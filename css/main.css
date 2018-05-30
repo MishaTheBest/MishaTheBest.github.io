@@ -4,7 +4,9 @@
 /********** main-styles *************/
 .light-button{
     display: inline-block;
-    width: 120px;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 40px;
     line-height: 40px;
     box-sizing: border-box;
@@ -181,18 +183,24 @@ header{
 .expertise-container .container-title{
     margin-bottom: 15px;
 }
-.expertise-title p{
+.expertise-title p,.team-title p{
     font-family: 'Playfair Display', serif;
     font-size: 14px;
-    color: #828186;
     margin-bottom: 20px;
 }
-.expertise-title hr{
+.expertise-title p{
+    color: #828186;
+}
+.expertise-title hr,.team-title hr{
     width: 50px;
+    margin-bottom: 40px;
+}
+.expertise-title hr{
     border-top: 2px solid #c6c4c9;
-    margin-bottom: 80px;
 }
 .expertise-item{
+    margin-top: 40px;
+    margin-bottom: 40px;
     padding: 0 23px;
 }
 .expertise-item img{
@@ -210,9 +218,103 @@ header{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #666666;
-    margin-bottom: 40px;
 }
 .expertise-items hr{
     border-top: 1px solid #ebebeb;
 }
 /********** end expertise-container *********/
+
+
+
+/*********** team-container **************/
+.team-container{
+    background: url("../img/team-bg.png") no-repeat center/cover;
+    background-attachment: fixed;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #fff;
+}
+.team-container .team-title .container-title{
+    color: #fff;
+}
+.team-container .team-title p{
+    color: #f9f9f9;
+}
+.team-container .team-title hr{
+    border-top: 2px solid #3f3360;
+}
+.our-team-block .team-elem{
+    margin-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.our-team-block .white-elem-img{
+    background-color: white;
+    height: 230px;
+    margin-bottom: 0;
+}
+.our-team-block .team-elem .full-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f3f3f5;
+    margin-bottom: 12px;
+}
+.our-team-block .team-elem .position{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #afadbb;
+}
+.our-team-block .team-elem .team-elem-description{
+    padding-top: 22px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    border: 1px solid #78778c;
+}
+.our-team-block{
+    margin-bottom: 70px;
+}
+.join-us-group p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+/********** end team-container **************/
+
+
+/************ our-works-container ***********/
+.our-works-container{
+    padding: 70px 0;
+}
+.our-works-container .our-works-header{
+    margin-bottom: 62px;
+}
+.our-works-elements{
+    margin-left: 0;
+    margin-right: 0;
+}
+.our-works-elements>div{
+    padding-left: 0;
+    padding-right: 0;
+}
+.our-works-elem{
+    background-color: gray;
+    height: 200px;
+}
+.our-works-elements>div:nth-child(even)>div {
+    background-color: lightgray;
+}
+.inverse-colors>div:nth-child(even)>div{
+    background-color: gray;
+}
+.inverse-colors>div:nth-child(odd)>div{
+    background-color: lightgray;
+}
+.our-works-container .light-button{
+    margin-top: 70px;
+}
+/*********** end our-works-container **********/
