@@ -16,7 +16,8 @@ quotesParagraph.innerHTML = "";
 
 let quotesStorage = document.querySelectorAll("#quote-hidden-storage>.quote-hidden-elem");
 let quotesStorageQuantity = quotesStorage.length;
-
+let showQuantity=0;
+let scalebedProfilePhoto = 0;
 function generateProfilePhoto(source) {
     let img = document.createElement("img");
     img.src = source;
@@ -25,9 +26,17 @@ function generateProfilePhoto(source) {
     div.appendChild(img);
     return div;
 }
-for(let i=0;i<quotesStorageQuantity;i++){
-    photosPlace.appendChild(generateProfilePhoto(quotesStorage[i].querySelector("img").src))
+
+function initProfiles() {
+    maxVisibleElements>quotesStorageQuantity?showQuantity=quotesStorageQuantity:showQuantity=maxVisibleElements;
+    scalebedProfilePhoto = (Math.floor(showQuantity/2)+1);
+    console.log(scalebedProfilePhoto);
+    for(let i=0;i<showQuantity;i++){
+        photosPlace.appendChild(generateProfilePhoto(quotesStorage[i].querySelector("img").src))
+    }
+    photosPlace.querySelectorAll(".quote-profile-photo")[scalebedProfilePhoto-1].classList.add("quote-profile-photo-active");
 }
+initProfiles();
 function showQuote() {
     let quotesStorageParagraph = quotesStorage[currentQuote].querySelector("p");
     let quotesStorageName = quotesStorage[currentQuote].querySelector(".full-name");
