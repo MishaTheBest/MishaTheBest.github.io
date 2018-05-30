@@ -256,7 +256,7 @@ header{
     height: 230px;
     margin-bottom: 0;
 }
-.our-team-block .team-elem .full-name{
+.our-team-block .team-elem .full-name,.quote-elem-description .full-name{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -264,7 +264,7 @@ header{
     color: #f3f3f5;
     margin-bottom: 12px;
 }
-.our-team-block .team-elem .position{
+.our-team-block .team-elem .position,.quote-elem-description .position{
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 100;
@@ -321,6 +321,57 @@ header{
     margin-top: 70px;
 }
 /*********** end our-works-container **********/
+
+/************* reviews-container **************/
+.reviews-container{
+    background: url("../img/reviews-bg.png") no-repeat center/cover;
+    background-attachment: fixed;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #cccbd1;
+}
+.reviews-container .quote span{
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    color: #ebeaef;
+}
+.reviews-container .quote-text p{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+.quote-text{
+    transition: all .3s linear;
+}
+#left-arrow,#right-arrow {
+    display: inline-block;
+    font-weight: 100;
+    font-size: 46px;
+    cursor: pointer;
+    color: #9f9f9f;
+    transition: color .2s linear;
+}
+#left-arrow:hover,#right-arrow:hover{
+    color: #fff;
+
+}
+#quote-profile-photos,.quote-profile-photo{
+    display: inline-block;
+}
+.quote-profile-photo>img{
+    transition: all .3s linear;
+    width: 45px;
+    height: 45px;
+}
+.quote-profile-photo-active>img{
+    height: 70px;
+    width: 70px;
+}
+#quote-hidden-storage{
+    display: none;
+}
+/************* end reviews-container *********/
+
 
 
 /*********** media queries ******************/
