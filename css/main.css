@@ -44,6 +44,9 @@ header{
     background-color: rgba(48, 41, 82, 0.7);
     font-family: 'Roboto', sans-serif;
 }
+.navbar-toggler-icon{
+
+}
 .navbar .nav-link{
     text-transform: uppercase;
     font-size: 13px;
@@ -318,3 +321,12 @@ header{
     margin-top: 70px;
 }
 /*********** end our-works-container **********/
+
+
+/*********** media queries ******************/
+@media (max-width: 992px){
+    .story-container>.container>.row,.our-works-container .our-works-header>div{
+        text-align: center !important;
+    }
+}
+/************ end media ******************/
