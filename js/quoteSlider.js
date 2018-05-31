@@ -1,23 +1,18 @@
-/*window.onload = function () {
-
-};*/
 'use strict';
-const maxVisibleElements = 5;
-let currentQuote = 0;
-
-
 const leftButton = document.querySelector('#left-arrow');
 const rightButton = document.querySelector('#right-arrow');
 const photosPlace = document.querySelector('#quote-profile-photos');
 let quotesParagraph = document.getElementById("quote-paragraph");
 let quotesName  = document.getElementById("quote-name");
 let quotesPosition  = document.getElementById("quote-position");
-quotesParagraph.innerHTML = "";
-
 let quotesStorage = document.querySelectorAll("#quote-hidden-storage>.quote-hidden-elem");
 let quotesStorageQuantity = quotesStorage.length;
-let showQuantity=0;
-let scalebedProfilePhoto = 0;
+let middleIndex = (Math.floor(quotesStorage.length/2));
+let showQuantity= middleIndex;
+
+let images = ["quote-profile.png","quote-profile1.png","quote-profile2.png"];
+
+
 function generateProfilePhoto(source) {
     let img = document.createElement("img");
     img.src = source;
@@ -27,31 +22,51 @@ function generateProfilePhoto(source) {
     return div;
 }
 
-function initProfiles() {
-    maxVisibleElements>quotesStorageQuantity?showQuantity=quotesStorageQuantity:showQuantity=maxVisibleElements;
-    scalebedProfilePhoto = (Math.floor(showQuantity/2)+1);
-    console.log(scalebedProfilePhoto);
-    for(let i=0;i<showQuantity;i++){
-        photosPlace.appendChild(generateProfilePhoto(quotesStorage[i].querySelector("img").src))
-    }
-    photosPlace.querySelectorAll(".quote-profile-photo")[scalebedProfilePhoto-1].classList.add("quote-profile-photo-active");
+/*function hideProfilePhoto(index) {
+    photosPlace.children[index].classList.add("hidden-profile-photo");
+    setTimeout(function () {
+        photosPlace.removeChild(photosPlace.children[index]);
+    },300);
 }
-initProfiles();
+*/
+function renderProfiles() {
+    if (photosPlace.children.length > 0) {
+        photosPlace.innerHTML = "";
+    }
+
+    for(let i=0;i<quotesStorage.length;i++){
+        photosPlace.appendChild(generateProfilePhoto("img/"+images[i]));
+    }
+    photosPlace.querySelectorAll(".quote-profile-photo")[middleIndex].classList.add("quote-profile-photo-active");
+}
 function showQuote() {
-    let quotesStorageParagraph = quotesStorage[currentQuote].querySelector("p");
-    let quotesStorageName = quotesStorage[currentQuote].querySelector(".full-name");
-    let quotesStoragePosition = quotesStorage[currentQuote].querySelector(".position");
+    let quotesStorageParagraph = quotesStorage[showQuantity].querySelector("p");
+    let quotesStorageName = quotesStorage[showQuantity].querySelector(".full-name");
+    let quotesStoragePosition = quotesStorage[showQuantity].querySelector(".position");
     quotesParagraph.innerHTML = quotesStorageParagraph.innerHTML;
     quotesName.innerHTML = quotesStorageName.innerHTML;
     quotesPosition.innerHTML = quotesStoragePosition.innerHTML;
-
+    renderProfiles();
 }
 showQuote();
 function plusQuote() {
-    currentQuote===quotesStorageQuantity-1?currentQuote=0:currentQuote++;
+    showQuantity>=quotesStorageQuantity-1?showQuantity=0:showQuantity++;
+    for (let i = 0; i < quotesStorageQuantity; i++) {
+        if(i + 1 !== quotesStorageQuantity) {
+            let x = images[i];
+            images[i] = images[i+1];
+            images[i+1] = x;
+        }
+    }
 }
 function minusQuote() {
-    currentQuote===0?currentQuote=quotesStorageQuantity-1:currentQuote--;
+    showQuantity<=0?showQuantity=quotesStorageQuantity-1:showQuantity--;
+    for (let i = quotesStorageQuantity-1; i > 0; i--) {
+            let x = images[i];
+            images[i] = images[i-1];
+            images[i-1] = x;
+        console.log(images);
+    }
 }
 leftButton.addEventListener('click',function () {
     minusQuote();

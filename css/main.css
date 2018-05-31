@@ -341,7 +341,7 @@ header{
     margin-bottom: 50px;
 }
 .quote-text{
-    transition: all .3s linear;
+
 }
 #left-arrow,#right-arrow {
     display: inline-block;
@@ -369,6 +369,14 @@ header{
 }
 #quote-hidden-storage{
     display: none;
+}
+.quote-profile-photo{
+    transition: all .3s linear;
+}
+.hidden-profile-photo{
+    height: 0;
+    width: 0;
+    opacity: .0;
 }
 /************* end reviews-container *********/
 
