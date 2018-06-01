@@ -2,6 +2,7 @@
 const leftButton = document.querySelector('#left-arrow');
 const rightButton = document.querySelector('#right-arrow');
 const photosPlace = document.querySelector('#quote-profile-photos');
+let quotesRow = document.querySelector(".quote-text");
 let quotesParagraph = document.getElementById("quote-paragraph");
 let quotesName  = document.getElementById("quote-name");
 let quotesPosition  = document.getElementById("quote-position");
@@ -11,6 +12,9 @@ let middleIndex = (Math.floor(quotesStorage.length/2));
 let showQuantity= middleIndex;
 
 let images = ["quote-profile.png","quote-profile1.png","quote-profile2.png"];
+
+
+
 
 
 function generateProfilePhoto(source) {
@@ -40,10 +44,17 @@ function renderProfiles() {
     photosPlace.querySelectorAll(".quote-profile-photo")[middleIndex].classList.add("quote-profile-photo-active");
 }
 function showQuote() {
+
     let quotesStorageParagraph = quotesStorage[showQuantity].querySelector("p");
     let quotesStorageName = quotesStorage[showQuantity].querySelector(".full-name");
     let quotesStoragePosition = quotesStorage[showQuantity].querySelector(".position");
-    quotesParagraph.innerHTML = quotesStorageParagraph.innerHTML;
+    quotesRow.classList.add("hidden-quote-text");
+    setTimeout(function () {
+        quotesParagraph.innerHTML = quotesStorageParagraph.innerHTML;
+    },1200);
+    setTimeout(function () {
+        quotesRow.classList.remove("hidden-quote-text");
+    },2400);
     quotesName.innerHTML = quotesStorageName.innerHTML;
     quotesPosition.innerHTML = quotesStoragePosition.innerHTML;
     renderProfiles();

@@ -381,6 +381,18 @@ header{
     width: 0;
     opacity: .0;
 }
+
+.quote-text{
+    max-height: 1200px;
+    overflow: hidden;
+    /* Set our transitions up. */
+    -webkit-transition: max-height 1.2s linear;
+    -moz-transition: max-height 1.2s linear;
+    transition: max-height 1.2s linear;
+}
+.hidden-quote-text{
+    max-height: 0;
+}
 /************* end reviews-container *********/
 
 
