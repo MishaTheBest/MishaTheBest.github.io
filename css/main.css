@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
 /********** main-styles *************/
+*{
+    font-size: 10px;
+}
 .light-button{
     display: inline-block;
     width: auto;
@@ -15,7 +18,7 @@
     text-transform: uppercase;
     color: #00e0d0;
     font-family: 'Hammersmith One', sans-serif;
-    font-size: 16px;
+    font-size: 1.6em;
 }
 .light-button:active,.light-button:hover,.light-button:focus{
     text-decoration: none;
@@ -23,7 +26,7 @@
 }
 .container-title{
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 2.2em;
     font-weight: bold;
     text-transform: uppercase;
     color: #413d4b;
@@ -49,7 +52,7 @@ header{
 }
 .navbar-dark .navbar-nav .nav-link{
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 1.3em;
     font-weight: 600;
     color: white;
     transition: color .3s linear;
@@ -68,7 +71,7 @@ header{
 }
 #header-carousel .carousel-text h1{
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
+    font-size: 3.2em;
     font-weight: 600;
 }
 #header-carousel .carousel-text hr{
@@ -79,7 +82,7 @@ header{
 }
 #header-carousel .carousel-text p{
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 100;
 }
 .carousel-indicators{
@@ -121,7 +124,7 @@ header{
 .story-container p{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 1.4em;
     color: #716e78;
 }
 .story-container .container-title{
@@ -166,7 +169,7 @@ header{
 }
 .circle-button-description h6{
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
@@ -188,7 +191,7 @@ header{
 }
 .expertise-title p,.team-title p{
     font-family: 'Playfair Display', serif;
-    font-size: 14px;
+    font-size: 1.4em;
     margin-bottom: 20px;
 }
 .expertise-title p{
@@ -211,7 +214,7 @@ header{
 }
 .expertise-item h5{
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: bold;
     text-transform: uppercase;
     color: #413d4b;
@@ -219,7 +222,7 @@ header{
 }
 .expertise-item p{
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 1.4em;
     color: #666666;
 }
 .expertise-items hr{
@@ -258,7 +261,7 @@ header{
 }
 .our-team-block .team-elem .full-name,.quote-elem-description .full-name{
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: bold;
     text-transform: uppercase;
     color: #f3f3f5;
@@ -266,7 +269,7 @@ header{
 }
 .our-team-block .team-elem .position,.quote-elem-description .position{
     font-family: 'Roboto', sans-serif;
-    font-size: 13px;
+    font-size: 1.3em;
     font-weight: 100;
     text-transform: uppercase;
     color: #afadbb;
@@ -282,7 +285,7 @@ header{
 }
 .join-us-group p{
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 300;
     margin-bottom: 30px;
 }
@@ -332,16 +335,13 @@ header{
 }
 .reviews-container .quote span{
     font-family: 'Playfair Display', serif;
-    font-size: 100px;
+    font-size: 10em;
     color: #ebeaef;
 }
 .reviews-container .quote-text p{
     font-family: 'Playfair Display', serif;
-    font-size: 16px;
+    font-size: 1.6em;
     margin-bottom: 50px;
-}
-.quote-text{
-
 }
 #left-arrow,#right-arrow {
     display: inline-block;
@@ -350,6 +350,9 @@ header{
     cursor: pointer;
     color: #9f9f9f;
     transition: color .2s linear;
+}
+#left-arrow .fa,#right-arrow .fa{
+    font-size: 46px;
 }
 #left-arrow:hover,#right-arrow:hover{
     color: #fff;
@@ -384,6 +387,9 @@ header{
 
 /*********** media queries ******************/
 @media (max-width: 992px){
+    *{
+        font-size: 18px;
+    }
     .story-container>.container>.row,.our-works-container .our-works-header>div{
         text-align: center !important;
     }
