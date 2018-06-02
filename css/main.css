@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
 /********** main-styles *************/
-*{
-    font-size: 10px;
+html{
+   font-size: 10px;
 }
 .light-button{
     display: inline-block;
@@ -403,8 +403,8 @@ header{
 
 /*********** media queries ******************/
 @media (max-width: 992px){
-    *{
-        font-size: 18px;
+    html{
+        font-size: 20px;
     }
     .story-container>.container>.row,.our-works-container .our-works-header>div{
         text-align: center !important;
