@@ -403,6 +403,62 @@ header{
 }
 /************* end reviews-container *********/
 
+/************* clients-container ***************/
+.clients-container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.give-us-news .container-title{
+    margin-bottom: 35px;
+}
+.give-us-news #give-us>div{
+    margin-bottom: 21px;
+}
+#give-us input{
+
+}
+#give-us input,#give-us textarea{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    border-radius: 0;
+    padding: 16px 20px;
+}
+#give-us textarea{
+    resize: none;
+}
+#give-us button{
+    cursor: pointer;
+    background: white;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.clients-container .clients .container-title{
+    margin-bottom: 45px;
+}
+.clients-container .clients>.row>.col-lg-5{
+    display: inline-block;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+.clients-container .clients img{
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+}
+/*********** end clients-container **********/
+
+/*************** footer *******************/
+footer{
+    background: url("../img/footer-bg.png") no-repeat center/cover;
+    background-attachment: fixed;
+}
+footer{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/************** end footer ***************/
 
 
 /*********** media queries ******************/
@@ -428,7 +484,7 @@ header{
         height: 32px;
         border-color: #00e0d0;
     }
-    .story-container>.container>.row,.our-works-container .our-works-header>div{
+    .story-container>.container>.row,.our-works-container .our-works-header>div,.clients-container{
         text-align: center !important;
     }
 }
