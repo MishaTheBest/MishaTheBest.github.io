@@ -413,6 +413,18 @@ header{
     .navbar-brand img{
         transform: scale(1.5);
     }
+    .carousel-indicators--round li{
+        height: 30px;
+        max-width: 30px;
+        border-radius: 15px;
+    }
+    .carousel-indicators .active{
+        background-color: #00e0d0;
+        max-width: 32px;
+        margin: 0 3px;
+        height: 32px;
+        border-color: #00e0d0;
+    }
     .story-container>.container>.row,.our-works-container .our-works-header>div{
         text-align: center !important;
     }
