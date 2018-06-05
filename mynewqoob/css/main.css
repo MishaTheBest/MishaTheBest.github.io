@@ -1,0 +1,60 @@
+@font-face {
+    src: url("../fonts/");
+}
+.navbar-dark .nav-item .nav-link,header h6,.gradient-button{
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+}
+.gradient-button{
+    border: none;
+    color: white;
+    padding: 0 53px;
+    cursor: pointer;
+    border-radius: 25px;
+    height: 50px;
+    line-height: 50px;
+    background: #49007c; /* Old browsers */
+    background: -moz-linear-gradient(left, #49007c 0%, #c1128d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #49007c 0%,#c1128d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #49007c 0%,#c1128d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49007c', endColorstr='#c1128d',GradientType=1 ); /* IE6-9 */
+    transition: background .3s linear;
+}
+.gradient-button:hover,.gradient-button:focus,.gradient-button:active{
+    
+}
+/********** navbar ***************/
+
+.navbar-dark .nav-item .nav-link{
+    color: #323233;
+    transition: all .3s ease-in-out;
+    padding: 12px 20px;
+    border: 1px solid rgba(99,102,103,.0);
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+.navbar-dark .nav-item .nav-link:hover,.navbar-dark .nav-item .nav-link:active,.navbar-dark .nav-item .nav-link:focus{
+    border: 1px solid rgba(99,102,103,1.0);
+    color: #323233;
+}
+/********** end navbar ************/
+
+/********* header ***************/
+header{
+    background: url("../img/header-bg.png") no-repeat center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 700px;
+}
+header h1{
+    margin-top: 300px;
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+header h6{
+    color: #949494;
+}
+header .gradient-button{
+    margin-top: 65px;
+}
+/********* end header **********/
