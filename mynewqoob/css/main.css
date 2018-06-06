@@ -1,11 +1,48 @@
 @font-face {
-    src: url("../fonts/");
+    src: url(../fonts/ProximaNova-Bold.ttf);
+    font-family: "Proxima Nova Bold";
+}
+@font-face {
+    src: url(../fonts/ProximaNova-Light.ttf);
+    font-family: "Proxima Nova Light";
+}
+@font-face {
+    src: url(../fonts/ProximaNova-Regular.ttf);
+    font-family: "Proxima Nova Regular";
+}
+@font-face {
+    src: url(../fonts/ProximaNovaT-Thin.ttf);
+    font-family: "Proxima Nova Thin";
+}
+h1,h2{
+    font-family: "Proxima Nova Bold",sans-serif;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 1.67rem;
+    line-height: 1.67rem;
+}
+h1>span{
+    font-family: "Proxima Nova Light",sans-serif;
+}
+p{
+    font-family: "Proxima Nova Light",sans-serif;
+    font-size: 1.125rem
+}
+.white-text{
+    color: #fff;
+}
+.black-text{
+    color: #000;
 }
 .navbar-dark .nav-item .nav-link,header h6,.gradient-button{
     font-size: 1.125rem;
     line-height: 1.125rem;
 }
 .gradient-button{
+    font-family: "Proxima Nova Regular",sans-serif;
     border: none;
     color: white;
     padding: 0 53px;
@@ -21,16 +58,17 @@
     transition: background .3s linear;
 }
 .gradient-button:hover,.gradient-button:focus,.gradient-button:active{
-    
+
 }
 /********** navbar ***************/
 
 .navbar-dark .nav-item .nav-link{
+    font-family: "Proxima Nova Regular",sans-serif;
     color: #323233;
     transition: all .3s ease-in-out;
     padding: 12px 20px;
     border: 1px solid rgba(99,102,103,.0);
-    border-radius: 18px;
+    border-radius: 21px;
     box-sizing: border-box;
 }
 .navbar-dark .nav-item .nav-link:hover,.navbar-dark .nav-item .nav-link:active,.navbar-dark .nav-item .nav-link:focus{
@@ -49,12 +87,57 @@ header{
 header h1{
     margin-top: 300px;
     margin-bottom: 10px;
-    font-size: 3rem;
 }
 header h6{
+    font-family: "Proxima Nova Regular",sans-serif;
     color: #949494;
 }
 header .gradient-button{
     margin-top: 65px;
 }
 /********* end header **********/
+
+
+/********** advantages-container *********/
+.advantages-element{
+    padding-top: 145px;
+    padding-bottom: 145px;
+}
+.advantages-element h1{
+    margin-bottom: 20px;
+}
+.advantages-element p{
+    margin-bottom: 40px;
+}
+.advantages-container>.row>div:first-child{
+    background: url("../img/design.png") no-repeat center/cover;
+
+}
+.advantages-container>.row>div:last-child{
+    background: url("../img/code.png") no-repeat center/cover;
+}
+
+/*********** end advantages-container *****/
+
+/************ we-do-container ***********/
+.we-do-container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.we-do-container h1{
+    margin-bottom: 115px;
+}
+.we-do-container .gradient-button{
+    margin-top: 30px;
+}
+.we-do-container .provide-elements>div{
+    margin-bottom: 85px;
+}
+
+.we-do-container .provide-elements>div p,.we-do-container .provide-elements>div h2{
+    padding-left: 18px;
+}
+.we-do-container .provide-elements>div h2{
+    margin-bottom: 20px;
+}
+/************ end we-do-container *******/
