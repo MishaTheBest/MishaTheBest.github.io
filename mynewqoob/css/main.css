@@ -85,7 +85,7 @@ header{
     min-height: 700px;
 }
 header h1{
-   
+
     margin-bottom: 10px;
 }
 header h6{
@@ -141,3 +141,14 @@ header .gradient-button{
     margin-bottom: 20px;
 }
 /************ end we-do-container *******/
+
+/*********** media queries ******************/
+@media (max-width: 992px) {
+    html{
+        font-size: 30px;
+    }
+    .advantages-element{
+        text-align: center;
+    }
+}
+/***********end media queries ******************/
