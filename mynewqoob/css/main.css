@@ -142,6 +142,33 @@ header .gradient-button{
 }
 /************ end we-do-container *******/
 
+
+/************* portfolio container *******/
+.portfolio-container{
+    min-height: 700px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#portfolio-wrapper{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 1s linear;
+}
+#portfolio-wrapper:hover{
+    //transform: matrix(1, 0, 0, 1, -2320, 0);
+    //transform: translate3d( -2320px,0,0);
+}
+.portfolio-element{
+    display: inline-block;
+}
+.portfolio-element img{
+
+    height: auto;
+}
+/************ end portfolio container *******/
+
 /*********** media queries ******************/
 @media (max-width: 992px) {
     html{
