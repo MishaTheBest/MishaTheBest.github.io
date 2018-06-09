@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.white-color{
+    color: #fff !important;
+}
+.application-container{
+    min-height: 600px;
+    height: 100vh;
+}
+#app>div>h4{
+    margin-left: 20px;
+    margin-right: 20px;
+}
