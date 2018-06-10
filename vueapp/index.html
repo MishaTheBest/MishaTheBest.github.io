@@ -13,9 +13,15 @@
 <body>
 <div class="container-fluid application-container d-flex justify-content-center align-items-center flex-column">
     <div class="row" id="app">
+        <div class="col-12 text-center loader-wrapper d-flex align-items-center justify-content-center flex-column">
+            <h6>{{counter}}%</h6>
+            <loader v-bind:val="counter" v-bind:max="100" v-bind:counter="counter">
+
+            </loader>
+        </div>
         <div class="col-12 d-flex align-items-center justify-content-around">
             <h4 class="d-inline-block">{{info}}</h4>
-            <a class="waves-effect waves-light btn deep-purple darken-3 white-color d-inline-block" v-on:click="generate()">Новая фраза</a>
+            <a class="aves-light btn deep-purple darken-3 white-color d-inline-block" v-on:click="generate()">Новая фраза</a>
         </div>
 
     </div>
