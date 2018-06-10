@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+/************ v-transition **************/
+
+/************ end v-transition **************/
+
 h1,h2,h3,h4,h5,h6{
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -14,4 +18,5 @@ h1,h2,h3,h4,h5,h6{
 #app>div>h4{
     margin-left: 20px;
     margin-right: 20px;
+    text-transform: uppercase;
 }
