@@ -1,0 +1,13 @@
+#app{
+    background-color: #E1E2E1;
+    min-height: 700px;
+    height: 100vh;
+}
+#app>.row{
+    height: 100%;
+
+}
+#player-block{
+    min-height: 500px;
+
+}
