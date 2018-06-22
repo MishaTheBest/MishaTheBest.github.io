@@ -44,8 +44,8 @@ let vm = new Vue({
         numOfPlaying: 0,
         //audio: "audio/haskey-piroman.mp3",
         volume: 0.5,
-        statusPlaying: false
-
+        statusPlaying: false,
+        showControl: true
     },
     methods:{
         playAudio:function () {

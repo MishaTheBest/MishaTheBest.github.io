@@ -13,26 +13,29 @@
     <div class="container-fluid" id="app">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-6 d-flex align-items-center justify-content-center" id="player-block">
-                <div id="album-cover" class="text-center d-flex align-items-end justify-content-center">
+                <div id="album-cover" class="text-center d-flex align-items-end justify-content-center" v-on:mouseover="showControl = true" v-on:mouseout="if(statusPlaying){showControl = false}">
                     <img src="">
                     <transition name="fade">
-                        <div class="track-info" v-if="statusPlaying">
+                        <div class="track-info d-flex align-items-center justify-content-center flex-column" v-if="showControl&&statusPlaying">
                             <h3>{{tracks[numOfPlaying].trackName}}</h3>
                             <h4>{{tracks[numOfPlaying].artist}}, {{tracks[numOfPlaying].album}}</h4>
                         </div>
                     </transition>
-                </div>
-
-                <input type="range" min="0" max="1" step="0.1" value="0.5" id="volume" v-on:change="setVolume" class="align-self-start">
-                <div class="control-buttons d-flex align-self-center justify-content-around">
-                    <span id="prev-btn" v-on:click="prevAudio"><i class="fa fa-step-backward" aria-hidden="true"></i></span>
-                    <span id="play-btn" v-on:click="playAudio" v-if="!statusPlaying"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    <span id="pause-btn" v-on:click="pauseAudio" v-else><i class="fa fa-pause" aria-hidden="true"></i></span>
-                    <span id="next-btn" v-on:click="nextAudio"><i class="fa fa-step-forward" aria-hidden="true"></i></span>
+                    <div class="control-buttons d-flex align-self-end justify-content-around" v-if="showControl">
+                        <span id="prev-btn" v-on:click="prevAudio"><i class="fa fa-step-backward" aria-hidden="true"></i></span>
+                        <span id="play-btn" v-on:click="playAudio" v-if="!statusPlaying"><i class="fa fa-play" aria-hidden="true"></i></span>
+                        <span id="pause-btn" v-on:click="pauseAudio" v-else><i class="fa fa-pause" aria-hidden="true"></i></span>
+                        <span id="next-btn" v-on:click="nextAudio"><i class="fa fa-step-forward" aria-hidden="true"></i></span>
+                    </div>
                 </div>
                 <player v-bind:audio="audio" v-bind:volume="volume">
 
                 </player>
+
+            </div>
+
+            <div class="col-12 text-center">
+                <input type="range" min="0" max="1" step="0.1" value="0.5" id="volume" v-on:change="setVolume" class="align-self-start">
             </div>
         </div>
     </div>
