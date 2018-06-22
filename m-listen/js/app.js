@@ -16,11 +16,12 @@ let vm = new Vue({
     data: {
         backgroundAlbum: 'img/doglife.jpg' ,
         audio: "audio/haskey-piroman.mp3",
-        volume: 1.0,
+        volume: 0.5,
         statusPlaying: false
     },
     methods:{
         playAudio:function () {
+            document.getElementById('audio').volume = this.volume;
             this.statusPlaying = true;
             this.audio = "audio/haskey-piroman.mp3";
            // document.getElementById("audio").src = this.audio;
@@ -31,13 +32,18 @@ let vm = new Vue({
             this.statusPlaying = false;
             document.getElementById("audio").pause();
         },
+        nextAudio:function(){
+            this.changeAudio("audio/linkin_park_numb.mp3");
+        },
+        changeAudio:function(source){
+            document.getElementById("audio").src = source;
+            document.getElementById("audio").play();
+        },
         changeAlbumCover:function () {
-            //document.getElementById("app").style.background = "url('" + this.backgroundAlbum + "')" + "no-repeat center/cover";
-            document.querySelector("#album-cover>img").src = this.backgroundAlbum;
+           document.querySelector("#album-cover>img").src = this.backgroundAlbum;
         },
         setVolume: function setVolume(e) {
             this.volume = e.target.value;
-            console.log(this.volume);
             document.getElementById('audio').volume = this.volume;
         }
     }

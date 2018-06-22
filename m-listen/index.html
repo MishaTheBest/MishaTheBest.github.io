@@ -21,7 +21,7 @@
                     <span id="prev-btn" v-on:click=""><i class="fa fa-step-backward" aria-hidden="true"></i></span>
                     <span id="play-btn" v-on:click="playAudio" v-if="!statusPlaying"><i class="fa fa-play" aria-hidden="true"></i></span>
                     <span id="pause-btn" v-on:click="pauseAudio" v-else><i class="fa fa-pause" aria-hidden="true"></i></span>
-                    <span id="next-btn" v-on:click=""><i class="fa fa-step-forward" aria-hidden="true"></i></span>
+                    <span id="next-btn" v-on:click="nextAudio"><i class="fa fa-step-forward" aria-hidden="true"></i></span>
                 </div>
                 <player v-bind:audio="audio" v-bind:volume="volume">
 
