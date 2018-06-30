@@ -73,7 +73,7 @@ let vm = new Vue({
         //,"audio/linkin_park_numb.mp3"],
         numOfPlaying: 0,
         //audio: "audio/haskey-piroman.mp3",
-        volume: 0.5,
+        volume: 1.0,
         statusPlaying: false,
         showControl: true,
         showEl: "hide"
