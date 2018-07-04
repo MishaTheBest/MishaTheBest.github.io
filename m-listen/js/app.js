@@ -14,7 +14,8 @@ Vue.component('player',{
 let vm = new Vue({
     el: "#app",
     data: {
-        tracks:[{
+        tracks:[],
+        /*[{
             artist:"Хаски",
             trackName: "Пироман",
             album: "Сбчь жзнь",
@@ -68,15 +69,14 @@ let vm = new Vue({
             album: "Любимые песни (воображаемых) людей",
             audio: "audio/10 - chernym-cherno.mp3",
             backgroundAlbum: 'img/lovelysongsofimaginepeoples.jpg'
-        }],
+        }]*/
         audio: "audio/haskey-piroman.mp3",
         //,"audio/linkin_park_numb.mp3"],
         numOfPlaying: 0,
         //audio: "audio/haskey-piroman.mp3",
-        volume: 1.0,
+        volume: 0.0,
         statusPlaying: false,
-        showControl: true,
-        showEl: "hide"
+        showControl: true
     },
     methods:{
         playAudio:function () {
@@ -122,5 +122,18 @@ let vm = new Vue({
             this.volume = e.target.value;
             document.getElementById('audio').volume = this.volume;
         }
+    },
+    mounted: function () {
+        let self = this;
+        let request = new XMLHttpRequest();
+        request.open('POST', 'http://127.0.0.1:3000/', true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        request.onreadystatechange = function() {
+            if (request.readyState === 4 && request.status === 200) {
+
+                self.tracks = JSON.parse(request.responseText);
+            }
+        };
+        request.send();
     }
 });
