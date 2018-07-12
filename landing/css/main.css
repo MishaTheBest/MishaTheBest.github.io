@@ -64,6 +64,13 @@
     margin-top: 80px;
     margin-bottom: 40px;
 }
+.container-header h3{
+    margin-bottom: 42px;
+}
+.container-header hr{
+    width: 75px;
+    border-top: 1px solid #1bc6a4;
+}
 /******* end other **********/
 
 
@@ -148,5 +155,22 @@ header .main-headers-wrapper{
     border-top: 7px solid white;
     color: white;
 }
-
+.services-container .container-header h3{
+    color: #4e4e4e;
+}
+.services-elem img{
+    margin-bottom: 30px;
+}
+.services-elem{
+    margin-bottom: 20px;
+}
+.services-elem:nth-child(1n) img{
+    border: 2px solid #1bc6a4;
+}
+.services-elem:nth-child(2n) img{
+    border: 2px solid #1c2a33;
+}
+.services-elem h5{
+    margin-bottom: 20px;
+}
 /********* end services ******/
