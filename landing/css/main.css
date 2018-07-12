@@ -194,3 +194,19 @@ header .main-headers-wrapper{
     margin-bottom: 80px;
 }
 /******** end why us *********/
+
+/****** we works *******/
+.we-works-container{
+    background-color: white;
+}
+.we-works-container .container-header h3{
+    color: #4e4e4e;
+}
+.we-works-container .container-header hr{
+    border-top-color: #1c2a33;
+}
+/****** end we works *****/
+
+
+
+
