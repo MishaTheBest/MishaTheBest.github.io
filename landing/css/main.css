@@ -174,3 +174,23 @@ header .main-headers-wrapper{
     margin-bottom: 20px;
 }
 /********* end services ******/
+
+
+/********* why us **********/
+.why-us-container{
+    //background-color: #1bc6a4;
+    background: url("../img/home-how-we-work.jpg") no-repeat center/cover;
+    background-attachment: fixed;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.why-us-container .container-header hr{
+
+}
+.why-us-container>.container .main-services .main-services-elem{
+    border-radius: 10px;
+}
+.why-us-container>.container .main-services{
+    margin-bottom: 80px;
+}
+/******** end why us *********/
