@@ -55,6 +55,15 @@
     text-decoration: none;
     background-color: rgba(27, 198, 164, .7);
 }
+.container-header h3,.main-headers{
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+.container-header{
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
 /******* end other **********/
 
 
@@ -105,11 +114,6 @@ header .main-headers-wrapper{
     min-height: 700px;
     height: 100vh;
 }
-.main-headers{
-    font-family: 'Rubik', sans-serif;
-    text-transform: uppercase;
-    color: white;
-}
 .main-headers h1{
     font-size: 4.3rem;
     font-weight: bolder;
@@ -118,3 +122,31 @@ header .main-headers-wrapper{
     margin-bottom: 30px;
 }
 /********* end header *********/
+
+
+/********* services **********/
+.main-services-elem{
+    height: 275px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.main-services-elem img{
+    width: auto;
+    height: 80px;
+    margin-bottom: 45px;
+}
+.main-services-elem h5{
+    font-size: 1.25rem;
+}
+.main-services-elem:nth-child(1n){
+    background-color: #1c2a33;
+    border-top: 7px solid #18cfab;
+    color: #18cfab;
+}
+.main-services-elem:nth-child(2n){
+    background-color: #18cfab;
+    border-top: 7px solid white;
+    color: white;
+}
+
+/********* end services ******/
