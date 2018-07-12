@@ -22,19 +22,19 @@
                     <a class="nav-link" href="#home">Главная <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#about">Услуги</a>
+                    <a class="nav-link" href="#services">Услуги</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#people">Преимущества</a>
+                    <a class="nav-link" href="#advantage">Преимущества</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#expertise">Достижения</a>
+                    <a class="nav-link" href="#achievements">Достижения</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#teams">Партенры</a>
+                    <a class="nav-link" href="#partners">Партенры</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#works">Контакты</a>
+                    <a class="nav-link" href="#contacts">Контакты</a>
                 </li>
             </ul>
         </div>
@@ -42,7 +42,7 @@
 </nav>
 
 <header class="container-fluid header-container">
-    <div class="container">
+    <div class="container" id="home">
         <div class="row main-headers-wrapper d-flex align-items-center justify-content-center">
             <div class="col-12 main-headers text-center">
                 <h3>Lorem ipsum dollor</h3>
@@ -55,7 +55,7 @@
     </div>
 </header>
 
-<div class="container-fluid services-container">
+<div class="container-fluid services-container" id="services">
     <div class="row main-services wow fadeIn">
         <div class="col-lg-3 main-services-elem d-flex align-items-center justify-content-center flex-column">
             <img src="img/ico2.png">
@@ -192,7 +192,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid why-us-container">
+<div class="container-fluid why-us-container" id="advantage">
     <div class="row container-header text-center">
         <div class="col-12">
             <h3>Преимущества</h3>
@@ -292,7 +292,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid achievements-container">
+<div class="container-fluid achievements-container" id="achievements">
     <div class="row container-header text-center">
         <div class="col-12">
             <h3>Наши достижения:</h3>
@@ -334,7 +334,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" id="partners">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -397,13 +397,57 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
 </script>
-<script src="js/script.js"></script>
+<script>
+    var lastId,
+        // All list items
+        menuItems = $(".nav-link"),
+        // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function() {
+            var item = $($(this).attr("href"));
+            if (item.length) {
+                return item;
+            }
+        });
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation
+    menuItems.click(function(e) {
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top  + 1;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 300);
+        e.preventDefault();
+    });
+    // Bind to scroll
+    $(window).scroll(function() {
+        // Get container scroll position
+        var fromTop = $(this).scrollTop()+600;
+        // Get id of current scroll item
+        var cur = scrollItems.map(function() {
+            if ($(this).offset().top < fromTop)
+                return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : "";
+        if (lastId !== id) {
+            lastId = id;
+            // Set/remove active class
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href='#" + id + "']").parent().addClass("active")
+        }
+    });
+</script>
 </body>
 </html>
