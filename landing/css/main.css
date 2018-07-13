@@ -352,12 +352,16 @@ header .main-headers-wrapper{
 .contacts-row>div{
     margin-bottom: 40px;
 }
-.contacts-form input,.contacts-form textarea{
+.contacts-form input,.contacts-form textarea,
+.contacts-form input:focus,.contacts-form textarea:focus,
+.contacts-form input:active,.contacts-form textarea:active{
     border: 1px solid #fedc3d;
     background-color: #000;
     color: #fedc3d;
 }
-.contacts-form input::placeholder,.contacts-form textarea::placeholder {
+.contacts-form input::placeholder,.contacts-form textarea::placeholder,
+.contacts-form input:focus::placeholder,.contacts-form textarea:focus::placeholder,
+.contacts-form input:active::placeholder,.contacts-form textarea:active::placeholder{
     color:  #fedc3d;
     opacity: 1; /* Firefox */
 }
