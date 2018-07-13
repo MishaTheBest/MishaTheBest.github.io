@@ -248,7 +248,7 @@ header .main-headers-wrapper{
 /****** end we works *****/
 
 /******** achievements *******/
-.achievements-container{
+.achievements-container,.partners-container{
     background: url("../img/photo-1512117789060-5de1ecef9eb7.jpg") no-repeat center/cover;
     background-attachment: fixed;
     padding-top: 20px;
@@ -287,17 +287,25 @@ header .main-headers-wrapper{
 
 /******** partners *********/
 .partners-container{
+
+    padding-bottom: 80px;
+}
+.partners-inner-container{
+    padding-top: 10px;
+    padding-bottom: 180px;
     background-color: white;
+    border-radius: 20px;
 }
 .partner-elem{
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .partner-elem img{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 50px;
     filter: grayscale(100%);
     transition: filter .3s ease-in;
+
 }
 .partner-elem:hover img{
     filter: grayscale(0%);
