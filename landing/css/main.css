@@ -44,6 +44,8 @@ html,body{
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 .colored-button{
+    border: none;
+    text-transform: uppercase;
     font-size: 0.8125rem;
     color: white;
     background-color: rgba(27, 198, 164, 1);
@@ -57,7 +59,7 @@ html,body{
     text-decoration: none;
     background-color: rgba(27, 198, 164, .7);
 }
-.container-header h3,.main-headers{
+.container-header h3,.main-headers,.form-header{
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     color: white;
@@ -84,7 +86,7 @@ html,body{
 
 /********* navbar **********/
 .navbar-dark{
-    background-color: #44433e;
+    background-color: #1c2a33;
     min-height: 80px;
 }
 .navbar-brand img{
@@ -254,9 +256,8 @@ header .main-headers-wrapper{
     padding-top: 20px;
     padding-bottom: 80px;
 }
-.achievements-row{
+.achievements-row,.contacts-row{
     box-sizing: border-box;
-
     border-top: 1px solid #1bc6a4;
     border-bottom: 1px solid #1bc6a4;
     padding: 100px 20px;
@@ -311,3 +312,36 @@ header .main-headers-wrapper{
     filter: grayscale(0%);
 }
 /******** ens partners ******/
+
+/******** contacts ********/
+.contacts-container{
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-color: #1c2a33;
+}
+.contacts-info ul{
+    list-style: none;
+}
+.contacts-info a{
+    text-decoration: none;
+    color: white;
+}
+.contacts-info ul li{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contacts-info ul li span{
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+.contacts-info-header{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/******** end contacts ********/
+@media (max-width: 928px) {
+    html{
+        font-size: 20px;
+    }
+}
