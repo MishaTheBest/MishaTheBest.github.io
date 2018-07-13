@@ -27,50 +27,54 @@ html,body{
     right: 0;
 }
 .draw:hover {
-    color: #fff;
+    color: #000;
 }
 .draw:hover::before, .draw:hover::after {
     width: 100%;
     height: 100%;
 }
 .draw:hover::before {
-    border-top-color: #fff;
-    border-right-color: #fff;
+    border-top-color: #000;
+    border-right-color: #000;
     transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .draw:hover::after {
-    border-bottom-color: #fff;
-    border-left-color: #fff;
+    border-bottom-color: #000;
+    border-left-color: #000;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 .colored-button{
     border: none;
     text-transform: uppercase;
     font-size: 0.8125rem;
-    color: white;
-    background-color: rgba(27, 198, 164, 1);
+    color: #000;
+    background-color: rgba(254, 220, 61, 1);
     font-weight: bold;
     padding: 15px 35px;
     transition: all .3s ease-in-out,color 0.25s ;
     position: relative;
 }
 .colored-button:hover,.colored-button:active,.colored-button:focus{
-    color: white;
+    color: #000;
     text-decoration: none;
-    background-color: rgba(27, 198, 164, .7);
+    background-color: rgba(254, 220, 61, 0.7);
 }
 .container-header h3,.main-headers,.form-header{
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
-    color: white;
+    color: #fedc3d;
+    text-shadow: 0px 0px #000,
+    1px 0px #000,
+    0px 1px #000,
+    1px 1px #000;
 }
 .we-works-container .container-header h3,
 .partners-container .container-header h3,
 .services-container .container-header h3{
-    color: #4e4e4e;
+    color: #000;
 }
 .container-header{
-    margin-top: 80px;
+    padding-top: 80px;
     margin-bottom: 40px;
 }
 .container-header h3{
@@ -78,7 +82,7 @@ html,body{
 }
 .container-header hr{
     width: 75px;
-    border-top: 1px solid #1bc6a4;
+    border-top: 1px solid #000;
 }
 /******* end other **********/
 
@@ -86,7 +90,7 @@ html,body{
 
 /********* navbar **********/
 .navbar-dark{
-    background-color: #1c2a33;
+    background-color: #fedc3d;
     min-height: 80px;
 }
 .navbar-brand img{
@@ -96,7 +100,7 @@ html,body{
 .navbar-dark .navbar-nav .nav-link,.navbar-dark .navbar-nav .nav-link:focus{
     font-weight: 600;
     text-transform: uppercase;
-    color: #b8b8b8;
+    color: #6e6e6e;
     transition: color .3s ease-in-out;
     font-family: 'Rubik', sans-serif;
 }
@@ -105,14 +109,14 @@ html,body{
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #1bc6a4;
+    background-color: #000;
     transform: scaleX(0);
     transition: transform .3s linear;
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:active,
 .navbar-dark .navbar-nav .active .nav-link{
-    color: #1bc6a4;
+    color: #000;
 }
 .navbar-dark .navbar-nav .nav-link:hover:after,
 .navbar-dark .navbar-nav .nav-link:active:after,
@@ -142,6 +146,9 @@ header .main-headers-wrapper{
 
 
 /********* services **********/
+.services-container{
+    background-color: #fedc3d;
+}
 .main-services-elem{
     height: 275px;
     box-sizing: border-box;
@@ -155,15 +162,18 @@ header .main-headers-wrapper{
 .main-services-elem h5{
     font-size: 1.25rem;
 }
+.main-services-elem{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
 .main-services-elem:nth-child(1n){
-    background-color: #1c2a33;
-    border-top: 7px solid #18cfab;
-    color: #18cfab;
+    background-color: #000;
+    color: #fedc3d;
 }
 .main-services-elem:nth-child(2n){
-    background-color: #18cfab;
-    border-top: 7px solid white;
-    color: white;
+    border-left: 1px solid black;
+    background-color: #fedc3d;
+    color: #000;
 }
 
 .services-elem img{
@@ -173,10 +183,10 @@ header .main-headers-wrapper{
     margin-bottom: 20px;
 }
 .services-elem:nth-child(1n) img{
-    border: 2px solid #1bc6a4;
+    border: 2px solid #fea680;
 }
 .services-elem:nth-child(2n) img{
-    border: 2px solid #1c2a33;
+    border: 2px solid #000;
 }
 .services-elem h5{
     margin-bottom: 20px;
@@ -186,7 +196,7 @@ header .main-headers-wrapper{
 
 /********* why us **********/
 .why-us-container{
-    //background-color: #1bc6a4;
+    //background-color: #86c232;
     background: url("../img/home-how-we-work.jpg") no-repeat center/cover;
     background-attachment: fixed;
     padding-top: 10px;
@@ -205,12 +215,12 @@ header .main-headers-wrapper{
 
 /****** we works *******/
 .we-works-container{
-    background-color: white;
+    background-color: #fedc3d;
     padding-bottom: 60px;
 }
 
 .we-works-container .container-header hr{
-    border-top-color: #1c2a33;
+    border-top-color: #000;
 }
 .we-works-elem{
 
@@ -221,29 +231,29 @@ header .main-headers-wrapper{
     height: 80px;
     box-sizing: border-box;
     border-radius: 50px;
-    background-color: #1c2a33;
-    border: 2px solid #1bc6a4;
+    background-color: #000;
+    border: 2px solid #fedc3d;
     position: relative;
     text-align: center;
 }
 .we-works-elem:nth-child(2n) .circle-works{
-    background-color: #1bc6a4;
-    border: 2px solid #1c2a33;
+    background-color: #fedc3d;
+    border: 2px solid #000;
 }
 .circle-works span{
     font-size: 30px;
     font-family: 'Rubik', sans-serif;
-    color: #1bc6a4;
+    color: #fedc3d;
     line-height: 75px;
     margin-left: 2px;
 }
 .we-works-elem:nth-child(2n) .circle-works span{
-    color: #1c2a33;
+    color: #000;
 }
 .we-works-elem-text p{
     font-family: 'Rubik', sans-serif;
     font-size: 1.25rem;
-    color: #1c2a33;
+    color: #000;
     font-weight: bold;
     margin-bottom: 0;
 }
@@ -258,8 +268,8 @@ header .main-headers-wrapper{
 }
 .achievements-row,.contacts-row{
     box-sizing: border-box;
-    border-top: 1px solid #1bc6a4;
-    border-bottom: 1px solid #1bc6a4;
+    border-top: 1px solid #fedc3d;
+    border-bottom: 1px solid #fedc3d;
     padding: 100px 20px;
 }
 .achievement-wrapper{
@@ -271,8 +281,8 @@ header .main-headers-wrapper{
     height: 150px;
     box-sizing: border-box;
     border-radius: 75px;
-    background-color: #1c2a33;
-    border: 2px solid #1bc6a4;
+    background-color: #fedc3d;
+    border: 2px solid #000;
     position: relative;
     text-align: center;
 }
@@ -282,7 +292,7 @@ header .main-headers-wrapper{
     font-weight: bold;
 }
 .achievement span,.achievement p{
-    color: #1bc6a4;
+    color: #000;
 }
 /******** end achievements *******/
 
@@ -294,7 +304,7 @@ header .main-headers-wrapper{
 .partners-inner-container{
     padding-top: 10px;
     padding-bottom: 180px;
-    background-color: white;
+    background-color: #fedc3d;
     border-radius: 20px;
 }
 .partner-elem{
@@ -317,17 +327,17 @@ header .main-headers-wrapper{
 .contacts-container{
     padding-top: 10px;
     padding-bottom: 40px;
-    background-color: #1c2a33;
+    background-color: #000;
 }
 .contacts-info ul{
     list-style: none;
 }
 .contacts-info a{
     text-decoration: none;
-    color: white;
+    color: #fedc3d;
 }
 .contacts-info ul li{
-    color: white;
+    color: #fedc3d;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -338,6 +348,26 @@ header .main-headers-wrapper{
 .contacts-info-header{
     text-transform: uppercase;
     font-weight: bold;
+}
+.contacts-row>div{
+    margin-bottom: 40px;
+}
+.contacts-form input,.contacts-form textarea{
+    border: 1px solid #fedc3d;
+    background-color: #000;
+    color: #fedc3d;
+}
+.contacts-form input::placeholder,.contacts-form textarea::placeholder {
+    color:  #fedc3d;
+    opacity: 1; /* Firefox */
+}
+
+.contacts-form input:-ms-input-placeholder,.contacts-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:  #fedc3d;
+}
+
+.contacts-form input::-ms-input-placeholder,.contacts-form textarea::-ms-input-placeholder { /* Microsoft Edge */
+    color:  #fedc3d;
 }
 /******** end contacts ********/
 @media (max-width: 928px) {
