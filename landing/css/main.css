@@ -3,6 +3,12 @@
 html,body{
     overflow-x: hidden;
 }
+.services-container,.why-us-container,
+.we-works-container,.achievements-container,
+.partners-container,.contacts-container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .draw::before, .draw::after {
     box-sizing: inherit;
     content: '';
@@ -74,7 +80,7 @@ html,body{
     color: #000;
 }
 .container-header{
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     margin-bottom: 40px;
 }
 .container-header h3{
@@ -89,13 +95,21 @@ html,body{
 
 
 /********* navbar **********/
+.navbar-dark .navbar-toggler,.navbar-dark .navbar-toggler:focus,.navbar-dark .navbar-toggler:active {
+    outline: none;
+    border-color: transparent;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 .navbar-dark{
     background-color: #fedc3d;
-    min-height: 80px;
 }
 .navbar-brand img{
     width: 120px;
     height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .navbar-dark .navbar-nav .nav-link,.navbar-dark .navbar-nav .nav-link:focus{
     font-weight: 600;
@@ -107,7 +121,7 @@ html,body{
 .navbar-dark .navbar-nav .nav-link:after{
     content: "";
     display: block;
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color: #000;
     transform: scaleX(0);
@@ -199,8 +213,7 @@ header .main-headers-wrapper{
     //background-color: #86c232;
     background: url("../img/home-how-we-work.jpg") no-repeat center/cover;
     background-attachment: fixed;
-    padding-top: 10px;
-    padding-bottom: 20px;
+
 }
 .why-us-container .container-header hr{
 
@@ -216,7 +229,6 @@ header .main-headers-wrapper{
 /****** we works *******/
 .we-works-container{
     background-color: #fedc3d;
-    padding-bottom: 60px;
 }
 
 .we-works-container .container-header hr{
@@ -263,8 +275,7 @@ header .main-headers-wrapper{
 .achievements-container,.partners-container{
     background: url("../img/photo-1512117789060-5de1ecef9eb7.jpg") no-repeat center/cover;
     background-attachment: fixed;
-    padding-top: 20px;
-    padding-bottom: 80px;
+
 }
 .achievements-row,.contacts-row{
     box-sizing: border-box;
@@ -325,8 +336,6 @@ header .main-headers-wrapper{
 
 /******** contacts ********/
 .contacts-container{
-    padding-top: 10px;
-    padding-bottom: 40px;
     background-color: #000;
 }
 .contacts-info ul{
