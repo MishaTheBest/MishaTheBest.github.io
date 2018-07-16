@@ -11,6 +11,11 @@
 
 </head>
 <body>
+<div class="preloader-wrapper align-items-center justify-content-center">
+    <div class="preloader">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+</div>
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
@@ -345,51 +350,49 @@
             </div>
         </div>
         <div class="row partners-row d-flex justify-content-center wow fadeIn">
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/logo.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/70253096_w0_h0_barabashovo_logo.jpg"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/avec.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/hmck.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/UEFA_Euro_2012_logo.png"></a>
             </div>
-            <div class="w-100"></div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/avec.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/logo.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/logo.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/logo.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/logo.png"></a>
             </div>
-            <div class="w-100"></div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/logo.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/70253096_w0_h0_barabashovo_logo.jpg"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/avec.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/hmck.png"></a>
             </div>
-            <div class="col-md-2 partner-elem d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-lg-2 partner-elem d-flex justify-content-center align-items-center">
                 <a href="#"><img src="img/UEFA_Euro_2012_logo.png"></a>
             </div>
         </div>
@@ -490,9 +493,11 @@
         });
     // Bind click handler to menu items
     // so we can get a fancy scroll animation
+    var navbarHeight = 80;
+    console.log(navbarHeight);
     menuItems.click(function(e) {
         var href = $(this).attr("href"),
-            offsetTop = href === "#" ? 0 : $(href).offset().top  + 1;
+            offsetTop = href === "#" ? 0 : $(href).offset().top - navbarHeight;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 1500);
@@ -500,7 +505,7 @@
     });
     $("#start-button").click(function(e) {
         var href = $(this).attr("href"),
-            offsetTop = href === "#" ? 0 : $(href).offset().top  + 1;
+            offsetTop = href === "#" ? 0 : $(href).offset().top  - navbarHeight;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 300);
@@ -525,6 +530,16 @@
                 .parent().removeClass("active")
                 .end().filter("[href='#" + id + "']").parent().addClass("active")
         }
+    });
+</script>
+<script>
+    $(window).on('load', function () {
+        $preloader = $('.preloader-wrapper'),
+            $loader = $preloader.find('.preloader');
+        setTimeout(function() {
+            $loader.fadeOut();
+            $preloader.delay(350).fadeOut('slow');
+        }, 2000);
     });
 </script>
 </body>

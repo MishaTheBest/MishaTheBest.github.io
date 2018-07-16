@@ -5,7 +5,8 @@ html,body{
 }
 .services-container,.why-us-container,
 .we-works-container,.achievements-container,
-.partners-container,.contacts-container{
+.partners-container,.contacts-container,
+.partners-inner-container{
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -92,7 +93,52 @@ html,body{
 }
 /******* end other **********/
 
+/******** preloader *********/
+.preloader-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fedc3d;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+}
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #000;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #000 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
+/****** end preloader ********/
 
 /********* navbar **********/
 .navbar-dark .navbar-toggler,.navbar-dark .navbar-toggler:focus,.navbar-dark .navbar-toggler:active {
@@ -197,7 +243,7 @@ header .main-headers-wrapper{
     margin-bottom: 20px;
 }
 .services-elem:nth-child(1n) img{
-    border: 2px solid #fea680;
+    border: 2px solid #000;
 }
 .services-elem:nth-child(2n) img{
     border: 2px solid #000;
@@ -213,16 +259,17 @@ header .main-headers-wrapper{
     //background-color: #86c232;
     background: url("../img/home-how-we-work.jpg") no-repeat center/cover;
     background-attachment: fixed;
+    padding-top: 60px;
 
 }
 .why-us-container .container-header hr{
-
+        border-top-color: #fedc3d;
 }
 .why-us-container>.container .main-services .main-services-elem{
     border-radius: 10px;
 }
 .why-us-container>.container .main-services{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 /******** end why us *********/
 
@@ -277,6 +324,9 @@ header .main-headers-wrapper{
     background-attachment: fixed;
 
 }
+.achievements-container hr{
+    border-top-color: #fedc3d;
+}
 .achievements-row,.contacts-row{
     box-sizing: border-box;
     border-top: 1px solid #fedc3d;
@@ -313,8 +363,7 @@ header .main-headers-wrapper{
     padding-bottom: 80px;
 }
 .partners-inner-container{
-    padding-top: 10px;
-    padding-bottom: 180px;
+
     background-color: #fedc3d;
     border-radius: 20px;
 }
@@ -324,6 +373,7 @@ header .main-headers-wrapper{
 }
 .partner-elem img{
     width: auto;
+    max-width: 100%;
     height: 50px;
     filter: grayscale(100%);
     transition: filter .3s ease-in;
@@ -337,6 +387,9 @@ header .main-headers-wrapper{
 /******** contacts ********/
 .contacts-container{
     background-color: #000;
+}
+.contacts-container hr{
+    border-top-color: #fedc3d;
 }
 .contacts-info ul{
     list-style: none;
