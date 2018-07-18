@@ -454,4 +454,8 @@ html,body{
     .text3 {
         font-size: 4rem;
     }
+    #party-bg, #peoples-bg, #peoples-bg-2{
+        height: 100%;
+        width: auto;
+    }
 }
