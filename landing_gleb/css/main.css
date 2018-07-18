@@ -81,12 +81,12 @@ html,body{
     width: 90px;
     background-color: #b8bdc1;
 }
-#peoples-bg,#peoples-bg-2{
+#party-bg,#peoples-bg,#peoples-bg-2{
     position: absolute;
     bottom: 0;
     width: 120%;
+    left: -10%;
     height: auto;
-    transition: transform 1s linear;
 }
 #peoples-bg-2{
     bottom: -300px;
