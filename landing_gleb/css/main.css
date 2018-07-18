@@ -208,7 +208,7 @@ html,body{
     font-family: "Seaweed Script";
     color: #fff;
     text-align: center;
-    font-size: 40px;
+    font-size: 2rem;
     position: relative;
     margin:0;
 }
@@ -239,13 +239,13 @@ html,body{
     background-color: white;
 }
 .text1 {
-    font-size: 60px;
+    font-size: 3rem;
 }
 .text2 {
-    font-size: 169px;
+    font-size: 10rem;
 }
 .text3 {
-    font-size: 100px;
+    font-size: 8rem;
 }
 
 /******** features-container ******/
@@ -437,4 +437,21 @@ html,body{
 
 .contacts-form input::-ms-input-placeholder,.contacts-form textarea::-ms-input-placeholder { /* Microsoft Edge */
     color:  #0eb493;
+}
+@media (max-width: 928px) {
+    html{
+        font-size: 20px;
+    }
+    .navbar-dark .navbar-brand{
+        transform: scale(0.7);
+    }
+    .text1 {
+        font-size: 2rem;
+    }
+    .text2 {
+        font-size: 5rem;
+    }
+    .text3 {
+        font-size: 4rem;
+    }
 }
