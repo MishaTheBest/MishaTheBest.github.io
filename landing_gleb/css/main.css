@@ -91,14 +91,14 @@ html,body{
 #peoples-bg-2{
     bottom: -300px;
 }
-/*** end other *********/
+
 
 
 /***** animations ********/
 .maxOpacity{
     opacity: 1.0 !important;
 }
-/**** end animations *******/
+
 
 /***** header *******/
 .header-container{
@@ -135,7 +135,7 @@ html,body{
     z-index: 3;
     color: white;
 }
-/**** end header ****/
+
 
 
 /******** features-container ******/
@@ -154,7 +154,6 @@ html,body{
     font-size: 0.8125rem;
     color: #4d606e;
 }
-/********* end features-container ******/
 
 /******* works *************/
 .works-row{
@@ -208,7 +207,6 @@ html,body{
     margin-top: 0;
     margin-bottom: 0;
 }
-/******* end works *********/
 
 /******** facts ***********/
 .facts-container{
@@ -256,4 +254,25 @@ html,body{
     margin-top: 15px;
     font-size: 3.33rem;
 }
-/****** end facts *********/
+/******* video-container *******/
+.video-container{
+    padding: 0;
+    position: relative;
+}
+.video-container video{
+    width: 100vw;
+    height: auto;
+
+}
+.video-container:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: radial-gradient(rgb(28, 105, 90), rgb(0, 0, 0));
+    opacity: .6;
+}
