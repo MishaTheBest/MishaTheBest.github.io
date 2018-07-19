@@ -24,25 +24,22 @@
                     <a class="nav-link" href="#home">Главная <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#services">Услуги</a>
+                    <a class="nav-link" href="#features">Услуги</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#advantage">Преимущества</a>
+                    <a class="nav-link" href="#works">Преимущества</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#achievements">Достижения</a>
+                    <a class="nav-link" href="#facts">Достижения</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link" href="#partners">Партенры</a>
-                </li>
-                <li class="nav-item text-center">
-                    <a class="nav-link" href="#contacts">Контакты</a>
+                    <a class="nav-link" href="#contacts">Партенры</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<header class="container-fluid header-container maxOpacity">
+<header class="container-fluid header-container maxOpacity" id="home">
     <img src="img/party-bg.jpg" id="party-bg">
     <img src="img/peoples.png" id="peoples-bg">
     <img src="img/peoples2.png" id="peoples-bg-2">
@@ -54,11 +51,13 @@
                 <p class="shadow-letters text2">PARTY</p>
                 <p class="shadow-letters text3">EVER!</p>
                 <p class="script"><span>events</span></p>
+                <i class="fa fa-arrow-circle-down" aria-hidden="true" id="start-btn"></i>
             </div>
+
         </div>
     </div>
 </header>
-<div class="container-fluid features-container">
+<div class="container-fluid features-container" id="features">
     <div class="container inner-container">
         <div class="row container-header text-center">
            <div class="col-12">
@@ -190,7 +189,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid works-container inner-container">
+<div class="container-fluid works-container inner-container" id="works">
 
         <div class="row container-header text-center">
             <div class="col-12">
@@ -269,7 +268,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid facts-container">
+<div class="container-fluid facts-container" id="facts">
     <div class="container inner-container">
         <div class="row container-header text-center">
             <div class="col-12">
@@ -319,7 +318,7 @@
 
     </div>
 </div>
-<div class="container-fluid contacts-container">
+<div class="container-fluid contacts-container" id="contacts">
     <div class="container inner-container">
         <div class="row container-header text-center">
             <div class="col-12">
@@ -367,23 +366,36 @@
                 </ul>
             </div>
             <div class="col-md-6 contacts-form">
-                <h5 class="form-header text-center">Напишите нам!</h5>
-                <form class="text-center" action="/feedback/send" method="post" id="feedback">
-                    <!--<input type="hidden" name="_token" value="KnD1vx4zcff9pDhEk4RR6XbgFjquUh5FdrFjilyb">-->
+                <h5 class="form-header text-center">Связаться с нами</h5>
+                <form class="text-center" action="/landing" method="post" id="feedback">
+                    <input type="hidden" name="_token" value="WNUr5b3KwkgbRhgH0YaNsvNRzwbBl1NDwsG69En9">                        <div class="form-group">
+                    <input type="text" class="form-control" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ" name="name" autocomplete="newname" required>
+                </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="InputName" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ" name="name" required>
+                        <input class="form-control" type="tel" placeholder="ВВЕДИТЕ ВАШ НОМЕР" id="phone" name="phone" autocomplete="off" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="tel" placeholder="ВВЕДИТЕ ВАШ НОМЕР" id="InputTel" name="phone" required>
+                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="ВВЕДИТЕ ВАШ EMAIL" autocomplete="newemail" name="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="ВВЕДИТЕ ВАШ EMAIL" name="email" required>
+                        <select class="form-control">
+                            <option selected disabled>Вид</option>
+                            <option>День рождения</option>
+                            <option>Корпоратив</option>
+                            <option>Свадьба</option>
+                            <option>Свидание</option>
+                            <option>Другое</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="Textarea" rows="3" placeholder="ОПИШИТЕ ВАШ ВОПРОС" name="text" required></textarea>
+                        <textarea class="form-control" rows="3" placeholder="ОПИШИТЕ ВАШ ВОПРОС" name="text" required></textarea>
                     </div>
+                    <!--<div class="alert alert-success" id="message" role="alert">-->
+
+                    <!--</div>-->
+
                     <div class="text-center">
-                        <button type="submit" class="colored-button draw">
+                        <button type="submit" class="colored-button draw" id="load">
                             <span>Отправить</span>
                         </button>
                     </div>
@@ -417,7 +429,14 @@
     // so we can get a fancy scroll animation
     menuItems.click(function(e) {
         var href = $(this).attr("href"),
-            offsetTop = href === "#" ? 0 : $(href).offset().top  + 1;
+            offsetTop = href === "#" ? 0 : $(href).offset().top  - 120;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 1500);
+        e.preventDefault();
+    });
+    $("#start-btn").click(function (e) {
+        let offsetTop = $("#features").offset().top  - 120;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 1500);
