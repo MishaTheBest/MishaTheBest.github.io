@@ -7,10 +7,6 @@ html,body{
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
 }
-.inner-container{
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
 .draw::before, .draw::after {
     box-sizing: inherit;
     content: '';
@@ -75,17 +71,17 @@ html,body{
 
 /******** navbar *****/
 .navbar{
-    background-color: #0eb493;
+    background-color: #0093b7;
 }
 .navbar-dark .navbar-nav .nav-link{
     position: relative;
-    color: rgb(255,255,255);
+    color: rgb(230,236,235);
     text-transform: uppercase;
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:active,
 .navbar-dark .navbar-nav .nav-link:focus{
-    color: rgb(255,255,255);
+    color: rgb(230,236,235);
 }
 .navbar-dark .navbar-nav .nav-link:after{
     content: '';
@@ -95,7 +91,7 @@ html,body{
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color:  rgb(255,255,255);
+    background-color: rgb(230,236,235);
     transform: scaleX(0);
     transition: transform .3s ease;
 }
@@ -105,8 +101,36 @@ html,body{
 .navbar-dark .navbar-nav .active .nav-link:after{
     transform: scaleX(.75);
 }
-/***** header *******/
 
+/******** main **********/
+.main-container{
+    background: url("../img/main.jpg") no-repeat center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.main-container:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: radial-gradient(rgba(0, 147, 183, 0.48), rgb(0, 0, 0));
+}
+.main-container>.inner-container{
+    position: relative;
+    z-index: 3;
+    color: #e6eceb;
+}
+.headers{
+    min-height: 700px;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+    color: #e6eceb;
+}
 @media (max-width: 928px) {
     html{
         font-size: 20px;
