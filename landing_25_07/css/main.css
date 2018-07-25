@@ -123,7 +123,7 @@ html,body{
     background-attachment: fixed;
     position: relative;
 }
-.main-container:after{
+.main-container:after,.offer-container:after{
     content: "";
     display: block;
     position: absolute;
@@ -150,6 +150,71 @@ html,body{
 }
 .last-header{
     margin-bottom: 60px;
+}
+/******* works *************/
+.works-row{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.works-elem-wrapper{
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+.works-elem-wrapper img{
+    width: 100%;
+    height: auto;
+}
+.works-elem-description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(14, 180, 147, 0.7);
+    opacity: .0;
+    transition: opacity .3s ease-in-out;
+}
+.works-elem-description hr{
+    border-top-color: white;
+    width: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.works-elem-description h5,.works-elem-description h6{
+    font-weight: bold;
+    color: white;
+    transition: margin .3s linear;
+}
+.works-elem-description h5{
+    margin-top: -50px;
+}
+.works-elem-description h6{
+    margin-bottom: -50px;
+}
+.works-elem-description h5{
+    text-transform: uppercase;
+}
+.works-elem-wrapper:hover .works-elem-description{
+    opacity: 1.0;
+}
+.works-elem-wrapper:hover .works-elem-description h5,
+.works-elem-wrapper:hover .works-elem-description h6{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/********* offer **********/
+.offer-container{
+    background-color: #005f89;
+    color: #e6eceb;
+}
+.offer-row{
+
+    min-height: 300px;
+}
+.offer-row p{
+    color: #e6eceb;
+    font-size: 1.6rem;
 }
 /********* advantages **********/
 .adv-elem-header{
