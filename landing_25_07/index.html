@@ -50,7 +50,8 @@
             <div class="col-12 text-center wow zoomIn">
                 <h1>Peugeot</h1>
                 <h2>and</h2>
-                <h1>Citroen</h1>
+                <h1 class="last-header">Citroen</h1>
+                <a href="#advantages" class="colored-button draw" id="start-btn">Подробнее</a>
             </div>
 
         </div>
@@ -115,7 +116,7 @@
         e.preventDefault();
     });
     $("#start-btn").click(function (e) {
-        let offsetTop = $("#features").offset().top  - 120;
+        let offsetTop = $("#advantages").offset().top  - 120;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 1500);
