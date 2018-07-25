@@ -3,6 +3,7 @@
 html,body{
     overflow-x: hidden;
     font-family: 'PT Sans', sans-serif;
+    color: #005f89;
 }
 .draw::before, .draw::after {
     box-sizing: inherit;
@@ -63,7 +64,7 @@ html,body{
 }
 
 .container-header{
-    padding-top: 75px;
+    padding-top: 25px;
     padding-bottom: 40px;
 }
 .container-header h3{
@@ -76,6 +77,10 @@ html,body{
     width: 50px;
     margin-top: 15px;
     margin-bottom: 10px;
+}
+.inner-container{
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 /***** animations ********/
 
@@ -133,6 +138,8 @@ html,body{
     position: relative;
     z-index: 3;
     color: #e6eceb;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .headers{
     min-height: 700px;
@@ -151,8 +158,61 @@ html,body{
     margin-top: 10px;
     margin-bottom: 5px;
 }
-.adv-elem-text{
+/************ focus ************/
+.focus-container{
+    background-color: #005f89;
+}
+.focus-container .row{
+    min-height: 300px;
+}
+.focus-container h1{
+    color: #e6eceb;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+/****** we works *******/
+.we-works-container{
+    background-color: white;
+    padding-bottom: 60px;
+}
 
+.we-works-container .container-header hr{
+    border-top-color: #1c2a33;
+}
+.we-works-elem{
+
+    margin-bottom: 10px;
+}
+.circle-works{
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: #005f89;
+    border: 2px solid #63cdd7;
+    position: relative;
+    text-align: center;
+}
+.we-works-elem:nth-child(2n) .circle-works{
+    background-color: #63cdd7;
+    border: 2px solid #005f89;
+}
+.circle-works span{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    color: #63cdd7;
+    line-height: 75px;
+    margin-left: 2px;
+}
+.we-works-elem:nth-child(2n) .circle-works span{
+    color: #005f89;
+}
+.we-works-elem-text p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    color: #005f89;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 @media (max-width: 928px) {
     html{
