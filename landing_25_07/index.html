@@ -123,7 +123,7 @@
                 <h5>и получи скидку на первую покупку 20%!</h5>
             </div>
             <div class="col-lg-2 text-center">
-                <a href="#advantages" class="colored-button draw" id="call-btn">Подробнее</a>
+                <a href="#contacts" class="colored-button draw" id="call-btn">Подробнее</a>
             </div>
         </div>
     </div>
@@ -359,6 +359,14 @@
         }, 1500);
         e.preventDefault();
     });
+    $("#call-btn").click(function (e) {
+        let offsetTop = $("#contacts").offset().top  - 120;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 1500);
+        e.preventDefault();
+    });
+
     // Bind to scroll
     $(window).scroll(function() {
         // Get container scroll position
