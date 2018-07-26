@@ -123,7 +123,7 @@ html,body{
 }
 /******** main **********/
 .main-container{
-    background: url("../img/main.jpg") no-repeat center/cover;
+    background: url("../img/main_1.jpg") no-repeat center/cover;
     background-attachment: fixed;
     position: relative;
 }
