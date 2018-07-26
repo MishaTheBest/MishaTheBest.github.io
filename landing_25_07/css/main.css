@@ -161,11 +161,11 @@ html,body{
 }
 /******* works *************/
 .works-container{
-    padding-bottom: 0;
+
 }
 .works-row{
     margin-top: 35px;
-    margin-bottom: 0;
+    margin-bottom: 35px;
 }
 .works-elem-wrapper{
     overflow: hidden;
@@ -315,6 +315,7 @@ html,body{
 .achievements-container{
     background-color: #005f89;
     color: #e6eceb;
+    padding-bottom: 65px;
 }
 .ach-elem-inner {
     width: 150px;
