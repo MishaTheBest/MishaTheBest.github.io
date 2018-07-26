@@ -16,8 +16,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                Brand
-                <!--<img src="img/logo.png" alt="logo">-->
+               <img src="img/logo.png" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,16 +27,19 @@
                         <a class="nav-link" href="#home">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item text-center">
+                        <a class="nav-link" href="#works">Новое</a>
+                    </li>
+                    <li class="nav-item text-center">
                         <a class="nav-link" href="#advantages">Преимущества</a>
                     </li>
                     <li class="nav-item text-center">
-                        <a class="nav-link" href="#works">Преимущества</a>
+                        <a class="nav-link" href="#achievements">Достижения</a>
                     </li>
                     <li class="nav-item text-center">
-                        <a class="nav-link" href="#facts">Достижения</a>
+                        <a class="nav-link" href="#we-works">Как мы работаем</a>
                     </li>
                     <li class="nav-item text-center">
-                        <a class="nav-link" href="#contacts">Партенры</a>
+                        <a class="nav-link" href="#contacts">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -46,11 +48,12 @@
 </header>
 <div class="container-fluid main-container" id="home">
     <div class="container inner-container">
-        <div class="row headers d-flex align-items-center justify-content-center">
-            <div class="col-12 text-center wow zoomIn">
-                <h1>Peugeot</h1>
-                <h2>and</h2>
-                <h1 class="last-header">Citroen</h1>
+        <div class="row headers d-flex align-items-end justify-content-center">
+            <div class="col-12 text-center wow zoomIn ">
+
+                <h1>Запчасти б/у</h1>
+                <h2>для автомобилей Peugeot & Citroen</h2>
+                <h1 class="last-header">в Харькове с доставкой по всей Украине</h1>
                 <a href="#advantages" class="colored-button draw" id="start-btn">Подробнее</a>
             </div>
 
@@ -100,10 +103,23 @@
         </div>
     </div>
 </div>
-<div class="container-fluid offer-container">
-    <div class="container inner-container">
-        <div class="row offer-row d-flex align-items-center justify-content-center">
-            <p>Продажа б/у запчастей для автомобилей пежо, ситроен в Харькове с доставкой по Украине</p>
+<!--<div class="container-fluid offer-container">-->
+    <!--<div class="container inner-container">-->
+        <!--<div class="row offer-row d-flex align-items-center justify-content-center">-->
+            <!--<p>Продажа б/у запчастей для автомобилей Peugeot, Citroen в Харькове с доставкой по Украине</p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="container-fluid focus-container">
+    <div class="container">
+        <div class="row d-flex align-items-center wow bounceInLeft">
+            <div class="col-lg-10 text-left">
+                <h1>Закажи прямо сейчас</h1>
+                <h5>и получи скидку на первую покупку 20%!</h5>
+            </div>
+            <div class="col-lg-2 text-center">
+                <a href="#advantages" class="colored-button draw" id="call-btn">Подробнее</a>
+            </div>
         </div>
     </div>
 </div>
@@ -134,21 +150,41 @@
         </div>
     </div>
 </div>
-<div class="container-fluid focus-container">
-    <div class="container">
-        <div class="row d-flex align-items-center wow bounceInLeft">
-           <div class="col-lg-10 text-center">
-               <h1>Закажи прямо сейчас!</h1>
-           </div>
-            <div class="col-lg-2 text-center">
-                <a href="#advantages" class="colored-button draw" id="call-btn">Подробнее</a>
+<div class="container-fluid achievements-container" id="achievements">
+    <div class="container inner-container">
+        <div class="row container-header">
+            <div class="col-12 text-center">
+                <h3>Достижения</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-lg-3 wow fadeInLeft ach-elem-wrapper d-flex align-items-center justify-content-center flex-column">
+                <div class="ach-elem-inner d-flex align-items-center justify-content-center flex-column">
+                    <h5>20</h5>
+                    <p>лет</p>
+                    <p>на рынке</p>
+                </div>
+            </div>
+            <div class="col-lg-3 wow fadeInLeft ach-elem-wrapper d-flex align-items-center justify-content-center flex-column">
+                <div class="ach-elem-inner d-flex align-items-center justify-content-center flex-column reverse-color">
+                    <h5>20</h5>
+                    <p>лет</p>
+                    <p>на рынке</p>
+                </div>
+            </div>
+            <div class="col-lg-3 wow fadeInLeft ach-elem-wrapper d-flex align-items-center justify-content-center flex-column">
+                <div class="ach-elem-inner d-flex align-items-center justify-content-center flex-column">
+                    <h5>500+</h5>
+                    <p>клиентов</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div class="container-fluid we-works-container">
     <div class="container inner-container">
-        <div class="row container-header text-center">
+        <div class="row container-header text-center" id="we-works">
             <div class="col-12">
                 <h3>Как мы работаем:</h3>
                 <hr>
@@ -218,29 +254,64 @@
         </div>
     </div>
 </div>
-<div class="container-fluid advantages-container" id="achievements">
+<div class="container-fluid contacts-container" id="contacts">
     <div class="container inner-container">
         <div class="row container-header">
             <div class="col-12 text-center">
-                <h3>Достижения</h3>
+                <h3>Контакты</h3>
                 <hr>
             </div>
         </div>
-        <div class="row justify-content-around">
-            <div class="col-lg-3 wow fadeInLeft adv-elem-wrapper d-flex align-items-center justify-content-center flex-column">
-                <img src="img/settings.png" alt="Сервис">
-                <h5 class="adv-elem-header">Сервис</h5>
-                <p class="adv-elem-text">Some text</p>
+        <div class="row contacts-row">
+            <div class="col-md-6 contacts-info d-flex justify-content-around align-items-center">
+                <ul>
+                    <li>
+                        <span class="contacts-info-header">
+                            E-mail:
+                        </span>
+                    </li>
+                    <li>
+                        <span class="contacts-info-inner">
+                            <a href="mailto:info@qoob-studio.com">info@example.com</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="contacts-info-header">
+                            Тел:
+                        </span>
+                    </li>
+                    <li>
+                        <span class="contacts-info-inner">
+                           <a href="tel:+38095111111">+38095123141</a>
+                        </span>
+                    </li>
+                </ul>
             </div>
-            <div class="col-lg-3 wow fadeInDown adv-elem-wrapper d-flex align-items-center justify-content-center flex-column">
-                <img src="img/protection.png" alt="Защита">
-                <h5 class="adv-elem-header">Защита</h5>
-                <p class="adv-elem-text">Some text</p>
-            </div>
-            <div class="col-lg-3 wow fadeInRight adv-elem-wrapper d-flex align-items-center justify-content-center flex-column">
-                <img src="img/24-hours.png" alt="Поддержка">
-                <h5 class="adv-elem-header">Поддержка</h5>
-                <p class="adv-elem-text">Some text</p>
+            <div class="col-md-6 contacts-form">
+                <h5 class="form-header text-center">Связаться с нами</h5>
+                <form class="text-center" action="server.php" method="post" id="feedback">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ" name="name" autocomplete="newname" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="tel" placeholder="ВВЕДИТЕ ВАШ НОМЕР" id="phone" name="phone" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="ВВЕДИТЕ ВАШ EMAIL" autocomplete="newemail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="ОПИШИТЕ ВАШ ВОПРОС" name="text" required></textarea>
+                    </div>
+                    <div class="alert" id="message" role="alert">
+
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="colored-button draw" id="load">
+                            <span>Отправить</span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -277,7 +348,7 @@
         e.preventDefault();
     });
     $("#start-btn").click(function (e) {
-        let offsetTop = $("#advantages").offset().top  - 120;
+        let offsetTop = $("#works").offset().top  - 120;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 1500);

@@ -46,6 +46,7 @@ html,body{
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 .colored-button{
+    display: inline-block;
     border: none;
     text-transform: uppercase;
     font-size: 0.8125rem;
@@ -56,6 +57,7 @@ html,body{
     transition: all .3s ease-in-out,color 0.25s ;
     position: relative;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .colored-button:hover,.colored-button:active,.colored-button:focus{
     color: #005f89;
@@ -116,7 +118,9 @@ html,body{
 .navbar-dark .navbar-nav .active .nav-link:after{
     transform: scaleX(.75);
 }
-
+.navbar-brand img{
+    max-height: 60px;
+}
 /******** main **********/
 .main-container{
     background: url("../img/main.jpg") no-repeat center/cover;
@@ -142,19 +146,26 @@ html,body{
     padding-bottom: 0;
 }
 .headers{
-    min-height: 700px;
+    min-height: 900px;
     height: 100vh;
     position: relative;
     z-index: 3;
     color: #e6eceb;
 }
 .last-header{
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+}
+.main-logo{
+    margin-bottom: 150px;
+    margin-top: 100px;
 }
 /******* works *************/
+.works-container{
+    padding-bottom: 0;
+}
 .works-row{
     margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 0;
 }
 .works-elem-wrapper{
     overflow: hidden;
@@ -171,7 +182,7 @@ html,body{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(14, 180, 147, 0.7);
+    background-color: rgba(0, 147, 215, 0.7);
     opacity: .0;
     transition: opacity .3s ease-in-out;
 }
@@ -205,16 +216,31 @@ html,body{
 }
 /********* offer **********/
 .offer-container{
-    background-color: #005f89;
+    background: url("../img/parts.jpg") no-repeat center/cover;
+    background-attachment: fixed;
     color: #e6eceb;
+    position: relative;
+}
+.offer-container:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: radial-gradient(rgba(0, 147, 183, 0.7), rgb(0, 0, 0));
 }
 .offer-row{
-
+    position: relative;
+    z-index: 3;
     min-height: 300px;
 }
 .offer-row p{
     color: #e6eceb;
     font-size: 1.6rem;
+    font-weight: bold;
 }
 /********* advantages **********/
 .adv-elem-header{
@@ -232,9 +258,15 @@ html,body{
 }
 .focus-container h1{
     color: #e6eceb;
-    font-size: 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
 }
+.focus-container h5{
+    color: #e6eceb;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 /****** we works *******/
 .we-works-container{
     background-color: white;
@@ -278,6 +310,95 @@ html,body{
     color: #005f89;
     font-weight: bold;
     margin-bottom: 0;
+}
+/************ achievements **********/
+.achievements-container{
+    background-color: #005f89;
+    color: #e6eceb;
+}
+.ach-elem-inner {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: #005f89;
+    color: #63cdd7;
+    border: 2px solid #63cdd7;
+}
+.ach-elem-inner h5{
+    font-size: 3rem;
+    margin-bottom: -5px;
+}
+.ach-elem-inner p{
+    margin: 0;
+    padding: 0;
+}
+.achievements-container .reverse-color{
+    background-color: #63cdd7;
+    color: #005f89;
+    border: 2px solid #005f89;
+}
+/******** contacts ********/
+.contacts-container{
+    background-color: #005f89;
+    color: #e6eceb;
+}
+
+.contacts-info ul{
+    list-style: none;
+}
+.contacts-info a{
+    text-decoration: none;
+    color: #e6eceb;
+}
+.contacts-info ul li{
+    color: #e6eceb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contacts-info ul li span{
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+.contacts-info-header{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.contacts-row>div{
+    margin-bottom: 40px;
+}
+.form-header{
+    color: #e6eceb;
+    font-weight: bold;
+}
+.contacts-form textarea{
+    resize: none;
+}
+.contacts-form input,.contacts-form textarea,
+.contacts-form input:focus,.contacts-form textarea:focus,
+.contacts-form input:active,.contacts-form textarea:active,
+.contacts-form select,.contacts-form select:focus,.contacts-form select:active{
+    border: 1px solid #e6eceb;
+    background-color: #005f89;
+    box-shadow: none;
+    color: #e6eceb;
+}
+.contacts-form input::placeholder,.contacts-form textarea::placeholder,
+.contacts-form input:focus::placeholder,.contacts-form textarea:focus::placeholder,
+.contacts-form input:active::placeholder,.contacts-form textarea:active::placeholder{
+    color:  #e6eceb;
+    opacity: 1; /* Firefox */
+}
+
+.contacts-form input:-ms-input-placeholder,.contacts-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e6eceb;
+}
+
+.contacts-form input::-ms-input-placeholder,.contacts-form textarea::-ms-input-placeholder { /* Microsoft Edge */
+    color:  #e6eceb;
+}
+
+#message {
+    display: none;
 }
 @media (max-width: 928px) {
     html{
