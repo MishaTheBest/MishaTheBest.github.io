@@ -5,6 +5,7 @@ html,body{
     font-family: 'PT Sans', sans-serif;
     color: #005f89;
 }
+
 .draw::before, .draw::after {
     box-sizing: inherit;
     content: '';
@@ -120,6 +121,28 @@ html,body{
 }
 .navbar-brand img{
     max-height: 60px;
+}
+.society{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.society-btn{
+    margin-bottom: 10px;
+}
+.society img{
+    width: 40px;
+    height: 40px;
+    transition: transform .3s ease-in;
+}
+.society a:hover img{
+    transform: scale(1.2);
 }
 /******** main **********/
 .main-container{
@@ -251,9 +274,11 @@ html,body{
 /************ focus ************/
 .focus-container{
     background-color: #005f89;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .focus-container .row{
-    min-height: 300px;
+    min-height: 200px;
 }
 .focus-container h1{
     color: #e6eceb;
@@ -409,5 +434,12 @@ html,body{
     }
     .headers h1,.headers h2{
         font-size: 1.3rem;
+    }
+    .focus-container h1,.focus-container h5{
+        text-align: center ;
+    }
+    .ach-elem-wrapper{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
