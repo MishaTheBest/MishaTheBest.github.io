@@ -2,7 +2,11 @@ $(document).ready(function() {
     $('#phone').mask("+38 (999) 999-9999");
     let loadBtn = $('#load');
     let messageBtn = $('#message');
-
+    let giftContainer  = document.querySelector("#gift-container");
+    let giftBtn = document.querySelector("#gift_button");
+    giftBtn.addEventListener("click",function () {
+        giftContainer.classList.remove("show-gift-container");
+    });
     $('#feedback').submit(function(event) {
         event.preventDefault();
         $.ajax({
@@ -25,11 +29,13 @@ $(document).ready(function() {
             },
             error: function () {
                 toggleMessage('Произошла ошибка. Проверьте ввод!');
+                giftContainer.classList.add("show-gift-container");
             },
             complete: function () {
                 loadBtn.html('Отправить').prop('disabled', false);
                 $('#feedback input, #feedback textarea').val("");
-                $('#kind').prop('selected', true)
+                $('#kind').prop('selected', true);
+                giftContainer.classList.add("show-gift-container");
             }
         });
     });
