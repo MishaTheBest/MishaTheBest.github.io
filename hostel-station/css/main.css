@@ -165,3 +165,11 @@
 
 
 }
+@media (max-width: 928px) {
+    .callback-btn{
+        display: none;
+    }
+    #slider-control{
+        display: none;
+    }
+}
