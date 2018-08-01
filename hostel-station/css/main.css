@@ -29,12 +29,14 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     outline: none;
 }
-.container-header h2{
-    font-size: 1.667rem;
+
+.container-header h2 {
+    font-size: 1.875rem;
     color: #00a025;
     margin-top: 35px;
     margin-bottom: 30px;
 }
+
 /********* header **********/
 .navbar-light {
     background-color: #fff;
@@ -97,6 +99,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     top: 200vh;
     bottom: 0;
 }
+
 #main-slider .active {
     transition-delay: .3s;
     display: block;
@@ -179,12 +182,15 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     height: inherit;
 
 }
-#datepicker{
+
+#datepicker {
     padding: 9px;
 }
+
 .form-control::-webkit-input-placeholder {
     color: #000;
 }
+
 .booking-form-inner {
     border-radius: 9px;
     padding: 40px 15px;
@@ -235,34 +241,41 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .stairs {
     animation: stairs-anim 2s linear infinite;
 }
+
 /********** advantages ************/
-.advantages-container{
+.advantages-container {
     background: white;
 }
-.adv-row{
+
+.adv-row {
     padding-top: 25px;
 }
-.adv-elem-wrapper{
+
+.adv-elem-wrapper {
     min-height: 200px;
     margin-bottom: 50px;
 }
-.adv-elem-wrapper h6{
+
+.adv-elem-wrapper h6 {
     color: #00a025;
     font-size: 1rem;
     font-weight: bold;
 }
+
 /********** prices **********/
-.main-hotel-image-wrapper{
+.main-hotel-image-wrapper {
     position: relative;
     border-radius: 9px;
 }
-.main-hotel-image-wrapper img{
+
+.main-hotel-image-wrapper img {
     min-height: 370px;
     width: 100%;
     height: auto;
 
 }
-.image-photo-description{
+
+.image-photo-description {
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     position: absolute;
@@ -274,26 +287,30 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     margin: 0 15px;
     border-bottom: 1px solid white;
 }
-.decoration-circle-wrapper{
+
+.decoration-circle-wrapper {
     position: absolute;
     padding-right: 50px;
     height: 100%;
     right: 0;
     top: 0;
 }
-.decoration-circle{
-    background-color: rgba(255,255,255,.7);
+
+.decoration-circle {
+    background-color: rgba(255, 255, 255, .7);
     width: 16px;
     height: 16px;
     border-radius: 8px;
     margin-bottom: 3px;
 }
-.image-photo-description h6{
+
+.image-photo-description h6 {
     color: #fff;
     z-index: 3;
     padding-right: 85px;
 }
-.left-arrow-circle{
+
+.left-arrow-circle {
     cursor: pointer;
     background-color: #fff;
     width: 40px;
@@ -301,20 +318,47 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     border-radius: 20px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
-.left-arrow-circle .fa{
+
+.left-arrow-circle .fa {
     line-height: 40px;
     font-size: 30px;
     color: #00a025;
 }
-.photo-preview{
+
+.photo-preview {
     margin-top: 13px;
+}
+.hotel-description-wrapper h3 {
+    color: #00a025;
+    font-size: 1.875rem;
+    margin-bottom: 35px;
+}
+
+.hotel-description-wrapper p {
+    font-size: 1rem;
+    color: #231f20;
+    margin-bottom: 23px;
+}
+.convenience-row>.col-6{
+    margin-bottom: 23px;
+}
+.convenience-description {
+    margin-left: 22px;
+    font-size: 0.875rem;
+}
+.price-hotel{
+    font-size: 1rem;
+    color: #00a025;
+}
+.price-hotel strong{
+    font-size: 1.875rem;
 }
 @media (max-width: 993px) {
     .callback-btn {
         display: none;
     }
 
-    #slider-control,.slider-control-inner{
+    #slider-control, .slider-control-inner {
         display: none !important;
     }
 
