@@ -27,6 +27,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     color: #fefffe;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    outline: none;
 }
 .container-header h2{
     font-size: 1.667rem;
@@ -178,7 +179,12 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     height: inherit;
 
 }
-
+#datepicker{
+    padding: 9px;
+}
+.form-control::-webkit-input-placeholder {
+    color: #000;
+}
 .booking-form-inner {
     border-radius: 9px;
     padding: 40px 15px;
@@ -245,9 +251,36 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     font-size: 1rem;
     font-weight: bold;
 }
-
-
-
+/********** prices **********/
+.main-hotel-image-wrapper{
+    position: relative;
+    border-radius: 9px;
+}
+.main-hotel-image-wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
+.image-photo-description{
+    border-radius: 9px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 80px;
+    background-color: rgba(0, 160, 37, 0.70);
+    padding: 0 35px;
+    border-bottom: 1px solid white;
+}
+.image-photo-description h6{
+    color: #fff;
+    z-index: 3;
+}
+.left-arrow-circle{
+    background-color: ;
+}
 @media (max-width: 993px) {
     .callback-btn {
         display: none;
