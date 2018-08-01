@@ -28,7 +28,12 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
-
+.container-header h2{
+    font-size: 1.667rem;
+    color: #00a025;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
 /********* header **********/
 .navbar-light {
     background-color: #fff;
@@ -73,6 +78,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: url("../img/main_background.png") no-repeat center/cover;
 }
 
 #main-slider > div {
@@ -85,11 +91,13 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all .6s linear;
-    top: 100vh;
+    transition: top .6s linear;
+    transition-delay: .6s;
+    top: 200vh;
+    bottom: 0;
 }
-
 #main-slider .active {
+    transition-delay: .3s;
     display: block;
     top: 0;
 }
@@ -107,7 +115,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 }
 
 #main-slider .slider-inner:last-child {
-    background-image: url("../img/main_background.png");
+    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
 }
 
 #slider-control {
@@ -192,6 +200,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .icons {
     position: absolute;
     bottom: 40px;
+    z-index: 10;
 }
 
 .icons a:nth-child(2) {
@@ -220,14 +229,32 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .stairs {
     animation: stairs-anim 2s linear infinite;
 }
+/********** advantages ************/
+.advantages-container{
+    background: white;
+}
+.adv-row{
+    padding-top: 25px;
+}
+.adv-elem-wrapper{
+    min-height: 200px;
+    margin-bottom: 50px;
+}
+.adv-elem-wrapper h6{
+    color: #00a025;
+    font-size: 1rem;
+    font-weight: bold;
+}
 
-@media (max-width: 928px) {
+
+
+@media (max-width: 993px) {
     .callback-btn {
         display: none;
     }
 
-    #slider-control {
-        display: none;
+    #slider-control,.slider-control-inner{
+        display: none !important;
     }
 
     .navbar .container {
