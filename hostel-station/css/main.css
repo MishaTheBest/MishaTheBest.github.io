@@ -291,6 +291,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .image-photo-description h6{
     color: #fff;
     z-index: 3;
+    padding-right: 85px;
 }
 .left-arrow-circle{
     cursor: pointer;
