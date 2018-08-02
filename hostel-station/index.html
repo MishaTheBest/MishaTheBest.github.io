@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/datepicker.min.css">
 </head>
 <body>
-<nav class="navbar navbar-light navbar-expand-lg fixed-top">
+<nav class="navbar navbar-light navbar-expand-xl fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -265,17 +265,76 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 text-center-mob">
                         <span class="price-hotel">
                             <strong>300</strong> грн/ночь
                         </span>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 text-center-mob">
                         <button type="submit" class="main-button align-self-center">Забронировать</button>
                     </div>
                 </div>
             </div>
 
+        </div>
+    </div>
+</div>
+<div class="container-fluid services-container">
+    <div class="row container-header">
+        <div class="col-12 text-center">
+            <h2>Дополнительные услуги</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 serv-elem-wrapper d-flex align-items-center justify-content-center flex-column">
+                <img src="img/wifi.png" alt="wi-fi">
+                <h6>WI FI</h6>
+            </div>
+            <div class="col-lg-3 serv-elem-wrapper d-flex align-items-center justify-content-center flex-column">
+                <img src="img/aero.png" alt="кондиционер">
+                <h6>Кондиционер</h6>
+            </div>
+            <div class="col-lg-3 serv-elem-wrapper d-flex align-items-center justify-content-center flex-column">
+                <img src="img/breakfast.png" alt="Завтрак">
+                <h6>Завтрак</h6>
+            </div>
+            <div class="col-lg-3 serv-elem-wrapper d-flex align-items-center justify-content-center flex-column">
+                <img src="img/washer.png" alt="Стирка">
+                <h6>Стирка</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid reviews-container">
+    <div class="row container-header">
+        <div class="col-12 text-center">
+            <h2>Отзывы</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1 left-arrow d-flex align-items-center justify-content-end">
+                <div class="left-arrow-circle text-center">
+                    <i class="fa fa-angle-left" aria-hidden="true" id="prev-review"></i>
+                </div>
+            </div>
+            <div class="col-10 reviews-wrapper">
+                <div class="row">
+                    <div class="col-lg-6 review-wrapper">
+                        <div class="row">
+                            <div class="col-12 review-header">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 right-arrow d-flex align-items-center justify-content-start">
+                <div class="left-arrow-circle text-center">
+                    <i class="fa fa-angle-right" aria-hidden="true" id="next-review"></i>
+                </div>
+            </div>
         </div>
     </div>
 </div>

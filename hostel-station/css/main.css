@@ -263,6 +263,9 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 }
 
 /********** prices **********/
+.price-container{
+    padding-bottom: 50px;
+}
 .main-hotel-image-wrapper {
     position: relative;
     border-radius: 9px;
@@ -283,11 +286,13 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     left: 0;
     min-height: 80px;
     background-color: rgba(0, 160, 37, 0.70);
-    padding: 0 35px;
     margin: 0 15px;
     border-bottom: 1px solid white;
 }
-
+.image-photo-description h6{
+    /*margin-left: 35px;*/
+    /*margin-right: 85px;*/
+}
 .decoration-circle-wrapper {
     position: absolute;
     padding-right: 50px;
@@ -307,7 +312,8 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .image-photo-description h6 {
     color: #fff;
     z-index: 3;
-    padding-right: 85px;
+    margin-left: 35px;
+    margin-right: 85px;
 }
 
 .left-arrow-circle {
@@ -328,6 +334,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .photo-preview {
     margin-top: 13px;
 }
+
 .hotel-description-wrapper h3 {
     color: #00a025;
     font-size: 1.875rem;
@@ -353,17 +360,45 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .price-hotel strong{
     font-size: 1.875rem;
 }
+/*********** services *********/
+.services-container{
+    padding-bottom: 65px;
+}
+.serv-elem-wrapper img{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.serv-elem-wrapper h6{
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 30px;
+}
 @media (max-width: 993px) {
+
     .callback-btn {
         display: none;
     }
 
-    #slider-control, .slider-control-inner {
+    #slider-control, .slider-control-inner,.decoration-circle-wrapper {
         display: none !important;
     }
 
     .navbar .container {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .hotel-description-wrapper{
+        margin-top: 35px;
+    }
+    .image-photo-description h6{
+        margin:0 5px;
+    }
+    .main-hotel-image-wrapper img{
+        min-height: 200px;
+    }
+}
+@media (max-width: 768px){
+    .text-center-mob{
+        text-align: center !important;
     }
 }
