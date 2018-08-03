@@ -373,6 +373,52 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     color: black;
     margin-bottom: 30px;
 }
+/********** reviews *******/
+.review-header{
+    color: #00a025;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 12px;
+}
+.review-header .postdate{
+    font-size: 0.875rem;
+}
+/*.review-header,.stars-wrapper{*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+/*}*/
+.stars-wrapper{
+    margin-bottom: 12px;
+}
+.star .fa{
+    font-size: 1.4rem;
+    color: #5bc273;
+}
+.star{
+    margin-right: 10px;
+    display: inline-block;
+}
+/*.review-paragraph{*/
+    /*padding-left: 0;*/
+/*}*/
+.review-paragraph{
+    font-size: 0.75rem;
+    color: #231f20;
+    margin-bottom: 40px;
+}
+
+.review-wrapper{
+    border-radius: 9px;
+    box-shadow: 0 8px 10px rgba(134, 134, 134, 0.36);
+
+}
+.review-wrapper>.row{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.reviews-container{
+    margin-bottom: 85px;
+}
 @media (max-width: 993px) {
 
     .callback-btn {
@@ -395,6 +441,9 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     }
     .main-hotel-image-wrapper img{
         min-height: 200px;
+    }
+    .reviews-wrapper>.row>div{
+        margin-bottom: 35px;
     }
 }
 @media (max-width: 768px){
