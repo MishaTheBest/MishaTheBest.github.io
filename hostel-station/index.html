@@ -24,16 +24,16 @@
                     <a class="nav-link" href="#home">Главная <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#features">Преимущества</a>
+                    <a class="nav-link" href="#advantages">Преимущества</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#works">Номера и цены</a>
+                    <a class="nav-link" href="#prices">Номера и цены</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#facts">Доп. услуги</a>
+                    <a class="nav-link" href="#services">Доп. услуги</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contacts">Отзывы</a>
+                    <a class="nav-link" href="#reviews">Отзывы</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contacts">Контакты</a>
@@ -45,7 +45,7 @@
         </a>
     </div>
 </nav>
-<div class="container-fluid main-container">
+<div class="container-fluid main-container" id="home">
     <div class="row align-items-center justify-content-center" id="main-slider">
         <div class="col-12 slider-inner active">
 
@@ -125,7 +125,7 @@
             </a>
         </div>
         <div class="stairs-wrapper d-flex justify-content-center">
-            <div class="stairs">
+            <div class="stairs" id="start-btn">
                 <img src="img/icon.png">
             </div>
         </div>
@@ -133,7 +133,7 @@
     </div>
 
 </div>
-<div class="container-fluid advantages-container">
+<div class="container-fluid advantages-container" id="advantages">
     <div class="row container-header">
         <div class="col-12 text-center">
             <h2>Преимущества хостела <strong>“Station”</strong></h2>
@@ -160,7 +160,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid price-container">
+<div class="container-fluid price-container" id="prices">
     <div class="row container-header">
         <div class="col-12 text-center">
             <h2>Номера и цены</h2>
@@ -279,7 +279,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid services-container">
+<div class="container-fluid services-container" id="services">
     <div class="row container-header">
         <div class="col-12 text-center">
             <h2>Дополнительные услуги</h2>
@@ -313,7 +313,7 @@
         </div>
     </div>
     <div class="container mt-5">
-        <div class="row">
+        <div class="row" id="reviews">
             <div class="col-1 left-arrow d-flex align-items-center justify-content-end">
                 <div class="left-arrow-circle text-center">
                     <i class="fa fa-angle-left" aria-hidden="true" id="prev-review"></i>
@@ -414,9 +414,72 @@
         </div>
     </div>
 </div>
+<div class="container-fluid contacts-container" id="contacts">
+    <div class="row container-header">
+        <div class="col-12 text-center">
+            <h2>Контакты</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 offset-lg-1 map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.899132484897!2d36.27561993956782!3d49.97420024980566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270b03479f59c3%3A0x5a1a6fcafef07b9!2sqoob-studio!5e0!3m2!1sru!2sua!4v1533290468648" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-5">
+                <ul class="contacts-info-list">
+                    <li><img src="img/location.png">г. Харьков, пр. Правды 10</li>
+                    <li><a href="#"><img src="img/insta-gr.png">nailme_kharkov</a></li>
+                    <li><a href="#"><img src="img/fb-gr.png">vk.com/nailme_kh</a></li>
+                    <li><a href="tel:+380633613613"><img src="img/message-gr.png">+38 (063) 3 613 613</a></li>
+                </ul>
+                <div class="contact-form">
+                    <h5 class="form-header text-center">Бесплатная консультация</h5>
+                    <form class="text-center" action="/" method="post" id="feedback">
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label text-left">Имя:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" id="name"
+                                       autocomplete="newname" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="phone"  class="col-sm-2 col-form-label text-left">Телефон:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="tel" id="phone"
+                                       name="phone" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <!--<div class="form-group">-->
+                            <!--<input type="email" class="form-control" aria-describedby="emailHelp"-->
+                                   <!--placeholder="E-Mail" autocomplete="newemail" name="email" required>-->
+                        <!--</div>-->
+                        <div class="form-group row">
+                            <label for="text" class="col-sm-12 text-left no-border">Комментарий:</label>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" rows="1" name="text" id="text"
+                                          required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="alert d-none" id="message" role="alert">
+
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="main-button align-self-center" id="load">
+                                <span>Отправить</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="js/slider.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -426,5 +489,6 @@
         crossorigin="anonymous"></script>
 <script src="js/datepicker.min.js"></script>
 <script src="js/booking.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>
