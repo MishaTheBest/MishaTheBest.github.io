@@ -457,6 +457,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 #feedback input,#feedback textarea{
     border: none;
     transition: border .3s linear;
+    border-radius: 0;
 }
 #feedback textarea{
     resize: none;
@@ -515,6 +516,12 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     }
     .reviews-wrapper>.row>div{
         margin-bottom: 35px;
+    }
+    .reviews-container .fa{
+        display: none;
+    }
+    #feedback label{
+        border: none!important;
     }
 }
 @media (max-width: 768px){
