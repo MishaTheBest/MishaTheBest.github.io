@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/lightslider.css">
 </head>
 <body>
 <nav class="navbar navbar-light navbar-expand-xl fixed-top">
@@ -171,53 +172,71 @@
             <div class="col-lg-8 hotel-photo-slider">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-2 left-arrow d-flex align-items-center justify-content-end">
-                        <div class="left-arrow-circle text-center">
-                            <i class="fa fa-angle-left" aria-hidden="true" id="prev-slide-hotel"></i>
+                        <div class="left-arrow-circle text-center" id="prev-slide-hotel">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <div class="col-8 main-hotel-image-wrapper">
-                        <div class="image-photo-description d-flex align-items-center">
-                            <h6>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh </h6>
-                            <div class="decoration-circle-wrapper d-flex align-items-center flex-column justify-content-center">
-                                <div class="decoration-circle">
+                    <div class="col-lg-8">
 
-                                </div>
-                                <div class="decoration-circle">
-
-                                </div>
-                            </div>
+                        <div class="clearfix" style="max-width:100%">
+                            <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                <li data-thumb="img/hotel-inner.png" class="text-center">
+                                    <img src="img/hotel-inner.png" />
+                                </li>
+                                <li data-thumb="img/hotel-inner.png" class="text-center">
+                                    <img src="img/hotel-inner.png" />
+                                </li>
+                                <li data-thumb="img/hotel-inner.png" class="text-center">
+                                    <img src="img/hotel-inner.png" />
+                                </li>
+                            </ul>
                         </div>
-                        <img src="img/hotel-inner.png" alt="Hostel Station">
+
                     </div>
+                    <!--<div class="col-8 main-hotel-image-wrapper">-->
+                        <!--<div class="image-photo-description d-flex align-items-center">-->
+                            <!--<h6>Lorem ipsum dolor sit amet, consectetuer-->
+                                <!--adipiscing elit, sed diam nonummy nibh </h6>-->
+                            <!--<div class="decoration-circle-wrapper d-flex align-items-center flex-column justify-content-center">-->
+                                <!--<div class="decoration-circle">-->
+
+                                <!--</div>-->
+                                <!--<div class="decoration-circle">-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<img src="img/hotel-inner.png" alt="Hostel Station">-->
+                    <!--</div>-->
                     <div class="col-2 right-arrow d-flex align-items-center justify-content-start">
-                        <div class="left-arrow-circle text-center">
-                            <i class="fa fa-angle-right" aria-hidden="true" id="next-slide-hotel"></i>
+                        <div class="left-arrow-circle text-center" id="next-slide-hotel">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-2">
+                <!--<div class="row">-->
+                    <!--<div class="col-2">-->
 
-                    </div>
-                    <div class="col-8">
-                        <div class="row">
-                            <div class="col-4 photo-preview">
-                                <img src="img/hotel-inner.png" class="img-fluid">
-                            </div>
-                            <div class="col-4 photo-preview">
-                                <img src="img/hotel-inner.png" class="img-fluid">
-                            </div>
-                            <div class="col-4 photo-preview">
-                                <img src="img/hotel-inner.png" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
+                    <!--</div>-->
+                    <!--<div class="col-8">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-4 photo-preview">-->
+                                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
+                            <!--</div>-->
+                            <!--<div class="col-4 photo-preview">-->
+                                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
+                            <!--</div>-->
+                            <!--<div class="col-4 photo-preview">-->
+                                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-2">-->
 
-                    </div>
-                </div>
+                    <!--</div>-->
+                <!--</div>-->
             </div>
+
             <div class="col-lg-4 hotel-description-wrapper d-flex justify-content-between flex-column">
                 <div class="row">
                     <div class="col-12">
@@ -614,5 +633,31 @@
 <script src="js/booking.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/review.js"></script>
+<script src="js/lightslider.js"></script>
+<script>
+    $(document).ready(function() {
+       const slider = $('#image-gallery').lightSlider({
+            gallery:true,
+            item:1,
+            thumbItem:3,
+            slideMargin: 0,
+            speed:500,
+            auto:true,
+            controls: false,
+            loop:true,
+            onSliderLoad: function() {
+                $('#image-gallery').removeClass('cS-hidden');
+            },
+        });
+        document.getElementById("prev-slide-hotel").addEventListener("click",function () {
+            slider.goToPrevSlide();
+        });
+        document.getElementById("next-slide-hotel").addEventListener("click",function () {
+            slider.goToNextSlide();
+        });
+
+    });
+
+</script>
 </body>
 </html>

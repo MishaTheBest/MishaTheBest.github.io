@@ -534,11 +534,19 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     #reviews-wrapper>.row>div{
         margin-bottom: 35px;
     }
-    .reviews-container .left-arrow-circle,.reviews-container .left-arrow-circle{
+    .reviews-container .left-arrow-circle,.reviews-container .left-arrow-circle,
+    #prev-slide-hotel,#next-slide-hotel{
         display: none;
     }
     #feedback label{
         border: none!important;
+    }
+    .form-header,.contacts-info-list{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .contact-form{
+        padding-left: 0;
     }
 }
 @media (max-width: 768px){
