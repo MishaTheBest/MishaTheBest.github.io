@@ -409,11 +409,9 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     color: #231f20;
     margin-bottom: 40px;
 }
-
 .review-wrapper{
     border-radius: 9px;
     box-shadow: 0 8px 10px rgba(134, 134, 134, 0.36);
-
 }
 .review-wrapper>.row{
     margin-left: 15px;
@@ -423,18 +421,24 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     margin-bottom: 85px;
 }
 /*********** review slider **********/
-#reviews-wrapper{
-    position: relative;
-    overflow-x: hidden;
+@media (min-width: 993px){
+    #reviews-wrapper{
+        position: relative;
+        overflow-x: hidden;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: -15px;
+        padding-right: 30px;
+    }
+    #reviews-wrapper>.row{
+        width: inherit;
+        transition: transform 1s linear;
+    }
+    .review-element{
+        max-width: 50vw;
+    }
+}
 
-}
-#reviews-wrapper>.row{
-    width: inherit;
-    transition: transform 1s linear;
-}
-.review-element{
-    max-width: 50vw;
-}
 /********* contacts **********/
 .contacts-container{
     margin-bottom: 75px;
