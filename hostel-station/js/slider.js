@@ -19,9 +19,7 @@ function nextSlide() {
     prevShowedSlide = slides[activeSlideNum];
     prevShowedSlide.classList.remove("active");
     activeSlideNum>=maxSlideNum-1?activeSlideNum=0:activeSlideNum++;
-    console.log(activeSlideNum);
     slides[activeSlideNum].classList.add("active");
-
     setActiveSlide();
 }
 

@@ -422,6 +422,19 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 .reviews-container{
     margin-bottom: 85px;
 }
+/*********** review slider **********/
+#reviews-wrapper{
+    position: relative;
+    overflow-x: hidden;
+
+}
+#reviews-wrapper>.row{
+    width: inherit;
+    transition: transform 1s linear;
+}
+.review-element{
+    max-width: 50vw;
+}
 /********* contacts **********/
 .contacts-container{
     margin-bottom: 75px;
@@ -514,10 +527,10 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     .main-hotel-image-wrapper img{
         min-height: 200px;
     }
-    .reviews-wrapper>.row>div{
+    #reviews-wrapper>.row>div{
         margin-bottom: 35px;
     }
-    .reviews-container .fa{
+    .reviews-container .left-arrow-circle,.reviews-container .left-arrow-circle{
         display: none;
     }
     #feedback label{
