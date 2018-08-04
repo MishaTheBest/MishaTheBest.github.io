@@ -24,7 +24,7 @@ for (let i = 0; i < reviewsLength; i++) {
 }
 function nextReview() {
     count++;
-    translateX -= (reviewWidth + 15);
+    translateX -= (reviewWidth + 30);
     if(count>=reviewsLength){
         translateX = 0;
         count = 1;
@@ -34,9 +34,9 @@ function nextReview() {
 }
 function previousReview() {
     count--;
-    translateX += (reviewWidth + 15);
+    translateX += (reviewWidth) + 30;
     if(count<=1){
-        translateX = (reviewsLength-2) * (reviewWidth + 15)*-1;
+        translateX = (reviewsLength-2) * (reviewWidth + 30)*-1 ;
         count = reviewsLength;
     }
     console.log(translateX,count);
