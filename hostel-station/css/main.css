@@ -96,16 +96,16 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: top .6s linear;
-    transition-delay: .6s;
-    top: 200vh;
+    transition: transform 1.8s linear;
+    /*transition-delay: .9s;*/
+    transform: translate3d(0,100vh,0);
     bottom: 0;
 }
 
 #main-slider .active {
-    transition-delay: .3s;
+    /*transition-delay: .9s;*/
     display: block;
-    top: 0;
+    transform: translate3d(0,0,0);
 }
 
 #main-slider .slider-inner:first-child {
@@ -113,15 +113,32 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 }
 
 .slider-inner:nth-child(2) {
-    background: url("https://st3.depositphotos.com/10654668/14113/i/450/depositphotos_141134008-stock-photo-red-roses-on-table.jpg");
+    background: url("../img/DSC02676.jpg");
 }
 
 .slider-inner:nth-child(3) {
-    background: url("https://www.imgonline.com.ua/examples/rainbow-background-5-big.jpg");
+    background: url("../img/DSC02793.jpg");
 }
-
-#main-slider .slider-inner:last-child {
-    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+.slider-inner:nth-child(4) {
+    background: url("../img/DSC02815.jpg");
+}
+.slider-inner:nth-child(5) {
+    background: url("../img/DSC02860.jpg");
+}
+.slider-inner:nth-child(6) {
+    background: url("../img/DSC02886.jpg");
+}
+.slider-inner:nth-child(7) {
+    background: url("../img/DSC02962.jpg");
+}
+.slider-inner:nth-child(8) {
+    background: url("../img/DSC02974.jpg");
+}
+.slider-inner:nth-child(9) {
+    background: url("../img/DSC02994.jpg");
+}
+.slider-inner:nth-child(10) {
+    background: url("../img/DSC03298.jpg");
 }
 
 #slider-control {

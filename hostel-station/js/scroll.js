@@ -29,7 +29,7 @@ $("#start-btn").click(function (e) {
 // Bind to scroll
 $(window).scroll(function () {
     // Get container scroll position
-    var fromTop = $(this).scrollTop() + 600;
+    var fromTop = $(this).scrollTop() + 500;
     // Get id of current scroll item
     var cur = scrollItems.map(function () {
         if ($(this).offset().top < fromTop)
