@@ -194,7 +194,7 @@ input:-webkit-autofill:focus {
 }
 
 .area-title h2 {
-    color: #1a264a;
+    color: #101010;
     line-height: 1;
     margin-bottom: 45px;
     padding-bottom: 35px;
@@ -203,13 +203,13 @@ input:-webkit-autofill:focus {
 }
 
 .area-title h2 span {
-    color: #1193d4;
+    color: #000;
 }
 
 .icon-and-border {
     background: #fff none repeat scroll 0 0;
     border-radius: 50%;
-    color: #1193d4;
+    color: #000;
     display: inline-block;
     height: 40px;
     left: 0;
@@ -223,7 +223,7 @@ input:-webkit-autofill:focus {
 }
 
 .area-title h2::after {
-    border-bottom: 2px dashed #1a264a;
+    border-bottom: 2px dashed #101010;
     bottom: 0;
     content: "";
     height: 2px;
@@ -250,7 +250,7 @@ input:-webkit-autofill:focus {
     background: #ffffff none repeat scroll 0 0;
     border: 2px solid;
     border-radius: 5px;
-    color: #1193d4;
+    color: #000;
     display: inline-block;
     font-weight: 700;
     margin-top: 10px;
@@ -259,8 +259,8 @@ input:-webkit-autofill:focus {
 }
 
 .read-more:hover {
-    background: #1193d4 none repeat scroll 0 0;
-    border-color: #1193d4;
+    background: #000 none repeat scroll 0 0;
+    border-color: #000;
     color: #fff;
 }
 
@@ -815,11 +815,11 @@ input:-webkit-autofill:focus {
 }
 
 .blue-bg {
-    background: #1193d4;
+    background: #000;
 }
 
 .dark-blue-bg {
-    background: #1291CA;
+    background: #000;
 }
 
 .dark-bg {
@@ -851,9 +851,9 @@ input:-webkit-autofill:focus {
 }
 
 .area-bg::before {
-    background: #1193d4 none repeat scroll 0 0;
+    background: url("img/home/geometry-dark.jpg") no-repeat center/cover;
+    background-attachment: fixed;
 }
-
 /*-----------------------
     SHADOW & BORDER
 ------------------------*/
@@ -951,7 +951,7 @@ input:-webkit-autofill:focus {
 -----------------------*/
 
 .search-collapse-area {
-    background: #1193d4 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     border-top: 1px solid;
 }
 
@@ -987,7 +987,7 @@ input:-webkit-autofill:focus {
 
 .search-form button:hover {
     background: #fff none repeat scroll 0 0;
-    color: #1193d4;
+    color: #000;
 }
 
 .search-form::before {
@@ -1056,7 +1056,7 @@ input:-webkit-autofill:focus {
     border-bottom: 0 none;
     border-top: 0 none;
     margin-bottom: 0;
-    background-color: #1193d4;
+    background-color: white;
 }
 @media screen and (min-width: 1200px){
     #top-bar .navbar-collapse{
@@ -1077,24 +1077,52 @@ input:-webkit-autofill:focus {
 .is-sticky .navbar-brand > img {
     max-width: 80%;
 }
-.nav>li>a,.nav>li>a:focus,.nav>li>a:active{
-    transition: all .5s;
-    color: white;
+.nav>li>a{
+    position: relative;
+    background-color: white;
     text-transform: uppercase;
-    background-color: transparent;
 }
-.nav>li>a:hover,.nav>.active{
-    background-color: #d32c7d;
-    color: white;
+.nav>li>a:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    margin-bottom: 1px;
+    background-color: black;
+    width: 100%;
+    transition: transform .3s linear;
+    transform: scaleX(0);
+}
+.nav>li>a:hover{
+    background-color: white;
+}
+.nav>li>a:hover:before{
+    transform: scaleX(.75);
+}
+.nav>li>a:focus,.nav>li>a:active{
+    background-color: white;
+}
+.nav>.active a:before{
+    transform: scaleX(.75);
+}
+.nav>li>a,.nav>li>a:active,nav>li>a:focus{
+    color: black;
+    background-color: white;
+}
+.nav>li>a:hover,.nav>.active a{
+
+
 }
 @media (max-width: 991px){
     .navbar-header .collapse, .navbar-toggle {
-        border: 2px solid #d32c7d;
+        border: 2px solid #000;
         border-radius: 0;
         display: block !important;
     }
     .navbar-toggle .icon-bar {
-        background: #d32c7d none repeat scroll 0 0;
+        background: #000 none repeat scroll 0 0;
     }
 }
 /*ul#nav {
@@ -1145,7 +1173,7 @@ ul#nav li.active a {
 }
 
 .is-sticky .mainmenu-area {
-    background: #1193d4;
+    background: #000;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     z-index: 99999;
@@ -1265,7 +1293,7 @@ ul#nav li ul a,
 }
 
 .welcome-slider-area .owl-nav > div {
-    background: #1193d4 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     bottom: 0;
     display: inline-block;
     font-size: 35px;
@@ -1281,7 +1309,7 @@ ul#nav li ul a,
 
 .welcome-slider-area .owl-nav > div:hover {
     background: #fff none repeat scroll 0 0;
-    color: #1193d4;
+    color: #000;
 }
 
 /*----------------------------
@@ -1341,7 +1369,7 @@ ul#nav li ul a,
 .sign-up:hover {
     background: #ffffff none repeat scroll 0 0;
     border-color: #ffffff;
-    color: #1aabec;
+    color: black;
 }
 
 
@@ -1358,7 +1386,7 @@ ul#nav li ul a,
 }
 
 .qs-box-icon i {
-    border: 1px solid #1193d4;
+    border: 1px solid #000;
     color: #292929;
     font-size: 30px;
     height: 60px;
@@ -1370,8 +1398,8 @@ ul#nav li ul a,
 }
 
 .qs-box:hover .qs-box-icon i {
-    background: #1193d4 none repeat scroll 0 0;
-    border-color: #1193d4;
+    background: #000 none repeat scroll 0 0;
+    border-color: #000;
     color: #ffffff;
 }
 
@@ -1443,7 +1471,7 @@ ul#nav li ul a,
 
 .app-area .qs-box-icon i {
     border-radius: 50%;
-    color: #1193d4;
+    color: #000;
 }
 
 /*--------------------------------
@@ -1459,7 +1487,7 @@ ul#nav li ul a,
 }
 
 .video-area .area-bg::after {
-    background: rgba(0, 0, 0, 0) linear-gradient(120deg, transparent 50%, #1193d4 50%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(120deg, transparent 50%, #000 50%) repeat scroll 0 0;
     opacity: 0.9;
 }
 
@@ -1495,7 +1523,7 @@ ul#nav li ul a,
 .video-area-popup:hover {
     background: #fff none repeat scroll 0 0;
     border-color: #fff;
-    color: #1193d4;
+    color: #000;
 }
 
 .video-play-button h3 {
@@ -1510,9 +1538,9 @@ ul#nav li ul a,
 ---------------------------------*/
 
 .line-border {
-    border-bottom: 1px solid #1193d4;
-    border-left: 1px solid #1193d4;
-    border-right: 1px solid #1193d4;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
     height: 50px;
     left: 50%;
     position: absolute;
@@ -1522,8 +1550,8 @@ ul#nav li ul a,
 }
 
 .line-border::before {
-    border-right: 1px solid #1193d4;
-    border-top: 1px solid #1193d4;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
     content: "";
     height: 10px;
     left: -9px;
@@ -1539,7 +1567,7 @@ ul#nav li ul a,
 .line-border::after {
     -webkit-animation: 1s ease 0s normal none infinite running dot_animation;
     animation: 1s ease 0s normal none infinite running dot_animation;
-    background: #1193d4 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     border-radius: 50%;
     content: "";
     height: 25px;
@@ -1673,7 +1701,7 @@ ul#nav li ul a,
 .download-button:hover {
     background: #fff none repeat scroll 0 0;
     border-color: #fff;
-    color: #1193d4;
+    color: #000;
 }
 
 /*-------------------------------
@@ -1694,7 +1722,7 @@ ul#nav li ul a,
 }
 
 .member-name-and-designation h3::after {
-    border-bottom: 4px double #1193d4;
+    border-bottom: 4px double #000;
     bottom: 0;
     content: "";
     height: 4px;
@@ -1710,9 +1738,9 @@ ul#nav li ul a,
 
 .member-details-content .social-bookmark li a {
     border-radius: 50%;
-    -webkit-box-shadow: 0 0 0 2px #1193d4 inset;
-    box-shadow: 0 0 0 2px #1193d4 inset;
-    color: #1a264a;
+    -webkit-box-shadow: 0 0 0 2px #000 inset;
+    box-shadow: 0 0 0 2px #000 inset;
+    color: #101010;
     font-size: 22px;
     height: 50px;
     margin: 0 5px;
@@ -1722,8 +1750,8 @@ ul#nav li ul a,
 }
 
 .member-details-content .social-bookmark li a:hover {
-    -webkit-box-shadow: 0 0 0 30px #1193d4 inset;
-    box-shadow: 0 0 0 30px #1193d4 inset;
+    -webkit-box-shadow: 0 0 0 30px #000 inset;
+    box-shadow: 0 0 0 30px #000 inset;
     color: #fff;
 }
 
@@ -1739,7 +1767,7 @@ ul#nav li ul a,
 }
 
 .team-member-thumb-menu ul li::after {
-    background: #1193d4 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -1814,8 +1842,8 @@ ul#nav li ul a,
 }
 
 .testmonial-area .owl-dots > div.active {
-    background: #1193d4 none repeat scroll 0 0;
-    border-color: #1193d4;
+    background: #000 none repeat scroll 0 0;
+    border-color: #000;
 }
 
 /*---------------------------------
@@ -1841,7 +1869,7 @@ ul#nav li ul a,
 }
 
 .price-rate h2 {
-    color: #1193d4;
+    color: #000;
     font-family: open sans;
     font-size: 70px;
     margin-bottom: 0;
@@ -1896,11 +1924,11 @@ ul#nav li ul a,
 }
 
 .single-blog a:hover {
-    color: #1193d4;
+    color: #000;
 }
 
 .blog-details h4 a:hover {
-    color: #1193d4;
+    color: #000;
 }
 
 .blog-meta {
@@ -1923,7 +1951,7 @@ ul#nav li ul a,
     font-size: 18px;
     letter-spacing: 1px;
     margin-top: 15px;
-    color: #1193d4
+    color: #000
 }
 
 .blog-details a.readmore:hover {
@@ -1935,7 +1963,7 @@ ul#nav li ul a,
 ----------------------------------*/
 
 .contact-area .area-bg::before {
-    background: #45b9f2 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     width: 50%;
 }
 
@@ -1956,7 +1984,7 @@ ul#nav li ul a,
 }
 
 .contact-form button {
-    background: #1193d4 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     border: 0 none;
     color: #fff;
     letter-spacing: 1px;
@@ -1998,7 +2026,7 @@ ul#nav li ul a,
 }
 
 .subscriber-form button {
-    background: #2abaef none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     border: 0 none;
     border-radius: 50px;
     height: 100%;
@@ -2012,7 +2040,7 @@ ul#nav li ul a,
 }
 
 .subscriber-form button:hover {
-    background: #1193d4 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
 }
 
 label.mt10 {
@@ -2025,7 +2053,7 @@ label.mt10 {
 
 label.mt10.valid {
     bottom: 18px;
-    color: #2abaef;
+    color: #000;
     left: 0;
     position: absolute;
     right: 0;
