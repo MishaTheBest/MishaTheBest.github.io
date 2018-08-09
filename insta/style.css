@@ -1,42 +1,3 @@
-/*--------------------------------------------------------------------------------------
-Theme Name: MASSIVE
-Theme URI: http://quomodosoft.com
-Author URI: http://quomodosoft.com
-Description: 100% Responsive, Highly Customizable, SEO Friendly Apps Landing HTML5 template using Twitter Bootstrap Latest, Search Engine Friendly.
-Author: OCREATES
-Version: 1.0
-----------------------------------------------------------------------------------------
-    1. BASE CSS
-    2. TOP AREA
-        2.1 MAINMENU AREA
-    3. WELCOME TEXT AREA
-    3. ABOUT AREA
-    4. SERVICE TOP AREA
-    5. APP AREA
-    6. VIDEO AREA
-    7. WORK AREA
-    8. SCREENSHOT AREA
-    9. DOWNLOAD AREA
-    10. TEAM AREA
-    11. INFO AREA
-    12. TESTMONIAL AREA
-    13. PRICE AERA
-    14. BLOG AREA
-    15. CONTACT AREA
-    16. FOOTER AREA
-    17. SCROLL TO TOP AREA
-    18. HOME TWO
-        18.1 HOME TWO VIDEO PROMO
-        18.2 HOME TWO VIDEO AREA
-        18.3 HOME TWO SUBSCRIBER AREA
-        18.4 HOME TWO FOOTER AREA
-    19. STYLE TWO TEAM AREA
-    20. TEAM STYLE THREE
-    21. TESTMONIAL STYLE THREE
-    22. FAQS AREA
-    22. BLOG PAGES
-----------------------------------------------------------------------------------------*/
-
 /*--------------------
     1. BASE CSS
 ----------------------*/
@@ -1087,7 +1048,6 @@ input:-webkit-autofill:focus {
 }
 
 .navbar-header {
-    margin-top: 14px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -1096,20 +1056,47 @@ input:-webkit-autofill:focus {
     border-bottom: 0 none;
     border-top: 0 none;
     margin-bottom: 0;
+    background-color: #1193d4;
 }
+@media screen and (min-width: 1200px){
+    #top-bar .navbar-collapse{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .navbar-brand{
     padding: 0;
 }
 .navbar-brand > img {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    margin: 5px 20px;
 }
 
 .is-sticky .navbar-brand > img {
     max-width: 80%;
 }
-
+.nav>li>a,.nav>li>a:focus,.nav>li>a:active{
+    transition: all .5s;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+.nav>li>a:hover,.nav>.active{
+    background-color: #d32c7d;
+    color: white;
+}
+@media (max-width: 991px){
+    .navbar-header .collapse, .navbar-toggle {
+        border: 2px solid #d32c7d;
+        border-radius: 0;
+        display: block !important;
+    }
+    .navbar-toggle .icon-bar {
+        background: #d32c7d none repeat scroll 0 0;
+    }
+}
 /*ul#nav {
     float: right;
     -webkit-transition: 0.3s;
@@ -1395,7 +1382,7 @@ ul#nav li ul a,
 .features-top-area .qs-box h3 {
     font-size: 18px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .qs-box.pos-icon-left {

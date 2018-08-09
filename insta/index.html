@@ -60,39 +60,28 @@
     <header class="top-area" id="home">
         <div class="header-top-area">
             <!--MAINMENU AREA-->
-            <div class="mainmenu-area" id="mainmenu-area">
-                <div class="mainmenu-area-bg"></div>
-                <nav class="navbar">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a href="#home" class="navbar-brand"><img src="img/logo.png" alt="logo" style="height: inherit"></a>
-                        </div>
-                        <div id="main-nav" class="stellarnav">
-                            <ul id="nav" class="nav">
-                                <li class="active"><a href="#home">Главная</a></li>
-                                <li><a href="#features">Услуги</a></li>
-                                <li><a href="#app">Преимущеста</a></li>
-                                <li><a href="#screenshot">Фото</a></li>
-                                <li><a href="#client">Отзывы</a></li>
-                                <li><a href="#team">О нас</a></li>
-                                <li><a href="#pricing">Pricing</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </div>
+            <div id="top-bar" class="navbar navbar-fixed-top">
+                <!--data-spy="affix" data-offset-top="440"-->
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#home"><img src="img/logo.png" alt="logo" style="height: 50px;width: auto"></a>
                     </div>
-                </nav>
-                <div id="search-form-switcher" class="search-collapse-area collapse white">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-xs-12">
-                                <div class="white">
-                                    <form action="#" class="search-form">
-                                        <input type="search" name="search" id="search" placeholder="Search Here..">
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a class="nav-link" href="#home">Главная</a></li>
+                            <li><a class="nav-link" href="#features">Услуги</a></li>
+                            <li><a class="nav-link" href="#app">Преимущеста</a></li>
+                            <li><a class="nav-link" href="#screenshot">Фото</a></li>
+                            <li><a class="nav-link" href="#client">Отзывы</a></li>
+                            <li><a class="nav-link" href="#team">О нас</a></li>
+                            <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                            <li><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -113,7 +102,7 @@
                                 <h1>Приветствуем тебя</h1>
                                 <p>Интернет Агентство Виталия Яблочкина - это опытная команда специалистов в области маркетинга, создании сайта, SEO оптимизации и дизайна</p>
                                 <div class="home-button">
-                                    <a href="#features">Подробнее</a>
+                                    <a href="#features" id="start-btn">Подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +119,7 @@
             <div class="row">
                 <div class="col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2>welcome to <span>app features</span></h2>
+                        <h2>Наши <span>услуги</span></h2>
                         <span class="icon-and-border"><i class="material-icons">phone_android</i></span>
                         <p>Rapidiously monetize state of the art ROI rather than quality. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim neque aliquid.</p>
                     </div>
@@ -140,31 +129,67 @@
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="qs-box relative mb50 center wow fadeInUp" data-wow-delay="0.2s">
                         <div class="qs-box-icon">
-                            <i class="material-icons">cloud_off</i>
+                            <i class="material-icons">camera_alt</i>
                         </div>
-                        <h3>Premium Quality</h3>
-                        <p>Lorem Ipsum is a simply dummy texts of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                        <a href="#" class="read-more">Learn More</a>
+                        <h3>Реклама и продвижение в соц.сетях</h3>
+                        <p>Привлекаем в ваш бизнес клиентов, повышаем продажи, раскручиваем аккаунт, тем самым набирая кол-во ваших подписчиков, работаем исключительно на целевую аудиторию, ту которая нужна вам.
+                            Работаем с соц. сетями Вконтакте, Instagram, Facebook</p>
+
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="qs-box relative mb50 center  wow fadeInUp" data-wow-delay="0.3s">
                         <div class="qs-box-icon">
-                            <i class="material-icons">forum</i>
+                            <i class="material-icons">web</i>
                         </div>
-                        <h3>Chat with love</h3>
-                        <p>Lorem Ipsum is a simply dummy texts of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                        <a href="#" class="read-more">Learn More</a>
+                        <h3>Cоздание сайтов</h3>
+                        <p>Сеть давно перестала быть для человека развлечением, сегодня это эффективный инструмент успешной реализации бизнес идей. Поэтому в современной реальности нужна качественная разработка сайта, ведь это актуально и очень востребовано. Создание сайта – своего собственного ресурса в сети, первый этап на пути построения успешного бизнеса.</p>
+
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="qs-box relative mb50 center  wow fadeInUp" data-wow-delay="0.4s">
                         <div class="qs-box-icon">
-                            <i class="material-icons">3d_rotation</i>
+                            <i class="material-icons">brush</i>
                         </div>
-                        <h3>3d Display</h3>
-                        <p>Lorem Ipsum is a simply dummy texts of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                        <a href="#" class="read-more">Learn More</a>
+                        <h3>Дизайн</h3>
+                        <p>Создание афиши, логотипа, визитки</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="qs-box relative mb50 center wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="qs-box-icon">
+                            <i class="material-icons">text_fields</i>
+                        </div>
+                        <h3>Нейминг. Создание оригинального имени</h3>
+                        <p>Не можете придумать для вашего кафе, ресторана или бизнеса оригинальное название или имя? Мы вам с этим поможем.
+                            Правильно выбранное название выполняет сразу несколько задач любого бизнеса
+                            Помогает привлечь внимание нужной целевой аудитории к новому продукту или проекту. Очевидно, что нельзя привлечь сразу всех. У каждого товара есть свои потребители. И правильное название станет для вашего клиента ярким маяком в море одинаковых предложений
+                            Помогает закрепить образ продукта в памяти потенциального клиента, «запасть в душу» потребителя. И когда настанет момент, первым, о чём он вспомнит, будет ваше предложение.
+                            Вызывает доверие клиента. Если ему нравится название, и он его запомнил, то он автоматически начинает доверять вам.
+                            Укрепляет позиции продукта на рынке аналогичных товаров или услуг.</p>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="qs-box relative mb50 center  wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="qs-box-icon">
+                            <i class="material-icons">receipt</i>
+                        </div>
+                        <h3>Разработка контент-плана, контент-менеджер</h3>
+                        <p>Нуждаетесь в качественно написанном контент-плане и человеке, который это все будет делать? Мы вам с этим поможем!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="qs-box relative mb50 center  wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="qs-box-icon">
+                            <i class="material-icons">trending_up</i>
+                        </div>
+                        <h3>SEO Оптимизация вашего сайта</h3>
+                        <p>Вам нужно создать поток новых клиентов из Яндекса? Мы разработаем и запустим максимально эффективную рекламную кампанию «Яндекс.Директ»
+                            Вам нужно создать поток новых клиентов из Google? Мы разработаем и запустим максимально эффективную рекламную кампанию «Google Adwords». Создание рекламной кампании «Google Adwords»</p>
                     </div>
                 </div>
             </div>
@@ -193,8 +218,9 @@
                                 <div class="qs-box-icon">
                                     <i class="material-icons">camera_alt</i>
                                 </div>
-                                <h3>Awesome Beauty Camera</h3>
-                                <p>Your looks great on any device. Connect this app any device. Can be easily read and a user understands freely what you wanted to say him or her.</p>
+                                <h4>Реклама и продвижение в соц.сетях</h4>
+                                <p>Привлекаем в ваш бизнес клиентов, повышаем продажи, раскручиваем аккаунт, тем самым набирая кол-во ваших подписчиков, работаем исключительно на целевую аудиторию, ту которая нужна вам.
+                                    Работаем с соц. сетями Вконтакте, Instagram, Facebook</p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
@@ -202,16 +228,18 @@
                                 <div class="qs-box-icon">
                                     <i class="fa fa-cubes"></i>
                                 </div>
-                                <h3>Live Chat Support</h3>
+                                <h4>Live Chat Support</h4>
                                 <p>Your looks great on any device. Connect this app any device. Can be easily read and a user understands freely what you wanted to say him or her.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                             <div class="qs-box relative mb50 left  wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="qs-box-icon">
                                     <i class="fa fa-comments"></i>
                                 </div>
-                                <h3>Live Chat Support</h3>
+                                <h4>Live Chat Support</h4>
                                 <p>Your looks great on any device. Connect this app any device. Can be easily read and a user understands freely what you wanted to say him or her.</p>
                             </div>
                         </div>
@@ -220,7 +248,7 @@
                                 <div class="qs-box-icon">
                                     <i class="fa fa-tv"></i>
                                 </div>
-                                <h3>Retina Ready</h3>
+                                <h4>Retina Ready</h4>
                                 <p>Your looks great on any device. Connect this app any device. Can be easily read and a user understands freely what you wanted to say him or her.</p>
                             </div>
                         </div>
@@ -781,6 +809,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!--===== ACTIVE JS=====-->
     <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 
 </html>
