@@ -1410,7 +1410,10 @@ ul#nav li ul a,
 /*--------------------------------
     5. APP AREA
 ----------------------------------*/
-
+#app{
+    background: url("img/home/geometry-light.png") no-repeat center/cover;
+    background-attachment: fixed;
+}
 .high-light {
     color: #292929;
     font-weight: 700;
