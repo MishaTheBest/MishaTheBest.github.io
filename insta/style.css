@@ -935,13 +935,13 @@ input:-webkit-autofill:focus {
 }
 
 .top-area .area-bg {
-    background: rgba(0, 0, 0, 0) url("img/promo/promo-bg.jpg") no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) no-repeat scroll center center / cover;
 }
 
 .top-area .area-bg::after {
     background: rgba(0, 0, 0, 0) url("img/home/home-wave.svg") no-repeat scroll center center / cover;
     bottom: -59px;
-    height: 166px;
+    height: 206px;
     top: auto;
     z-index: 9;
 }
@@ -2139,7 +2139,7 @@ label.mt10.valid {
 }
 
 .scrolltotop:hover {
-    background: #1193d4;
+    background: #000;
     color: #ffffff;
 }
 
@@ -3067,4 +3067,23 @@ label.mt10.valid {
 .single-widget.instafeed li {
     float: left;
     width: 33.33%;
+}
+
+
+@media (max-width: 991px) and (min-width: 768px){
+
+    .navbar-toggle .icon-bar {
+        background: #000 none repeat scroll 0 0 !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        border: 2px solid #000 !important;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-nav{
+        text-align: center;
+    }
+    .nav-link:hover:before,  .nav>.active a:before{
+        transform: scaleX(.3) !important;
+    }
 }
