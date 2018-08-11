@@ -938,13 +938,13 @@ input:-webkit-autofill:focus {
     background: rgba(0, 0, 0, 0) no-repeat scroll center center / cover;
 }
 
-.top-area .area-bg::after {
-    background: rgba(0, 0, 0, 0) url("img/home/home-wave.svg") no-repeat scroll center center / cover;
-    bottom: -59px;
-    height: 206px;
-    top: auto;
-    z-index: 9;
-}
+/*.top-area .area-bg::after {*/
+    /*background: rgba(0, 0, 0, 0) url("img/home/wave.png") no-repeat scroll center center / cover;*/
+    /*bottom: -59px;*/
+    /*height: 206px;*/
+    /*top: auto;*/
+    /*z-index: 9;*/
+/*}*/
 
 /*----------------------
     TOP BAR
@@ -1337,8 +1337,26 @@ ul#nav li ul a,
 
 .welcome-mockup img {
     width: 60%;
+    animation: levitation 10s ease-in-out infinite;
+    transition: all .3s linear;
 }
+.welcome-mockup img:hover{
 
+}
+@keyframes levitation {
+    from{
+        transform: translate3d(0,0,0);
+    }
+    20%{
+        transform: translate3d(0,5%,0);
+    }
+    70%{
+        transform: translate3d(0,-10%,0);
+    }
+    to{
+        transform: translate3d(0,0,0);
+    }
+}
 
 .welcome-text h4 {
     font-size: 20px;
@@ -1405,6 +1423,10 @@ ul#nav li ul a,
 
 .qs-box-icon img {
     width: 50px;
+}
+.features-top-area{
+    background: url("img/home/geometry-light.png") no-repeat center/cover;
+
 }
 
 .features-top-area .qs-box h3 {
@@ -1849,7 +1871,24 @@ ul#nav li ul a,
 /*---------------------------------
     13. PRICE AERA
 -----------------------------------*/
+.file_block{
+    overflow: hidden;
+    background: none repeat scroll 0 0 #FFFFFF;
+    position: relative;
+    transition: height 0.8s ease-out 0s;
+    -moz-transition: height 0.8s ease-out 0s;
+    -webkit-transition: height 0.8s ease-out 0s;
+    -o-transition: height 0.8s ease-out 0s;
+}
 
+.file_block iframe {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.show_docs span {
+    cursor: pointer;
+}
 .single-price {
     background: #ffffff none repeat scroll 0 0;
     -webkit-box-shadow: 0 0 10px #dddfe0;
