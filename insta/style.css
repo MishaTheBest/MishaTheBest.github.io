@@ -1871,24 +1871,6 @@ ul#nav li ul a,
 /*---------------------------------
     13. PRICE AERA
 -----------------------------------*/
-.file_block{
-    overflow: hidden;
-    background: none repeat scroll 0 0 #FFFFFF;
-    position: relative;
-    transition: height 0.8s ease-out 0s;
-    -moz-transition: height 0.8s ease-out 0s;
-    -webkit-transition: height 0.8s ease-out 0s;
-    -o-transition: height 0.8s ease-out 0s;
-}
-
-.file_block iframe {
-    border: 1px solid #000;
-    padding: 10px;
-}
-
-.show_docs span {
-    cursor: pointer;
-}
 .single-price {
     background: #ffffff none repeat scroll 0 0;
     -webkit-box-shadow: 0 0 10px #dddfe0;
