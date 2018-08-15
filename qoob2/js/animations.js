@@ -36,10 +36,11 @@ function FirstStep() {
         },1000);
 }
 function secondStep() {
-    rightMainBlockImg.style.left = "-10%";
-    rightMainBlockImg.style.transform = "rotate(-45deg)";
-    setTimeout(function () {
 
+    rightMainBlockImg.transition = "all 3s ease-in-out";
+    setTimeout(function () {
+        rightMainBlockImg.style.left = "-10%";
+        rightMainBlockImg.style.transform = "rotate(-45deg)";
         mainContent.style.display = 'block';
         let offsetTop = $("#main-content").offset().top;
         $('html, body').stop().animate({
@@ -84,3 +85,8 @@ $(window).bind('mousewheel', function (e) {
 });
 
 
+/********* portfolio **********/
+
+$('.card').on('click', function() {
+    $('.cards-container').toggleClass('container-origin');
+})
