@@ -12,7 +12,7 @@ let activeText = 0;
 let animationStep = 0;
 function FirstStep() {
     $("#play-btn").fadeOut(100, function () {
-        this.display = "none !important";
+
     });
     leftMainBlock.style.transform = "translate3d(-50vw,0,0)";
     leftMainBlock.classList.remove("col-5");
@@ -46,7 +46,8 @@ function secondStep() {
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 1500);
-    },1000)
+    },1000);
+
 }
 function showHeadersText(num){
     if(num===0){
@@ -89,4 +90,20 @@ $(window).bind('mousewheel', function (e) {
 
 $('.card').on('click', function() {
     $('.cards-container').toggleClass('container-origin');
-})
+});
+/********* advantages *************/
+
+const advBg = document.querySelector(".adv-bg");
+console.log(advBg);
+let advElements = advBg.querySelectorAll(".adv-bg-elem");
+advBg.addEventListener("mouseover",function (e) {
+    let valueX=(e.pageX * -1 / 120);
+    let valueY=(e.pageY * -1 / 80);
+   for(let i = 0;i<advElements.length;i++){
+       movingShadow(advElements[i],valueX*-1);
+   }
+});
+function movingShadow(elem,mouseX) {
+    elem.style.boxShadow = `${mouseX}px 1px 3px rgba(0,0,0,.3)`;
+    console.log(elem);
+}
