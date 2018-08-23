@@ -9,201 +9,436 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
           integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main_1.css">
-    <link rel="stylesheet" href="css/main2.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 <nav class="fixed-top">
-    <div id="main-hum">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <nav class="menu">
+        <input type="checkbox" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+        </label>
+
+        <a href="index.html" class="menu-item">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>Главная</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            <span>Услуги</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+            <span>Портфолио</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fa fa-address-card" aria-hidden="true"></i>
+            <span>Контакты</span>
+        </a>
+
+
+    </nav>
+
+
+    <!-- filters -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="shadowed-goo">
+
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"/>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                               result="goo"/>
+                <feGaussianBlur in="goo" stdDeviation="3" result="shadow"/>
+                <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2"
+                               result="shadow"/>
+                <feOffset in="shadow" dx="1" dy="1" result="shadow"/>
+                <feComposite in2="shadow" in="goo" result="goo"/>
+                <feComposite in2="goo" in="SourceGraphic" result="mix"/>
+            </filter>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"/>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                               result="goo"/>
+                <feComposite in2="goo" in="SourceGraphic" result="mix"/>
+            </filter>
+        </defs>
+    </svg>
 </nav>
 <div id="preloader" class="align-items-center justify-content-center" style="z-index: 10000">
-    <svg width="77px"  height="77px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-square">
+    <svg width="77px" height="77px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+         preserveAspectRatio="xMidYMid" class="lds-square">
         <g transform="translate(20 20)">
             <rect x="-15" y="-15" width="30" height="30" fill="#4568f6" transform="scale(0.868024 0.868024)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.4s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.4s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(50 20)">
             <rect x="-15" y="-15" width="30" height="30" fill="#4568f6" transform="scale(0.58394 0.58394)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.3s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.3s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(80 20)">
             <rect x="-15" y="-15" width="30" height="30" fill="#4568f6" transform="scale(0.332594 0.332594)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(20 50)">
             <rect x="-15" y="-15" width="30" height="30" fill="#4568f6" transform="scale(0.58394 0.58394)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.3s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.3s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(50 50)">
             <rect x="-15" y="-15" width="30" height="30" fill="#6e5cfe" transform="scale(0.332594 0.332594)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(80 50)">
             <rect x="-15" y="-15" width="30" height="30" fill="#6e5cfe" transform="scale(0.255226 0.255226)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.1s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.1s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(20 80)">
             <rect x="-15" y="-15" width="30" height="30" fill="#4568f6" transform="scale(0.332594 0.332594)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(50 80)">
             <rect x="-15" y="-15" width="30" height="30" fill="#6e5cfe" transform="scale(0.255226 0.255226)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.1s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.1s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
         <g transform="translate(80 80)">
             <rect x="-15" y="-15" width="30" height="30" fill="#c681fe" transform="scale(0.496586 0.496586)">
-                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" dur="1s" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="0s" repeatCount="indefinite"></animateTransform>
+                <animateTransform attributeName="transform" type="scale" calcMode="spline" values="1;1;0.2;1;1"
+                                  keyTimes="0;0.2;0.5;0.8;1" dur="1s"
+                                  keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="0s"
+                                  repeatCount="indefinite"></animateTransform>
             </rect>
         </g>
     </svg>
 </div>
-<div class="container-fluid main-container">
-    <a href="#" id="play-btn" class="align-items-center justify-content-center">
-        <i class="fa fa-play" aria-hidden="true"></i>
-    </a>
-    <div class="row d-flex align-items-center justify-content-center" id="main-blocks">
-        <div class="left-main-block">
-            <div class="row">
-                <div class="col-12 main-headers text-left">
-                    <h1>Qoob</h1>
-                    <h2>web</h2>
-                    <h3>production</h3>
-                    <h2>studio</h2>
+<div id="main-page">
+    <div class="container-fluid main-container">
+        <a href="#" id="play-btn" class="align-items-center justify-content-center">
+            <i class="fa fa-play" aria-hidden="true"></i>
+        </a>
+        <div class="row d-flex align-items-center justify-content-center" id="main-blocks">
+            <div class="left-main-block">
+                <div class="row">
+                    <div class="col-12 main-headers text-left">
+                        <h1>Qoob</h1>
+                        <h2>web</h2>
+                        <h3>production</h3>
+                        <h2>studio</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button class="gradient-button">
+                            estimate project
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4">
+            <div class="right-main-block d-flex align-items-center justify-content-center">
+                <img src="img/hand_with_cube_blue.png">
+                <h2 class="second-step-header">Создание сайта - это особый вид искусства</h2>
+                <h2 class="second-step-header">Мы - мастера своего дела</h2>
+                <h2 class="second-step-header">Каждый сайт - поражает воображение</h2>
+                <h2 class="second-step-header">Давайте творить вместе!</h2>
+            </div>
+        </div>
+    </div>
+    <div id="main-content">
+        <div class="container-fluid about-us-container">
+            <div class="row py-5">
+                <div class="col-12 text-center py-4 container-header">
+                    <h2>О нас</h2>
+                    <div class="h-line">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-lg-5 cube-wrapper">
+                    <canvas id='canvas' width='600' height='600'></canvas>
+                </div>
+                <div class="col-lg-7 d-flex align-items-center justify-content-center">
+                    <p>
+                        <strong>QOOB</strong> - это коллектив единомышленников, который собрался в уютном офисе с
+                        одной целью – стать лучшими, но не на бумаге, не в рейтингах, а для наших клиентов.
+                        У нас большие амбиции, и в то же время - мы профессионалы. Каждый наш клиент - в первую очередь
+                        наш друг!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid serv-container">
+            <div class="row py-5 align-items-center justify-content-center wow fadeInLeft">
+                <div class="col-12 text-center py-4 container-header">
+                    <h2>Услуги</h2>
+                    <div class="h-line">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <p class="wow fadeInLeft">Лендинг или крупномасштабное комлексное решение?</p>
+                    <p class="wow fadeInLeft">Сайт или веб-приложение?</p>
+                    <p class="wow fadeInLeft">Есть идеи?</p>
+                    <p class="wow fadeInLeft">Пора действовать!</p>
+                    <p class="wow fadeInLeft">Мы воплотим все ваши мечты в реальность!</p>
+                </div>
+                <div class="col-lg-5 cube text-center">
+                    <img src="img/geometry-cube.png" class="img-fluid">
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-center">
                     <button class="gradient-button">
-                        estimate project
+                        Подробнее
                     </button>
                 </div>
             </div>
         </div>
-        <div class="right-main-block d-flex align-items-center justify-content-center">
-            <img src="img/hand_with_cube_blue.png">
-            <h2 class="second-step-header">Создание сайта - это особый вид искусства</h2>
-            <h2 class="second-step-header">Мы - мастера своего дела</h2>
-            <h2 class="second-step-header">Каждый сайт - поражает воображение</h2>
-            <h2 class="second-step-header">Давайте творить вместе!</h2>
-        </div>
-    </div>
-</div>
-<div id="main-content">
-    <div class="container-fluid about-us-container">
-        <div class="row py-5">
-            <div class="col-12 text-center py-4 container-header">
-                <h2>О нас</h2>
-                <div class="h-line">
-                    <i class="fa fa-cube" aria-hidden="true"></i>
+        <div class="container-fluid advantages-container py-5">
+            <div class="row adv-header">
+                <div class="col-12 text-center py-4 container-header">
+                    <h2>После заказа сайта у нас:</h2>
+                    <div class="h-line">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 cube-wrapper">
-                <canvas id='canvas' width='600' height='600'></canvas>
-            </div>
-            <div class="col-lg-7 d-flex align-items-center justify-content-center">
-                <p>
-                    <strong>QOOB</strong> - это коллектив единомышленников, который собрался в уютном офисе с
-                    одной целью – стать лучшими, но не на бумаге, не в рейтингах, а для наших клиентов.
-                    У нас большие амбиции, и в то же время - мы профессионалы. Каждый наш клиент - в первую очередь наш друг!
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid serv-container">
-        <div class="row py-5 align-items-center justify-content-center wow fadeInLeft">
-            <div class="col-12 text-center py-4 container-header">
-                <h2>Услуги</h2>
-                <div class="h-line">
-                    <i class="fa fa-cube" aria-hidden="true"></i>
+            <div class="row adv-row">
+                <div class="col-lg-3 adv-elem-wrapper d-flex align-items-center flex-column">
+                    <img src="img/geometry-cube-2.png">
+                    <span class="vl"></span>
+                    <p class="text-center">Вашу компанию упаковали <br> в электронном виде</p>
+                </div>
+                <div class="col-lg-3 adv-elem-wrapper d-flex align-items-center flex-column">
+                    <img src="img/geometry-cube-3.png">
+                    <span class="vl"></span>
+                    <p class="text-center">Вас выделили <br> среди конкурентов</p>
+                </div>
+                <div class="col-lg-3 adv-elem-wrapper d-flex align-items-center flex-column">
+                    <img src="img/geometry-cube-4.png">
+                    <span class="vl"></span>
+                    <p class="text-center">О Вас говорят <br> больше</p>
+                </div>
+                <div class="col-lg-3 adv-elem-wrapper d-flex align-items-center flex-column">
+                    <img src="img/geometry-cube-5.png">
+                    <span class="vl"></span>
+                    <p class="text-center">Вам открыли новый путь <br> для продаж в сети</p>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <button class="gradient-button">
+                        Заказать
+                    </button>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <p class="wow fadeInLeft">Лендинг или крупномасштабное комлексное решение?</p>
-                <p class="wow fadeInLeft">Сайт или веб-приложение?</p>
-                <p class="wow fadeInLeft">Есть идеи?</p>
-                <p class="wow fadeInLeft">Пора действовать!</p>
-                <p class="wow fadeInLeft">Мы вополтоим все ваши мечты в реальность!</p>
-            </div>
-            <div class="col-lg-5 lamp text-center">
-                <img src="img/geometry-cube.png" class="img-fluid">
-            </div>
-            <div class="col-12 d-flex align-items-center justify-content-center">
-                <button class="gradient-button">
-                    Подробнее
-                </button>
-            </div>
         </div>
-    </div>
-    <div class="container-fluid advantages-container">
-        <div class="adv-bg">
-            <div class="adv-bg-elem">
 
-            </div>
-            <div class="adv-bg-elem d-flex align-items-center justify-content-center">
-                <span>q</span>
-            </div>
-            <div class="adv-bg-elem d-flex align-items-center justify-content-center">
-                <span class="wink">o</span>
-            </div>
-            <div class="adv-bg-elem d-flex align-items-center justify-content-center">
-                <span class="wink">o</span>
-            </div>
-            <div class="adv-bg-elem d-flex align-items-center justify-content-center">
-                <span>b</span>
-            </div>
-            <div class="adv-bg-elem">
+        <!--<div class="container-fluid contacts-container">-->
+        <!--<div class="adv-bg">-->
+        <!--<div class="adv-bg-elem">-->
 
-            </div>
-        </div>
-    </div>
-    <!--<div class="container offer-container">-->
-        <!--<div class="row tablet-row  d-flex align-items-center justify-content-center">-->
-            <!--<div class="col-8 tablet-wrapper text-center">-->
-                <!--<span>Создай сайт в 5 кликов!</span>-->
-            <!--</div>-->
         <!--</div>-->
-    <!--</div>-->
-    <!--<div class="container-fluid portfolio-container py-5">-->
+        <!--<div class="adv-bg-elem d-flex align-items-center justify-content-center">-->
+        <!--<span>q</span>-->
+        <!--</div>-->
+        <!--<div class="adv-bg-elem d-flex align-items-center justify-content-center">-->
+        <!--<span class="wink">o</span>-->
+        <!--</div>-->
+        <!--<div class="adv-bg-elem d-flex align-items-center justify-content-center">-->
+        <!--<span class="wink">o</span>-->
+        <!--</div>-->
+        <!--<div class="adv-bg-elem d-flex align-items-center justify-content-center">-->
+        <!--<span>b</span>-->
+        <!--</div>-->
+        <!--<div class="adv-bg-elem">-->
+
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="container offer-container">-->
+        <!--<div class="row tablet-row  d-flex align-items-center justify-content-center">-->
+        <!--<div class="col-8 tablet-wrapper text-center">-->
+        <!--<span>Создай сайт в 5 кликов!</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container-fluid portfolio-container py-5">-->
         <!--<div class="row">-->
-            <!--<div class="col-12 text-center py-4 container-header">-->
-                <!--<h2>Портфолио</h2>-->
-                <!--<div class="h-line">-->
-                    <!--<i class="fa fa-cube" aria-hidden="true"></i>-->
-                <!--</div>-->
-            <!--</div>-->
+        <!--<div class="col-12 text-center py-4 container-header">-->
+        <!--<h2>Портфолио</h2>-->
+        <!--<div class="h-line">-->
+        <!--<i class="fa fa-cube" aria-hidden="true"></i>-->
+        <!--</div>-->
+        <!--</div>-->
         <!--</div>-->
         <!--<div class="cards-container row">-->
-            <!--<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>-->
-            <!--<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>-->
-            <!--<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>-->
-            <!--<div class="w-100"></div>-->
-            <!--&lt;!&ndash;<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>&ndash;&gt;-->
+        <!--<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>-->
+        <!--<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>-->
+        <!--<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>-->
+        <!--<div class="w-100"></div>-->
+        <!--&lt;!&ndash;<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="card col-md-3"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>&ndash;&gt;-->
         <!--</div>-->
-    <!--</div>-->
-    <!--<div class="container-fluid services-container">-->
+        <!--</div>-->
+        <!--<div class="container-fluid services-container">-->
         <!--<div class="py-5 mx-1 row services-row">-->
-            <!--<div class="col-lg-3 d-flex align-items-center justify-content-center flex-column services-element-wrapper">-->
-                <!--<img src="img/unique_style.png" alt="Дизайн">-->
-            <!--</div>-->
+        <!--<div class="col-lg-3 d-flex align-items-center justify-content-center flex-column services-element-wrapper">-->
+        <!--<img src="img/unique_style.png" alt="Дизайн">-->
         <!--</div>-->
-    <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
 </div>
+<footer class="container-fluid" id="main-footer">
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
 
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Content -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+                <p>Here you can use rows and columns here to organize your footer content.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate esse
+                    quasi, veritatis totam voluptas nostrum.</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <a href="#!">PROJECTS</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#!">ABOUT US</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#!">BLOG</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#!">AWARDS</a>
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Contact details -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <i class="fa fa-home mr-3"></i> Харьков, Украина <br>
+                            ул. Плехановская 126/1</p>
+                    </li>
+                    <li>
+                        <p>
+                           <a href="mailto:info@qoob-studio.com"><i class="fa fa-envelope mr-3"></i> info@qoob-studio.com</a></p>
+                    </li>
+                    <li>
+                        <p>
+                           <a href="tel:tel:+380953568336"><i class="fa fa-phone mr-3"></i>(095) 356 83 36</a></p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+                <!-- Social buttons -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+                <!-- Facebook -->
+                <a type="button" class="btn-floating btn-fb">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <!-- Twitter -->
+                <a type="button" class="btn-floating btn-tw">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <!-- Google +-->
+                <a type="button" class="btn-floating btn-gplus">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                <!-- Dribbble -->
+                <a type="button" class="btn-floating btn-dribbble">
+                    <i class="fa fa-dribbble"></i>
+                </a>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© qoob, 2018 | Все права защищены
+        <a href="http://qoob-studio.com/"> qoob-studio.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -221,9 +456,9 @@
 <script src="js/animations.js">
 
 </script>
-<script src="js/menu.js">
+<!--<script src="js/menu.js">-->
 
-</script>
+<!--</script>-->
 <script src="js/vector.js">
 
 </script>
