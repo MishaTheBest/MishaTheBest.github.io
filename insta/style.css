@@ -1984,10 +1984,45 @@ ul#nav li ul a,
 ----------------------------------*/
 
 .contact-area .area-bg::before {
-    background: #000 none repeat scroll 0 0;
+    /*background: #000 none repeat scroll 0 0;*/
     width: 50%;
 }
+.contacts-row{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-wrap: wrap;
+}
+.contacts-row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+.contact-info-wrapper{
+    align-items: center;
+    justify-content: center;
+}
+.contact-info-wrapper a{
+    margin: 15px 0;
+    color: black;
+    font-size: 2.5rem;
+    display: block;
 
+}
+.contacts-icons{
+    margin-top: 50px;
+}
+.contacts-icons a{
+    display: inline-block;
+    transition: transform .3s ease-in;
+}
+.contacts-icons a:hover{
+    transform: scale(1.3);
+}
+.contacts-icons img{
+    width: auto;
+    height: 60px;
+}
 .contact-area .area-bg::after {
     background: rgba(0, 0, 0, 0) url("img/mockups/map-mockup.png") no-repeat scroll left 4% center / auto 39%;
 }
