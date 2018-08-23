@@ -540,7 +540,7 @@ $hamburger-spacing: 8px;
 /********* advantages **********/
 .advantages-container {
   background-color: $white;
-  .adv-header {
+  .advantages-header {
     .container-header {
       h2 {
         color: $violet;
@@ -561,8 +561,8 @@ $hamburger-spacing: 8px;
 
     }
   }
-  .adv-row {
-    .adv-elem-wrapper {
+  .advantages-row {
+    .advantages-elem-wrapper {
       img {
         width: 100%;
         height: auto;
