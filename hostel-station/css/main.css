@@ -54,7 +54,7 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
 }
 
 .nav-link {
-    font-size: 1rem;
+    font-size: 12px;
 }
 
 .navbar-light .navbar-nav .nav-link {
