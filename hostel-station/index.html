@@ -10,8 +10,40 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/datepicker.min.css">
     <link rel="stylesheet" href="css/lightslider.css">
+    <style>
+        .navbar .callback-btn {
+            margin-right: 30px;
+            font-size: .8rem;
+        }
+
+        #languages a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+            padding: 5px;
+        }
+
+        #languages a span {
+            background: #00a025;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        #languages a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-link {
+            font-size: .8rem;
+        }
+    </style>
 </head>
 <body>
+
+
 <nav class="navbar navbar-light navbar-expand-xl fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
@@ -39,44 +71,54 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contacts">Контакты</a>
                 </li>
+                <li class="nav-item d-flex">
+                    <a href="#contacts" class="main-button callback-btn">
+                        Связаться с нами
+                    </a>
+                </li>
+                <li class="nav-item d-flex" id="languages">
+                    <a href="#"><span class="d-flex justify-content-center align-items-center">RU</span></a>
+                    <a href="#"><span class="d-flex justify-content-center align-items-center">EN</span></a>
+                </li>
             </ul>
         </div>
-        <a href="#" class="main-button callback-btn">
-            Связаться с нами
-        </a>
+
+
     </div>
 </nav>
 <div class="container-fluid main-container" id="home">
-    <div class="row align-items-center justify-content-center" id="main-slider">
-        <div class="col-12 slider-inner active">
+    <div class="row" id="main-slider">
+        <div id="main-slider-list">
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
-        </div>
-        <div class="col-12 slider-inner">
+            </div>
+            <div class="main-slider-inner">
 
+            </div>
         </div>
     </div>
     <div class="container">
@@ -152,6 +194,26 @@
     </div>
 
 </div>
+<div class="container-fluid about-container">
+    <div class="row container-header">
+        <div class="col-12 text-center">
+            <h2>О нас</h2>
+        </div>
+    </div>
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p><strong>Hostel Station</strong> – уютный и современный хостел, расположенный в двух минутах ходьбы от
+                    Южного Вокзала.
+                    У нас Вы сможете комфортно и спокойной провести время, будучи гостем нашего чудесного города.
+                    В Вашем распоряжении: уютная лаунж зона, современная кухня с новой техникой, багажная комната для
+                    безопасного хранения ваших вещей.
+                    Наши цены намного доступнее отеля, но наш сервис не уступает гостиничному.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container-fluid advantages-container" id="advantages">
     <div class="row container-header">
         <div class="col-12 text-center">
@@ -179,7 +241,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid price-container" >
+<div class="container-fluid price-container">
     <div class="row container-header">
         <div class="col-12 text-center">
             <h2>Номера и цены</h2>
@@ -199,32 +261,32 @@
                         <div class="clearfix" style="max-width:100%">
                             <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                                 <li data-thumb="img/hotel-inner.png" class="text-center">
-                                    <img src="img/hotel-inner.png" />
+                                    <img src="img/hotel-inner.png"/>
                                 </li>
                                 <li data-thumb="img/hotel-inner.png" class="text-center">
-                                    <img src="img/hotel-inner.png" />
+                                    <img src="img/hotel-inner.png"/>
                                 </li>
                                 <li data-thumb="img/hotel-inner.png" class="text-center">
-                                    <img src="img/hotel-inner.png" />
+                                    <img src="img/hotel-inner.png"/>
                                 </li>
                             </ul>
                         </div>
 
                     </div>
                     <!--<div class="col-8 main-hotel-image-wrapper">-->
-                        <!--<div class="image-photo-description d-flex align-items-center">-->
-                            <!--<h6>Lorem ipsum dolor sit amet, consectetuer-->
-                                <!--adipiscing elit, sed diam nonummy nibh </h6>-->
-                            <!--<div class="decoration-circle-wrapper d-flex align-items-center flex-column justify-content-center">-->
-                                <!--<div class="decoration-circle">-->
+                    <!--<div class="image-photo-description d-flex align-items-center">-->
+                    <!--<h6>Lorem ipsum dolor sit amet, consectetuer-->
+                    <!--adipiscing elit, sed diam nonummy nibh </h6>-->
+                    <!--<div class="decoration-circle-wrapper d-flex align-items-center flex-column justify-content-center">-->
+                    <!--<div class="decoration-circle">-->
 
-                                <!--</div>-->
-                                <!--<div class="decoration-circle">-->
+                    <!--</div>-->
+                    <!--<div class="decoration-circle">-->
 
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<img src="img/hotel-inner.png" alt="Hostel Station">-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<img src="img/hotel-inner.png" alt="Hostel Station">-->
                     <!--</div>-->
                     <div class="col-2 right-arrow d-flex align-items-center justify-content-start">
                         <div class="left-arrow-circle text-center" id="next-slide-hotel">
@@ -233,25 +295,25 @@
                     </div>
                 </div>
                 <!--<div class="row">-->
-                    <!--<div class="col-2">-->
+                <!--<div class="col-2">-->
 
-                    <!--</div>-->
-                    <!--<div class="col-8">-->
-                        <!--<div class="row">-->
-                            <!--<div class="col-4 photo-preview">-->
-                                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
-                            <!--</div>-->
-                            <!--<div class="col-4 photo-preview">-->
-                                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
-                            <!--</div>-->
-                            <!--<div class="col-4 photo-preview">-->
-                                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="col-2">-->
+                <!--</div>-->
+                <!--<div class="col-8">-->
+                <!--<div class="row">-->
+                <!--<div class="col-4 photo-preview">-->
+                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
+                <!--</div>-->
+                <!--<div class="col-4 photo-preview">-->
+                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
+                <!--</div>-->
+                <!--<div class="col-4 photo-preview">-->
+                <!--<img src="img/hotel-inner.png" class="img-fluid">-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-2">-->
 
-                    <!--</div>-->
+                <!--</div>-->
                 <!--</div>-->
             </div>
 
@@ -350,7 +412,7 @@
         </div>
     </div>
     <div class="container mt-5">
-        <div class="row" >
+        <div class="row">
             <div class="col-1 left-arrow d-flex align-items-center justify-content-end">
                 <div class="left-arrow-circle text-center" id="prev-review">
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -583,7 +645,8 @@
     <div class="container" id="contacts">
         <div class="row">
             <div class="col-lg-5 offset-lg-1 map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.899132484897!2d36.27561993956782!3d49.97420024980566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270b03479f59c3%3A0x5a1a6fcafef07b9!2sqoob-studio!5e0!3m2!1sru!2sua!4v1533290468648" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.899132484897!2d36.27561993956782!3d49.97420024980566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270b03479f59c3%3A0x5a1a6fcafef07b9!2sqoob-studio!5e0!3m2!1sru!2sua!4v1533290468648"
+                        width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-lg-5">
                 <ul class="contacts-info-list">
@@ -603,15 +666,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="phone"  class="col-sm-2 col-form-label text-left">Телефон:</label>
+                            <label for="phone" class="col-sm-2 col-form-label text-left">Телефон:</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="tel" id="phone"
                                        name="phone" autocomplete="off" required>
                             </div>
                         </div>
                         <!--<div class="form-group">-->
-                            <!--<input type="email" class="form-control" aria-describedby="emailHelp"-->
-                                   <!--placeholder="E-Mail" autocomplete="newemail" name="email" required>-->
+                        <!--<input type="email" class="form-control" aria-describedby="emailHelp"-->
+                        <!--placeholder="E-Mail" autocomplete="newemail" name="email" required>-->
                         <!--</div>-->
                         <div class="form-group row">
                             <label for="text" class="col-sm-12 text-left no-border">Комментарий:</label>
@@ -653,24 +716,24 @@
 <script src="js/review.js"></script>
 <script src="js/lightslider.js"></script>
 <script>
-    $(document).ready(function() {
-       const slider = $('#image-gallery').lightSlider({
-            gallery:true,
-            item:1,
-            thumbItem:3,
+    $(document).ready(function () {
+        const slider = $('#image-gallery').lightSlider({
+            gallery: true,
+            item: 1,
+            thumbItem: 3,
             slideMargin: 0,
-            speed:500,
-            auto:true,
+            speed: 500,
+            auto: true,
             controls: false,
-            loop:true,
-            onSliderLoad: function() {
+            loop: true,
+            onSliderLoad: function () {
                 $('#image-gallery').removeClass('cS-hidden');
             },
         });
-        document.getElementById("prev-slide-hotel").addEventListener("click",function () {
+        document.getElementById("prev-slide-hotel").addEventListener("click", function () {
             slider.goToPrevSlide();
         });
-        document.getElementById("next-slide-hotel").addEventListener("click",function () {
+        document.getElementById("next-slide-hotel").addEventListener("click", function () {
             slider.goToNextSlide();
         });
 

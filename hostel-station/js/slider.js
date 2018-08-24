@@ -2,7 +2,8 @@
 
 const nextSlideBtn = document.querySelector("#next-slide");
 const prevSlideBtn = document.querySelector("#prev-slide");
-const slides = document.querySelectorAll(".slider-inner");
+const sliderContent = document.querySelector("#main-slider-list");
+const slides = document.querySelectorAll(".main-slider-inner");
 const maxSlide = document.querySelector("#max-slide");
 const activeSlide = document.querySelector("#active-slide");
 const maxSlideNum = slides.length;
@@ -16,15 +17,9 @@ function setActiveSlide() {
 }
 
 function nextSlide() {
-    slides[activeSlideNum].style.transform = `translate3d(0,-100vh,0)`;
-    if(activeSlideNum>=maxSlideNum-1){
-        for(let i = 0;i<maxSlideNum;i++){
-            slides[i].style.transform = `translate3d(0,100vh,0)`;
-        }
-    }
     activeSlideNum>=maxSlideNum-1?activeSlideNum=0:activeSlideNum++;
+    sliderContent.style.top = -(activeSlideNum*$('#main-slider').height())+"px";
     console.log(activeSlideNum);
-    slides[activeSlideNum].style.transform = `translate3d(0,0,0)`;
     setActiveSlide();
     nextSlideBtn.removeEventListener("click",nextSlide);
     setTimeout(function () {
@@ -33,15 +28,8 @@ function nextSlide() {
 }
 
 function prevSlide() {
-
-    slides[activeSlideNum].style.transform = `translate3d(0,100vh,0)`;
-    if(activeSlideNum<=0){
-        for(let i = 0;i<maxSlideNum;i++){
-            slides[i].style.transform = `translate3d(0,-100vh,0)`;
-        }
-    }
     activeSlideNum<=0?activeSlideNum=maxSlideNum-1:activeSlideNum--;
-    slides[activeSlideNum].style.transform = `translate3d(0,0,0)`;
+    sliderContent.style.top = -(activeSlideNum*$('#main-slider').height())+"px";
     setActiveSlide();
     prevSlideBtn.removeEventListener("click",prevSlide);
     setTimeout(function () {
@@ -59,4 +47,7 @@ sliderControlArea.addEventListener("mouseout",function(){
          autoPlaySlide = setInterval(nextSlide,5000);
 }
 );
+window.onresize = function () {
+    sliderContent.style.top = -(activeSlideNum*$(window).height())+"px";
+};
 

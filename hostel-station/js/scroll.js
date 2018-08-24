@@ -19,7 +19,7 @@ menuItems.click(function (e) {
     e.preventDefault();
 });
 $("#start-btn").click(function (e) {
-    let offsetTop = $("#advantages").offset().top - 120;
+    let offsetTop = $("#about").offset().top - 140;
     $('html, body').stop().animate({
         scrollTop: offsetTop
     }, 1500);

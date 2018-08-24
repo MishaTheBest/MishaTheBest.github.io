@@ -83,62 +83,49 @@ input, select, input:hover, input:active, input:focus, select:hover, select:acti
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+#main-slider-list{
+    position: absolute;
+    top: 0;
+    transition: top 1.8s linear;
+}
+.main-slider-inner{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.main-slider-inner{
+}
+.main-slider-inner:first-child {
     background: url("../img/main_background.png") no-repeat center/cover;
 }
-
-#main-slider > div {
-    height: inherit;
-    width: inherit;
+.main-slider-inner:nth-child(2) {
+    background: url("../img/DSC02676.jpg") no-repeat center/cover;
 }
 
-#main-slider .slider-inner {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: transform 1.8s linear;
-    /*transition-delay: .9s;*/
-    transform: translate3d(0,100vh,0);
-    bottom: 0;
+.main-slider-inner:nth-child(3) {
+    background: url("../img/DSC02793.jpg") no-repeat center/cover;
 }
-
-#main-slider .active {
-    /*transition-delay: .9s;*/
-    display: block;
-    transform: translate3d(0,0,0);
+.main-slider-inner:nth-child(4) {
+    background: url("../img/DSC02815.jpg") no-repeat center/cover;
 }
-
-#main-slider .slider-inner:first-child {
-    background-image: url("../img/main_background.png");
+.main-slider-inner:nth-child(5) {
+    background: url("../img/DSC02860.jpg") no-repeat center/cover;
 }
-
-.slider-inner:nth-child(2) {
-    background: url("../img/DSC02676.jpg");
+.main-slider-inner:nth-child(6) {
+    background: url("../img/DSC02886.jpg") no-repeat center/cover;
 }
-
-.slider-inner:nth-child(3) {
-    background: url("../img/DSC02793.jpg");
+.main-slider-inner:nth-child(7) {
+    background: url("../img/DSC02962.jpg") no-repeat center/cover;
 }
-.slider-inner:nth-child(4) {
-    background: url("../img/DSC02815.jpg");
+.main-slider-inner:nth-child(8) {
+    background: url("../img/DSC02974.jpg") no-repeat center/cover;
 }
-.slider-inner:nth-child(5) {
-    background: url("../img/DSC02860.jpg");
+.main-slider-inner:nth-child(9) {
+    background: url("../img/DSC02994.jpg") no-repeat center/cover;
 }
-.slider-inner:nth-child(6) {
-    background: url("../img/DSC02886.jpg");
-}
-.slider-inner:nth-child(7) {
-    background: url("../img/DSC02962.jpg");
-}
-.slider-inner:nth-child(8) {
-    background: url("../img/DSC02974.jpg");
-}
-.slider-inner:nth-child(9) {
-    background: url("../img/DSC02994.jpg");
-}
-.slider-inner:nth-child(10) {
-    background: url("../img/DSC03298.jpg");
+.main-slider-inner:nth-child(10) {
+    background: url("../img/DSC03298.jpg") no-repeat center/cover;
 }
 
 #slider-control {
