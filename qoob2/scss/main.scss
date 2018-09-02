@@ -1,10 +1,11 @@
 /********* global **********/
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Comfortaa|Indie+Flower|Arvo|Righteous|Paytone+One');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Comfortaa|Indie+Flower|Arvo|Righteous|Paytone+One|Roboto');
 /******* colors ************/
 $white: #fff;
 $black: #040404;
 $violet: #6e5cfe;
 $blue: #4568f6;
+$darkblue: #17173a;
 $lightblue: #2684fe;
 $pink: #c681fe;
 /********** fonts *********/
@@ -37,6 +38,14 @@ h1 {
 }
 
 /********** global ***********/
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+strong, span {
+  font-family: inherit;
+}
+
 #main-page {
   background: linear-gradient(-45deg, $blue 20%, $lightblue 40%, $pink 100%);
   box-shadow: 0 6px 10px rgba(0, 0, 0, .3);
@@ -220,6 +229,10 @@ $hamburger-spacing: 8px;
     left: 60px;
     text-transform: uppercase;
     @extend %Comfortaa;
+    text-shadow: 1px 1px 0 $white,
+    1px -1px 0 $white,
+    -1px 1px 0 $white,
+    -1px -1px 0 $white;
   }
   &:hover {
     background: $white;
@@ -252,15 +265,15 @@ $hamburger-spacing: 8px;
 }
 
 .menu-open:checked ~ .menu-item {
-  //span{
-  //  transform: scaleX(1);
-  //}
-  //&:hover{
-  //  span{
-  //    left: 90px;
-  //    opacity: 1.0;
-  //  }
-  //}
+  span {
+    transform: scaleX(1);
+  }
+  &:hover {
+    span {
+      left: 90px;
+      opacity: 1.0;
+    }
+  }
   transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   @for $i from 1 through $menu-items {
 
@@ -274,7 +287,6 @@ $hamburger-spacing: 8px;
 /********** main ************/
 
 .main-container {
-  // background: $white fixed no-repeat center/cover;
   transition: transform .3s ease-in-out;
   #play-btn {
     cursor: pointer;
@@ -400,48 +412,6 @@ $hamburger-spacing: 8px;
   }
 }
 
-/********* offer ************/
-//.tablet-row {
-//  background: url("../img/tablet.png") no-repeat center/cover;
-//  height: 700px;
-//  .tablet-wrapper {
-//
-//    span {
-//      color: $black;
-//      @extend %Amatic;
-//      font-size: 4rem;
-//    }
-//  }
-//}
-/****** portfolio ******/
-//.portfolio-container {
-//  perspective: 1000px;
-//  overflow: hidden;
-//  .cards-container {
-//    justify-content: center;
-//    align-items: center;
-//    height: auto;
-//    transition: 1s;
-//    //transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
-//    transform-style: preserve-3d;
-//    .card {
-//      padding: 0;
-//      margin: 10px;
-//      transition: 0.3s;
-//      max-width: 300px;
-//      img {
-//        max-width: 100%;
-//      }
-//      &:hover {
-//        cursor: pointer;
-//        transform: translateZ(10px);
-//      }
-//    }
-//  }
-//  .container-origin {
-//    transform: rotate(0);
-//  }
-//}
 /********** services *************/
 @keyframes cubeStaticAnim {
   from {
@@ -573,7 +543,7 @@ $hamburger-spacing: 8px;
 
 .portfolio-container {
   position: relative;
-  background: #17173a !important;
+  background: $darkblue !important;
   .port-bg {
     width: 100%;
     height: 100%;
@@ -605,7 +575,7 @@ $hamburger-spacing: 8px;
       }
     }
   }
-  .animated{
+  .animated {
     animation-delay: .3s;
   }
   .portfolio-row {
@@ -613,26 +583,26 @@ $hamburger-spacing: 8px;
     position: absolute;
     height: 100%;
     width: 100%;
-    .portfolio-elements{
+    .portfolio-elements {
       cursor: pointer;
-      .portfolio-element{
-        a{
+      .portfolio-element {
+        a {
           text-align: right;
-          span{
+          span {
             transition: .3s opacity ease-in-out;
             opacity: .0;
             color: $white;
             text-transform: uppercase;
             @extend %Comfortaa;
           }
-          &:hover{
+          &:hover {
             text-decoration: none;
           }
-          &:active,&:focus{
+          &:active, &:focus {
             border: none;
             outline: none;
           }
-          i{
+          i {
             transition: .3s opacity ease-in-out;
             opacity: .0;
             color: $white;
@@ -640,13 +610,55 @@ $hamburger-spacing: 8px;
           }
         }
       }
-      .slick-current{
-        a{
-          span{
+      .slick-current {
+        a {
+          span {
             opacity: 1.0;
           }
-          i{
+          i {
             opacity: 1.0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*********** services ***********/
+.services-container {
+  background: $darkblue !important;
+  min-height: 100vh;
+  .slick-slide {
+    outline: none;
+  }
+  #services-headers {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, $blue 20%, $lightblue 40%, $pink 100%);
+    transition: top 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .slick-control {
+
+    .slick-control-inner {
+      font-size: 35px;
+      color: $white;
+    }
+  }
+  .services-main-slider {
+    height: 100%;
+    .services-row {
+      height: 100%;
+      .services-header {
+        h3 {
+          color: $white;
+        }
+        .services-slider {
+          h4, p {
+            color: $white;
           }
         }
       }
