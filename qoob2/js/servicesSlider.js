@@ -82,12 +82,17 @@ prevBtn.click(function () {
         servSubSlider.slick('slickPrev');
     }
 });
+if(isMobile){
+    servSubSlider.slick('unslick');
+    servMainSlider.slick('unslick');
+    console.log("unslicked");
+    document.querySelector(".right-slick-control").style.display = "none";
+    document.querySelector(".left-slick-control").style.display = "none";
+}
 window.onresize = function () {
     if(isMobile){
         servSubSlider.slick('unslick');
         servMainSlider.slick('unslick');
-        // document.querySelector(".services-main-slider").classList.remove("col-10");
-        // document.querySelector(".services-main-slider").classList.add("col-12");
         console.log("unslicked");
         document.querySelector(".right-slick-control").style.display = "none";
         document.querySelector(".left-slick-control").style.display = "none";
