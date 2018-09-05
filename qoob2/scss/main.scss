@@ -1,5 +1,5 @@
 /********* global **********/
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Comfortaa|Indie+Flower|Arvo|Righteous|Paytone+One|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Comfortaa|Indie+Flower|Arvo|Righteous|Paytone+One|Roboto|Oswald');
 /******* colors ************/
 $white: #fff;
 $black: #040404;
@@ -33,6 +33,10 @@ $pink: #c681fe;
   font-family: 'Paytone One', sans-serif;
 }
 
+%Oswald {
+  font-family: 'Oswald', sans-serif
+}
+
 h1 {
   font-size: 4rem;
 }
@@ -64,6 +68,42 @@ strong, span {
   color: $white;
   box-shadow: 0 5px 10px rgba(198, 129, 254, .4);
   min-width: 180px;
+  &:hover{
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.h-line {
+  position: relative;
+  width: 100px;
+  display: inline-block;
+  .fa {
+    color: $white;
+    font-size: 16px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: $white;
+    left: 5px;
+    top: 11px;
+    transition: all .3s ease-in-out;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: $white;
+    right: 5px;
+    top: 11px;
+    transition: all .3s ease-in-out;
+  }
 }
 
 .container-header {
@@ -83,37 +123,7 @@ strong, span {
       }
     }
   }
-  .h-line {
-    position: relative;
-    width: 100px;
-    display: inline-block;
-    .fa {
-      color: $white;
-      font-size: 16px;
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      width: 30px;
-      height: 1px;
-      background-color: $white;
-      left: 5px;
-      top: 11px;
-      transition: all .3s ease-in-out;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      width: 30px;
-      height: 1px;
-      background-color: $white;
-      right: 5px;
-      top: 11px;
-      transition: all .3s ease-in-out;
-    }
-  }
+
 }
 
 #preloader {
@@ -326,7 +336,7 @@ $hamburger-spacing: 8px;
       h1, h2, h3 {
         color: $violet;
         text-transform: uppercase;
-        @extend %Righteous;
+        @extend %Indie;
         font-weight: bolder;
         letter-spacing: .2rem;
       }
@@ -334,14 +344,39 @@ $hamburger-spacing: 8px;
         font-size: 5rem;
         @extend %Paytone;
         font-weight: normal;
+        &:nth-child(2) {
+          font-size: 4rem;
+          margin-top: -25px;
+        }
+      }
+      .h-line {
+        text-align: center;
+        width: 100%;
+        i {
+          color: $violet;
+          margin-left: 70%;
+          font-size: 24px;
+        }
+        &:after {
+          width: 0;
+        }
+        &:before {
+          width: 80%;
+          height: 2px;
+          top: 11px;
+        }
+        &:before, &:after {
+          background-color: $violet;
+        }
       }
       h2 {
         font-size: 2.5rem;
+        @extend %Oswald;
       }
       h3 {
         font-size: 2.2rem;
+        @extend %Oswald;
       }
-
     }
     .left-main-block {
       transition: all .5s ease-in-out;
@@ -541,7 +576,7 @@ $hamburger-spacing: 8px;
 
 /********* portfolio ***********/
 
-.portfolio-container {
+.portfolio-container, .services-container {
   position: relative;
   background: $darkblue !important;
   .port-bg {
@@ -627,7 +662,26 @@ $hamburger-spacing: 8px;
 /*********** services ***********/
 .services-container {
   background: $darkblue !important;
+  position: relative;
   min-height: 100vh;
+  .port-bg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    .port-bg-elem {
+      height: 100%;
+      span {
+        color: rgba(198, 129, 254, .05);
+
+      }
+    }
+  }
+  .serv-row {
+    height: 100%;
+    width: 100%;
+    margin-left: 15px;
+  }
   .slick-slide {
     outline: none;
   }
@@ -666,6 +720,52 @@ $hamburger-spacing: 8px;
   }
 }
 
+/********** contacts *********/
+.contacts-container {
+  background: $lightblue !important;
+  > .row {
+    min-height: 100vh;
+    .container-header {
+
+    }
+    #feedback {
+      .form-group {
+        input, textarea, select {
+          background-color: $lightblue;
+          border: none;
+          outline: none;
+          color: rgba(255, 255, 255, .8);
+          text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
+          box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
+          border-radius: 5px;
+          &::placeholder {
+            color: rgba(255, 255, 255, .8);
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
+          }
+        }
+        textarea {
+          resize: none;
+        }
+      }
+    }
+    .contacts-info {
+      ul {
+        list-style: none;
+        li {
+            color: $white;
+          .contacts-info-header{
+            color: $white;
+          }
+          a{
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+}
+
 /******** media *********/
 @media (max-width: 928px) {
   html {
@@ -693,9 +793,7 @@ $hamburger-spacing: 8px;
       position: relative;
       transition: transform .5s ease-in-out;
       overflow-x: hidden;
-      .main-headers {
 
-      }
       .left-main-block {
         transition: all .5s ease-in-out;
         position: absolute;
@@ -743,9 +841,8 @@ $hamburger-spacing: 8px;
       }
     }
   }
-
-  .cards-container {
-    transform: rotate(0) !important;
+  .contacts-container{
+    padding-top: 150px;
   }
   #main-footer {
     display: block;
