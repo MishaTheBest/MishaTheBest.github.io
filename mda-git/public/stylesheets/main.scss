@@ -1,0 +1,164 @@
+/****** colors *******/
+$white: #fff;
+$black: #000;
+$red: #e90a0b;
+/****** fonts ********/
+@import url('https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One');
+
+%Rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+%Rubik-Mono {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+%light {
+  font-weight: 300;
+}
+
+%regular {
+  font-weight: 400;
+}
+
+%medium {
+  font-weight: 500;
+}
+
+%h1 {
+  @extend %Rubik-Mono;
+  @extend %light;
+  font-size: 6rem;
+  letter-spacing: -1.5px;
+}
+
+%h2 {
+  @extend %Rubik;
+  @extend %light;
+  font-size: 3.75rem;
+  letter-spacing: -0.5px;
+}
+
+%h3 {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 3rem;
+  letter-spacing: 0px;
+}
+
+%h4 {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 2.125rem;
+  letter-spacing: 0.25px;
+}
+
+%h5 {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+}
+
+%h6 {
+  @extend %Rubik;
+  @extend %medium;
+  font-size: 1.25rem;
+  letter-spacing: 0.15px;
+}
+
+%st-1 {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+}
+
+%st-2 {
+  @extend %Rubik;
+  @extend %medium;
+  font-size: 0.875rem;
+  letter-spacing: 0.1px;
+}
+
+%b-1 {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+%b-2 {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+}
+
+%button {
+  @extend %Rubik;
+  @extend %medium;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+%caption {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+}
+
+%overline {
+  @extend %Rubik;
+  @extend %regular;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/*********** main-page *********/
+.main-container {
+  background: url("../images/main-bg.png") no-repeat fixed center/cover;
+  .container {
+    > .row {
+      min-height: 100vh;
+      .main-headers {
+        color: $white;
+        h1, h2 {
+          text-transform: uppercase;
+          margin: 0;
+        }
+        h1 {
+          @extend %h1;
+        }
+        h2 {
+          @extend %h2;
+          margin-top: -1.75rem;
+        }
+        .h-line {
+          display: block;
+          height: 1px;
+          width: 40%;
+          background-color: $red;
+          margin: 50px 0;
+        }
+        p {
+          @extend %caption;
+        }
+      }
+      .wheel-wrapper {
+          position: relative;
+        #disk {
+          position: absolute;
+          transition: transform .8s ease-in-out;
+        }
+        &:hover  #disk{
+          transform: rotate(360deg);
+        }
+      }
+
+    }
+  }
+}
