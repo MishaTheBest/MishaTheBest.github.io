@@ -118,12 +118,135 @@ $red: #e90a0b;
   letter-spacing: 1.5px;
 }
 
+/********** navbar ************/
+.navbar {
+  background-color: $black;
+  > .container {
+    .navbar-nav {
+      .nav-item {
+        margin-right: 46px;
+        .nav-link{
+          justify-content: center;
+          flex-direction: column;
+          display: flex;
+          &:after{
+            content: '';
+            align-self: center;
+            background-color: $red;
+            height: 1px;
+            width: 11px;
+            transform: scaleX(0);
+            transition: transform .1s ease-in-out;
+          }
+          &:hover:after{
+            transform: scaleX(1);
+          }
+          color: $white;
+
+        }
+      }
+      .active{
+       .nav-link{
+         &:after{
+           transform: scaleX(1);
+         }
+       }
+      }
+      .nav-contacts{
+        .nav-call-i{
+          color: $white;
+          position: relative;
+          .fa{
+            display: block;
+            transform: rotate(-90deg);
+            font-size: 18px;
+            padding: 10px;
+            background-color: $red;
+            border-radius: 50%;
+            position: relative;
+            @keyframes call {
+              from{
+                width: 110%;
+                height: 110%;
+                top: -5%;
+                right: -5%;
+                opacity: .7;
+              }
+              80%{
+                width: 150%;
+                height: 150%;
+                top: -25%;
+                right: -25%;
+                opacity: .3;
+              }
+              to{
+                opacity: .0;
+              }
+            }
+            &:after{
+              content: '';
+              position: absolute;
+              z-index: -1;
+              top: -10%;
+              right: -10%;
+              display: block;
+              border-radius: 50%;
+              width: 110%;
+              height: 110%;
+              background-color: $red;
+              opacity: .7;
+              animation: .8s linear call infinite;
+            }
+          }
+        }
+        .nav-contacts-info{
+          color: $white;
+          @extend %caption;
+          ul{
+            padding-left: 0;
+            list-style: none;
+          }
+        }
+      }
+      .shopping-cart{
+        cursor: pointer;
+        .shopping-cart-wrapper{
+          position: relative;
+          .fa{
+            color: $red;
+            display: inline-block;
+            transform: scaleX(-1);
+            font-size: 35px;
+          }
+          .shopping-cart-counter{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: -10px;
+            min-width: 20px;
+            min-height: 20px;
+            border-radius:50%;
+            background-color: $white;
+            .counter{
+              font-size: 12px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /*********** main-page *********/
 .main-container {
   background: url("../images/main-bg.png") no-repeat fixed center/cover;
+  padding-top: 104px;
+  overflow-x: hidden;
   .container {
     > .row {
       min-height: 100vh;
+      min-height: calc(100vh - 104px);
       .main-headers {
         color: $white;
         h1, h2 {
@@ -149,12 +272,19 @@ $red: #e90a0b;
         }
       }
       .wheel-wrapper {
-          position: relative;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: auto;
+        }
         #disk {
+          width: 83%;
           position: absolute;
           transition: transform .8s ease-in-out;
         }
-        &:hover  #disk{
+        &:hover #disk {
           transform: rotate(360deg);
         }
       }

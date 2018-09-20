@@ -7,10 +7,11 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../public/stylesheets/main.css">
 </head>
 <body>
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="../public/images/Logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -18,21 +19,44 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item text-center active">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item d-flex align-items-center justify-content-center text-center active">
                     <a class="nav-link" href="#home">Шины <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item text-center">
-                    <a class="nav-link" href="#features">Лиски</a>
+                <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                    <a class="nav-link" href="#features">Диски</a>
                 </li>
-                <li class="nav-item text-center">
+                <li class="nav-item d-flex align-items-center justify-content-center text-center">
                     <a class="nav-link" href="#works">О нас</a>
                 </li>
-                <li class="nav-item text-center">
-                    <a class="nav-link" href="#facts">Доставка&оплата</a>
+                <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                    <a class="nav-link" href="#facts">Доставка/Оплата</a>
                 </li>
-                <li class="nav-item text-center">
-                    <a class="nav-link" href="#contacts">Контакты</a>
+                <li class="nav-item nav-contacts d-flex align-items-center justify-content-center">
+                  <div class="row align-items-center justify-content-center">
+                      <div class="col-3 nav-call-i d-flex align-items-center justify-content-center">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-9 nav-contacts-info">
+                          <ul>
+                              <li>099 099 99 99</li>
+                              <li>099 099 99 99</li>
+                              <li>099 099 99 99</li>
+                          </ul>
+                      </div>
+                  </div>
+                </li>
+                <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                    <div class="row">
+                        <div class="col-12 shopping-cart">
+                            <div class="shopping-cart-wrapper">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <div class="shopping-cart-counter d-flex align-items-center justify-content-center text-center">
+                                    <span class="counter">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
