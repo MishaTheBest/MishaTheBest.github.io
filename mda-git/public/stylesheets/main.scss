@@ -118,6 +118,25 @@ $red: #e90a0b;
   letter-spacing: 1.5px;
 }
 
+/******** global ************/
+.mda-btn{
+  @extend %button;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 30px;
+  background: $red;
+  color: $white;
+  line-height: 0.875rem;
+  margin: 20px 0;
+  transition: opacity .1s ease-in-out;
+  &:hover{
+    text-decoration: none;
+    color: $white;
+    opacity: .5;
+  }
+}
+
 /********** navbar ************/
 .navbar {
   background-color: $black;
@@ -210,6 +229,7 @@ $red: #e90a0b;
       }
       .shopping-cart{
         cursor: pointer;
+
         .shopping-cart-wrapper{
           position: relative;
           .fa{
@@ -287,8 +307,68 @@ $red: #e90a0b;
         &:hover #disk {
           transform: rotate(360deg);
         }
-      }
 
+      }
+      .main-advantages{
+          .advantages{
+            color: $white;
+            padding-left: 0;
+            list-style: none;
+            li{
+              cursor: default;
+              margin:18px 0;
+              @extend %st-1;
+              position: relative;
+              .o-marker{
+                position: absolute;
+                left: 0;
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border: 1px solid $red;
+                border-radius: 50%;
+              }
+              .adv-inner{
+                position: relative;
+                margin-left: 80px;
+                &:after{
+                  content: '';
+                  position: absolute;
+                  right: 100%;
+                  top: 3px;
+                  display: inline-block;
+                  width: 18px;
+                  height: 18px;
+                  border: 1px solid $red;
+                  border-radius: 50%;
+                  transition: right .3s ease-in , opacity .3s ease-in;
+                  opacity: .0;
+                }
+                &:before{
+                  content: '';
+                  position: absolute;
+                  right: 101%;
+                  top: 50%;
+                  display: inline-block;
+                  height: 1px;
+                  width: 0;
+                  background: $red;
+                  transition: width .3s ease-in, opacity .3s ease-in;
+                  opacity: .0;
+                }
+              }
+              &:hover  .adv-inner:before{
+                width: 65px;
+                opacity: 1;
+              }
+              &:hover .adv-inner:after{
+                right: 120%;
+                right: calc(100% + 64px);
+                opacity: 1;
+              }
+            }
+          }
+      }
     }
   }
 }
