@@ -2,6 +2,8 @@
 $white: #fff;
 $black: #000;
 $red: #e90a0b;
+$darkgray:#1d1d1d;
+$lightgray:#4a4a4a;
 /****** fonts ********/
 @import url('https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One');
 
@@ -118,7 +120,17 @@ $red: #e90a0b;
   letter-spacing: 1.5px;
 }
 
+/******** transitions *********/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}
+
+
 /******** global ************/
+
 .mda-btn{
   @extend %button;
   cursor: pointer;
@@ -141,6 +153,14 @@ $red: #e90a0b;
 .navbar {
   background-color: $black;
   > .container {
+   .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(233,10,11, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+   .navbar-toggler {
+      border-color: rgb(233,10,11);
+     outline: none;
+    }
     .navbar-nav {
       .nav-item {
         margin-right: 46px;
@@ -265,8 +285,8 @@ $red: #e90a0b;
   overflow-x: hidden;
   .container {
     > .row {
-      min-height: 100vh;
-      min-height: calc(100vh - 104px);
+      min-height: 101vh;
+      min-height: calc(101vh - 104px);
       .main-headers {
         color: $white;
         h1, h2 {
@@ -371,4 +391,53 @@ $red: #e90a0b;
       }
     }
   }
+  .main-selector-row{
+    min-height: 100vh;
+    #main-selector{
+      position: relative;
+      color: $white;
+      label{
+        color: $lightgray;;
+        background-color: $darkgray;
+        width: 50%;
+        cursor: pointer;
+        border: 1px solid $white;
+        border-bottom: none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: inline-block;
+        float: left;
+        transition: color .1s linear;
+      }
+      .selector-main{
+        @extend %h1;
+        font-size: 1.5rem;
+        input[type="radio"]{
+          display: none;
+        }
+        input[type="radio"]:checked+label{
+          color: $white;
+        }
+        .col-6{
+          padding: 0;
+        }
+        #type-choice{
+          @extend %h3;
+          font-size: 1.25rem;
+        }
+      }
+      .close-selector{
+        position: absolute;
+        top: -28px;
+        right: -10px;
+        cursor: pointer;
+        .fa{
+          color: $red;
+          font-size: 2rem;
+        }
+      }
+    }
+
+  }
+
 }
