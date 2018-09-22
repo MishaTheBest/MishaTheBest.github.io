@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
@@ -21,17 +21,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item d-flex align-items-center justify-content-center text-center active">
-                        <a class="nav-link" href="#home">Шины <span class="sr-only">(current)</span></a>
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                        <a class="nav-link" href="tiers.html">Шины</a>
                     </li>
                     <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                        <a class="nav-link" href="#features">Диски</a>
+                        <a class="nav-link" href="disks.html">Диски</a>
                     </li>
                     <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                        <a class="nav-link" href="#works">О нас</a>
+                        <a class="nav-link" href="about.html">О нас</a>
                     </li>
                     <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                        <a class="nav-link" href="#facts">Доставка/Оплата</a>
+                        <a class="nav-link" href="delivery.html">Доставка/Оплата</a>
                     </li>
                     <li class="nav-item nav-contacts d-flex align-items-center justify-content-center">
                         <div class="row align-items-center justify-content-center">
@@ -141,29 +141,41 @@
                                         <div class="tab-pane fade show active" id="pills-tiers-inner-1" role="tabpanel"
                                              aria-labelledby="pills-tiers-tab-1">
                                             <div class="row form-elements">
-                                                <div class="col-lg-3 form-elem d-flex-align-items-center justify-content-center">
-                                                    <label for="brand" class="mt-2">Производитель</label>
+                                                <div class="col-lg-3 form-elem">
+                                                    <label for="brand" class="mt-2">
+                                                        <img src="../public/images/vendor.png" class="selector-icon">
+                                                        <span>Бренд</span>
+                                                    </label>
                                                     <select v-model="brand" id="brand">
                                                         <option value="">Все</option>
                                                         <option v-for="brand in brands" v-bind:value="brand">{{brand}}</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-3 form-elem">
-                                                    <label for="height" class="mt-2">Профиль</label>
+                                                    <label for="height" class="mt-2">
+                                                        <img src="../public/images/height.png" class="selector-icon">
+                                                        Профиль
+                                                    </label>
                                                     <select v-model="height" id="height">
                                                         <option value="">Все</option>
                                                         <option v-for="height in heights" v-bind:value="height">{{height}}</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-3 form-elem">
-                                                    <label for="width" class="mt-2">Ширина</label>
+                                                    <label for="width" class="mt-2">
+                                                        <img src="../public/images/width.png" class="selector-icon">
+                                                        Ширина
+                                                    </label>
                                                     <select v-model="width" id="width">
                                                         <option value="">Все</option>
                                                         <option v-for="tier in tiers" v-bind:value="tier.width">{{tier.width}}</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-3 form-elem">
-                                                    <label for="diameter" class="mt-2">Диаметр</label>
+                                                    <label for="diameter" class="mt-2">
+                                                        <img src="../public/images/diameter.png" class="selector-icon">
+                                                        Диаметр
+                                                    </label>
                                                     <select v-model="diameter" id="diameter">
                                                         <option value="">Все</option>
                                                         <option v-for="tier in tiers" v-bind:value="tier.diameter">{{tier.diameter}}</option>
