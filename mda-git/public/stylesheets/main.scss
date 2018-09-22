@@ -396,36 +396,82 @@ $lightgray:#4a4a4a;
     #main-selector{
       position: relative;
       color: $white;
-      label{
-        color: $lightgray;;
+      .nav-pills .nav-link, .nav-pills .nav-link{
+        color: $white;
         background-color: $darkgray;
-        width: 50%;
-        cursor: pointer;
-        border: 1px solid $white;
-        border-bottom: none;
-        border-radius: 3px;
-        box-sizing: border-box;
-        display: inline-block;
-        float: left;
-        transition: color .1s linear;
+        transition: background-color .2s ease-in;
       }
-      .selector-main{
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        background-color: $red;
+        color: $white;
+      }
+
+      .nav-pills,.tab-content{
         @extend %h1;
-        font-size: 1.5rem;
-        input[type="radio"]{
-          display: none;
+        font-size: 1.25rem;
+        width: 100%;
+        text-align: center;
+        .nav-item{
+          width: 50%;
+          cursor: pointer;
+          //border: 1px solid $white;
+          border-bottom: none;
+          border-radius: 6px;
+          box-sizing: border-box;
+          display: inline-block;
+          float: left;
+          transition: color .1s linear;
+          a{
+            color: $white;
+          }
         }
-        input[type="radio"]:checked+label{
-          color: $white;
+        .selector-main{
+          @extend %h1;
+          font-size: 1.5rem;
+
+          .col-6{
+            padding: 0;
+          }
+          #type-choice{
+            @extend %h3;
+            font-size: 1.25rem;
+          }
         }
-        .col-6{
-          padding: 0;
+        .form-elements{
+          margin: 0;
+          margin-bottom: 15px;
+          .form-elem{
+            font-size: .75rem;
+            select{
+              cursor: pointer;
+              width: 100%;
+              padding: 10px 0;
+              background-color: $darkgray;
+              color: $white;
+              border: none;
+            }
+          }
         }
-        #type-choice{
-          @extend %h3;
-          font-size: 1.25rem;
+        .seasons-row{
+          font-size: .75rem;
+          input[type="radio"]{
+            display: none;
+          }
+          input[type="radio"]+label{
+            cursor: pointer;
+            padding: 10px 10px;
+            color: $white;
+            background: $darkgray;
+            background-color: $darkgray;
+            width: 100%;
+          }
+          input[type="radio"]:checked+label{
+            color: $white;
+            background: $red;
+          }
         }
       }
+
       .close-selector{
         position: absolute;
         top: -28px;
@@ -433,7 +479,7 @@ $lightgray:#4a4a4a;
         cursor: pointer;
         .fa{
           color: $red;
-          font-size: 2rem;
+          font-size: 1rem;
         }
       }
     }
