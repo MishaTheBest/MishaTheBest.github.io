@@ -1,0 +1,157 @@
+/********* colors *********/
+$white: #fff;
+$black: #161616;
+$gold: #edbb5f;
+$gray: #d8d8d8;
+/***** transitions ******/
+%transitionColor {
+  transition: color .3s ease-in;
+}
+
+%transitionWidth {
+  transition: width .3s cubic-bezier(.76, .32, .83, .67);
+}
+
+/******** fonts ********/
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Fira+Sans:300,400');
+
+%Poiret {
+  font-family: 'Poiret One', cursive;
+}
+%Fira {
+  font-family: 'Fira Sans', sans-serif;
+}
+%st-1 {
+  font-size: 0.9375rem;
+}
+
+/**** global *****/
+a {
+  &:hover, &:active, &:focus {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.fluid-btn {
+  color: $white;
+  display: inline-block;
+  height: 45px;
+
+  .fluid-btn-fill {
+    width: 50%;
+    height: 100%;
+    background-color: $gold;
+    @extend %transitionWidth;
+    border-radius: 5px;
+  }
+  .fluid-btn-text {
+    margin-top: -45px;
+    line-height: 45px;
+    @extend %Fira;
+    padding: 0 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+    i{
+      color: $gold;
+      @extend %transitionColor;
+      margin-left: 5px;
+      font-size: 1.5rem;
+      transform: scaleY(.6);
+    }
+  }
+  &:hover {
+    .fluid-btn-fill {
+      width: 100%;
+    }
+    .fluid-btn-text {
+      i{
+        color: $white;
+      }
+    }
+  }
+}
+
+/*** navbar ******/
+.navbar {
+  background-color: $black;
+  padding: 15px 70px;
+  .navbar-collapse {
+    position: relative;
+    .nav-link {
+      @extend %Poiret;
+      @extend %transitionColor;
+      @extend %st-1;
+      color: $white;
+      &:hover, &:active, &:focus {
+        color: $gold;
+      }
+    }
+    .languages {
+      position: absolute;
+      right: 0;
+      text-transform: uppercase;
+      hr {
+        width: 45px;
+        display: inline-block;
+        float: left;
+        border-top-color: $gold;
+        @extend %transitionWidth;
+      }
+      .dropdown-toggle {
+        &:after {
+          display: none;
+        }
+      }
+      &:hover{
+        hr{
+          width: 55px;
+        }
+      }
+
+    }
+  }
+
+}
+
+/******** main *******/
+.main-container {
+  background: $gray;
+  position: relative;
+  .rightside-info {
+    position: absolute;
+    right: 70px;
+    height: 70px;
+    width: 100vh;
+    background: $black;
+    color: $white;
+    overflow: hidden;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    .inner-info {
+      transform: rotate(180deg);
+      hr {
+        display: block;
+        border-top-color: $gold;
+        width: 120px;
+        margin: 0 15px;
+
+      }
+      a {
+        @extend %Poiret;
+        color: $white;
+        text-decoration: none;
+        font-size: 0.875rem;
+        margin: 0 15px;
+        @extend %transitionColor;
+        &:hover, &:active, &:focus {
+          color: $gold;
+        }
+      }
+    }
+  }
+  .main-headers {
+    min-height: 100vh;
+
+  }
+}
