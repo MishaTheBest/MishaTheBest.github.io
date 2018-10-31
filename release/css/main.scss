@@ -1,8 +1,11 @@
 /********* colors *********/
 $white: #fff;
-$black: #161616;
-$gold: #edbb5f;
+$black: #131313;
+$gold: #f5da82;
+$lightgold: #fdf19d;
+$darkgold: #e5c46d;
 $gray: #d8d8d8;
+$red: #aa1c15;
 /***** transitions ******/
 %transitionColor {
   transition: color .3s ease-in;
@@ -13,145 +16,224 @@ $gray: #d8d8d8;
 }
 
 /******** fonts ********/
-@import url('https://fonts.googleapis.com/css?family=Poiret+One|Fira+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Fira+Sans:300,400|Marck+Script');
+@font-face {
+  src: url("../fonts/GOTHIC.ttf");
+  font-family: 'Century Gothic';
+}
 
 %Poiret {
   font-family: 'Poiret One', cursive;
 }
+
 %Fira {
   font-family: 'Fira Sans', sans-serif;
 }
+
+%Marck {
+  font-family: 'Marck Script', cursive;
+}
+
+%Gothic {
+  font-family: 'Century Gothic', sans-serif;
+}
+
 %st-1 {
   font-size: 0.9375rem;
 }
 
 /**** global *****/
+* {
+  @extend %Gothic;
+}
+
 a {
+  color: $white;
   &:hover, &:active, &:focus {
     color: $white;
     text-decoration: none;
   }
 }
 
-.fluid-btn {
-  color: $white;
-  display: inline-block;
-  height: 45px;
+h2 {
+  font-size: 2.1875rem;
+}
 
-  .fluid-btn-fill {
-    width: 50%;
-    height: 100%;
-    background-color: $gold;
-    @extend %transitionWidth;
-    border-radius: 5px;
-  }
-  .fluid-btn-text {
-    margin-top: -45px;
-    line-height: 45px;
-    @extend %Fira;
-    padding: 0 10px;
-    font-weight: 100;
+.container-header {
+  h2 {
     text-transform: uppercase;
-    i{
-      color: $gold;
-      @extend %transitionColor;
-      margin-left: 5px;
-      font-size: 1.5rem;
-      transform: scaleY(.6);
-    }
-  }
-  &:hover {
-    .fluid-btn-fill {
-      width: 100%;
-    }
-    .fluid-btn-text {
-      i{
-        color: $white;
-      }
-    }
+    @extend %Gothic;
   }
 }
 
-/*** navbar ******/
-.navbar {
-  background-color: $black;
-  padding: 15px 70px;
-  .navbar-collapse {
-    position: relative;
-    .nav-link {
-      @extend %Poiret;
-      @extend %transitionColor;
-      @extend %st-1;
-      color: $white;
-      &:hover, &:active, &:focus {
-        color: $gold;
-      }
-    }
-    .languages {
-      position: absolute;
-      right: 0;
-      text-transform: uppercase;
-      hr {
-        width: 45px;
-        display: inline-block;
-        float: left;
-        border-top-color: $gold;
-        @extend %transitionWidth;
-      }
-      .dropdown-toggle {
-        &:after {
-          display: none;
-        }
-      }
-      &:hover{
-        hr{
-          width: 55px;
-        }
-      }
+.light-color {
+  color: $gold;
+}
 
+.dark-color {
+  color: $black;
+}
+
+.light-bg {
+  background: #fdf19d; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, $lightgold 0%, $darkgold 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, $lightgold 0%, $darkgold 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, $lightgold 0%, $darkgold 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdf19d', endColorstr='#e5c46d', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+
+.dark-bg {
+  background: $black;
+}
+
+/*** header ******/
+header {
+  background: $black;
+  > .container {
+    > .row {
+      min-height: 105px;
+      .logo-wrapper {
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 205px;
+          width: auto;
+        }
+      }
+      .header-places {
+        p {
+          color: $gold;
+          @extend %Gothic;
+          font-size: 25px;
+        }
+      }
+      .header-contact-wrapper {
+        color: $white;
+        a {
+          @extend %st-1;
+          padding: 0 5px;
+        }
+      }
     }
   }
-
 }
 
 /******** main *******/
 .main-container {
-  background: $gray;
-  position: relative;
-  .rightside-info {
-    position: absolute;
-    right: 70px;
-    height: 70px;
-    width: 100vh;
-    background: $black;
-    color: $white;
-    overflow: hidden;
-    transform: rotate(-90deg);
-    transform-origin: top right;
-    .inner-info {
-      transform: rotate(180deg);
-      hr {
-        display: block;
-        border-top-color: $gold;
-        width: 120px;
-        margin: 0 15px;
+  > .row {
+    min-height: 100vh;
+    background: url("../img/main-bg.png") no-repeat center/cover;
+  }
+}
 
-      }
-      a {
-        @extend %Poiret;
-        color: $white;
-        text-decoration: none;
-        font-size: 0.875rem;
-        margin: 0 15px;
-        @extend %transitionColor;
-        &:hover, &:active, &:focus {
-          color: $gold;
-        }
+/**** *******/
+.interior-design {
+  > .row {
+    h1 {
+      @extend %Marck;
+      color: $black;
+      font-size: 6vw;
+    }
+    h3 {
+      font-size: 21px;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+  }
+}
+
+/***** services *********/
+.services-container {
+  background: $black;
+  > .row {
+    &:first-child {
+      background: url("../img/serv-bg.png") no-repeat center/cover;
+      .services {
+        padding: 0;
+        list-style: none;
+        font-size: 1.25rem;
       }
     }
   }
-  .main-headers {
-    min-height: 100vh;
+}
 
+/****** slider ******/
+.photoslider {
+  width: 100vw;
+  height: 100px;
+}
+
+/****** why us *******/
+.why-us-container {
+  box-shadow: inset 0 5px 15px rgba(0, 0, 0, .5);
+  ul {
+    padding: 0;
+    list-style: none;
+    font-size: 1.25rem;
+  }
+}
+
+/****** portfolio ******/
+.portfolio-container {
+  .portfolio-elements-row {
+    .portfolio-elem-wrapper {
+      h5 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9375rem;
+      }
+    }
+  }
+}
+
+/****** offer *********/
+
+.offer-container {
+  .down-btn {
+    $radius: 46px;
+    width: $radius;
+    height: $radius;
+    border-radius: 50%;
+    background: $gold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, .4);
+    i {
+      font-size: 50px;
+      //transform: scaleX(.8);
+      color: #000;
+      &:hover, &:active, &:focus {
+        color: #000;
+      }
+    }
+  }
+  .room-images {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -20%;
+      left: -15vw;
+      background: $black;
+      width: 130vw;
+      height: 50%;
+      transform: skewY(5deg);
+      z-index: 0;
+    }
+
+  }
+}
+/***** footer *****/
+footer{
+  background: $red;
+  color: $white;
+  font-size: 1.3125rem;
+  text-transform: uppercase;
+  a{
+    font-size: 1.2rem;
   }
 }
