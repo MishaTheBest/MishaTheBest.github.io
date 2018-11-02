@@ -8,6 +8,7 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -69,8 +70,33 @@
         </div>
     </div>
 </div>
-<div class="photoslider">
-
+<div id="multiple-items-wrapper" >
+    <div id="prev-slide-wrapper" class="slide-control d-flex align-items-center justify-content-center">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
+    <div id="multiple-items">
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_1.png" alt="">
+        </div>
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_2.png" alt="">
+        </div>
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_3.png" alt="">
+        </div>
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_1.png" alt="">
+        </div>
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_2.png" alt="">
+        </div>
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_3.png" alt="">
+        </div>
+    </div>
+    <div id="next-slide-wrapper" class="slide-control d-flex align-items-center justify-content-center">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </div>
 </div>
 <div class="container-fluid why-us-container light-bg">
     <div class="row py-3">
@@ -249,7 +275,59 @@
 
     </div>
 </div>
-<footer class="container-fluid fixed-bottom">
+<div class="container-fluid contacts-container dark-bg light-color pb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-wrapper py-4 my-5">
+                <div class="row contacts-form mb-3">
+                    <div class="col-12 text-center mb-3">
+                        <h4>заполните заявку прямо сейчас, и мы свяжемся с вами</h4>
+                    </div>
+                    <form action="" method="post" class="col-12">
+                        <div class="row py-2">
+                            <div class="col-4 offset-1">
+                                <label for="name">Ваше имя</label>
+                            </div>
+                            <div class="col-6 text-center">
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4 offset-1">
+                                <label for="phone">Контактный телефон</label>
+                            </div>
+                            <div class="col-6 text-center">
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4 offset-1">
+                                <label for="email">E-mail</label>
+                            </div>
+                            <div class="col-6 text-center">
+                                <input type="email" id="email" name="email">
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4 offset-1">
+                                <label for="text">Ваш вопрос</label>
+                            </div>
+                            <div class="col-6 text-center">
+                                <textarea name="text" id="text" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12 text-center">
+                                <button type="submit">Отправить заявку</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="container-fluid fixed-bottom d-none d-xl-block">
     <div class="row py-2">
         <div class="col-md-2 text-center">
             <img src="img/logo_footer.png" alt="" class="img-fluid">
@@ -291,5 +369,37 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $('#multiple-items').slick({
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        arrows: false,
+        
+        // responsive: [
+        //     {
+        //         breakpoint: 900,
+        //         settings: {
+        //             slidesToShow: 1
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 480,
+        //         settings: {
+        //             slidesToShow: 1
+        //         }
+        //     }
+        // ]
+    });
+    $('#next-slide-wrapper').click(()=>{
+        $('#multiple-items').slick('slickNext');
+    });
+    $('#prev-slide-wrapper').click(()=>{
+        $('#multiple-items').slick('slickPrev');
+    });
+</script>
 </body>
 </html>

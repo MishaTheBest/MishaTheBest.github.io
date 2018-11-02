@@ -4,7 +4,8 @@ $black: #131313;
 $gold: #f5da82;
 $lightgold: #fdf19d;
 $darkgold: #e5c46d;
-$gray: #d8d8d8;
+$gray: #2d2d2d;
+$lightgray: #484848;
 $red: #aa1c15;
 /***** transitions ******/
 %transitionColor {
@@ -45,6 +46,10 @@ $red: #aa1c15;
 /**** global *****/
 * {
   @extend %Gothic;
+}
+
+input, textarea, button {
+  outline: none;
 }
 
 a {
@@ -160,10 +165,41 @@ header {
 }
 
 /****** slider ******/
-.photoslider {
-  width: 100vw;
-  height: 100px;
+#multiple-items-wrapper{
+  position: relative;
+  .slide-control{
+    z-index: 100;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    position: absolute;
+    top: calc(50% - 15px);
+    background: $gold;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+    cursor: pointer;
+    &:first-child{
+      left: 10px;
+      padding-right: 3px;
+    }
+    &:last-child{
+      right: 10px;
+      padding-left: 3px;
+    }
+  }
+  .slide-wrapper {
+    height: 170px;
+    position: relative;
+    img {
+      position: absolute;
+      //top: -50%;
+      //left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
+
 
 /****** why us *******/
 .why-us-container {
@@ -227,13 +263,58 @@ header {
 
   }
 }
+
+/***** contacts ********/
+.contacts-container {
+  .form-wrapper {
+    background: $gray;
+    border-radius: 4px;
+    .contacts-form {
+      h4 {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+      form {
+        label {
+          color: $white;
+          font-size: 0.9375rem;
+          cursor: pointer;
+        }
+        input, textarea {
+          width: 100%;
+          background: $lightgray;
+          color: $white;
+          border: none;
+          text-align: center;
+          resize: none;
+        }
+        button {
+          color: $black;
+          padding: 14px 17px;
+          text-transform: uppercase;
+          cursor: pointer;
+          font-size: 1.2rem;
+          border: none;
+          border-radius: 5px;
+          background: #e5c46d; /* Old browsers */
+          background: -moz-linear-gradient(45deg, #e5c46d 0%, #fdf19d 48%, #e5c46d 91%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(45deg, #e5c46d 0%, #fdf19d 48%, #e5c46d 91%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(45deg, #e5c46d 0%, #fdf19d 48%, #e5c46d 91%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5c46d', endColorstr='#e5c46d', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+        }
+      }
+    }
+  }
+}
+
 /***** footer *****/
-footer{
+footer {
   background: $red;
   color: $white;
   font-size: 1.3125rem;
   text-transform: uppercase;
-  a{
+  a {
     font-size: 1.2rem;
   }
 }
