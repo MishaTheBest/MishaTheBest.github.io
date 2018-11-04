@@ -208,7 +208,16 @@ header {
         p {
           color: $gold;
           @extend %Gothic;
-          font-size: 25px;
+          font-size: 1.5vw;
+          text-transform: uppercase;
+          background-image: -webkit-linear-gradient(top, $darkgold, $white); /* For Chrome and Safari */
+          background-image: -moz-linear-gradient(top, $darkgold, $white); /* For old Fx (3.6 to 15) */
+          background-image: -ms-linear-gradient(top, $darkgold, $white); /* For pre-releases of IE 10*/
+          background-image: -o-linear-gradient(top, $darkgold, $white); /* For old Opera (11.1 to 12.0) */
+          background-image: linear-gradient(to bottom, $darkgold, $white); /* Standard syntax; must be last */
+          color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
         }
       }
       .header-contact-wrapper {
@@ -236,7 +245,7 @@ header {
     h1 {
       @extend %Marck;
       color: $black;
-      font-size: 6vw;
+      font-size: 4vw;
     }
     h3 {
       font-size: 21px;
@@ -251,7 +260,7 @@ header {
   background: $black;
   > .row {
     &:first-child {
-      background: url("../img/serv-bg.png") no-repeat center/cover;
+      //background: url("../img/serv-bg.png") no-repeat center/cover;
       .services {
         padding: 0;
         list-style: none;
@@ -262,10 +271,10 @@ header {
 }
 
 /****** slider ******/
-#multiple-items-wrapper{
+#multiple-items-wrapper {
   position: relative;
   background: $black;
-  .slide-control{
+  .slide-control {
     z-index: 100;
     height: 30px;
     width: 30px;
@@ -274,13 +283,13 @@ header {
     top: calc(50% - 15px);
     background: $gold;
     border-radius: 50%;
-    box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
     cursor: pointer;
-    &:first-child{
+    &:first-child {
       left: 10px;
       padding-right: 3px;
     }
-    &:last-child{
+    &:last-child {
       right: 10px;
       padding-left: 3px;
     }
@@ -301,7 +310,6 @@ header {
     }
   }
 }
-
 
 /****** why us *******/
 .why-us-container {
@@ -418,5 +426,76 @@ footer {
   text-transform: uppercase;
   a {
     font-size: 1.2rem;
+  }
+}
+
+/******* media *******/
+@media screen and (max-width: 1198px) {
+  header {
+
+    > .container {
+      > .row {
+        .header-places {
+          p {
+            //font-size: 10px;
+          }
+        }
+        .header-contact-wrapper {
+          text-align: left !important;
+          a {
+            font-size: 14px;
+          }
+          i {
+            display: none;
+          }
+          .email-wrapper {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  html, body {
+    font-size: 12px;
+  }
+  header {
+
+    > .container {
+      > .row {
+        min-height: 75px;
+        .logo-wrapper {
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+        .header-places {
+          p {
+            font-size: 2.1vw;
+          }
+        }
+        .header-contact-wrapper {
+          text-align: left !important;
+          a {
+            font-size: 10px;
+          }
+          i {
+            display: none;
+          }
+          .email-wrapper {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .interior-design {
+    > .row {
+      h1 {
+        font-size: 8vw !important;
+      }
+    }
   }
 }
