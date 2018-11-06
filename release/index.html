@@ -334,39 +334,93 @@
         </div>
     </div>
 </div>
-<footer class="container-fluid fixed-bottom d-none d-xl-block">
-    <div class="row py-2">
-        <div class="col-md-2 text-center">
-            <img src="img/logo_footer.png" alt="" class="img-fluid">
-        </div>
-        <div class="col-md-3 text-center">
-            <p class="mb-0">
-                Ваш уют в наших руках!
-            </p>
-        </div>
-        <div class="col-md-1 text-center">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-3 text-center">
-            <p class="mb-0">свяжитесь с нами:</p>
-        </div>
-        <div class="col-md-2 text-center">
-            <div class="row">
-                <div class="col-6">
-                    <a href="tel:0501749682">0501749682</a>
-                </div>
-                <div class="col-6">
-                    <a href="tel:0971141086">0971141086</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-
+<div id="pop-up-form-wrapper">
+    <input type="checkbox" name="pop-up-btn" class="d-none" id="pop-up-btn">
+    <label for="pop-up-btn" class="d-flex align-items-center justify-content-center" id="pop-up-btn-label">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </label>
+    <div id="pop-up-form">
+        <div class="row">
+            <div class="col-12 form-wrapper">
+                <div class="row contacts-form">
+                    <form action="" method="post" class="col-12 text-center">
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <label for="name_1">Ваше имя</label>
+                            </div>
+                            <div class="col-12 text-center">
+                                <input type="text" id="name_1" name="name" required>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <label for="phone_1">Контактный телефон</label>
+                            </div>
+                            <div class="col-12 text-center">
+                                <input type="tel" id="phone_1" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <label for="email_1">E-mail</label>
+                            </div>
+                            <div class="col-12 text-center">
+                                <input type="email" id="email_1" name="email">
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <label for="text_1">Ваш вопрос</label>
+                            </div>
+                            <div class="col-12 text-center">
+                                <textarea name="text" id="text_1" cols="30" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="row pt-0">
+                            <div class="col-12 text-center">
+                                <button type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</footer>
+</div>
+<!--<footer class="container-fluid fixed-bottom d-none d-xl-block">-->
+    <!--<div class="row py-2">-->
+        <!--<div class="col-md-2 text-center">-->
+            <!--<img src="img/logo_footer.png" alt="" class="img-fluid">-->
+        <!--</div>-->
+        <!--<div class="col-md-3 text-center">-->
+            <!--<p class="mb-0">-->
+                <!--Ваш уют в наших руках!-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-1 text-center">-->
+            <!--<i class="fa fa-phone" aria-hidden="true"></i>-->
+        <!--</div>-->
+        <!--<div class="col-md-3 text-center">-->
+            <!--<p class="mb-0">свяжитесь с нами:</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-2 text-center">-->
+            <!--<div class="row">-->
+                <!--<div class="col-6">-->
+                    <!--<a href="tel:0501749682">0501749682</a>-->
+                <!--</div>-->
+                <!--<div class="col-6">-->
+                    <!--<a href="tel:0971141086">0971141086</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class="col-12">-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</footer>-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
