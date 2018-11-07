@@ -221,7 +221,7 @@ header {
           position: absolute;
           top: 0;
           left: 0;
-          height: 205px;
+          height: 145px;
           width: auto;
         }
       }
@@ -256,7 +256,7 @@ header {
 .main-container {
   > .row {
     min-height: 100vh;
-    background: url("../img/main-bg.png") no-repeat center/cover;
+    background: url("../img/main-bg-2.jpg") no-repeat fixed center/cover;
   }
 }
 
