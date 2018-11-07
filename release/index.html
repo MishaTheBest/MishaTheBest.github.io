@@ -17,7 +17,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-3 d-flex align-items-center justify-content-center logo-wrapper align-self-start">
                 <a href="#">
-                    <img src="img/logo.png" alt="DesireDesign">
+                    <img src="img/logo.png" alt="DesireDesign" id="logo">
                 </a>
             </div>
             <div class="col-6 d-flex align-items-center justify-content-center header-places">
@@ -55,7 +55,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid services-container">
+<div class="container-fluid services-container dark-bg">
     <div class="row py-3">
         <div class="col-12 text-center container-header py-3">
             <h2 class="light-color wow slideInUp">Наши услуги</h2>
@@ -92,13 +92,19 @@
             <img src="img/slide_3.png" alt="">
         </div>
         <div class="slide-wrapper d-flex justify-content-center align-items-center">
-            <img src="img/slide_1.png" alt="">
+            <img src="img/slide_4.png" alt="">
         </div>
         <div class="slide-wrapper d-flex justify-content-center align-items-center">
-            <img src="img/slide_2.png" alt="">
+            <img src="img/slide_5.png" alt="">
         </div>
         <div class="slide-wrapper d-flex justify-content-center align-items-center">
-            <img src="img/slide_3.png" alt="">
+            <img src="img/slide_6.png" alt="">
+        </div>
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_7.png" alt="">
+        </div>
+        <div class="slide-wrapper d-flex justify-content-center align-items-center">
+            <img src="img/slide_8.png" alt="">
         </div>
     </div>
     <div id="next-slide-wrapper" class="slide-control d-flex align-items-center justify-content-center">
@@ -231,10 +237,11 @@
         </div>
         <div class="row video-row">
             <div class="col-12 my-5 wow slideInUp">
-                <video width="100%" height="500px" controls="controls" muted poster="video/desire_design.png">
-                    <source src="video/desire_design.ogg" type='video/ogg; codecs="theora, vorbis"'>
-                    <source src="video/desire_design.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <video preload="auto" controls="true" loop="loop" autoplay="autoplay" playsinline width="100%" height="500px" muted poster="video/desire_design.png">
                     <source src="video/desire_design.webm" type='video/webm; codecs="vp8, vorbis"'>
+                    <source src="video/desire_design.ogg" type='video/ogg; codecs="theora, vorbis"'>
+                    <source src="video/desire_design.mp4" type='video/mp4'>
+
                     Тег video не поддерживается вашим браузером.
                     <a href="video/desire_design.mp4">Скачайте видео</a>.
                 </video>
@@ -271,20 +278,20 @@
             </p>
         </div>
     </div>
-    <div class="row wow slideInUp">
-        <div class="col-12 text-center container-header py-3 mt-5">
-            <h4 class="pt-3">Часто задаваемые вопросы</h4>
-        </div>
-        <div class="col-12 text-left">
-            <p>
-                Информация о нашей коавдлоы оаовыалвыаол выоалдв ыоалдвыомпании
-                аылав ылао вышаоышао ыаывавыо аовышаовыш доадвлы оадлвыоалдвыоаИнформация
-                о нашей
-                коавдлоы оаовыал выаолвы оалдвыоалдв ыомпанииаылавыл аовышаоы шаоыа ывавы оаовы шаовы шдоа двлы
-                оадлвыоалдвыоа
-            </p>
-        </div>
-    </div>
+    <!--<div class="row wow slideInUp">-->
+        <!--<div class="col-12 text-center container-header py-3 mt-5">-->
+            <!--<h4 class="pt-3">Часто задаваемые вопросы</h4>-->
+        <!--</div>-->
+        <!--<div class="col-12 text-left">-->
+            <!--<p>-->
+                <!--Информация о нашей коавдлоы оаовыалвыаол выоалдв ыоалдвыомпании-->
+                <!--аылав ылао вышаоышао ыаывавыо аовышаовыш доадвлы оадлвыоалдвыоаИнформация-->
+                <!--о нашей-->
+                <!--коавдлоы оаовыал выаолвы оалдвыоалдв ыомпанииаылавыл аовышаоы шаоыа ывавы оаовы шаовы шдоа двлы-->
+                <!--оадлвыоалдвыоа-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 
 <div class="container-fluid contacts-container dark-bg light-color pb-5" id="form">
@@ -445,7 +452,7 @@
     $('#multiple-items').slick({
         infinite: true,
         autoplay: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         adaptiveHeight: true,
         arrows: false,
@@ -482,5 +489,11 @@
         e.preventDefault();
     });
 </script>
+<!--<script>-->
+    <!--$(window).on('scroll',()=>{-->
+        <!--document.getElementById('logo').style.height = document.querySelector('header').offsetHeight + 'px';-->
+        <!--console.log(document.querySelector('header').offsetHeight);-->
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
