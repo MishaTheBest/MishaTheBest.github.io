@@ -545,7 +545,7 @@ $btn-radius: 60px;
           }
         }
         .header-contact-wrapper {
-          text-align: left !important;
+         // text-align: left !important;
           a {
             font-size: 14px;
           }
@@ -581,7 +581,7 @@ $btn-radius: 60px;
           }
         }
         .header-contact-wrapper {
-          text-align: left !important;
+          text-align: center !important;
           a {
             font-size: 10px;
           }
@@ -589,7 +589,10 @@ $btn-radius: 60px;
             display: none;
           }
           .email-wrapper {
-            // display: none;
+            a{
+              font-size: 8px;
+            }
+
           }
         }
       }
