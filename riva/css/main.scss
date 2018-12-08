@@ -616,7 +616,9 @@ a {
   cursor: pointer;
   @extend %tr-c;
 }
-
+button,input,textarea{
+  outline: none;
+}
 /**** navbar ****/
 .navbar {
   background-color: $black;
@@ -640,6 +642,11 @@ a {
         &:hover, &:active, &:focus {
           color: $orange;
         }
+      }
+    }
+    .active{
+      .nav-link{
+        color: $orange !important;
       }
     }
     .nav-contacts-info {
@@ -798,6 +805,8 @@ a {
         .worker-img-wrapper-border {
           padding: 6px;
           border-radius: 50%;
+          @extend %tr-bg;
+          background: $white;
           width: 118px;
           height: 118px;
           border: 1px solid #555;
@@ -824,8 +833,9 @@ a {
           border: 1px solid #555;
           padding: 4px 3px;
           background: $white;
-          .worker-description-wrapper{
-            h5{
+          @extend %tr-bg;
+          .worker-description-wrapper {
+            h5 {
               @extend %bold;
               font-size: 1.0625rem;
               text-transform: uppercase;
@@ -837,6 +847,117 @@ a {
           }
         }
       }
+      &:hover {
+        .worker-description-wrapper-border, .worker-img-wrapper-border {
+          background: $orange;
+        }
+      }
+    }
+  }
+  .about-company-description {
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+}
+
+/** projects-container **/
+.projects-container {
+  background: url("../img/projects-bg.png") no-repeat center/cover;
+  #multiple-items-wrapper {
+    position: relative;
+    overflow: hidden;
+    #prev-slide-wrapper{
+      position: absolute;
+      left: 15px;
+    }
+    #next-slide-wrapper{
+      position: absolute;
+      right:15px;
+    }
+    .slide-control{
+      top: 50%;
+      z-index: 50;
+      cursor: pointer;
+      .fas{
+        font-size: 3rem;
+        color: $orange;
+      }
+    }
+    #multiple-items {
+
+      .slide-wrapper {
+        max-height: 200px;
+        overflow: hidden;
+        @extend %tr-op;
+        opacity: .6;
+        img {
+          width: 95%;
+          height: auto;
+        }
+      }
+      .slick-center{
+        opacity: 1;
+      }
+    }
+  }
+}
+/** partners-container **/
+.partners-container{
+  background: url("../img/wall-bg.png") no-repeat center/cover;
+  .mcs-horizontal-example{
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .mcs-horizontal-example .item{
+    display: inline-block;
+    margin: 0 40px;
+  }
+  .mCSB_scrollTools.mCSB_scrollTools_horizontal{
+
+  }
+  .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background: $orange;
+  }
+}
+/** form-container **/
+.form-container{
+  background: url("../img/order-bg.png") no-repeat center/cover;
+  form{
+    background: rgba(190,190,190,.6);
+    label,button{
+      @extend %bold;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+    }
+    input,textarea{
+      width: 100%;
+      background: $white;
+    }
+    label{
+      margin-bottom: 3px;
+    }
+    .required-input{
+      position: relative;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+        background: $orange;
+      }
+    }
+    textarea{
+      resize: none;
+    }
+    button{
+      background: $white;
+      cursor: pointer;
+      padding: 10px 15px;
     }
   }
 }
