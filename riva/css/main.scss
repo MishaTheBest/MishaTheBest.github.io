@@ -616,9 +616,11 @@ a {
   cursor: pointer;
   @extend %tr-c;
 }
-button,input,textarea{
+
+button, input, textarea {
   outline: none;
 }
+
 /**** navbar ****/
 .navbar {
   background-color: $black;
@@ -644,8 +646,8 @@ button,input,textarea{
         }
       }
     }
-    .active{
-      .nav-link{
+    .active {
+      .nav-link {
         color: $orange !important;
       }
     }
@@ -867,19 +869,19 @@ button,input,textarea{
   #multiple-items-wrapper {
     position: relative;
     overflow: hidden;
-    #prev-slide-wrapper{
+    #prev-slide-wrapper {
       position: absolute;
       left: 15px;
     }
-    #next-slide-wrapper{
+    #next-slide-wrapper {
       position: absolute;
-      right:15px;
+      right: 15px;
     }
-    .slide-control{
+    .slide-control {
       top: 50%;
       z-index: 50;
       cursor: pointer;
-      .fas{
+      .fas {
         font-size: 3rem;
         color: $orange;
       }
@@ -896,51 +898,53 @@ button,input,textarea{
           height: auto;
         }
       }
-      .slick-center{
+      .slick-center {
         opacity: 1;
       }
     }
   }
 }
+
 /** partners-container **/
-.partners-container{
+.partners-container {
   background: url("../img/wall-bg.png") no-repeat center/cover;
-  .mcs-horizontal-example{
+  .mcs-horizontal-example {
     overflow-x: auto;
     white-space: nowrap;
   }
 
-  .mcs-horizontal-example .item{
+  .mcs-horizontal-example .item {
     display: inline-block;
     margin: 0 40px;
   }
-  .mCSB_scrollTools.mCSB_scrollTools_horizontal{
+  .mCSB_scrollTools.mCSB_scrollTools_horizontal {
 
   }
-  .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     background: $orange;
   }
 }
+
 /** form-container **/
-.form-container{
+.form-container {
   background: url("../img/order-bg.png") no-repeat center/cover;
-  form{
-    background: rgba(190,190,190,.6);
-    label,button{
+  form {
+    background: rgba(190, 190, 190, .6);
+    label, button {
       @extend %bold;
       font-size: 0.875rem;
       text-transform: uppercase;
     }
-    input,textarea{
+    input, textarea {
       width: 100%;
       background: $white;
     }
-    label{
+    label {
       margin-bottom: 3px;
     }
-    .required-input{
+    .required-input {
       position: relative;
-      &:after{
+      &:after {
         content: '';
         display: block;
         position: absolute;
@@ -951,13 +955,117 @@ button,input,textarea{
         background: $orange;
       }
     }
-    textarea{
+    textarea {
       resize: none;
     }
-    button{
+    button {
       background: $white;
       cursor: pointer;
       padding: 10px 15px;
     }
+  }
+}
+
+/** empty-container **/
+.empty-container {
+  > .row {
+    background: url("../img/wall-bg.png") no-repeat center/cover;
+    min-height: 70px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 5px;
+      background: $orange;
+    }
+  }
+}
+
+/** footer **/
+footer {
+  background: $black;
+  p {
+    @extend %regular;
+    margin-bottom: 0;
+  }
+  .social-wrapper {
+    a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .email-wrapper {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    a {
+      @extend %bold;
+      font-size: 0.9375rem;
+      color: $white;
+      &:hover, &:active {
+        text-decoration: none;
+      }
+    }
+  }
+  .info-wrapper {
+    img {
+      display: inline-block;
+      margin: 0 6px;
+      width: 24px;
+      height: 24px;
+    }
+    p {
+      &:first-child{
+        line-height: 24px;
+      }
+      display: inline-block;
+      &:last-child{
+        margin-top: -24px;
+      }
+    }
+    a {
+      @extend %bold;
+      font-size: 0.9375rem;
+      color: $white;
+      &:hover, &:active {
+        text-decoration: none;
+      }
+    }
+    .works-info{
+      p {
+        @extend %regular;
+        color: $white;
+        display: inline-block;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: 0.625rem;
+        line-height: .825rem;
+        span {
+          font-size: 0.6875rem;
+        }
+      }
+    }
+  }
+  .copyright-row{
+    p{
+      color: #777;
+    }
+  }
+}
+/** media **/
+@media screen and (max-width: 375px){
+  h1{
+    font-size: 1.675rem !important;
   }
 }
