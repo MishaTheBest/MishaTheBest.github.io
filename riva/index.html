@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Рива"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,17 +23,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                    <a class="nav-link" href="tiers.html">о нас</a>
+                    <a class="nav-link" href="#about">о нас</a>
                 </li>
                 <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                    <a class="nav-link" href="disks.html">контакты</a>
+                    <a class="nav-link" href="#contacts">контакты</a>
                 </li>
                 <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                    <a class="nav-link" href="about.html">наши готовые проекты</a>
+                    <a class="nav-link" href="#projects">наши готовые проекты</a>
                 </li>
                 <li class="nav-item nav-contacts d-flex align-items-center justify-content-center flex-column nav-contacts-info">
                     <p>+38(099)555-44-55</p>
-                    <a href="#">обратный звонок</a>
+                    <a href="#contacts" id="callback">обратный звонок</a>
 
                 </li>
                 <li class="nav-item nav-contacts d-flex align-items-center justify-content-center flex-column nav-works-info text-center">
@@ -72,7 +73,7 @@
             </div>
         </div>
         <div class="row advantages-icons-row">
-            <div class="col-md-4 advantages-icon-wrapper  d-flex align-items-center justify-content-center flex-column">
+            <div class="wow slideInUp col-md-4 advantages-icon-wrapper  d-flex align-items-center justify-content-center flex-column">
                 <div class="advantages-icon-inner d-flex align-items-center justify-content-center mb-3">
                     <img src="img/projects-ico.png" alt="Проекты">
                 </div>
@@ -80,7 +81,7 @@
                     Уникальные проекты
                 </h2>
             </div>
-            <div class="col-md-4 advantages-icon-wrapper  d-flex align-items-center justify-content-center flex-column">
+            <div class="wow slideInUp col-md-4 advantages-icon-wrapper  d-flex align-items-center justify-content-center flex-column">
                 <div class="advantages-icon-inner d-flex align-items-center justify-content-center mb-3">
                     <img src="img/solutions.png" alt="Решения">
                 </div>
@@ -88,7 +89,7 @@
                     самые смелые решения
                 </h2>
             </div>
-            <div class="col-md-4 advantages-icon-wrapper  d-flex align-items-center justify-content-center flex-column">
+            <div class="wow slideInUp col-md-4 advantages-icon-wrapper  d-flex align-items-center justify-content-center flex-column">
                 <div class="advantages-icon-inner d-flex align-items-center justify-content-center mb-3">
                     <img src="img/building-ico.png" alt="Строительство">
                 </div>
@@ -102,77 +103,59 @@
 <div class="container-fluid services-container">
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-3 text-center serv-header">
+            <div class="col-md-3 col-sm-5 col-6 text-center serv-header">
                 <h1>услуги</h1>
             </div>
         </div>
         <div class="row services-row text-justify">
-            <div class="col-md-4 offset-md-1 services-elem w-c">
-                <h1 class="mb-2 text-center">ПРОЕКТИРОВАНИЕ</h1>
+            <div class="wow slideInUp col-md-4 offset-md-1 services-elem w-c">
+                <h1 class="text-center">проектирование</h1> <span class="mb-2"> от …. м2</span>
                 <p>
-                    текст текст текст текст текст текст текст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
+                    Индивидуальный подход в проектировании вашего рода, разработка чертежей АР КР, проектирование
+                    инженерных коммуникаций
                 </p>
             </div>
-            <div class="col-md-4 offset-md-2 services-elem w-c">
-                <h1 class="mb-2 text-center">ПРОЕКТИРОВАНИЕ</h1>
+            <div class="wow slideInUp col-md-4 offset-md-2 services-elem w-c">
+                <h1 class="text-center">комплексное строительство</h1> <span class="mb-2"> от … руб за м2</span>
                 <p>
-                    текст текст текст текст текст текст текст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
+                    Строительство дома от вашей идеи до готового объекта
                 </p>
             </div>
-            <div class="col-md-4 offset-md-1 services-elem w-c">
-                <h1 class="mb-2 text-center">ПРОЕКТИРОВАНИЕ</h1>
+            <div class="wow slideInUp col-md-4 offset-md-1 services-elem w-c">
+                <h1 class="text-center">монолитные работы</h1> <span class="mb-2">от … руб за м3</span>
                 <p>
-                    текст текст текст текст текст текст текст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
+                    Возведение отельных конструктивных элементов: фундаменты, плиты, колоны, лестницы и прочее
                 </p>
             </div>
-            <div class="col-md-4 offset-md-2 services-elem w-c">
-                <h1 class="mb-2 text-center">ПРОЕКТИРОВАНИЕ</h1>
+            <div class="wow slideInUp col-md-4 offset-md-2 services-elem w-c">
+                <h1 class="text-center">каменные работы</h1> <span class="mb-2">от … руб м3</span>
                 <p>
-                    текст текст текст текст текст текст текст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
+                    Кладка стен и перегородок из кирпича, газоблока, керамоблока и ракушечника
                 </p>
             </div>
-            <div class="col-md-4 offset-md-1 services-elem w-c">
-                <h1 class="mb-2 text-center">ПРОЕКТИРОВАНИЕ</h1>
+            <div class="wow slideInUp col-md-4 offset-md-1 services-elem w-c">
+                <h1 class="text-center">кровельные работы</h1> <span class="mb-2">от … руб за м2</span>
                 <p class="mb-0">
-                    текст текст текст текст текст текст текст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
+                    От мягкой кровли до стропильных систем любой сложности
                 </p>
             </div>
-            <div class="col-md-4 offset-md-2 services-elem w-c">
-                <h1 class="mb-2 text-center">ПРОЕКТИРОВАНИЕ</h1>
+            <div class="wow slideInUp col-md-4 offset-md-2 services-elem w-c">
+                <h1 class="mb-2 text-center">Внутренняя и наружная отделка </h1>
                 <p class="mb-0">
-                    текст текст текст текст текст текст текст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
-                    текст текст тексттекст текст тексттекст текст текст
                 </p>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid about-container">
+<div class="container-fluid about-container" id="about">
     <div class="container">
         <div class="row pt-5">
             <div class="col-12 text-center">
                 <h1>о компании</h1>
             </div>
         </div>
-        <div class="row workers-row align-items-start">
-            <div class="col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
+        <div class="row workers-row align-items-start pb-5 justify-content-center">
+            <div class="wow slideInUp my-2 col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
                 <div class="worker-inner d-flex align-items-center justify-content-center flex-column">
                     <div class="worker-img-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-img-wrapper">
@@ -182,14 +165,14 @@
                     <div class="worker-description-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-description-wrapper">
                             <h5>
-                                инженеры
+                                Директор
                             </h5>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div class="col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
+            <div class="wow slideInUp my-2 col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
                 <div class="worker-inner d-flex align-items-center justify-content-center flex-column">
                     <div class="worker-img-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-img-wrapper">
@@ -199,16 +182,16 @@
                     <div class="worker-description-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-description-wrapper">
                             <h5>
-                                начальник
+                                Главный
                                 <br>
-                                по снабжению
+                                инженер
                             </h5>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div class="col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
+            <div class="wow slideInUp my-2 col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
                 <div class="worker-inner d-flex align-items-center justify-content-center flex-column">
                     <div class="worker-img-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-img-wrapper">
@@ -218,14 +201,15 @@
                     <div class="worker-description-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-description-wrapper">
                             <h5>
-                                бухгалтер
+                                Начальник <br>проектного <br> отдела
                             </h5>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div class="col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
+            <div class="w-100"></div>
+            <div class="wow slideInUp my-2 col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
                 <div class="worker-inner d-flex align-items-center justify-content-center flex-column">
                     <div class="worker-img-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-img-wrapper">
@@ -235,7 +219,41 @@
                     <div class="worker-description-wrapper-border d-flex align-items-center justify-content-center">
                         <div class="worker-description-wrapper">
                             <h5>
-                                директор
+                                Инженер <br>технического <br>надзора
+                            </h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="wow slideInUp my-2 col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
+                <div class="worker-inner d-flex align-items-center justify-content-center flex-column">
+                    <div class="worker-img-wrapper-border d-flex align-items-center justify-content-center">
+                        <div class="worker-img-wrapper">
+                            <img src="img/workers_4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="worker-description-wrapper-border d-flex align-items-center justify-content-center">
+                        <div class="worker-description-wrapper">
+                            <h5>
+                                Начальник <br>отдела <br>снабжения
+                            </h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="wow slideInUp my-2 col-sm-3 worker-wrapper d-flex align-items-center justify-content-center text-center">
+                <div class="worker-inner d-flex align-items-center justify-content-center flex-column">
+                    <div class="worker-img-wrapper-border d-flex align-items-center justify-content-center">
+                        <div class="worker-img-wrapper">
+                            <img src="img/workers_4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="worker-description-wrapper-border d-flex align-items-center justify-content-center">
+                        <div class="worker-description-wrapper">
+                            <h5>
+                                Бухгалтер
                             </h5>
                         </div>
                     </div>
@@ -243,8 +261,234 @@
                 </div>
             </div>
         </div>
+        <div class="wow slideInUp row about-company-description pb-3">
+            <div class="col-12 text-center">
+                <h2>Строительная компания РИВА – это команда с опытом работы 15 лет, и готовыми объектами в различных
+                    климатических зонах не только РФ, но и других стран
+                </h2>
+            </div>
+            <div class="col-12 text-center">
+                <h2>Мы готовы воплотить любую Вашу идею и дать
+                    нужный совет
+                </h2>
+            </div>
+            <div class="col-12 text-center">
+                <h2>Строительство происходит с четким соблюдением технологий и постоянным техническим
+                    надзором
+                </h2>
+            </div>
+        </div>
+        <div class="wow slideInUp row video-row justify-content-center pb-5">
+            <div class="col-md-8"><img src="img/demo-video.png" alt="video" class="img-fluid"></div>
+        </div>
     </div>
 </div>
+<div class="container-fluid projects-container" id="projects">
+    <div class="container">
+        <div class="row pt-5 pb-3">
+            <div class="col-12 text-center w-c">
+                <h1>готовые проекты</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div id="multiple-items-wrapper">
+            <div id="prev-slide-wrapper" class="slide-control d-flex align-items-center justify-content-center">
+                <i class="fas fa-caret-left"></i>
+            </div>
+            <div id="multiple-items">
+                <div class="slide-wrapper d-flex justify-content-center align-items-center">
+                    <img src="img/project_1.png" class="img-fluid" alt="">
+                </div>
+                <div class="slide-wrapper d-flex justify-content-center align-items-center">
+                    <img src="img/demo-video.png" class="img-fluid" alt="">
+                </div>
+                <div class="slide-wrapper d-flex justify-content-center align-items-center">
+                    <img src="img/project_1.png" class="img-fluid" alt="">
+                </div>
+                <div class="slide-wrapper d-flex justify-content-center align-items-center">
+                    <img src="img/project_1.png" class="img-fluid" alt="">
+                </div>
+                <div class="slide-wrapper d-flex justify-content-center align-items-center">
+                    <img src="img/demo-video.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div id="next-slide-wrapper" class="slide-control d-flex align-items-center justify-content-center">
+                <i class="fas fa-caret-right"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid map-container" id="map">
+    <div class="container py-5">
+        <div class="row map-row align-items-center">
+           <div class="map-wrapper">
+               <img src="img/map.png" alt="карта" class="map-image">
+               <div class="map-pointer-wrapper map-pointer-1">
+                   <div class="map-pointer"></div>
+                   <h6 class="d-none d-md-block">Крым</h6>
+               </div>
+               <div class="map-pointer-wrapper map-pointer-2">
+                   <div class="map-pointer"></div>
+                   <h6 class="d-none d-md-block">Ростов</h6>
+               </div>
+               <div class="map-pointer-wrapper map-pointer-3">
+                   <div class="map-pointer"></div>
+                   <h6 class="d-none d-md-block">Крсанодар</h6>
+               </div>
+           </div>
+
+            <div class="text-center map-text-wrapper py-2">
+                <h1>
+                  <span>работаем по</span>  крыму, ростовской области и краснодарскому краю
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid partners-container">
+    <div class="row">
+        <div class="col-12 text-center pt-5">
+            <h1>Партнёры компании</h1>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-12 py-3">
+            <div class="mcs-horizontal-example">
+                <img src="img/partner_1.png" class="item"/>
+                <img src="img/partner_2.png" class="item"/>
+                <img src="img/partner_3.png" class="item"/>
+                <img src="img/partner_4.png" class="item"/>
+                <img src="img/partner_5.png" class="item"/>
+                <img src="img/partner_6.png" class="item"/>
+                <img src="img/partner_1.png" class="item"/>
+                <img src="img/partner_2.png" class="item"/>
+                <img src="img/partner_3.png" class="item"/>
+                <img src="img/partner_4.png" class="item"/>
+                <img src="img/partner_5.png" class="item"/>
+                <img src="img/partner_6.png" class="item"/>
+                <img src="img/partner_1.png" class="item"/>
+                <img src="img/partner_2.png" class="item"/>
+                <img src="img/partner_3.png" class="item"/>
+                <img src="img/partner_4.png" class="item"/>
+                <img src="img/partner_5.png" class="item"/>
+                <img src="img/partner_6.png" class="item"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid form-container" id="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center pt-5 pb-3 w-c">
+                <h1>заказать проект</h1>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center pb-5">
+            <div class="col-xl-5 col-md-6 col-sm-8 col-12">
+                <form action="" method="post" class="col-12 py-4 px-4">
+                    <div class="row py-2">
+                        <div class="col-12 text-left">
+                            <label for="name">ваше имя:</label>
+                        </div>
+                        <div class="col-12 text-center required-input">
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-12 text-left">
+                            <label for="phone">ваш телефон:</label>
+                        </div>
+                        <div class="col-12 text-center required-input">
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-12 text-left">
+                            <label for="email">E-MAIL:</label>
+                        </div>
+                        <div class="col-12 text-center">
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-12 text-left">
+                            <label for="text">Сообщение:</label>
+                        </div>
+                        <div class="col-12 text-center">
+                            <textarea name="text" id="text" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-12 text-center">
+                            <button type="submit">Отправить заявку</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid empty-container">
+    <div class="row"></div>
+</div>
+<footer class="container-fluid">
+    <div class="container">
+        <div class="row pt-3 pb-1 w-c">
+            <div class="col-lg-3 text-center"><img src="img/logo.png" alt="Рива"></div>
+            <div class="col-lg-3 offset-xl-2 offset-lg-1 text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <p>мы в социальных сетях:</p>
+                    </div>
+                    <div class="col-12 social-wrapper">
+                        <a href="https://vk.com/">
+                            <img src="img/vk-ico.png" alt="vk">
+                        </a>
+                        <a href="https://www.facebook.com/">
+                            <img src="img/fb-ico.png" alt="fb">
+                        </a>
+                        <a href="https://ok.ru/">
+                            <img src="img/ok-ico.png" alt="ok">
+                        </a>
+                    </div>
+                    <div class="col-12 email-wrapper">
+                        <a href="mailto:stroybudkoteje@gmail.com">
+                            <img src="img/mail-ico.png" alt="Почта" class="d-inline-block d-lg-none d-xl-inline-block">
+                            stroybudkoteje@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-3 text-center info-wrapper">
+                <img src="img/phone-ico.png" alt="Телефон">
+                <p>наши телефоны:</p>
+                <div class="w-100"></div>
+                <a href="tel:+380995554455">+38(099)555-44-55</a>
+                <div class="w-100"></div>
+                <a href="tel:+380995554455">+38(099)555-44-55</a>
+            </div>
+            <div class="col-lg-2 text-center info-wrapper">
+                <img src="img/clock-ico.png" alt="Время">
+                <p>работаем по </p>
+                <p>предварительной записи:</p>
+                <div class="works-info">
+                    <p><span>ПН - ПТ</span><br> 10:00 - 20:00</p>
+                    <p><span>сб - вс</span><br> 10:00 - 16:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="row copyright-row pb-3">
+            <div class="col-12 text-center">
+                <p>© 2018 Строй Буд. Все права защищены</p>
+            </div>
+            <div class="col-12 text-center">
+                <p>Данный сайт носит исключительно информационный характер и не является публичной офертой, определяемой
+                    положениями статьи 437 Гражданского кодекса Российской Федерации.</p>
+            </div>
+        </div>
+    </div>
+</footer>
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -256,9 +500,105 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
+</script>
+<script>
+    $('#multiple-items').slick({
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '15px',
+        // responsive: [
+        //     {
+        //         breakpoint: 900,
+        //         settings: {
+        //             slidesToShow: 1
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 480,
+        //         settings: {
+        //             slidesToShow: 1
+        //         }
+        //     }
+        // ]
+    });
+    $('#next-slide-wrapper').click(() => {
+        $('#multiple-items').slick('slickNext');
+    });
+    $('#prev-slide-wrapper').click(() => {
+        $('#multiple-items').slick('slickPrev');
+    });
+</script>
+<script>
+    (function ($) {
+        $(window).on("load", function () {
+            $(".mcs-horizontal-example").mCustomScrollbar({
+                axis: "x",
+                theme: "dark-3"
+            });
+        });
+    })(jQuery);
+</script>
+<script>
+    var lastId,
+        // All list items
+        menuItems = $(".nav-link"),
+        // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function () {
+            var item = $($(this).attr("href"));
+            if (item.length) {
+                return item;
+            }
+        });
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation
+    var headerOffset = $('.navbar')[0].offsetHeight;
+    menuItems.click(function (e) {
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top - headerOffset;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 1500);
+        e.preventDefault();
+    });
+
+    $("#callback").click(function (e) {
+        let offsetTop = $("#contacts").offset().top - 120;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 1500);
+        e.preventDefault();
+    });
+
+    // Bind to scroll
+    // $(window).scroll(function () {
+    //     // Get container scroll position
+    //     var fromTop = $(this).scrollTop() + headerOffset;
+    //     // Get id of current scroll item
+    //     var cur = scrollItems.map(function () {
+    //         if ($(this).offset().top < fromTop)
+    //             return this;
+    //     });
+    //     // Get the id of the current element
+    //     cur = cur[cur.length - 1];
+    //     var id = cur && cur.length ? cur[0].id : "";
+    //
+    //     if (lastId !== id) {
+    //         lastId = id;
+    //         // Set/remove active class
+    //         menuItems
+    //             .parent().removeClass("active")
+    //             .end().filter("[href='#" + id + "']").parent().addClass("active")
+    //     }
+    // });
 </script>
 </body>
 </html>
