@@ -780,13 +780,22 @@ button, input, textarea {
   }
   .services-row {
     .services-elem {
+      text-align: center;
       h1 {
         background: transparent;
         @extend %tr-bg;
+        margin-bottom: 0;
+      }
+      span {
+        @extend %regular;
+        display: inline-block;
+        font-size: .675rem;
+        width: 100%;
       }
       p {
         text-transform: uppercase;
         margin-bottom: 55px;
+
       }
       &:hover {
         h1 {
@@ -902,6 +911,83 @@ button, input, textarea {
         opacity: 1;
       }
     }
+  }
+}
+
+/** map container **/
+.map-container {
+  background: url("../img/wall-bg.png") no-repeat center/cover;
+  position: relative;
+  .map-row {
+    .map-wrapper{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .map-image {
+        width: 100%;
+        height: auto;
+      }
+      .map-pointer-wrapper{
+        position: absolute;
+
+        width: 23px;
+        height: 23px;
+        .map-pointer{
+          width: 100%;
+          height: 100%;
+          background: $orange;
+          border: 1px solid $white;
+        }
+        h6{
+          @extend %bold;
+          color: $black;
+          font-size: 1.5vw;
+          margin-left: 20px;
+          margin-top: -16px;
+          line-height: 1.5vw;
+          opacity: .0;
+          //@extend %tr-op;
+          transition: margin-left $tr-time linear,
+        opacity $tr-time linear;
+        }
+        &:hover{
+          h6{
+            opacity: 1;
+            margin-left: 29px;
+          }
+        }
+      }
+      .map-pointer-1{
+        left: 1vw;
+        top: 50%;
+      }
+      .map-pointer-2{
+        left: 6vw;
+        top: 56%;
+      }
+      .map-pointer-3{
+        left: 3.2vw;
+        top: 64%;
+      }
+    }
+
+    .map-text-wrapper {
+      background: $orange;
+      position: absolute;
+      min-width: 100vw;
+      left: 0;
+      margin-top: -50px;
+      //top: 0;
+      h1 {
+        margin-bottom: 0;
+        font-size: 2vw !important;
+        span {
+          font-size: 1.7vw !important;
+          margin-right: 15px;
+        }
+      }
+    }
+
   }
 }
 
@@ -1026,11 +1112,11 @@ footer {
       height: 24px;
     }
     p {
-      &:first-child{
+      &:first-child {
         line-height: 24px;
       }
       display: inline-block;
-      &:last-child{
+      &:last-child {
         margin-top: -24px;
       }
     }
@@ -1042,7 +1128,7 @@ footer {
         text-decoration: none;
       }
     }
-    .works-info{
+    .works-info {
       p {
         @extend %regular;
         color: $white;
@@ -1057,15 +1143,16 @@ footer {
       }
     }
   }
-  .copyright-row{
-    p{
+  .copyright-row {
+    p {
       color: #777;
     }
   }
 }
+
 /** media **/
-@media screen and (max-width: 375px){
-  h1{
+@media screen and (max-width: 375px) {
+  h1 {
     font-size: 1.675rem !important;
   }
 }
