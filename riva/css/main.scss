@@ -922,6 +922,7 @@ button, input, textarea {
 
 /** map container **/
 .map-container {
+  overflow: hidden;
   background: url("../img/wall-bg.png") no-repeat center/cover;
   position: relative;
   .map-row {
