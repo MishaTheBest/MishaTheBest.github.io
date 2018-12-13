@@ -834,6 +834,7 @@ button, input, textarea {
               left: -25%;
               width: auto;
               height: 100%;
+              transition: transform $tr-time linear;
             }
           }
         }
@@ -861,6 +862,11 @@ button, input, textarea {
       &:hover {
         .worker-description-wrapper-border, .worker-img-wrapper-border {
           background: $orange;
+        }
+        .worker-img-wrapper{
+          img{
+            transform: scale(1.1);
+          }
         }
       }
     }
