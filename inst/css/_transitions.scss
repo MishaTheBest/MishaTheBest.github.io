@@ -1,0 +1,16 @@
+$tr-time: .3s;
+$tr-type: ease-in;
+%tr-c {
+  transition: color $tr-time linear;
+}
+
+%tr-bg {
+  transition: background-color $tr-time linear;
+}
+
+%tr-op {
+  transition: opacity $tr-time linear;
+}
+@mixin transition($type) {
+  transition: $type $tr-time $tr-type;
+}

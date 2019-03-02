@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<div class="logo fixed-top">
+    <div class="logo-inner text-center">
+        <h2>SMM <span>real</span></h2>
+    </div>
+
+</div>
+<div id="menu-wrapper" class="animated fadeInLeft" style="z-index: 1080">
+    <div id="menu" class="d-flex align-items-center justify-content-center">
+
+        <div id="toggler-wrapper">
+            <div id="toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="main-menu">
+            <ul>
+                <li><a href="#" class="active">menu-item <span class="indicator"></span></a></li>
+                <li><a href="#">menu-item <span class="indicator"></span></a></li>
+                <li><a href="#">menu-item <span class="indicator"></span></a></li>
+                <li><a href="#">menu-item <span class="indicator"></span></a></li>
+                <li><a href="#">menu-item <span class="indicator"></span></a></li>
+                <li><a href="#">menu-item <span class="indicator"></span></a></li>
+            </ul>
+
+        </div>
+
+        <div id="menu-logo">
+            <h4>
+                SMM
+                <br>
+                real
+                <br>
+                2019
+            </h4>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="container-fluid main-container">
+    <div class="row">
+        <div class="col-md-3 offset-md-1 d-flex align-items-center justify-content-center">
+            <form action="" class="text-left p-5">
+                <h5 class="text-center">Регистрация</h5>
+                <div class="form-input-wrapper my-3">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" autocomplete="off">
+                </div>
+                <div class="form-input-wrapper my-3">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" autocomplete="off">
+                </div>
+                <div class="form-input-wrapper my-3">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" autocomplete="off">
+                </div>
+                <div class="form-input-wrapper my-3">
+                    <input type="checkbox" id="terms-of-use">
+                    <label for="terms-of-use" class="terms-of-use">Пользовательское соглашение</label>
+                </div>
+                <div class="text-center">
+                    <button type="submit">Зарегестрироваться</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-center flex-column text-center">
+            <div class="animated fadeIn delay-1s">
+                <h4>Купи</h4>
+                <div class="logo">
+                    <span class="logo-inner text-center">
+                      <h2>SMM <span>real</span></h2>
+                    </span>
+                </div>
+                <h4>и начни</h4>
+                <h3>зарабатывать!</h3>
+            </div>
+
+
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-center"></div>
+    </div>
+</div>
+
+<div class="container-fluid" style="min-height: 100vh"></div>
+<div class="container-fluid" style="min-height: 100vh"></div>
+
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script>
+    const toggler = document.querySelector('#toggler-wrapper');
+    const menu = document.querySelector('#menu-wrapper');
+    toggler.addEventListener('click', () => {
+        menu.classList.toggle('show-menu');
+    })
+</script>
+</body>
+</html>
