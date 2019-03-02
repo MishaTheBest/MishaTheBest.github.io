@@ -8,6 +8,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 
+
 </head>
 <body>
 <div class="logo fixed-top">
@@ -26,14 +27,14 @@
                 <span></span>
             </div>
         </div>
-        <div id="main-menu">
+        <div id="main-menu" class="text-right">
             <ul>
-                <li><a href="#" class="active">menu-item <span class="indicator"></span></a></li>
-                <li><a href="#">menu-item <span class="indicator"></span></a></li>
-                <li><a href="#">menu-item <span class="indicator"></span></a></li>
-                <li><a href="#">menu-item <span class="indicator"></span></a></li>
-                <li><a href="#">menu-item <span class="indicator"></span></a></li>
-                <li><a href="#">menu-item <span class="indicator"></span></a></li>
+                <li class="active"><a href="#main" class="menu-link">Главная<span class="indicator"></span></a></li>
+                <li><a href="#about" class="menu-link">О нас<span class="indicator"></span></a></li>
+                <li><a href="#contacts" class="menu-link">Контакты <span class="indicator"></span></a></li>
+                <li><a href="#contacts" class="menu-link">menu-item <span class="indicator"></span></a></li>
+                <li><a href="#contacts" class="menu-link">menu-item <span class="indicator"></span></a></li>
+                <li><a href="#contacts" class="menu-link">menu-item <span class="indicator"></span></a></li>
             </ul>
 
         </div>
@@ -53,10 +54,10 @@
 
 </div>
 
-<div class="container-fluid main-container">
+<div class="container-fluid main-container" id="main">
     <div class="row">
         <div class="col-md-3 offset-md-1 d-flex align-items-center justify-content-center">
-            <form action="" class="text-left p-5">
+            <form action="" class="text-left py-4 px-5">
                 <h5 class="text-center">Регистрация</h5>
                 <div class="form-input-wrapper my-3">
                     <label for="name">Имя</label>
@@ -75,9 +76,14 @@
                     <label for="terms-of-use" class="terms-of-use">Пользовательское соглашение</label>
                 </div>
                 <div class="text-center">
-                    <button type="submit">Зарегестрироваться</button>
+                    <button type="submit" class="py-2 px-3">Зарегестрироваться</button>
                 </div>
-
+                <div class="text-center mt-2">
+                    <span>Уже есть аккаунт?</span>
+                </div>
+                <div class="text-center">
+                    <a href="#">Войти</a>
+                </div>
             </form>
         </div>
         <div class="col-md-4 d-flex align-items-center justify-content-center flex-column text-center">
@@ -98,8 +104,8 @@
     </div>
 </div>
 
-<div class="container-fluid" style="min-height: 100vh"></div>
-<div class="container-fluid" style="min-height: 100vh"></div>
+<div class="container-fluid" style="min-height: 100vh" id="about"></div>
+<div class="container-fluid" style="min-height: 100vh" id="contacts"></div>
 
 <script src="js/wow.min.js"></script>
 <script>
@@ -112,5 +118,7 @@
         menu.classList.toggle('show-menu');
     })
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>

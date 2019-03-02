@@ -46,7 +46,7 @@ button{
 }
 /** form **/
 form {
-  border: 1px solid $black-1;
+  border: 1px solid $darkgray;
   h5 {
     @extend %st-1;
     text-transform: uppercase;
@@ -74,6 +74,18 @@ form {
   }
   .terms-of-use {
     @extend %overline;
+  }
+  span{
+    @extend %caption;
+    color: $gray;
+  }
+  a{
+    color: $main-color;
+    text-decoration: underline;
+    @extend %overline;
+    &:hover{
+      color: $main-color;
+    }
   }
 }
 
@@ -169,7 +181,7 @@ form {
               border-radius: 50%;
               background: transparent;
               position: relative;
-              margin-left: 43px;
+              margin-left: 48px;
               &:before {
                 content: "";
                 display: block;
@@ -211,7 +223,7 @@ form {
     #menu-logo {
       position: absolute;
       bottom: 40px;
-      right: 20px;
+      right: 32px;
       h4 {
         color: $main-color;
         @extend %overline;
