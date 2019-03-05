@@ -38,12 +38,14 @@ a {
 button, input, textarea {
   outline: none;
 }
-button{
+
+button {
   background: transparent;
   border: 1px solid $main-color;
   color: $main-color;
   @extend %overline;
 }
+
 /** form **/
 form {
   border: 1px solid $darkgray;
@@ -65,25 +67,25 @@ form {
     @extend %st-2;
   }
   .form-input-wrapper {
-      border-bottom: 1px solid $darkgray;
+    border-bottom: 1px solid $darkgray;
   }
   .form-input-wrapper {
-    &:last-child{
+    &:last-child {
       border-bottom: none;
     }
   }
   .terms-of-use {
     @extend %overline;
   }
-  span{
+  span {
     @extend %caption;
     color: $gray;
   }
-  a{
+  a {
     color: $main-color;
     text-decoration: underline;
     @extend %overline;
-    &:hover{
+    &:hover {
       color: $main-color;
     }
   }
@@ -289,6 +291,82 @@ form {
       }
 
     }
+  }
+}
+
+/** business container **/
+.business-container {
+  > .row {
+    .watch-wrapper{
+      overflow: hidden;
+      position: relative;
+      img{
+        opacity: .7;
+        width: 75%;
+        height: auto;
+      }
+      #instAnim{
+        top: 16.3%;
+        left: 14.7%;
+        transform: rotate(-29.5deg);
+        position: absolute;
+        svg {
+          padding: 5% 10%;
+          width: 60%;
+
+
+        }
+        .st0 {
+          fill: none;
+          stroke: $white;
+          stroke-width: 7;
+          stroke-linecap: round;
+          stroke-miterlimit: 10;
+        }
+        #littleCircle {
+          stroke-dasharray: 150;
+          animation: littleCircle 4s linear;
+
+        }
+        #camera {
+          stroke-dasharray: 300;
+          animation: camera 4s linear;
+
+        }
+        #lens {
+          fill: $white;
+          animation: lens 4s linear;
+
+        }
+        @keyframes camera {
+          0%, 25% {
+            stroke-dashoffset: 300;
+          }
+          50% {
+            stroke-dashoffset: 0;
+          }
+        }
+        @keyframes littleCircle {
+          0%, 50% {
+            stroke-dashoffset: 150;
+          }
+          75% {
+            stroke-dashoffset: 0;
+          }
+        }
+        @keyframes lens {
+          0%, 75% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+    min-height: 100vh;
+
   }
 }
 

@@ -30,7 +30,7 @@
         <div id="main-menu" class="text-right">
             <ul>
                 <li class="active"><a href="#main" class="menu-link">Главная<span class="indicator"></span></a></li>
-                <li><a href="#about" class="menu-link">О нас<span class="indicator"></span></a></li>
+                <li><a href="#business" class="menu-link">О нас<span class="indicator"></span></a></li>
                 <li><a href="#contacts" class="menu-link">Контакты <span class="indicator"></span></a></li>
                 <li><a href="#contacts" class="menu-link">menu-item <span class="indicator"></span></a></li>
                 <li><a href="#contacts" class="menu-link">menu-item <span class="indicator"></span></a></li>
@@ -104,12 +104,62 @@
     </div>
 </div>
 
-<div class="container-fluid" style="min-height: 100vh" id="about"></div>
-<div class="container-fluid" style="min-height: 100vh" id="contacts"></div>
+<div class="container-fluid business-container" id="business">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+
+            <div class="logo">
+            <span class="logo-inner text-center">
+            <h2>SMM <span>real</span></h2>
+            </span>
+            </div>
+            <ul>
+
+                <li>
+                    <p>Свой бизнес</p>
+                    <p></p>
+
+                </li>
+                <li>
+                    <h4></h4>
+                </li>
+                <li>
+                    <h4></h4>
+                </li>
+                <li>
+                    <h4></h4>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="watch-wrapper wow fadeIn">
+                <img src="img/Apple-Watch-Hermes-Double-Tour.png" alt="">
+                <div id="instAnim" class="wow" style="width: 100%;">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="contacts"></div>
 
 <script src="js/wow.min.js"></script>
 <script>
-    new WOW().init();
+    new WOW({
+        callback: function (box) {
+            if (box.id == 'instAnim') {
+                box.innerHTML = '<svg x="0px" y="0px" viewBox="0 0 202.5 202.5" style="enable-background:new 0 0 202.5 202.5;" >\n' +
+                    '                    <circle id="littleCircle" class="st0" cx="101" cy="101.5" r="18.9"/>\n' +
+                    '                    <circle id="lens" class="st0" cx="125.5" cy="78.6" r="2.9"/>\n' +
+                    '                    <path id="camera" class="st0" d="M79,60.5h44c10.5,0,19,8.5,19,19v44c0,10.5-8.5,19-19,19H79c-10.5,0-19-8.5-19-19v-44\n' +
+                    '\t            C60,69,68.5,60.5,79,60.5z"/>\n' +
+                    '                    <!--<circle id="bigCircle" class="st0" cx="101.2" cy="101.2" r="98.2"/>-->\n' +
+                    '                </svg>';
+            }
+        }
+    }).init();
 </script>
 <script>
     const toggler = document.querySelector('#toggler-wrapper');
