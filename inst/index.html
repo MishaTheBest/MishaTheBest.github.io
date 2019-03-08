@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+
 
 
 </head>
@@ -54,49 +57,64 @@
 
 </div>
 
+<div class="keyart" id="parallax">
+    <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>		<!-- 00.0 -->
+    <div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div>	<!-- 12.5 -->
+    <div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div>		<!-- 25.0 -->
+    <div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div>	<!-- 37.5 -->
+    <div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div>		<!-- 50.0 -->
+    <div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div>	<!-- 62.5 -->
+    <div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div>		<!-- 75.0 -->
+    <div class="keyart_layer" id="keyart-scrim"></div>
+    <div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div>		<!-- 87.5 -->
+    <div class="keyart_layer" id="keyart-8" data-speed="100"></div>		<!-- 100. -->
+</div>
 <div class="container-fluid main-container" id="main">
     <div class="row">
-        <div class="col-md-3 offset-md-1 d-flex align-items-center justify-content-center">
-            <form action="" class="text-left py-4 px-5">
-                <h5 class="text-center">Регистрация</h5>
-                <div class="form-input-wrapper my-3">
-                    <label for="name">Имя</label>
-                    <input type="text" id="name" autocomplete="off">
-                </div>
-                <div class="form-input-wrapper my-3">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" autocomplete="off">
-                </div>
-                <div class="form-input-wrapper my-3">
-                    <label for="password">Пароль</label>
-                    <input type="password" id="password" autocomplete="off">
-                </div>
-                <div class="form-input-wrapper my-3">
-                    <input type="checkbox" id="terms-of-use">
-                    <label for="terms-of-use" class="terms-of-use">Пользовательское соглашение</label>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="py-2 px-3">Зарегестрироваться</button>
-                </div>
-                <div class="text-center mt-2">
-                    <span>Уже есть аккаунт?</span>
-                </div>
-                <div class="text-center">
-                    <a href="#">Войти</a>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-4 d-flex align-items-center justify-content-center flex-column text-center">
-            <div class="animated fadeIn delay-1s">
-                <h4>Купи</h4>
-                <div class="logo">
-                    <span class="logo-inner text-center">
-                      <h2>SMM <span>real</span></h2>
-                    </span>
-                </div>
-                <h4>и начни</h4>
-                <h3>зарабатывать!</h3>
-            </div>
+        <!--<div class="col-md-3 offset-md-1 d-flex align-items-center justify-content-center">-->
+        <!--<form action="" class="text-left py-4 px-5">-->
+        <!--<h5 class="text-center">Регистрация</h5>-->
+        <!--<div class="form-input-wrapper my-3">-->
+        <!--<label for="name">Имя</label>-->
+        <!--<input type="text" id="name" autocomplete="off">-->
+        <!--</div>-->
+        <!--<div class="form-input-wrapper my-3">-->
+        <!--<label for="email">E-mail</label>-->
+        <!--<input type="email" id="email" autocomplete="off">-->
+        <!--</div>-->
+        <!--<div class="form-input-wrapper my-3">-->
+        <!--<label for="password">Пароль</label>-->
+        <!--<input type="password" id="password" autocomplete="off">-->
+        <!--</div>-->
+        <!--<div class="form-input-wrapper my-3">-->
+        <!--<input type="checkbox" id="terms-of-use">-->
+        <!--<label for="terms-of-use" class="terms-of-use">Пользовательское соглашение</label>-->
+        <!--</div>-->
+        <!--<div class="text-center">-->
+        <!--<button type="submit" class="py-2 px-3">Зарегестрироваться</button>-->
+        <!--</div>-->
+        <!--<div class="text-center mt-2">-->
+        <!--<span>Уже есть аккаунт?</span>-->
+        <!--</div>-->
+        <!--<div class="text-center">-->
+        <!--<a href="#">Войти</a>-->
+        <!--</div>-->
+        <!--</form>-->
+        <!--</div>-->
+        <div class="col-md-7 offset-md-1 d-flex align-items-center justify-content-center flex-column animated fadeIn delay-1s">
+            <h1>Зарабатывай в Instagram!</h1>
+            <hr>
+            <p>Курс, на котором вы получите самую востребованную интернет-профессию. После курса вы сможете
+                самостоятельно продвигать свои услуги и товары или работать с клиентами, оказывая SMM-услуги.</p>
+
+            <!--<h4>Купи</h4>-->
+            <!--<div class="logo">-->
+            <!--<span class="logo-inner text-center">-->
+            <!--<h2>SMM <span>real</span></h2>-->
+            <!--</span>-->
+            <!--</div>-->
+            <!--<h4>и начни</h4>-->
+            <!--<h3>зарабатывать!</h3>-->
 
 
         </div>
@@ -104,45 +122,45 @@
     </div>
 </div>
 
-<div class="container-fluid business-container" id="business">
-    <div class="row">
-        <div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+<div class="container-fluid">
+    <div class="container business-container" id="business">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+                <h2>Свой бизнес в Instagram? Легко!</h2>
 
-            <div class="logo">
+                <div class="rate-wrapper my-5">
+                    <ul class="rate">
+                        <li class="text-center">
+                            <div class="logo">
             <span class="logo-inner text-center">
             <h2>SMM <span>real</span></h2>
             </span>
-            </div>
-            <ul>
-
-                <li>
-                    <p>Свой бизнес</p>
-                    <p></p>
-
-                </li>
-                <li>
-                    <h4></h4>
-                </li>
-                <li>
-                    <h4></h4>
-                </li>
-                <li>
-                    <h4></h4>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-6 d-flex align-items-center justify-content-center">
-            <div class="watch-wrapper wow fadeIn">
-                <img src="img/Apple-Watch-Hermes-Double-Tour.png" alt="">
-                <div id="instAnim" class="wow" style="width: 100%;">
-
+                            </div>
+                        </li>
+                        <li><i class="far fa-check-circle"></i> Анализ рынка и аудитории</li>
+                        <li><i class="far fa-check-circle"></i> Разработка стратегии</li>
+                        <li><i class="far fa-check-circle"></i> Создание бизнес-аккаунта</li>
+                        <li><i class="far fa-check-circle"></i> Настройка лидогенерации</li>
+                        <li><i class="far fa-check-circle"></i> Монетизация</li>
+                        <li class="text-center price"><span>И многое другое!</span></li>
+                        <!--<li class="text-center price"><span>Всего </span>1499<span>₴</span></li>-->
+                    </ul>
                 </div>
             </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="watch-wrapper wow fadeIn">
+                    <img src="img/Apple-Watch-Hermes-Double-Tour.png" alt="">
+                    <div id="instAnim" class="wow" style="width: 100%;">
+
+                    </div>
+                </div>
 
 
+            </div>
         </div>
     </div>
 </div>
+
 <div class="container-fluid" id="contacts"></div>
 
 <script src="js/wow.min.js"></script>
@@ -170,5 +188,6 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/parallax.js"></script>
 </body>
 </html>
