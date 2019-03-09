@@ -17,48 +17,66 @@
   font-weight: 500;
 }
 
-h1 {
+%h1 {
   @extend %Roboto;
   @extend %light;
   font-size: 6rem;
   letter-spacing: -1.5px;
 }
 
-h2 {
+%h2 {
   @extend %Roboto;
   @extend %light;
   font-size: 3.75rem;
   letter-spacing: -0.5px;
+
 }
 
-h3 {
+%h3 {
   @extend %Roboto;
   @extend %regular;
   font-size: 3rem;
   letter-spacing: 0px;
 }
 
-h4 {
+%h4 {
   @extend %Roboto;
   @extend %regular;
   font-size: 2.125rem;
   letter-spacing: 0.25px;
 }
 
-h5 {
+%h5 {
   @extend %Roboto;
   @extend %regular;
   font-size: 1.5rem;
   letter-spacing: 0px;
 }
 
-h6 {
+%h6 {
   @extend %Roboto;
   @extend %medium;
   font-size: 1.25rem;
   letter-spacing: 0.15px;
 }
-
+h1{
+  @extend %h1;
+}
+h2{
+  @extend %h2;
+}
+h3{
+  @extend %h3;
+}
+h4{
+  @extend %h4;
+}
+h5{
+  @extend %h5;
+}
+h6{
+  @extend %h6;
+}
 %st-1 {
   @extend %Roboto;
   @extend %regular;
