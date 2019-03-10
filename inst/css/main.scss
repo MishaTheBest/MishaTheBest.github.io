@@ -509,6 +509,26 @@ overflow: hidden;
   }
 }
 
+/** not needed **/
+.not-needed-container{
+  .not-needed-element{
+    position: relative;
+    h4{
+      background: $main-color;
+      color: $black-3;
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+    img{
+      margin-top: -35px;
+    }
+    p{
+      @extend %overline;
+      width: 60%;
+    }
+  }
+}
 /** business container **/
 .business-container {
   > .row {
