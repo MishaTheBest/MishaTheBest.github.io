@@ -177,25 +177,17 @@
     // toTimeInput.on("changeDate", function (e) {
     //     fromTimeInput.datepicker('setEndDate', e.date);
     // });
-    function hideKeyboard(element) {
-        element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
-        element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
-        setTimeout(function() {
-            element.blur();  //actually close the keyboard
-            // Remove readonly attribute after keyboard is hidden.
-            element.removeAttr('readonly');
-            element.removeAttr('disabled');
-        }, 100);
-    }
     const datepicker  = document.querySelector('.daterangepicker');
     const inputDatepicker = document.querySelector('#input-daterange');
     datepickerToggler.addEventListener('click', () => {
         datepickersAreVisible = !datepickersAreVisible;
         if (datepickersAreVisible){
             datepicker.style.display = 'flex';
-            hideKeyboard(inputDaterange)
+            document.body.style.paddingBottom = '50vh';
+           // hideKeyboard(inputDaterange)
         }else{
             datepicker.style.display = 'none';
+            document.body.style.paddingBottom = '50vh';
         }
     })
 
