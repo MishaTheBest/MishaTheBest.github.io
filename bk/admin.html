@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/datepicker.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">-->
+    <!--<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">-->
+    <!--<link rel="stylesheet" href="css/bootstrap-datepicker3.standalone.min.css">-->
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
@@ -45,25 +48,19 @@
             </button>
         </div>
         <div class="col-auto ml-sm-auto d-flex align-items-end justify-content-start flex-column flex-sm-row">
-            <div class="datepicker-selector d-flex align-items-center align-items-sm-start justify-content-center flex-column flex-sm-row">
-                <div>
+            <div class="datepicker-selector d-flex align-items-center align-items-sm-start justify-content-center">
+                <div class="">
                     <span class="d-block">Показать</span>
                     <div>
-                        <label for="datepicker-1__from">с даты </label><input type="text" id="datepicker-1__from"
-                                                                              value=""/>
-                    </div>
-                    <div>
-                        <label for="datepicker-1__to">по дату </label><input type="text" id="datepicker-1__to"
-                                                                             value="">
+                        <input type="text" id="input-daterange">
                     </div>
                 </div>
-                <div class="calendar-icon d-none d-sm-block" id="datepickers__toggler">
+                <label for="input-daterange" class="calendar-icon " id="datepickers__toggler">
                     <svg class="img-fluid" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
 <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
 <g><path d="M684.8,378.7h139.1v139.1H684.8V378.7z"/><path d="M684.8,549.2h139.1v138.9H684.8V549.2z"/><path d="M786.1,50.7c0-22.3-18.4-40.7-40.7-40.7h-7.3c-22.3,0-40.7,18.4-40.7,40.7v77.2h88.6L786.1,50.7L786.1,50.7z"/><path d="M515.2,375.1h139.1V514H515.2V375.1z"/><path d="M309,50.7c0-22.3-18.4-40.7-40.9-40.7h-7c-22.5,0-40.9,18.4-40.9,40.7v77.2H309L309,50.7L309,50.7z"/><path d="M345.5,376.9h138.8v139.1H345.5V376.9L345.5,376.9z"/><path d="M172,722.6h138.8v139.1H172V722.6z"/><path d="M175.6,551h139.1v139.1H175.6V551z"/><path d="M851.8,127.9h-65.8v85.8c0,22.3-18.4,40.7-40.7,40.7h-7.3c-22.3,0-40.7-18.4-40.7-40.7v-85.8H309v85.8c0,22.3-18.4,40.7-40.9,40.7h-7c-22.5,0-40.9-18.4-40.9-40.7v-85.8h-72c-43.5,0-79,35.5-79,79v704c0,43.5,35.5,79,79,79h526l256.7-260.7V206.9C930.8,163.4,895.4,127.9,851.8,127.9z M892.5,732.9l-155.1-0.5c-43.5-0.3-70.7,28.5-70.4,71.8l0.8,146.9H145.8c-19.7,0-40.4-13-40.4-36.3V288.3l787.1-0.3V732.9z"/><path d="M345.5,547.2h138.8v139.2H345.5V547.2z"/><path d="M175.6,380.5h139.1v139.1H175.6V380.5L175.6,380.5z"/><path d="M515.2,545.3h139.1v139.1H515.2V545.3z"/><path d="M341.6,719h139.1v139.1H341.6V719z"/></g>
 </svg>
-                </div>
-                <button class="button--primary my-4 my-sm-0" type="button">Показать</button>
+                </label>
             </div>
         </div>
     </div>
@@ -127,118 +124,83 @@
             </div>
         </div>
     </div>
-
+    <div class="row mb-5">
+        <div class="col-12 d-flex-align-items-center justify-content-center" id="picker-wrapper"> </div>
+    </div>
 </div>
+
 <script src="js/script.js"></script>
-<script src="js/datepicker.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
 <script>
-    const pickerFrom = datepicker(document.querySelector('#datepicker-1__from'), {
-            // Event callbacks.
-            onSelect: (instance, date) => {
-                // Show which date was selected.
-                console.log(instance.dateSelected, instance.calendar);
-                instance.setMin(date);
-                // pickerTo.disabled = false;
-                // pickerTo.el.disabled = false;
-            },
-            onShow: instance => {
-                console.log('Calendar showing.')
-            },
-            onHide: instance => {
-                console.log('Calendar hidden.')
-            },
-            onMonthChange: instance => {
-                // Show the month of the selected date.
-                console.log(instance.currentMonthName)
-            },
-
-            // Customizations.
-            formatter: (input, date, instance) => {
-                // This will display the date as `1/1/2019`.
-                date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
-                input.value = date.toJSON().slice(0, 10);
-            },
-            position: 'br', // bottom right.
-            startDay: 1, // Calendar week starts on a Monday.
-            // customDays: ['S', 'M', 'T', 'W', 'Th', 'F', 'S'],
-            // customMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-
-            // Settings.
-            //alwaysShow: false, // Never hide the calendar.
-            maxDate: new Date(2099, 0, 1), // Jan 1st, 2099.
-            startDate: new Date(), // This month.
-            dateSelected: new Date(),
-            // Disabling things.
-            noWeekends: false, // Saturday's and Sunday's will be unselectable.
-            //  disabler: date => (date.getDay() === 2 && date.getMonth() === 9), // Disabled every Tuesday in October
-            //disabledDates: [new Date(2050, 0, 1), new Date(2050, 0, 3)], // Specific disabled dates.
-            // disableMobile: true, // Conditionally disabled on mobile devices.
-            disableYearOverlay:
-                true, // Clicking the year or month will *not* bring up the year overlay.
-
-            // Id - be sure to provide a 2nd picker with the same id to create a daterange pair.
-            id:
-                1
-        })
-    ;
-    const pickerTo = datepicker(document.querySelector('#datepicker-1__to'), {
-        // Event callbacks.
-        onSelect: (instance, date) => {
-            // Show which date was selected.
-            console.log(instance.dateSelected, instance.calendar);
-            instance.setMax(date)
-            //pickerFrom.setMax(instance.dateSelected);
-        },
-        onShow: instance => {
-            console.log('Calendar showing.')
-        },
-        onHide: instance => {
-            console.log('Calendar hidden.')
-        },
-        onMonthChange: instance => {
-            // Show the month of the selected date.
-            console.log(instance.currentMonthName)
-        },
-
-        // Customizations.
-        formatter: (input, date, instance) => {
-            // This will display the date as `1/1/2019`.
-            date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
-            input.value = date.toJSON().slice(0, 10);
-        },
-        position: 'br', // Top right.
-        startDay: 1, // Calendar week starts on a Monday.
-        // customDays: ['S', 'M', 'T', 'W', 'Th', 'F', 'S'],
-        // customMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        // // Settings.
-        //alwaysShow: false, // Never hide the calendar.
-        maxDate: new Date(2099, 0, 1), // Jan 1st, 2099.
-        // minDate: pickerFrom.dateSelected, // June 1st, 2016.
-        startDate: new Date(), // This month.
-        dateSelected: new Date(),
-        // Disabling things.
-        noWeekends: false, // Saturday's and Sunday's will be unselectable.
-        //  disabler: date => (date.getDay() === 2 && date.getMonth() === 9), // Disabled every Tuesday in October
-        //disabledDates: [new Date(2050, 0, 1), new Date(2050, 0, 3)], // Specific disabled dates.
-        // disableMobile: true, // Conditionally disabled on mobile devices.
-        disableYearOverlay: true, // Clicking the year or month will *not* bring up the year overlay.
-
-        // Id - be sure to provide a 2nd picker with the same id to create a daterange pair.
-        id: 1
+    const fromTimeInput = $('#date_added');
+    const toTimeInput = $('#date_modified');
+    const fromTime = fromTimeInput.val();
+    const toTime = toTimeInput.val();
+    const datepickerToggler = document.querySelector('#datepickers__toggler');
+    let datepickersAreVisible = false;
+    const inputDaterange = $('#input-daterange');
+    inputDaterange.daterangepicker({
+        "startDate": "14.07.2019",
+        "endDate": "20.07.2019",
+        autoApply: true,
+        parentEl: '#picker-wrapper',
+       locale:{
+           "format": 'DD.MM.YYYY'
+       },
+    }, function(start, end, label) {
+        console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
     });
-    //  picker.hide();
-    //  console.log(new Date(pickerTo.dateSelected-1))
-    // pickerFrom.setDate(pickerTo.dateSelected);
-    // pickerFrom.setMax(new Date(pickerTo.dateSelected-1));
-    // pickerTo.disabled = true;
-    // pickerTo.el.disabled = true;
-    pickerFrom.el.addEventListener('change', (e) => {
-        pickerFrom.setDate(new Date(e.currentTarget.value))
-    });
-    pickerTo.el.addEventListener('change', (e) => {
-        pickerTo.setDate(new Date(e.currentTarget.value))
+    // fromTimeInput.datepicker({
+    //     keyboardNavigation: false,
+    //     forceParse: false,
+    //     calendarWeeks: true,
+    //     autoclose: false,
+    //     endDate: toTime,
+    //     showOnFocus: false,
+    //     container: "#picker-from-wrapper",
+    //     format: 'dd/mm/yyyy'
+    // });
+    // toTimeInput.datepicker({
+    //     keyboardNavigation: false,
+    //     forceParse: false,
+    //     calendarWeeks: true,
+    //     autoclose: false,
+    //     startDate: fromTime,
+    //     showOnFocus: false,
+    //     container: "#picker-to-wrapper",
+    //     format: 'dd.mm.yyyy'
+    // });
+    // fromTimeInput.on("changeDate", function (e) {
+    //     toTimeInput.datepicker('setStartDate', e.date);
+    // });
+    // toTimeInput.on("changeDate", function (e) {
+    //     fromTimeInput.datepicker('setEndDate', e.date);
+    // });
+    datepickerToggler.addEventListener('click', () => {
+        datepickersAreVisible = !datepickersAreVisible;
+        if (datepickersAreVisible){
+            datepicker.style.display = 'flex';
+        }else{
+            datepicker.style.display = 'none';
+        }
     })
-    pickerTo.setMin(pickerFrom.dateSelected);
+    const datepicker  = document.querySelector('.daterangepicker');
+    const inputDatepicker = document.querySelector('#input-daterange');
+    inputDatepicker.focus();
+    inputDatepicker.blur();
+    console.log(inputDatepicker)
+    datepicker.style.display = 'none';
+    inputDatepicker.addEventListener('focus',()=>{
+        if(!datepickersAreVisible){
+            datepicker.style.display = 'none';
+            datepickersAreVisible = false;
+        }
+
+    })
+    inputDaterange.on('hide.daterangepicker', function(ev, picker) {
+        datepickersAreVisible = false;
+    });
 </script>
 </body>
 </html>
