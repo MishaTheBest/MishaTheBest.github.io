@@ -1107,17 +1107,17 @@
             if (this.isShowing) return;
 
             // Create a click proxy that is private to this instance of datepicker, for unbinding
-            this._outsideClickProxy = $.proxy(function(e) { this.outsideClick(e); }, this);
+            // this._outsideClickProxy = $.proxy(function(e) { this.outsideClick(e); }, this);
 
             // Bind global datepicker mousedown for hiding and
-            $(document)
-              .on('mousedown.daterangepicker', this._outsideClickProxy)
+            // $(document)
+            //   .on('mousedown.daterangepicker', this._outsideClickProxy)
               // also support mobile devices
-              .on('touchend.daterangepicker', this._outsideClickProxy)
+              // .on('touchend.daterangepicker', this._outsideClickProxy)
               // also explicitly play nice with Bootstrap dropdowns, which stopPropagation when clicking them
-              .on('click.daterangepicker', '[data-toggle=dropdown]', this._outsideClickProxy)
+              // .on('click.daterangepicker', '[data-toggle=dropdown]', this._outsideClickProxy)
               // and also close when focus changes to outside the picker (eg. tabbing between controls)
-              .on('focusin.daterangepicker', this._outsideClickProxy);
+              // .on('focusin.daterangepicker', this._outsideClickProxy);
 
             // Reposition the picker if the window is resized while it's open
             $(window).on('resize.daterangepicker', $.proxy(function(e) { this.move(e); }, this));
@@ -1164,20 +1164,20 @@
             }
         },
 
-        outsideClick: function(e) {
-            var target = $(e.target);
-            // if the page is clicked anywhere except within the daterangerpicker/button
-            // itself then call this.hide()
-            if (
-                // ie modal dialog fix
-                e.type == "focusin" ||
-                target.closest(this.element).length ||
-                target.closest(this.container).length ||
-                target.closest('.calendar-table').length
-                ) return;
-            this.hide();
-            this.element.trigger('outsideClick.daterangepicker', this);
-        },
+        // outsideClick: function(e) {
+        //     var target = $(e.target);
+        //     // if the page is clicked anywhere except within the daterangerpicker/button
+        //     // itself then call this.hide()
+        //     if (
+        //         // ie modal dialog fix
+        //         e.type == "focusin" ||
+        //         target.closest(this.element).length ||
+        //         target.closest(this.container).length ||
+        //         target.closest('.calendar-table').length
+        //         ) return;
+        //     this.hide();
+        //     this.element.trigger('outsideClick.daterangepicker', this);
+        // },
 
         showCalendars: function() {
             this.container.addClass('show-calendar');
