@@ -304,3 +304,12 @@ footer {
   opacity: .3;
   font-size: .6rem;
 }
+@media screen and (max-width: 375px) {
+  h1,h2,h3, h4, h5, h6{
+    font-size: 1.3rem !important;
+  }
+  .advantages-item{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
