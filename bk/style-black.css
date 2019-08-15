@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'American Captain';
+    src: url(fonts/9374.ttf);
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(fonts/10177.otf)
+}
+
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url(fonts/10871.otf)
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/3955.ttf)
+}
+
+body {
+    background: linear-gradient(to top, #030E10 3%, #0D2C4D 33%, #021621 69%);
+}
+
+p {
+    margin: 0;
+}
+
+input {
+    border: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #FCFCFC;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #FCFCFC;
+    text-decoration: none;
+}
+
+.username {
+    color: #F6F5F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 5vw;
+    padding-left: 0%;
+    padding-right: 1%;
+    text-align: center;
+    padding-bottom: 3vw;
+}
+
+.name {
+    color: #F6E58B;
+}
+
+.up {
+    text-transform: uppercase;
+    font-family: 'American Captain';
+    margin-bottom: 0%;
+    font-size: 5vw;
+}
+
+.telegram-name {
+    border-radius: 50px;
+    opacity: 0.7;
+    color: #4F77A1;;
+    font-family: 'Gilroy';
+    font-weight: bolder;
+    padding-right: 2%;
+}
+
+.line {
+    border-bottom: 1px solid rgba(196, 196, 196, 0.2);
+    padding-bottom: 3vw;
+}
+
+.roboto {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 4vw;
+
+}
+
+.time {
+    color: #369DD9;
+}
+
+.score {
+    color: #E91313;
+}
+
+.bet {
+    color: #FFFFFF;
+}
+
+.command-name {
+    text-transform: uppercase;
+    color: #E5E5E5;
+}
+
+.info {
+    display: inline-flex;
+    justify-content: space-between;
+    color: #E7DF66;
+}
+
+.info-bet {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    text-transform: uppercase;
+    font-family: 'American Captain';
+    color: #37606B;
+    background-color: #FEFEFE;
+    font-size: 5.5vw;
+}
+
+.bet-btn {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bet-sum {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFEFE;
+    border: 1px solid #37606B;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: 'American Captain';
+    margin-left: 10%;
+    margin-right: 10%;
+
+    margin-bottom: 4%;
+    font-size: 5.5vw;
+    padding: 1%;
+}
+
+.oplata {
+    text-transform: uppercase;
+    font-family: 'American Captain';
+    font-size: 4vw;
+    margin-top: 2vw;
+}
+
+.ractangle, .square, .visa-group{
+    display: block;
+    height: 7.778vw !important;
+    width: auto !important;
+    margin-bottom: 2vw;
+}
+
+.visa-group {
+    justify-content: center;;
+}
+
+.visa-group img {
+    width: 40%;
+}
+
+.inp {
+    width: 25vw;
+    outline: none;
+    background-color: #FEFEFE;
+
+}
+
+.svg-background {
+    position: absolute;
+    max-width: 100%;
+    min-height: 100%;
+
+}
+
+.items {
+    position: relative;
+}
+
+.telegram-link {
+    font-family: 'Gilroy Bold';
+    font-weight: 900;
+
+}
+
+.telega-link {
+    margin-top: 6vw !important;
+    width: 26.6vw !important;
+    height: 26.6vw !important;
+    margin-bottom: 25vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEBEB;
+}
+
+.cupon {
+    text-transform: uppercase;
+    font-size: 7vw;
+    margin-top: 8vw;
+}
+
+.bot-link {
+    color: #FEFEFE;
+    font-size: 7vw;
+    margin-top: 1vw;
+}
+
+.card {
+    background-color: #FFF6EC;
+    border-radius: 20px;
+    height: 100%;
+}
