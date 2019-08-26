@@ -1,0 +1,409 @@
+@import "colors";
+@import "transitions";
+@import "fonts";
+
+input, select, option, textarea {
+  background: $white;
+  border: 0.5px solid #686868;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 1.125rem;
+  outline: none;
+  min-height: 54px;
+}
+
+.successful {
+  color: $green;
+}
+
+.error {
+  color: $red;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  select {
+    padding-right: 30px;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $lightgray;
+    z-index: 100;
+    right: 10px;
+  }
+}
+
+.header--small {
+  font-family: Gilroy;
+  font-size: 1.5rem;
+  font-weight: normal !important;
+}
+
+.gradient {
+  background-color: rgba(248, 234, 234, 1);
+  background: linear-gradient(left top, rgba(248, 234, 234, 1) 0%, rgba(219, 201, 201, 1) 100%);
+}
+
+.auth {
+  min-height: 100vh;
+  &__holder {
+    background: $white;
+    border-radius: 45px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
+    margin-top: 165px;
+    margin-bottom: 165px;
+    &--choice {
+      background: $white;
+      border-radius: 45px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
+      margin-top: 165px;
+      margin-bottom: 165px;
+      .font-bold {
+        font-weight: 600 !important;
+      }
+      .auth {
+        &__profile {
+          min-width: 84.4vw;
+          margin: 0;
+          max-width: initial;
+          &--small {
+            height: 60px;
+            margin-top: 25px;
+          }
+        }
+        &__choice {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 127px;
+          margin-top: 42px;
+          &__item {
+            cursor: pointer;
+            text-align: center;
+            margin: 0 45px;
+            @include transition(transform);
+            &:hover {
+              text-decoration: none;
+              color: $black;
+              transform: scale(1.009);
+            }
+          }
+          &__box {
+            background: #1F1F1F;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 45px;
+            img {
+              margin: 53px 65px;
+            }
+          }
+          &__text {
+            font-family: 'Gliroy', sans-serif;
+            font-weight: 100;
+            font-size: 1.75rem;
+            color: $black;
+          }
+        }
+      }
+      h3 {
+        font-family: 'Gliroy', sans-serif;
+        font-weight: 100;
+      }
+    }
+  }
+  &__welcome {
+    font-weight: 100;
+    margin-bottom: 76px !important;
+  }
+  &__username {
+    font-weight: 600 !important;
+  }
+  &__profile {
+    margin: 0 156px 0;
+    max-width: 600px;
+  }
+  &__error {
+    font-family: 'Gliroy', sans-serif;
+    font-weight: 100;
+    font-size: 1.25rem;
+    color: #f00;
+    display: none;
+    &--active {
+      display: inline-block;
+    }
+  }
+  img {
+    margin-top: 107px;
+  }
+  h3 {
+    font-size: 2.25rem;
+    margin: 22px 0;
+  }
+  input, input::placeholder {
+    font-family: 'Gliroy', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+  input {
+    padding: 16px 15px;
+    background: transparent;
+    border: 4px solid rgba($black, 0.7);
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 11px;
+    margin-top: 19px;
+    &::placeholder {
+      color: rgba($black, .4);
+    }
+  }
+  button {
+    font-family: 'Gliroy', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    margin-top: 32px;
+    background: #222020;
+    border-radius: 15px;
+    color: #fff;
+    padding: 19px 65px;
+    margin-bottom: 136px;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  min-width: 100vw;
+  background: $darkgray;
+  .header__name {
+    color: #fff;
+    font-size: 2.25rem;
+    font-family: 'Gliroy', sans-serif;
+    padding-left: 180px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+  .user-info {
+    margin-right: 45px;
+    label {
+      padding: 25px;
+      border-radius: 10px;
+      span {
+        display: block;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        background: url("../img/user-white-ico.svg") no-repeat center/contain;
+      }
+    }
+  }
+  .user-info__inner {
+    position: absolute;
+    right: 60px;
+    bottom: -120px;
+    width: 425px;
+    background: $white;
+    padding: 25px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    span{
+      font-family: Gilroy;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  #userinfo:checked {
+    & ~ label {
+      background: $white;
+      span {
+        background: url("../img/user-ico.png") no-repeat center/contain;
+      }
+    }
+    & + .user-info__inner {
+      display: flex !important;
+    }
+  }
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  z-index: 1100;
+  background: $darkgray;
+  padding: 30px 40px;
+  max-width: 180px;
+  &__wrapper {
+    position: relative;
+    overflow-y: auto;
+    width: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__logo {
+    max-width: 87px;
+    margin-bottom: 60px;
+  }
+  &__item {
+    cursor: pointer;
+    margin-bottom: 27px;
+    text-align: center;
+    &__icon {
+      max-width: 50px;
+    }
+    &__text {
+      font-family: Gilroy, sans-serif;
+      margin-top: 2px;
+      font-size: .75rem;
+      color: $white;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+.full-height {
+  min-height: 100%;
+  min-height: 100vh;
+  &--body {
+    padding-left: 200px;
+    padding-top: 120px;
+    padding-right: 55px;
+  }
+}
+
+.maincard-header {
+  background: $white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  &__title {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    //padding-left: 15px;
+    h4 {
+      font-family: Gilroy;
+      font-size: 2rem;
+    }
+  }
+  &__body {
+    padding-bottom: 50px;
+    background: #f0f0f0;
+    button {
+      font-family: Gilroy;
+      font-size: 24px;
+      background: $darkgray;
+      color: $white;
+      padding: 10px 54px;
+      cursor: pointer;
+    }
+  }
+  .input-label {
+    margin-top: 12px;
+  }
+  .range-group {
+    display: flex;
+    align-items: center;
+    input {
+      max-width: 100px;
+    }
+    .divider {
+      display: block;
+      width: 20px;
+      height: 5px;
+      background: gray;
+      margin: 0 10px !important;
+    }
+  }
+  .range-date-group {
+    .range-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 15px;
+        z-index: 100;
+        background: url("../img/calendar-ico.svg") no-repeat center/contain;
+      }
+      input {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+.maincard-body {
+  background: $white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.table-wrapper {
+  position: relative;
+  overflow-x: auto;
+  min-height: 46vh;
+  table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 35px;
+    thead {
+      tr {
+        td {
+          padding-bottom: 72px;
+          span {
+            margin-left: 35px;
+            font-family: Gilroy;
+            font-size: 2rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding-bottom: 65px;
+          span {
+            margin-left: 35px;
+            font-family: Gilroy;
+            font-size: 1.85rem;
+            font-weight: bold;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
