@@ -26,7 +26,9 @@ input,select{
 .info{
   color: $blue;
 }
-
+.open-player-popup{
+  cursor: pointer;
+}
 .select-wrapper {
   position: relative;
   display: flex;
@@ -102,7 +104,11 @@ input,select{
   font-weight: normal !important;
 }
 .popup-info{
+  display: none;
   background: rgba($black, .5);
+  &-active{
+    display: initial !important;
+  }
   &__header{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -118,6 +124,7 @@ input,select{
       width: 30px;
       height: 8px;
       position: relative;
+      cursor: pointer;
     }
     .hide > span, .close-cross > span{
       display: block;
