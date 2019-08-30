@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<header class="d-flex justify-content-between align-items-center">
+    <span class="header__name">2x2 Sport</span>
+    <div class="user-info">
+        <input type="checkbox" id="userinfo" class="d-none">
+        <div class="user-info__inner row d-none">
+            <div class="col-6"><span class="header--small">Имя:</span></div>
+            <div class="col-6"><span>Иван</span></div>
+            <div class="col-6"><span class="header--small">Фамилия:</span></div>
+            <div class="col-6"><span>Иванов</span></div>
+            <div class="col-6"><span class="header--small">Должность:</span></div>
+            <div class="col-6"><span>Администратор</span></div>
+            <div class="col-6"><span class="header--small">Id:</span></div>
+            <div class="col-6"><span>1242423423</span></div>
+        </div>
+        <label for="userinfo">
+            <span></span>
+        </label>
+    </div>
+
+    <!--<img src="./img/user-white-ico.svg" class="img-fluid" alt="">-->
+</header>
+<nav class="navigation">
+    <div class="navigation__wrapper">
+        <div class="navigation__inner d-flex flex-column align-items-center">
+            <div class="navigation__logo">
+                <img src="./img/sport.png" class="img-fluid" alt="">
+            </div>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/players-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Игроки</span>
+            </a>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/amdins-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Администрация</span>
+            </a>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/payment-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Платежи</span>
+            </a>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/percentage-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Бонусы</span>
+            </a>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/gambling-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Игры</span>
+            </a>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/support-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Поддрежка</span>
+            </a>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/partnership-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Аффилейты</span>
+            </a>
+            <a href="#" class="navigation__item d-flex flex-column align-items-center justify-content-center">
+                <img src="./img/payment-ico.svg" alt="" class="navigation__item__icon img-fluid">
+                <span class="navigation__item__text">Платежные методы</span>
+            </a>
+        </div>
+    </div>
+
+</nav>
+<main class="container-fluid gradient full-height">
+    <div class="row  full-height--body">
+        <div class="col-12 maincard-header mt-3">
+            <div class="row maincard-header__title">
+                <div class="col-12">
+                    <h4 class="mb-0"> Поддержка</h4>
+                </div>
+            </div>
+            <form class="row maincard-header__body py-5" method="post" action="">
+
+            </form>
+        </div>
+        <div class="col-12 maincard-body mt-3">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <td class="pb-5"><span>Сообщение</span></td>
+                        <td class="pb-5"><span>С ответа</span></td>
+                        <td class="pb-5"><span>Номер</span></td>
+                        <td class="pb-5"><span>Ответственный</span></td>
+                        <td class="pb-5"><span>Пользователь</span></td>
+                        <td class="pb-5"><span>Статус</span></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="info-light cloud-left">Хочу выйграть, что делать то?!</span></td>
+                        <td><span>777</span></td>
+                        <td><span>777-98912881</span></td>
+                        <td><span>Mike</span></td>
+                        <td><span>Azazello</span></td>
+                        <td><span class="successful">Активный</span></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script>
+
+</script>
+</body>
+</html>

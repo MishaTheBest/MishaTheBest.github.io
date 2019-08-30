@@ -12,9 +12,40 @@ input, select, option, textarea {
   outline: none;
   min-height: 54px;
 }
-input,select{
+
+input, select {
   max-height: 54px;
 }
+
+.add-tag {
+  border: 2px solid $blue;
+  background-color: transparent !important;
+  background: transparent !important;
+  color: $black !important;
+}
+
+.remove {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background: url("../img/trash.svg") no-repeat center/contain;
+  cursor: pointer;
+  border: none !important;
+  margin-left: 25px;
+}
+
+.add-btn {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("../img/add-btn.svg") no-repeat center;
+  background-size: 30px 30px;
+  cursor: pointer;
+  border: 2px solid $black !important;
+  border-radius: 10px;
+  margin-left: 25px;
+}
+
 .successful {
   color: $green;
 }
@@ -23,11 +54,68 @@ input,select{
   color: $red;
 }
 
-.info{
+.info {
   color: $blue;
 }
-.open-player-popup{
+.info-light{
+  color: #0DAAB4;
+}
+.cloud-left{
+  position: relative;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: url("../img/cloud.svg") no-repeat center/contain;
+  }
+}
+.button-success, .button-danger, .button-warning {
+  padding: 10px 15px;
+  color: $white;
+  font-family: Gilroy;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.button-success {
+  background: $green;
+}
+
+.button-danger {
+  background: $red;
+}
+
+.button-warning {
+  background: #FFB800;
+}
+
+.gray-bg {
+  background: $lightgray;
+  margin-left: 1px;
+  margin-right: 1px;
+  .border-right-dark {
+    border-right: 1px solid $darkgray;
+  }
+}
+
+.open-player-popup {
   cursor: pointer;
+}
+.fix-select{
+  &:after{
+    margin-top: -7px;
+    select{
+
+    }
+  }
 }
 .select-wrapper {
   position: relative;
@@ -56,6 +144,7 @@ input,select{
     right: 10px;
   }
 }
+
 .range-group {
   display: flex;
   align-items: center;
@@ -70,6 +159,7 @@ input,select{
     margin: 0 10px !important;
   }
 }
+
 .range-date-group {
   .range-input-wrapper {
     position: relative;
@@ -98,80 +188,130 @@ input,select{
   font-size: 1.5rem;
   font-weight: normal !important;
 }
+
 .header--xsmall {
   font-family: Gilroy;
   font-size: 1.125rem;
   font-weight: normal !important;
 }
-.popup-info{
+
+.popup-info-payment {
   display: none;
   background: rgba($black, .5);
-  &-active{
-    display: initial !important;
+  &-active {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
-  &__header{
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .full-height--body {
+    max-width: 1225px;
   }
-  &__title{
+  .popup-info__header {
+    background: $blue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .popup-info__title {
     color: $white;
-    font-size: 3rem;
+    font-size: 1.8675rem;
+    padding-left: 20px;
     font-family: 'Gliroy', sans-serif;
     font-weight: 100;
   }
-  &__actions{
-    .hide,.close-cross{
+  .popup-info__actions {
+    .hide, .close-cross {
       width: 30px;
       height: 8px;
       position: relative;
       cursor: pointer;
     }
-    .hide > span, .close-cross > span{
+    .hide > span, .close-cross > span {
+      display: block;
+      width: 30px;
+      height: 8px;
+      background-color: $white;
+      position: absolute;
+    }
+  }
+  .maincard-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    &__inner {
+      width: 60vw;
+      max-width: 1225px;
+    }
+  }
+}
+
+.popup-info {
+  display: none;
+  background: rgba($black, .5);
+  &-active {
+    display: initial !important;
+  }
+  &__header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &__title {
+    color: $white;
+    font-size: 3rem;
+    font-family: 'Gliroy', sans-serif;
+    font-weight: 100;
+  }
+  &__actions {
+    .hide, .close-cross {
+      width: 30px;
+      height: 8px;
+      position: relative;
+      cursor: pointer;
+    }
+    .hide > span, .close-cross > span {
       display: block;
       width: 30px;
       height: 8px;
       background-color: $black;
       position: absolute;
     }
-    .hide{
-      >span{
+    .hide {
+      > span {
         //opacity: .5;
       }
     }
-    .close-cross{
+    .close-cross {
       position: relative;
-      span{
+      span {
         position: absolute;
         transform: rotate(-45deg);
-        &:nth-child(2){
+        &:nth-child(2) {
           transform: rotate(45deg);
         }
       }
     }
   }
-  .maincard-body{
+  .maincard-body {
     min-height: calc(100vh - 250px);
     position: relative;
     overflow-y: auto;
-    &__inner{
+    &__inner {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      hr{
+      hr {
         width: 100%;
         height: 2px;
         background: #c4c4c4;
       }
-      .status{
-        >h3{
+      .status {
+        > h3 {
           padding-left: 6px;
         }
-        .hover-bg{
+        .hover-bg {
           padding: 6px 6px 8px;
         }
-        button{
+        button {
           font-size: 1.25rem;
           padding: 6px;
           font-family: Gilroy;
@@ -181,12 +321,12 @@ input,select{
           font-weight: bold;
           display: none;
           background: $lightgray;
-          &:hover{
+          &:hover {
             background: $black;
             color: $lightgray;
           }
         }
-        &-holder{
+        &-holder {
           position: relative;
           display: flex;
           align-items: center;
@@ -203,16 +343,16 @@ input,select{
             right: 10px;
           }
         }
-        &:hover{
-          .hover-bg{
+        &:hover {
+          .hover-bg {
             background: $lightgray;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
             border-radius: 15px;
           }
-          button{
+          button {
             display: initial;
           }
-          .status-holder{
+          .status-holder {
             &:after {
               border-left: 10px solid transparent;
               border-right: 10px solid transparent;
@@ -222,30 +362,30 @@ input,select{
           }
         }
       }
-      .money{
-        .hover-bg{
+      .money {
+        .hover-bg {
           padding: 6px 6px 8px;
-          h4{
+          h4 {
             display: none;
           }
         }
-        &:hover{
-          .hover-bg{
+        &:hover {
+          .hover-bg {
             background: $lightgray;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
             border-radius: 15px;
-            h4{
+            h4 {
               display: initial;
             }
           }
         }
       }
-      .nav-tabs{
+      .nav-tabs {
         border-bottom: none;
-        li{
+        li {
           display: inline-block;
           min-height: 57px;
-          a{
+          a {
             font-family: Gilroy;
             font-size: 1.625rem;
             color: $black;
@@ -257,17 +397,17 @@ input,select{
             box-sizing: border-box;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
             border-radius: 15px;
-            &.active{
+            &.active {
               border: 2px solid #8DD3FA;
             }
-            &:hover{
+            &:hover {
               text-decoration: none;
             }
           }
         }
       }
-      .tab-pane{
-        > .row{
+      .tab-pane {
+        > .row {
           padding-left: 50px;
         }
       }
@@ -441,7 +581,7 @@ header {
     padding: 25px;
     border-radius: 10px;
     border-top-right-radius: 0;
-    span{
+    span {
       font-family: Gilroy;
       font-size: 1.5rem;
       font-weight: bold;
@@ -588,7 +728,7 @@ header {
             font-weight: bold;
             white-space: nowrap;
           }
-          p{
+          p {
             margin-left: 35px;
             margin-top: 4px;
           }
@@ -598,8 +738,8 @@ header {
   }
 }
 
-@media screen and (max-width: 1600px){
-  .extra-wrap{
+@media screen and (max-width: 1600px) {
+  .extra-wrap {
     flex: 0 0 100%;
     max-width: 100%;
   }
