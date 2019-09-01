@@ -105,9 +105,10 @@
                         <td><span>max. 10000000р</span></td>
                         <td>
                             <span class="select-wrapper fix-select">
-                                  <select class="successful header--small pt-0 pl-0" style="margin-top:-5px; border: none !important; font-weight: bolder !important;">
-                                <option value="" class="successful">Активный</option>
-                                <option value="" class="error">Неактивный</option>
+                                  <select class=" header--small pt-0 pl-0 status-element"
+                                          style="margin-top:-5px; border: none !important; font-weight: bolder !important;">
+                                  <option value="inactive">Неактивный</option>
+                                <option value="active" selected>Активный</option>
                             </select>
                             </span>
 
@@ -119,24 +120,11 @@
                         <td><span>max. 10000000р</span></td>
                         <td>
                             <span class="select-wrapper fix-select">
-                                  <select class="error header--small pt-0 pl-0" style="margin-top:-5px; border: none !important; font-weight: bolder !important;">
-                                <option value="" class="successful">Неактивный</option>
-                                <option value="" class="error">Неактивный</option>
-                            </select>
-                            </span>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span>FAKEPAL</span></td>
-                        <td><span>max. 10000000р</span></td>
-                        <td><span>max. 10000000р</span></td>
-                        <td>
-                            <span class="select-wrapper fix-select">
-                                  <select class="successful header--small pt-0 pl-0" style="margin-top:-5px; border: none !important; font-weight: bolder !important;">
-                                <option value="" class="successful">Активный</option>
-                                <option value="" class="error">Неактивный</option>
-                            </select>
+                                  <select class=" header--small pt-0 pl-0 status-element"
+                                          style="margin-top:-5px; border: none !important; font-weight: bolder !important;">
+                                        <option value="inactive" selected>Неактивный</option>
+                                        <option value="active">Активный</option>
+                                    </select>
                             </span>
 
                         </td>
@@ -156,7 +144,25 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script>
-
+    const select = document.querySelectorAll('.status-element');
+    [].forEach.call(select, (item) => {
+        if(item.value === 'active'){
+            item.classList.add('successful');
+            item.classList.remove('error');
+        }else{
+            item.classList.add('error');
+            item.classList.remove('successful');
+        }
+        item.addEventListener('change', (e) => {
+            if (e.target.value === 'active') {
+                e.target.classList.add('successful');
+                e.target.classList.remove('error');
+            } else {
+                e.target.classList.add('error');
+                e.target.classList.remove('successful');
+            }
+        })
+    })
 </script>
 </body>
 </html>
