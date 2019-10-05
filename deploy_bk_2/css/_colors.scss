@@ -1,0 +1,34 @@
+$black: #000;
+$white: #fff;
+$orange:#ff8a5c;
+$yellow: #FFB600;
+$gray: #aaa;
+$lightgray: #ddd;
+
+@mixin gradient($color) {
+  transition: $type $tr-time $tr-type;
+}
+
+
+
+body {
+  background: #fff;
+}
+.pink-bg{
+  background: linear-gradient(to right, #c63f97 0%, #a62a7a 60%);
+}
+.orange-bg{
+  background: linear-gradient(to right, #fba73b 0%, #f07621 80%);
+}
+.blue-bg{
+  background: linear-gradient(to right, #164af4 0%, #16359e 100%);
+}
+.green-bg{
+  background: linear-gradient(to left, #00c50d 0%, #138016 90%);
+}
+.skyblue-bg{
+  background: linear-gradient(to left, #3ba3ff 0%, #296dbd 80%);
+}
+.red-bg{
+  background: linear-gradient(to left,#eb750c 0%, #d2181c 100%);
+}

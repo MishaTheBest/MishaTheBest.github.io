@@ -1,0 +1,550 @@
+@import "colors";
+//@import "fonts";
+@import "transitions";
+
+@font-face {
+  font-family: 'American Captain'; /* Имя шрифта */
+  src: url(../fonts/9374.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'sofia'; /* Имя шрифта */
+  src: url(../fonts/SofiaProRegular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'Gilroy'; /* Имя шрифта */
+  src: url(../fonts/10177.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: 'Roboto'; /* Имя шрифта */
+  src: url(../fonts/10177.otf); /* Путь к файлу со шрифтом */
+}
+
+a {
+  text-decoration: none;
+  color: #E1E1E1 !important;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.padding-50{
+  padding-top: 50px !important;
+}
+.gradient-line {
+  width: 100%;
+  height: 5px;
+  border: none;
+  margin: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #F6F227 0%, rgba(212, 153, 1, 0.01) 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(to bottom, rgba(255, 252, 170, 1) 0%, rgba(146, 110, 21, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-family: 'American Captain', serif;
+  font-size: 48px;
+}
+
+.gradient-silver {
+  background: linear-gradient(to bottom, #FFF 0%, #8C8C8C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-family: 'American Captain', serif;
+  font-size: 48px;
+}
+
+.underline {
+  height: 15px;
+  width: 100vw;
+  background: url("../img/underline.png") no-repeat center/cover;
+  margin: 0 -15px;
+}
+
+.brick {
+  height: 15px;
+  width: 100vw;
+  background: url("../img/brick.png") repeat-x center;
+  margin: 0 -15px;
+}
+
+.navbar {
+  z-index: 10;
+  background-color: #1B1E27;
+  min-height: 100px;
+
+  &-brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38%;
+  }
+  &-nav {
+    color: #E1E1E1;
+    font-family: 'American Captain';
+    &-link {
+
+    }
+    .nav-item {
+      &-languages-wrapper {
+
+        border: 1px solid #494949;
+        box-sizing: border-box;
+        border-radius: 6px;
+
+      }
+      &-wrapper {
+        width: 80px;
+      }
+    }
+    &-slogan {
+      border: 2px solid #FFB600;
+      transform: skewX(-10deg);
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 70px;
+      &-text {
+        font-family: American Captain;
+        font-size: 16px;
+        transform: skewX(10deg);
+        display: inline-block;
+        margin-bottom: -2px;
+      }
+    }
+  }
+}
+
+.first-block {
+  background: url('../img/Frame.png') no-repeat center/cover;
+  //min-height: 100vh;
+  .why-row {
+    //display: flex;
+    //flex-direction: column;
+
+    .why-text-subbox {
+      .why {
+        background-color: $yellow;
+        transform: rotate(-5deg) skewX(-4deg);
+        position: relative;
+        $why-elements-width: 35px;
+        margin-top: 40px;
+        &:before, &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          width: $why-elements-width;
+          height: 100%;
+          background: $yellow;
+          z-index: 10;
+        }
+        &:before {
+          width: $why-elements-width * 1.8;
+          left: -$why-elements-width * 1.8 + 1;
+        }
+        &:after {
+          right: -$why-elements-width + 1;
+        }
+        .why-title {
+          font-family: 'American Captain';
+          color: #ffffff;
+          font-size: 64px;
+          line-height: 1.2;
+          padding-top: .7rem;
+          margin-left: -35px;
+        }
+
+      }
+      .why-text-bordered {
+        position: relative;
+        &:before, &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          //width: $why-elements-width;
+          height: 100%;
+          background: radial-gradient(50% 50% at 50% 50%, #F6F227 0%, rgba(212, 153, 1, 0.01) 100%);
+          z-index: 10;
+          width: 5px;
+        }
+        &:before {
+          left: -25px;
+        }
+        &:after {
+          right: 0px;
+        }
+
+        p {
+          font-family: 'Gilroy';
+          color: #ffffff;
+          letter-spacing: 1px;
+          font-weight: 600;
+        }
+      }
+
+    }
+    .why-text-box {
+      display: flex;
+      flex-direction: row;
+
+    }
+    .why-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: 'American Captain';
+      font-size: 1.375rem;
+      letter-spacing: 1px;
+      .btn-first-block {
+        background-color: #FF0404;
+        transform: skewX(8deg) rotate(1deg);
+        color: #ffffff !important;
+        line-height: 1.5;
+        padding-top: .4rem;
+        box-shadow: 0px 0px 15px 0px rgba(255, 4, 4, 1);
+        margin-left: -15px;
+        span {
+          margin: 20px 60px;
+        }
+      }
+      .btn-second-block {
+        background-color: #21FA90;
+        transform: skewX(-8deg) rotate(-1deg);
+        padding-top: .4rem;
+        line-height: 1.5;
+        color: #ffffff !important;
+        box-shadow: 0 0 15px 0 rgba(33, 250, 144, 1);
+        margin-right: -15px;
+        span {
+          margin: 15px 60px;
+        }
+      }
+    }
+  }
+
+  .men-stick {
+    background: url('../img/stick.png') no-repeat center/cover;
+    justify-content: flex-end;
+
+    .men {
+
+    }
+
+  }
+}
+
+/* */
+.up-text {
+  text-transform: uppercase;
+}
+
+.second-block {
+  background: url('../img/Frame.png') no-repeat center/cover;
+  //min-height: 100vh;
+  .about {
+    color: #ffffff;
+    font-family: 'Gilroy';
+    letter-spacing: 1px;
+    /* background-image: linear-gradient(to bottom left,rgba(188,188,188,0.13),rgba(188, 188, 188, 0.089)); */
+    background: linear-gradient(-120deg, rgba(188, 188, 188, 0.05) 0%, rgba(188, 188, 188, 0.15) 50%, rgba(188, 188, 188, 0.3) 100%);
+    flex-direction: column;
+    transform: skewX(-3deg);
+    .about-title {
+      transform: skewX(3deg);
+      font-family: 'American Captain';
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(129, 129, 129, 1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #fff;
+    }
+    .form-get {
+      transform: skewX(3deg);
+
+      //flex-direction: column;
+      //justify-content: flex-start;
+
+    }
+    .form-inp {
+      //display: flex;
+      //justify-content: space-around;
+      font-family: 'Gilroy';
+      &-text {
+        font-family: American Captain;
+        font-size: 24px;
+      }
+
+      input {
+        border: none;
+        background-color: #D6D7D6;
+
+        padding: 10px 5px;
+        display: inline-block;
+      }
+    }
+  }
+  .btn-get-box {
+    background-color: #21FA90;
+    box-shadow: 0px 0px 15px 0px #21fa90;
+    font-family: 'American Captain';
+    font-size: 2rem;
+    transform: skewX(-5deg);
+    .get-btn {
+
+      color: #000 !important;
+    }
+  }
+  .football-stick {
+    background: url('../img/stick_red.png') no-repeat center/cover;
+    justify-content: flex-end;
+    min-height: 100vh;
+
+    .football-men {
+      position: relative;
+      right: 8vw;
+    }
+
+  }
+}
+
+.footer-partn {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  font-family: 'Roboto';
+  color: #ffffff;
+  p {
+    margin-top: 18px;
+
+  }
+}
+
+.third-block {
+  background-color: #1B1E27;
+  min-height: calc(100vh - 155px);
+  .contact-form {
+    font-family: Gilroy;
+    font-size: 16px;
+    &-submit {
+      background-color: #FF0404;
+      transform: skewX(-5deg);
+      border: 0;
+      font-family: 'American Captain';
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    input, textarea {
+      background: #231F20;
+      border: 1px solid #666666;
+      padding: 8px;
+      color: white;
+    }
+  }
+  .contacts-title {
+    font-family: 'American Captain';
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(129, 129, 129, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+  }
+  .contact-subtitle {
+    color: #fff;
+    font-family: 'American Captain';
+    letter-spacing: 1px;
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+    font-family: 'Gilroy';
+    p {
+      margin-bottom: 0;
+    }
+    .telegram {
+      display: flex;
+      flex-direction: row;
+      border-left: 1px solid #007AD2;
+      .telegram-ico {
+        color: #007AD2;
+        font-size: 2rem;
+
+      }
+      .telegram-text {
+
+      }
+    }
+    .skype {
+      display: flex;
+      flex-direction: row;
+      border-left: 1px solid #10BDEA;
+      .skype-ico {
+        color: #10BDEA;
+
+        font-size: 2rem;
+      }
+      .skype-text {
+
+      }
+    }
+  }
+  .support {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    border-left: 1px solid #E21212;
+    p {
+      margin-bottom: 0;
+    }
+
+    .mail {
+      color: #E21212;
+      font-size: 2rem;
+    }
+    .main-sup {
+      display: flex;
+      flex-direction: row;
+    }
+    .sub-sup {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.sup-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-title {
+  font-family: 'Gilroy';
+}
+
+.social-acc {
+  font-family: 'Gilroy', semi-bold;
+}
+
+/** adv-cont**/
+.advantages-container {
+  background: #060E1F;
+  position: relative;
+  .telegram-triangle-wrapper {
+    top: 105px;
+    position: absolute;
+    z-index: 100;
+    .telegram-triangle {
+      margin-left: -15px;
+      position: relative;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        position: absolute;
+        top: 0;
+        max-width: 55%;
+        font-family: Gilroy;
+        font-size: 16px;
+        color: white;
+      }
+    }
+    img {
+      //margin-left: -11px;
+    }
+  }
+  .advantage-el-lvl-1 {
+    .advantage-el-content {
+      max-width: 290px;
+    }
+  }
+  .advantage-el-lvl-2 {
+    .advantage-el-content {
+      max-width: 320px;
+    }
+  }
+  .advantage-el-lvl-3 {
+    .advantage-el-content {
+      max-width: 380px;
+    }
+  }
+  .advantage-el {
+    color: #fff;
+    &-header {
+      h5 {
+        font-family: 'Gilroy';
+        font-size: 18px;
+        font-weight: bolder;
+      }
+
+    }
+
+    &-content {
+      //max-width: 360px;
+      p {
+        font-family: sofia;
+        font-size: 16px;
+        line-height: 1;
+
+      }
+    }
+    &-ico {
+      min-width: 60px;
+      flex: 0 0 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .first-block .why-row .why-text-subbox .why {
+    &:before, &:after {
+      display: none !important;
+    }
+  }
+  .first-block .why-row .why-text-subbox .why .why-title {
+    font-size: 32px;
+
+  }
+  .first-block .why-row .why-btn {
+    font-size: 1rem;
+
+  }
+  .first-block .why-row .why-btn{
+    justify-content: space-around !important;
+  }
+  .first-block .why-row .why-btn .btn-first-block span, .first-block .why-row .why-btn .btn-second-block span {
+    margin: 10px 30px !important;
+  }
+  .first-block .why-row .why-text-subbox .why-text-bordered{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .first-block .why-row .why-text-subbox .why-text-bordered:before{
+    left: 0;
+  }
+  .first-block .why-row .why-text-subbox .why-text-bordered:after, .first-block .why-row .why-text-subbox .why-text-bordered:before {
+
+  }
+  .first-block .men-stick{
+    background: none;
+  }
+  .gradient-line{
+    //display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .advantages-container{
+    .gradient-line{
+      display: none;
+    }
+  }
+}
