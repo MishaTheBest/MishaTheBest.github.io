@@ -680,6 +680,7 @@ a:hover {
 .advantages-container {
   background: #1B1E27;
   position: relative;
+  overflow: hidden;
 }
 
 .advantages-container .telegram-triangle-wrapper {
