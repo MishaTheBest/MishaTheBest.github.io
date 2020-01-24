@@ -48,7 +48,7 @@ h2 {
             height: 4px;
             position: absolute;
             left: -96px;
-            top: calc(50% - 2px);
+            top: calc(1.4375rem - 2px);
             background: $darkgray;
         }
     }
@@ -57,7 +57,7 @@ h2 {
 .paragraph {
     color: $darkgray;
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .breadcrumbs-link {
@@ -68,5 +68,26 @@ h2 {
     cursor: pointer;
     &:hover {
         color: #aa885f;
+        text-decoration: none;
+    }
+}
+
+.scroll-down {
+    font-size: 1.125rem;
+    color: #949393;
+    position: relative;
+    margin-left: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 29px;
+        left: -32px;
+        // top: 0;
+        background: url("../img/mouse.svg") no-repeat center/contain;
     }
 }

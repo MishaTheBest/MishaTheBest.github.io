@@ -44,14 +44,14 @@
                     </div>
                     <ul class="navigation__menu-list">
                         <li class="navigation__menu-item active"><a href="index.html"><span>Главная</span></a></li>
-                        <li class="navigation__menu-item"><a href="#"><span>О компании</span></a></li>
+                        <li class="navigation__menu-item"><a href="#about" id="about-link"><span>О компании</span></a></li>
                         <li class="navigation__menu-item"><a href="production.html"><span>Продукция</span></a></li>
-                        <li class="navigation__menu-item"><a href="#"><span>Новинки</span></a></li>
-                        <li class="navigation__menu-item"><a href="#"><span>Овощи и фрукты</span></a></li>
-                        <li class="navigation__menu-item"><a href="#"><span>Производство</span></a></li>
-                        <li class="navigation__menu-item"><a href="#"><span>Наши партнеры</span></a></li>
-                        <li class="navigation__menu-item"><a href="#"><span>Блог</span></a></li>
-                        <li class="navigation__menu-item"><a href="#"><span>Контакты</span></a>
+                        <li class="navigation__menu-item"><a href="newest_products.html"><span>Новинки</span></a></li>
+                        <li class="navigation__menu-item"><a href="fruits.html"><span>Овощи и фрукты</span></a></li>
+                        <li class="navigation__menu-item"><a href="our_production.html"><span>Производство</span></a></li>
+                        <li class="navigation__menu-item"><a href="partners.html"><span>Наши партнеры</span></a></li>
+                        <li class="navigation__menu-item"><a href="blog.html"><span>Блог</span></a></li>
+                        <li class="navigation__menu-item"><a href="contacts.html"><span>Контакты</span></a>
                         </li>
                         <div class="navigation__copyright">
                             <span>Сделано в студии <strong>Павла Чупина</strong></span>
@@ -160,7 +160,7 @@
             <div class="middle scroll">
                 <div class="scroll__inner screen-1">
                     <div class="screen-1__logo">
-                        <img src="./img/foodart.svg" alt="" class="img-fluid">
+                        <img src="./img/foodart-logo.svg" alt="" class="img-fluid">
                     </div>
                     <h2>Орехи и сухофрукты, овощи и фрукты из разных уголков мира.</h2>
                     <span class="breadcrumbs-link video-toggler">Смотреть видео</span>
@@ -190,7 +190,8 @@
                         Мы разрабатываем новые линейки орехов и сухофруктов, воплощаем в жизнь самые смелые решения по упаковке и дизайну.
                     </p>
                 </div>
-                <div class="scroll__inner screen-6">
+                <div class="scroll__inner screen-6" id="about">
+                    <h6 class="headline">О компании</h6>
                     <h1 class="title title--line">Один из лидеров ритейла России в категории орехи и сухофрукты</h1>
                     <p class="paragraph">
                         Наша основная задача поддержать покупателя, удерживая цены на максимально низком уровне не за счет качества продукта, а за счет издержек внутри самой компании. </p>
@@ -213,6 +214,27 @@
 <script src="./js/jquery.jInvertScroll.js">
 </script>
 <script>
+    window.addEventListener('load', () => {
+        if (window.location.hash === '#about' && $(window).scrollTop() < $(document).height() - $(window).height()) {
+            $("html, body")
+            $(window).scrollTop($(document).height() - $(window).height())
+        }
+    })
+    $("#about-link").click(function(e) {
+        if ($(window).scrollTop() < $(document).height() - $(window).height()) {
+            menu.classList.toggle("navigation__menu--active");
+
+            $("html, body")
+                .stop()
+                .animate({
+                        scrollTop: $(document).height() - $(window).height()
+                    },
+                    3500
+                );
+        }
+
+        e.preventDefault();
+    });
     const videoToggler = document.querySelectorAll(".video-toggler");
     const videoPopup = document.querySelector(".video-popup");
     for (let i = 0; i < menuToggler.length; i++) {
