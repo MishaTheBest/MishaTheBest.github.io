@@ -52,6 +52,24 @@ h2 {
             background: $darkgray;
         }
     }
+    &--vertical {
+        -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+    &--vertical.title--line {
+        padding-top: 96px !important;
+        margin: 0 75px 0 0 !important;
+        float: left;
+        font-size: 2rem;
+        &::before {
+            transform: rotate(90deg);
+            top: initial;
+            left: initial;
+            top: 30px;
+            right: -10px;
+        }
+    }
 }
 
 .paragraph {
