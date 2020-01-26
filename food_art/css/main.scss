@@ -49,6 +49,10 @@ body {
     padding-right: 0 !important;
 }
 
+.pt-150 {
+    padding-top: 150px !important;
+}
+
 .py-200 {
     padding-top: 200px !important;
     padding-bottom: 200px !important;
@@ -865,11 +869,38 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    &__controll {
+        position: absolute;
+        bottom: 0;
+        right: -100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--prev,
+        &--next {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+        }
+        &--prev {
+            background: #e6e6e6;
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        &--next {
+            background: #9298a5;
+        }
+    }
     &__image {
         flex: 0 0 27.083%;
         max-width: 27.083%;
-        min-height: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        align-self: stretch;
+        // height: 100vh;
         position: relative;
         overflow: hidden;
         img {
@@ -1440,4 +1471,25 @@ body {
     .title {
         margin-right: 140px;
     }
+}
+
+.blog_page_container {
+    .full-height-row__content {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .full-height-row {
+        &__image {
+            overflow: initial;
+        }
+    }
+}
+
+.page-not-found {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin-left: 260px;
+    margin-right: 140px;
 }

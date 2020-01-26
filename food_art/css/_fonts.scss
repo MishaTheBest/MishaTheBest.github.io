@@ -16,6 +16,20 @@ h3,
 h4,
 h5,
 h6,
+p,
+a {
+    &::selection {
+        color: $white;
+        background: #eda318;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
     margin: 0;
 }
@@ -72,20 +86,38 @@ h2 {
     }
 }
 
+.title-2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.title-3 {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
 .paragraph {
     color: $darkgray;
     font-size: 1.125rem;
     font-weight: 400;
 }
 
+.date {
+    font-size: 1rem;
+    color: $gray;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 30px;
+}
+
 .breadcrumbs-link {
-    color: $latte;
+    color: $latte !important;
     font-size: 1.125rem;
     @include transition(color);
     text-decoration: underline;
     cursor: pointer;
     &:hover {
-        color: #aa885f;
+        color: #aa885f !important;
         text-decoration: none;
     }
 }
@@ -98,6 +130,7 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
     &::before {
         content: "";
         display: block;
@@ -108,4 +141,8 @@ h2 {
         // top: 0;
         background: url("../img/mouse.svg") no-repeat center/contain;
     }
+}
+
+.paragraph a {
+    color: inherit;
 }
