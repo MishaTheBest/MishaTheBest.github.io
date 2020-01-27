@@ -1149,6 +1149,7 @@ body {
 .offset-image-center-row {
     margin-top: 0 !important;
     margin-left: 140px;
+    margin-right: 140px;
     .offset-image-row__image {
         position: relative;
         top: initial;
@@ -1157,6 +1158,22 @@ body {
     .offset-image-row__content {
         margin-left: initial;
         margin-top: initial;
+    }
+    &__leaf {
+        position: absolute;
+        z-index: 100;
+    }
+    &__leaf--first {
+        top: 17.778vh;
+        left: 27.404vw;
+    }
+    &__leaf--second {
+        top: 38.333vh;
+        left: 67.788vw;
+    }
+    &__leaf--third {
+        top: 80.556vh;
+        left: 49.038vw;
     }
 }
 
