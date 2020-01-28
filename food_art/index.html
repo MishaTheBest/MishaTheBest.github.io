@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href='./css/animate.min.css'></link>
     <link rel="stylesheet" href='./css/main.css'></link>
 </head>
 
@@ -166,13 +167,13 @@
                     <span class="breadcrumbs-link video-toggler">Смотреть видео</span>
                 </div>
                 <div class="scroll__inner screen-2">
-                    <h1 class="title title--line">Мы ценим людей и их стремление быть здоровыми</h1>
+                    <h1 class="title title--line tlt">Мы ценим людей и их стремление быть здоровыми</h1>
                     <p class="paragraph">
                         Наши орехи и сухофрукты идеально подходят всем, кто стремится к здоровому образу жизни. В них много витаминов и биологически активных веществ, кроме того они просто очень вкусные!
                     </p>
                 </div>
                 <div class="scroll__inner screen-3">
-                    <h1 class="title title--line">Мы любим свое дело</h1>
+                    <h1 class="title title--line tlt">Мы любим свое дело</h1>
                     <p class="paragraph">
                         Мы ценим своих заказчиков и стараемся поддерживать, как деловые, так и дружеские отношения!
                     </p>
@@ -210,10 +211,62 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/lettering.js"></script>
+<script src="./js/textillate.js"></script>
 <script src="./js/menu.js"></script>
-<script src="./js/jquery.jInvertScroll.js">
-</script>
+<script src="./js/jquery.jInvertScroll.js"></script>
 <script>
+    $.fn.isInViewport = function() {
+        var elementLeft = $(this).offset().left;
+        var elementRight = elementLeft + $(this).outerWidth();
+
+        var viewportTop = $(window).scrollLeft();
+        var viewportBottom = viewportTop + ($(window).width());
+        // if (elementRight > viewportTop && elementLeft < viewportBottom) {
+        //     console.log(`bottom ${viewportBottom} top ${viewportTop} el left ${elementLeft} el right ${elementRight}`)
+
+        // }
+        return elementRight > viewportTop && elementLeft < viewportBottom;
+    };
+
+    $(window).on('resize scroll', function() {
+        $('.title').each(function() {
+            // var activeColor = $(this).attr('id');
+            if ($(this).isInViewport()) {
+                console.log(this.innerHTML)
+                $(this).textillate({ in: {
+                        // set the effect name
+                        effect: 'fadeInRight',
+
+                        // set the delay factor applied to each consecutive character
+                        delayScale: 1,
+
+                        // set the delay between each character
+                        delay: 50,
+
+                        // set to true to animate all the characters at the same time
+                        sync: false,
+
+                        // randomize the character sequence
+                        // (note that shuffle doesn't make sense with sync = true)
+                        shuffle: false,
+
+                        // reverse the character sequence
+                        // (note that reverse doesn't make sense with sync = true)
+                        reverse: false,
+
+                        // callback that executes once the animation has finished
+                        callback: function() {}
+                    },
+                });
+            } else {
+                // console.log(this + ' out')
+            }
+        });
+    });
+    // $(function() {
+    //     $('.tlt').textillate();
+    // })
     window.addEventListener('load', () => {
         if (window.location.hash === '#about' && $(window).scrollTop() < $(document).height() - $(window).height()) {
             $("html, body")
