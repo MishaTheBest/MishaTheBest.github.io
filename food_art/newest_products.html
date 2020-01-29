@@ -11,9 +11,17 @@
 
 <body>
     <div class="">
+        <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<g>
+	<path class="st0" d="M10,16v-6h6v6H10z M10,0h6v6h-6V0z M0,10h6v6H0V10z M0,0h6v6H0V0z"/>
+</g>
+</svg>
+        </div>
         <nav class="navigation">
             <div class="navigation__wrapper">
-                <div class="navigation__aside">
+
+                <div class="navigation__aside d-none d-lg-flex">
                     <div class="navigation__logo">
                         <img src="./img/logo.svg" alt="">
                     </div>
@@ -30,6 +38,7 @@
                     </div>
                 </div>
                 <div class="navigation__menu">
+
                     <div class="navigation__cross menu-toggler">
                         <div class="navigation__cross__inner">
 
@@ -37,7 +46,7 @@
                     </div>
                     <ul class="navigation__menu-list">
                         <li class="navigation__menu-item"><a href="index.html"><span>Главная</span></a></li>
-                        <li class="navigation__menu-item"><a href="index.html#about"><span>О компании</span></a></li>
+                        <li class="navigation__menu-item"><a href="index.html#about" id="about-link"><span>О компании</span></a></li>
                         <li class="navigation__menu-item"><a href="production.html"><span>Продукция</span></a></li>
                         <li class="navigation__menu-item active"><a href="newest_products.html"><span>Новинки</span></a></li>
                         <li class="navigation__menu-item"><a href="fruits.html"><span>Овощи и фрукты</span></a></li>
@@ -46,10 +55,22 @@
                         <li class="navigation__menu-item"><a href="blog.html"><span>Блог</span></a></li>
                         <li class="navigation__menu-item"><a href="contacts.html"><span>Контакты</span></a>
                         </li>
+                        <li class="navigation__menu-item d-inline-block d-lg-none">
+                            <div class="d-flex">
+                                <div class="navigation__language mx-1">
+                                    <img src="./img/ru.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="navigation__language mx-1">
+                                    <img src="./img/eng.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </li>
+
+                        <div class="navigation__copyright">
+                            <span>Сделано в студии <strong>Павла Чупина</strong></span>
+                        </div>
                     </ul>
-                    <div class="navigation__copyright">
-                        <span>Сделано в студии <strong>Павла Чупина</strong></span>
-                    </div>
+
                 </div>
             </div>
         </nav>

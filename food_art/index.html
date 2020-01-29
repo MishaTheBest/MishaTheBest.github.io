@@ -19,9 +19,17 @@
         </div>
     </div>
     <div>
+        <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<g>
+	<path class="st0" d="M10,16v-6h6v6H10z M10,0h6v6h-6V0z M0,10h6v6H0V10z M0,0h6v6H0V0z"/>
+</g>
+</svg>
+        </div>
         <nav class="navigation">
             <div class="navigation__wrapper">
-                <div class="navigation__aside">
+
+                <div class="navigation__aside d-none d-lg-flex">
                     <div class="navigation__logo">
                         <img src="./img/logo.svg" alt="">
                     </div>
@@ -38,6 +46,7 @@
                     </div>
                 </div>
                 <div class="navigation__menu">
+
                     <div class="navigation__cross menu-toggler">
                         <div class="navigation__cross__inner">
 
@@ -54,6 +63,17 @@
                         <li class="navigation__menu-item"><a href="blog.html"><span>Блог</span></a></li>
                         <li class="navigation__menu-item"><a href="contacts.html"><span>Контакты</span></a>
                         </li>
+                        <li class="navigation__menu-item d-inline-block d-lg-none">
+                            <div class="d-flex">
+                                <div class="navigation__language mx-1">
+                                    <img src="./img/ru.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="navigation__language mx-1">
+                                    <img src="./img/eng.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </li>
+
                         <div class="navigation__copyright">
                             <span>Сделано в студии <strong>Павла Чупина</strong></span>
                         </div>
@@ -167,33 +187,33 @@
                     <span class="breadcrumbs-link video-toggler">Смотреть видео</span>
                 </div>
                 <div class="scroll__inner screen-2">
-                    <h1 class="title title--line tlt">Мы ценим людей и их стремление быть здоровыми</h1>
+                    <h1 class="title title--line hidden">Мы ценим людей и их стремление быть здоровыми</h1>
                     <p class="paragraph">
                         Наши орехи и сухофрукты идеально подходят всем, кто стремится к здоровому образу жизни. В них много витаминов и биологически активных веществ, кроме того они просто очень вкусные!
                     </p>
                 </div>
                 <div class="scroll__inner screen-3">
-                    <h1 class="title title--line tlt">Мы любим свое дело</h1>
+                    <h1 class="title title--line hidden">Мы любим свое дело</h1>
                     <p class="paragraph">
                         Мы ценим своих заказчиков и стараемся поддерживать, как деловые, так и дружеские отношения!
                     </p>
                 </div>
                 <div class="scroll__inner screen-4">
-                    <h1 class="title title--line">У нас огромный опыт</h1>
+                    <h1 class="title title--line hidden">У нас огромный опыт</h1>
                     <p class="paragraph">
                         Мы предлагаем взаимовыгодное и удобное сотрудничество с высокой лояльностью к каждому клиенту.
 
                     </p>
                 </div>
                 <div class="scroll__inner screen-5">
-                    <h1 class="title title--line">Мы каждый день стремимся к большему</h1>
+                    <h1 class="title title--line hidden">Мы каждый день стремимся к большему</h1>
                     <p class="paragraph">
                         Мы разрабатываем новые линейки орехов и сухофруктов, воплощаем в жизнь самые смелые решения по упаковке и дизайну.
                     </p>
                 </div>
                 <div class="scroll__inner screen-6" id="about">
                     <h6 class="headline">О компании</h6>
-                    <h1 class="title title--line">Один из лидеров ритейла России в категории орехи и сухофрукты</h1>
+                    <h1 class="title title--line hidden">Один из лидеров ритейла России в категории орехи и сухофрукты</h1>
                     <p class="paragraph">
                         Наша основная задача поддержать покупателя, удерживая цены на максимально низком уровне не за счет качества продукта, а за счет издержек внутри самой компании. </p>
                     <p class="paragraph">
@@ -233,68 +253,22 @@
         $('.title').each(function() {
             // var activeColor = $(this).attr('id');
             if ($(this).isInViewport()) {
-                console.log(this.innerHTML)
-                $(this).textillate({ in: {
-                        // set the effect name
-                        effect: 'fadeInRight',
+                setTimeout(() => {
+                    $(this).textillate({ in: {
+                            effect: 'fadeInRight',
+                            delayScale: 1,
+                            delay: 50,
+                            sync: false,
+                            shuffle: false,
+                            reverse: false,
+                            callback: function() {}
+                        },
+                    });
+                }, 200);
 
-                        // set the delay factor applied to each consecutive character
-                        delayScale: 1,
-
-                        // set the delay between each character
-                        delay: 50,
-
-                        // set to true to animate all the characters at the same time
-                        sync: false,
-
-                        // randomize the character sequence
-                        // (note that shuffle doesn't make sense with sync = true)
-                        shuffle: false,
-
-                        // reverse the character sequence
-                        // (note that reverse doesn't make sense with sync = true)
-                        reverse: false,
-
-                        // callback that executes once the animation has finished
-                        callback: function() {}
-                    },
-                });
-            } else {
-                // console.log(this + ' out')
             }
         });
     });
-    // $(function() {
-    //     $('.tlt').textillate();
-    // })
-    window.addEventListener('load', () => {
-        if (window.location.hash === '#about' && $(window).scrollTop() < $(document).height() - $(window).height()) {
-            $("html, body")
-            $(window).scrollTop($(document).height() - $(window).height())
-        }
-    })
-    $("#about-link").click(function(e) {
-        if ($(window).scrollTop() < $(document).height() - $(window).height()) {
-            menu.classList.toggle("navigation__menu--active");
-
-            $("html, body")
-                .stop()
-                .animate({
-                        scrollTop: $(document).height() - $(window).height()
-                    },
-                    3500
-                );
-        }
-
-        e.preventDefault();
-    });
-    const videoToggler = document.querySelectorAll(".video-toggler");
-    const videoPopup = document.querySelector(".video-popup");
-    for (let i = 0; i < menuToggler.length; i++) {
-        videoToggler[i].addEventListener("click", () => {
-            videoPopup.classList.toggle("active");
-        });
-    }
     const scrollProgress = document.querySelector('#progress .scroll-progress__inner');
     var elem = $.jInvertScroll([' .scroll '], // an array containing the selector(s) for the elements you want to animate
         {
@@ -303,29 +277,64 @@
                 scrollProgress.style.width = percent * 100 + '%';
             }
         });
-    var speed = 1;
-    var lastScrollTop = 0;
-    // higher variation = faster acceleration
-    function positon(variation) {
-        newPosition = (scrollPercent * 15 * (speed * variation)) - (speed * variation);
-        return newPosition + "px";
-    }
-    const parallaxBg = document.querySelectorAll('.parallax-bg')
-    $(window).scroll(function(e) {
-        var scrollNum = $(window).scrollTop();
-        scrollPercent = ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
-        if (scrollNum > lastScrollTop) {
-            for (let i = 0; i < parallaxBg.length; i++) {
-                parallaxBg[i].style.backgroundPosition = `${-scrollPercent * 3}px 0`;
+    window.addEventListener('load', () => {
+
+        $("#about-link").click(function(e) {
+            if ($(window).scrollTop() < $(document).height() - $(window).height()) {
+                menu.classList.toggle("navigation__menu--active");
+
+                $("html, body")
+                    .stop()
+                    .animate({
+                            scrollTop: $(document).height() - $(window).height()
+                        },
+                        3500
+                    );
             }
 
-        } else {
+            e.preventDefault();
+        });
+        const videoToggler = document.querySelectorAll(".video-toggler");
+        const videoPopup = document.querySelector(".video-popup");
+        for (let i = 0; i < videoToggler.length; i++) {
+            videoToggler[i].addEventListener("click", () => {
+                videoPopup.classList.toggle("active");
+            });
+        }
+
+        var speed = 1;
+        var lastScrollTop = 0;
+        // higher variation = faster acceleration
+        function positon(variation) {
+            newPosition = (scrollPercent * 15 * (speed * variation)) - (speed * variation);
+            return newPosition + "px";
+        }
+        const parallaxBg = document.querySelectorAll('.parallax-bg')
+        $(window).scroll(function(e) {
+            var scrollNum = $(window).scrollTop();
+            scrollPercent = ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
             for (let i = 0; i < parallaxBg.length; i++) {
                 parallaxBg[i].style.backgroundPosition = `${-scrollPercent * 3}px 0`;
             }
-        }
-        lastScrollTop = scrollNum;
-    });
+            lastScrollTop = scrollNum;
+        });
+        if (window.location.hash === '#about' && $(window).scrollTop() < $(document).height() - $(window).height()) {
+            $("html, body")
+            $(window).scrollTop($(document).height() - $(window).height())
+            setTimeout(() => {
+                $('#about .title').textillate({ in: {
+                        effect: 'fadeInRight',
+                        delayScale: 1,
+                        delay: 50,
+                        sync: false,
+                        shuffle: false,
+                        reverse: false,
+                        callback: function() {}
+                    },
+                });
+            }, 200);
+        };
+    })
 </script>
 
 </html>

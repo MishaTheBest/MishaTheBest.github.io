@@ -11,9 +11,17 @@
 
 <body>
     <div class="">
+        <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<g>
+	<path class="st0" d="M10,16v-6h6v6H10z M10,0h6v6h-6V0z M0,10h6v6H0V10z M0,0h6v6H0V0z"/>
+</g>
+</svg>
+        </div>
         <nav class="navigation">
             <div class="navigation__wrapper">
-                <div class="navigation__aside">
+
+                <div class="navigation__aside d-none d-lg-flex">
                     <div class="navigation__logo">
                         <img src="./img/logo.svg" alt="">
                     </div>
@@ -30,6 +38,7 @@
                     </div>
                 </div>
                 <div class="navigation__menu">
+
                     <div class="navigation__cross menu-toggler">
                         <div class="navigation__cross__inner">
 
@@ -37,7 +46,7 @@
                     </div>
                     <ul class="navigation__menu-list">
                         <li class="navigation__menu-item"><a href="index.html"><span>Главная</span></a></li>
-                        <li class="navigation__menu-item"><a href="index.html#about"><span>О компании</span></a></li>
+                        <li class="navigation__menu-item"><a href="index.html#about" id="about-link"><span>О компании</span></a></li>
                         <li class="navigation__menu-item active"><a href="production.html"><span>Продукция</span></a></li>
                         <li class="navigation__menu-item"><a href="newest_products.html"><span>Новинки</span></a></li>
                         <li class="navigation__menu-item"><a href="fruits.html"><span>Овощи и фрукты</span></a></li>
@@ -46,10 +55,22 @@
                         <li class="navigation__menu-item"><a href="blog.html"><span>Блог</span></a></li>
                         <li class="navigation__menu-item"><a href="contacts.html"><span>Контакты</span></a>
                         </li>
+                        <li class="navigation__menu-item d-inline-block d-lg-none">
+                            <div class="d-flex">
+                                <div class="navigation__language mx-1">
+                                    <img src="./img/ru.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="navigation__language mx-1">
+                                    <img src="./img/eng.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </li>
+
+                        <div class="navigation__copyright">
+                            <span>Сделано в студии <strong>Павла Чупина</strong></span>
+                        </div>
                     </ul>
-                    <div class="navigation__copyright">
-                        <span>Сделано в студии <strong>Павла Чупина</strong></span>
-                    </div>
+
                 </div>
             </div>
         </nav>
@@ -66,156 +87,191 @@
                         </div>
                     </div>
 
-                    <div class="slider-container">
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/01-ar.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">01</span>
-                                    <h6 class="slider-product-small__name">
-                                        Ядра арахиса
-                                    </h6>
-                                </div>
 
-                            </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/02-gr.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">02</span>
-                                    <h6 class="slider-product-small__name">
-                                        Ядро грецкого ореха
-                                    </h6>
-                                </div>
+                    <div class="swiper-container" style='width: 100%;'>
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/01-ar.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">01</span>
+                                            <h6 class="slider-product-small__name">
+                                                Ядра арахиса
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/03-kur.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">03</span>
-                                    <h6 class="slider-product-small__name">
-                                        Абрикосы сушеные
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/02-gr.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">02</span>
+                                            <h6 class="slider-product-small__name">
+                                                Ядро грецкого ореха
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/04-cher.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">04</span>
-                                    <h6 class="slider-product-small__name">
-                                        Чернослив
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/03-kur.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">03</span>
+                                            <h6 class="slider-product-small__name">
+                                                Абрикосы сушеные
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/05-fun.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">05</span>
-                                    <h6 class="slider-product-small__name">
-                                        Ядра фундука
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/04-cher.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">04</span>
+                                            <h6 class="slider-product-small__name">
+                                                Чернослив
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/06-fis.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">06</span>
-                                    <h6 class="slider-product-small__name">
-                                        Фисташки жареные
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/05-fun.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">05</span>
+                                            <h6 class="slider-product-small__name">
+                                                Ядра фундука
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/07-min.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">07</span>
-                                    <h6 class="slider-product-small__name">
-                                        Ядро миндаля
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/06-fis.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">06</span>
+                                            <h6 class="slider-product-small__name">
+                                                Фисташки жареные
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/08-br.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">08</span>
-                                    <h6 class="slider-product-small__name">
-                                        Бразильский орех
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/07-min.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">07</span>
+                                            <h6 class="slider-product-small__name">
+                                                Ядро миндаля
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/09-ked.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">09</span>
-                                    <h6 class="slider-product-small__name">
-                                        Кедровый орех
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/08-br.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">08</span>
+                                            <h6 class="slider-product-small__name">
+                                                Бразильский орех
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/10-cu.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">10</span>
-                                    <h6 class="slider-product-small__name">
-                                        Цукаты
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/09-ked.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">09</span>
+                                            <h6 class="slider-product-small__name">
+                                                Кедровый орех
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/11-cas.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">11</span>
-                                    <h6 class="slider-product-small__name">
-                                        Ядра кешью
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/10-cu.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">10</span>
+                                            <h6 class="slider-product-small__name">
+                                                Цукаты
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="trade_marks.html">
-                            <div class="slider-product-small">
-                                <img src="./img/products-2/12-pek.png" alt="" class="slider-product-small__image">
-                                <div class="slider-product-small__info">
-                                    <span class="slider-product-small__counter">12</span>
-                                    <h6 class="slider-product-small__name">
-                                        Пекан
-                                    </h6>
-                                </div>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/11-cas.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">11</span>
+                                            <h6 class="slider-product-small__name">
+                                                Ядра кешью
+                                            </h6>
+                                        </div>
 
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="slider-counter">
-                        <div>
-                            <span id="current-slide">01</span>/<span id="total-counter">03</span>
+                            <div class="swiper-slide">
+                                <a href="trade_marks.html">
+                                    <div class="slider-product-small">
+                                        <img src="./img/products-2/12-pek.png" alt="" class="slider-product-small__image">
+                                        <div class="slider-product-small__info">
+                                            <span class="slider-product-small__counter">12</span>
+                                            <h6 class="slider-product-small__name">
+                                                Пекан
+                                            </h6>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                        <div class='d-flex align-items-center'>
+                            <div class="swiper-pagination">
+
+                            </div>
+                            <div class="slider-counter">
+                                <div>
+                                    <span id="current-slide">01</span>/<span id="total-counter">03</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="navigation-row">
@@ -231,30 +287,24 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
-
-<script src="./js/slick.min.js">
-</script>
+<script src="./js/swiper.min.js"></script>
 <script src="./js/menu.js">
 </script>
 <script>
-    var $status = $('.pagingInfo');
-    var $slickElement = $('.slider-container');
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        direction: 'horizontal',
+        loop: false,
 
-    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
-        var i = (currentSlide ? currentSlide : 0) + 2;
-        console.log(i + '/' + slick.slideCount);
-    });
-    $('.slider-container').slick({
-        dots: false,
-        arrows: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        variableWidth: true,
-        swipeToSlide: true
-
-    });
+        freeMode: true,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        mousewheel: true,
+    })
 </script>
 
 </html>
