@@ -82,7 +82,7 @@
                 </div>
             </div>
         </nav>
-        <main id="horizontal-wrapper">
+        <main id="horizontal-wrapper" class="d-none d-md-block">
             <div class="horizon scroll">
                 <!-- <img src="https://www.pixxelfactory.net/jInvertScroll/images/middle.png" alt="" />
                  -->
@@ -225,6 +225,96 @@
             </div>
 
         </main>
+        <div class="container-fluid d-block d-md-none">
+            <div class="row">
+                <div class="col-9 mt-5 mb-5">
+                    <img src="./img/foodart-logo.svg" alt="" class="img-fluid logo-mobile mt-5">
+                    <h2 class="my-5">Орехи и сухофрукты, овощи и фрукты из разных уголков мира.</h2>
+                    <span class="breadcrumbs-link video-toggler">Смотреть видео</span>
+                </div>
+                <div class="col-12 mt-5">
+                    <div class="fluid-right">
+                        <img src="./img/bg-1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 my-5">
+                    <h1 class="title title--line hidden">Мы ценим людей и их стремление быть здоровыми</h1>
+                    <p class="paragraph mt-4">
+                        Наши орехи и сухофрукты идеально подходят всем, кто стремится к здоровому образу жизни. В них много витаминов и биологически активных веществ, кроме того они просто очень вкусные!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="fluid-left">
+                        <img src="./img/bg-3.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 my-5">
+                    <h1 class="title title--line hidden">Мы любим свое дело</h1>
+                    <p class="paragraph mt-4 mb-5">
+                        Мы ценим своих заказчиков и стараемся поддерживать, как деловые, так и дружеские отношения!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="fluid-left">
+                        <img src="./img/bg-4.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-8 offset-4">
+                    <div class="fluid-right">
+                        <img src="./img/bg-5_2.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 my-5">
+                    <h1 class="title title--line hidden">У нас огромный опыт</h1>
+                    <p class="paragraph mt-4 mb-5 pr-3">
+                        Мы предлагаем взаимовыгодное и удобное сотрудничество с высокой лояльностью к каждому клиенту.
+                    </p>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 my-5">
+                    <h1 class="title title--line hidden pr-4">Мы каждый день стремимся к большему</h1>
+                    <p class="paragraph mt-4 mb-5 pr-3">
+                        Мы разрабатываем новые линейки орехов и сухофруктов, воплощаем в жизнь самые смелые решения по упаковке и дизайну.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <img src="./img/bg-6.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-8 offset-4">
+                    <div class="fluid-right">
+                        <img src="./img/bg-7.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-12">
+                    <h6 class="headline mb-3">О компании</h6>
+                    <h1 class="title title--line hidden">Один из лидеров ритейла России в категории орехи и сухофрукты</h1>
+                    <p class="paragraph my-3">
+                        Наша основная задача поддержать покупателя, удерживая цены на максимально низком уровне не за счет качества продукта, а за счет издержек внутри самой компании. </p>
+                    <p class="paragraph mb-5">
+                        Мы активно учувствуем в совместных проектах с Федеральными сетевыми ритейлерами по производству СТМ и стремимся быть лучшими, как для своих партнеров, так и для покупателей.
+                    </p>
+                    <a href="production.html" class="breadcrumbs-link">Далее/Наша продукция</a>
+
+                </div>
+            </div>
+        </div>
         <div class='scroll-progress' id='progress'>
             <div class='scroll-progress__inner'></div>
         </div>
@@ -270,13 +360,16 @@
         });
     });
     const scrollProgress = document.querySelector('#progress .scroll-progress__inner');
-    var elem = $.jInvertScroll([' .scroll '], // an array containing the selector(s) for the elements you want to animate
-        {
-            // height: 6000, // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-            onScroll: function(percent) { //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                scrollProgress.style.width = percent * 100 + '%';
-            }
-        });
+    if($(window).width() >= 576){
+        var elem = $.jInvertScroll([' .scroll '], // an array containing the selector(s) for the elements you want to animate
+            {
+                // height: 6000, // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+                onScroll: function(percent) { //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                    scrollProgress.style.width = percent * 100 + '%';
+                }
+            });
+    }
+
     window.addEventListener('load', () => {
 
         $("#about-link").click(function(e) {
