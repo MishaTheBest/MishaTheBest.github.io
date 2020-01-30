@@ -1,0 +1,212 @@
+.bg-1 {
+  left: 60.944vmax;
+  top: 0;
+  width: 59.028vmax;
+  height: 72.778vh;
+  // background: url("../img/bg-1.png") no-repeat;
+  // background-size: cover;
+  // background-position: left top;
+}
+
+.bg-2 {
+  left: 115.972vmax;
+  top: 72.222vh;
+  height: 27.778vh;
+  width: 30.556vmax;
+}
+
+.bg-3 {
+  left: 173.611vmax;
+  top: 0;
+  height: 100vh;
+  width: 43.056vmax;
+}
+
+.bg-4 {
+  left: 239.833vmax;
+  top: 11.667vh;
+  height: 40vh;
+  width: 56.25vmax;
+}
+
+.bg-5 {
+  left: 274.833vmax;
+  top: 27.556vh;
+  height: 72.444vh;
+  width: 31.181vmax;
+}
+
+.bg-6 {
+  left: 370.833vmax;
+  top: 52.667vh;
+  height: 40vh;
+  width: 34.722vmax;
+}
+
+.bg-7 {
+  left: 400.833vmax;
+  top: 0;
+  height: 100vh;
+  width: 56.417vmax;
+}
+
+.screen-1 {
+  left: 17.361vmax;
+  width: 40vmax;
+  &__logo {
+    width: 13.194vmax;
+    margin-bottom: 3.889vh;
+  }
+  h2 {
+    font-size: 2.083vmax;
+    margin-bottom: 7.778vh;
+    font-weight: 400;
+  }
+  .breadcrumbs-link {
+    font-size: 1.25vmax;
+  }
+}
+
+.screen-2 {
+  left: 143.944vmax;
+  width: 48.792vmax;
+  h1 {
+    font-size: 3.194vmax;
+    margin-bottom: 6.111vh;
+  }
+  p {
+    margin-left: 9.028vmax;
+    font-size: 1.25vmax;
+  }
+}
+
+.screen-3 {
+  left: 269.544vmax;
+  width: 48.792vmax;
+  h1 {
+    margin-top: 40.667vh;
+    font-size: 3.194vmax;
+    margin-bottom: 6.111vh;
+  }
+  p {
+    margin-left: 9.028vmax;
+    font-size: 1.25vmax;
+  }
+}
+
+.screen-4 {
+  left: 394.544vmax;
+  width: 48.792vmax;
+  h1 {
+    margin-top: 6.667vh;
+    font-size: 3.194vmax;
+    margin-bottom: 6.111vh;
+  }
+  p {
+    margin-left: 9.028vmax;
+    font-size: 1.25vmax;
+  }
+}
+
+.screen-5 {
+  left: 452.544vmax;
+  width: 41.692vmax;
+  align-self: flex-start;
+  h1 {
+    margin-top: 16.111vh;
+    font-size: 3.194vmax;
+    margin-bottom: 6.111vh;
+  }
+  p {
+    // margin-left: 9.028vmax;
+    font-size: 1.25vmax;
+  }
+}
+
+.screen-6 {
+  left: 596.544vmax;
+  width: 39.692vmax;
+  align-self: flex-start;
+  h6 {
+    margin-top: 21.111vh;
+    margin-bottom: 4.444vh;
+  }
+  h1 {
+    font-size: 3.194vmax;
+    margin-bottom: 6.111vh;
+  }
+  p {
+    // margin-left: 9.028vmax;
+    font-size: 1.25vmax;
+    margin-bottom: 3.333vh;
+  }
+  .breadcrumbs-link {
+    font-size: 1.25vmax;
+    margin-top: 8.333vh;
+  }
+}
+
+.leaf-1 {
+  left: 30.556vmax;
+  top: 57.222vh;
+}
+
+.leaf-2 {
+  left: 44.722vmax;
+  top: 10.556vh;
+}
+
+.leaf-3 {
+  top: 66.667vh;
+  left: 78.75vmax;
+}
+
+.leaf-4 {
+  top: 8.889vh;
+  left: 159.375vmax;
+}
+
+.leaf-5 {
+  top: 59.444vh;
+  left: 165.625vmax;
+}
+
+.leaf-6 {
+  top: 40.556vh;
+  left: 258.194vmax;
+}
+
+.leaf-7 {
+  top: 22.222vh;
+  left: 269.097vmax;
+}
+
+.leaf-8 {
+  top: 83.333vh;
+  left: 284.236vmax;
+}
+
+.leaf-9 {
+  top: 74.444vh;
+  left: 358.681vmax;
+}
+
+.leaf-10 {
+  top: 23.333vh;
+  left: 371.181vmax;
+}
+
+.leaf-11 {
+  top: 37.222vh;
+  left: 373.611vmax;
+}
+
+.leaf-12 {
+  top: 53.333vh;
+  left: 446.528vmax;
+}
+
+.leaf-13 {
+  top: 21.111vh;
+  left: 496.528vmax;
+}
