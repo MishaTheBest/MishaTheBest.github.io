@@ -86,6 +86,33 @@
     body {
         font-size: 12.5217391304px;
     }
+    body .pt-200 {
+        padding-top: 50px !important;
+    }
+    body .pb-200 {
+        padding-bottom: 50px !important;
+    }
+    body .py-200 {
+        padding-bottom: 50px !important;
+        padding-top: 50px !important;
+    }
+    .full-height-row {
+        .full-height-row__content {
+            padding-left: 60px !important;
+            -ms-flex-preferred-size: 0 !important;
+            flex-basis: auto;
+            -webkit-box-flex: 1 !important;
+            -ms-flex-positive: 1 !important;
+            flex-grow: 1 !important;
+            max-width: 100% !important;
+        }
+        .full-height-row__image {
+            // margin-right: 0 !important;
+            // flex: 0 0 26.367% !important;
+            // max-width: 26.367% !important;
+            display: none !important;
+        }
+    }
     .navigation__menu {
         min-width: 100vw !important;
         // position: relative;
@@ -114,12 +141,15 @@
         z-index: 300;
     }
     .image--full-width {
-        margin-left: -60px;
+        margin-left: 0px;
         width: 100vw;
         height: auto;
     }
+    .content {
+        padding-left: 0px !important;
+        margin-left: 0 !important;
+    }
     .container,
-    .content,
     .production-container,
     .partners-container {
         padding-left: 60px !important;
@@ -191,6 +221,7 @@
         }
     }
     .navigation-row__link:first-child {
+        // margin-left: -60px;
         padding-left: 60px !important;
     }
     .navigation-row__link:last-child {
@@ -211,11 +242,16 @@
         padding-right: 60px !important;
     }
     .full-screen-image-row {
-        margin-left: -60px !important;
+        margin-left: 0px !important;
     }
     .text-row {
         padding-left: 60px !important;
         padding-right: 60px !important;
+    }
+    .trade-marks-images-row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 50px;
     }
 }
 
@@ -225,12 +261,14 @@
         font-size: 9.04347826087px;
     }
     .image--full-width {
-        margin-left: -20px;
+        margin-left: 0px;
         width: 100vw;
         height: auto;
     }
+    body .our-achivements-row {
+        padding: 50px 0;
+    }
     .container,
-    .content,
     .production-container,
     .partners-container {
         padding-left: 20px !important;
@@ -259,6 +297,13 @@
         padding-left: 20px;
         padding-right: 0;
     }
+    .two-equals-row__block {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        // text-align: center;
+    }
     .slider-counter {
         padding-right: 20px !important;
     }
@@ -271,20 +316,44 @@
         margin-right: 20px !important;
     }
     .navigation-row__link:first-child {
-        padding-left: 20px !important;
+        // margin-left: -20px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     .navigation-row__link:last-child {
-        padding-right: 20px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
-    .trade-marks-container .full-height-row__content--padding-right{
+    .trade-marks-container .full-height-row__content--padding-right {
         padding-right: 0 !important;
     }
-    .full-height-row--equal .full-height-row__content{
+    .full-height-row--equal .full-height-row__content {
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
-    .full-height-row__image{
+    .full-height-row__image {
         display: none !important;
+    }
+    .partners-container .paragraph,
+    .partners-container .title,
+    .production-container .paragraph,
+    .production-container .title {
+        margin-right: 20px !important;
+    }
+    .slider-product {
+        height: 170px !important;
+        width: 340px !important;
+        &__inner {}
     }
     .two-equals-row {
         padding-left: 20px !important;
@@ -298,7 +367,7 @@
         }
     }
     .full-screen-image-row {
-        margin-left: -20px !important;
+        // margin-left: -20px !important;
     }
     .our-achivements-row {
         &__v-line {
