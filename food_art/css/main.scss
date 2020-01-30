@@ -1049,6 +1049,7 @@ body {
 }
 
 .text-row {
+    flex-wrap:wrap;
     display: flex;
     padding-right: 140px;
     padding-left: 140px;
@@ -1308,6 +1309,8 @@ body {
         font-size: 1.125rem;
         color: $black;
         font-weight: 300;
+        margin-bottom: 40px;
+        display: inline-block;
     }
     .contacts-info__social {
         display: flex;
@@ -1625,10 +1628,16 @@ body {
 .page-not-found {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     min-height: 100vh;
-    margin-left: 260px;
-    margin-right: 140px;
+    // margin-left: 260px;
+    // margin-right: 140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .cereals-row {
