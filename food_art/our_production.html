@@ -10,181 +10,216 @@
 </head>
 
 <body>
-    <div class="">
-        <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-<g>
-	<path class="st0" d="M10,16v-6h6v6H10z M10,0h6v6h-6V0z M0,10h6v6H0V10z M0,0h6v6H0V0z"/>
-</g>
-</svg>
+<div class="language-popup">
+    <div class="language-popup__inner">
+        <div class="navigation__cross language-toggler">
+            <div class="navigation__cross__inner">
+            </div>
         </div>
-        <nav class="navigation">
-            <div class="navigation__wrapper">
+        <h2>Выбор языка</h2>
+        <select name="languages" id="lang">
+            <option value="rus">Русский</option>
+            <option value="eng">English</option>
+        </select>
+    </div>
 
-                <div class="navigation__aside d-none d-lg-flex">
-                    <div class="navigation__logo">
-                        <img src="./img/logo.svg" alt="">
-                    </div>
-                    <div class="navigation__toggler menu-toggler">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+</div>
+<div class="">
+    <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 <g>
 	<path class="st0" d="M10,16v-6h6v6H10z M10,0h6v6h-6V0z M0,10h6v6H0V10z M0,0h6v6H0V0z"/>
 </g>
 </svg>
-                        <span>Меню</span>
-                    </div>
-                    <div class="navigation__language">
-                        <img src="./img/ru.png" alt="" class="img-fluid">
+    </div>
+    <nav class="navigation">
+        <div class="navigation__wrapper">
+
+            <div class="navigation__aside d-none d-lg-flex">
+                <div class="navigation__logo">
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <div class="navigation__toggler menu-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<g>
+	<path class="st0" d="M10,16v-6h6v6H10z M10,0h6v6h-6V0z M0,10h6v6H0V10z M0,0h6v6H0V0z"/>
+</g>
+</svg>
+                    <span>Меню</span>
+                </div>
+                <div class="navigation__language language-toggler">
+                    <img src="./img/ru.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="navigation__menu">
+
+                <div class="navigation__cross menu-toggler">
+                    <div class="navigation__cross__inner">
+
                     </div>
                 </div>
-                <div class="navigation__menu">
-
-                    <div class="navigation__cross menu-toggler">
-                        <div class="navigation__cross__inner">
-
-                        </div>
-                    </div>
-                    <ul class="navigation__menu-list">
-                        <li class="navigation__menu-item"><a href="index.html"><span>Главная</span></a></li>
-                        <li class="navigation__menu-item"><a href="index.html#about" id="about-link"><span>О компании</span></a></li>
-                        <li class="navigation__menu-item"><a href="production.html"><span>Продукция</span></a></li>
-                        <li class="navigation__menu-item"><a href="newest_products.html"><span>Новинки</span></a></li>
-                        <li class="navigation__menu-item"><a href="fruits.html"><span>Овощи и фрукты</span></a></li>
-                        <li class="navigation__menu-item active"><a href="our_production.html"><span>Производство</span></a></li>
-                        <li class="navigation__menu-item"><a href="partners.html"><span>Наши партнеры</span></a></li>
-                        <li class="navigation__menu-item"><a href="blog.html"><span>Блог</span></a></li>
-                        <li class="navigation__menu-item"><a href="contacts.html"><span>Контакты</span></a>
-                        </li>
-                        <li class="navigation__menu-item d-inline-block d-lg-none">
-                            <div class="d-flex">
-                                <div class="navigation__language mx-1">
-                                    <img src="./img/ru.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="navigation__language mx-1">
-                                    <img src="./img/eng.png" alt="" class="img-fluid">
-                                </div>
+                <ul class="navigation__menu-list">
+                    <li class="navigation__menu-item"><a href="index.html"><span>Главная</span></a></li>
+                    <li class="navigation__menu-item"><a href="index.html#about" id="about-link"><span>О компании</span></a>
+                    </li>
+                    <li class="navigation__menu-item"><a href="production.html"><span>Продукция</span></a></li>
+                    <li class="navigation__menu-item"><a href="newest_products.html"><span>Новинки</span></a></li>
+                    <li class="navigation__menu-item"><a href="fruits.html"><span>Овощи и фрукты</span></a></li>
+                    <li class="navigation__menu-item active"><a href="our_production.html"><span>Производство</span></a>
+                    </li>
+                    <li class="navigation__menu-item"><a href="partners.html"><span>Наши партнеры</span></a></li>
+                    <li class="navigation__menu-item"><a href="blog.html"><span>Блог</span></a></li>
+                    <li class="navigation__menu-item"><a href="contacts.html"><span>Контакты</span></a>
+                    </li>
+                    <li class="navigation__menu-item d-inline-block d-lg-none">
+                        <div class="d-flex">
+                            <div class="navigation__language mx-1">
+                                <img src="./img/ru.png" alt="" class="img-fluid">
                             </div>
-                        </li>
-
-                        <div class="navigation__copyright">
-                            <span>Сделано в студии <strong>Павла Чупина</strong></span>
+                            <div class="navigation__language mx-1">
+                                <img src="./img/eng.png" alt="" class="img-fluid">
+                            </div>
                         </div>
-                    </ul>
+                    </li>
+
+                    <div class="navigation__copyright">
+                        <span>Сделано в студии <strong>Павла Чупина</strong></span>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <main id="horizontal-wrapper">
+        <section class="newest-products-container content">
+            <div class="full-height-row">
+                <div class="full-height-row__image wow scaleXLTR" data-wow-duration="2s">
+                    <img src="./img/6_1.png" alt="" class="wow translateLeft" data-wow-duration="2s"  style="right: initial; left: 0;">
+                </div>
+                <div class="full-height-row__content">
+                    <h6 class="headline">Наше производство</h6>
+                    <h1 class="title hidden title--line">Производство</h1>
+                    <p class="paragraph">
+                        Компания «Фуд Арт» имеет свое высокотехнологичное производство в экологически чистом районе
+                        Москвы. </p>
+                    <p class="paragraph">
+                        Мы считаем, что основой эффективного бизнеса являются высокие технологии, которые определяют
+                        конкурентоспособность товаров и услуг, способствуют устойчивому развитию.
+                    </p>
+
+
+                    <span class="scroll-down">
+                            Листайте вниз
+                        </span>
+                </div>
+
+            </div>
+            <div class="text-row py-200">
+                <h3>
+                    Наши производственные мощности полностью автоматизированы и оснащены метало детекторами, чтобы
+                    максимально исключить человеческий фактор при производстве продукта.
+                </h3>
+            </div>
+            <div class="full-screen-image-row">
+                <div class="full-screen-image-row__image" data-parallax="scroll" data-image-src='./img/6_2.png'>
 
                 </div>
             </div>
-        </nav>
-        <main id="horizontal-wrapper">
-            <section class="newest-products-container content">
-                <div class="full-height-row">
-                    <div class="full-height-row__image">
-                        <img src="./img/6_1.png" alt="">
-                    </div>
-                    <div class="full-height-row__content">
-                        <h6 class="headline">Наше производство</h6>
-                        <h1 class="title title--line">Производство</h1>
-                        <p class="paragraph">
-                            Компания «Фуд Арт» имеет свое высокотехнологичное производство в экологически чистом районе Москвы. </p>
-                        <p class="paragraph">
-                            Мы считаем, что основой эффективного бизнеса являются высокие технологии, которые определяют конкурентоспособность товаров и услуг, способствуют устойчивому развитию.
-                        </p>
+            <div class="offset-image-row offset-image-center-row color__inverse py-200">
+                <div class="offset-image-center-row__leaf offset-image-center-row__leaf--first">
+                    <img src="./img/leaf-1.png" alt="" class="img-fluid parallax-element d-none d-lg-inline-block" data-parallax-speed="-8">
+                </div>
+                <div class="offset-image-center-row__leaf offset-image-center-row__leaf--text-second">
+                    <img src="./img/leaf-10.png" alt="" class="img-fluid parallax-element d-none d-lg-inline-block" data-parallax-speed="-4">
+                </div>
+                <div class="offset-image-center-row__leaf offset-image-center-row__leaf--third">
+                    <img src="./img/leaf-8.png" alt="" class="img-fluid parallax-element d-none d-lg-inline-block" data-parallax-speed="-5">
+                </div>
+                <div class="offset-image-row__image order-1 order-md-0">
+                    <img src="./img/6_3.png" class="img-fluid wow fadeIn" alt="">
+                </div>
+                <div class="offset-image-row__content order-0 order-md-1">
+                    <h1 class="title hidden title--line title--line--white title--line--right">Сырье</h1>
+                    <p class="paragraph">Сырье для нашей продукции произрастает в экологически чистых районах и
+                        выращивается с применением современных сельскохозяйственных эко-техник, которые сохраняют
+                        природную пользу орехов и сухофруктов.</p>
+                </div>
+            </div>
 
+            <div class="text-row py-200">
+                <div class="text-row__title">
+                    <h1 class="title hidden title--line title--line--latte title--line--bottom">Лаборатория</h1>
+                </div>
+                <div class="text-row__content">
 
-                        <span class="scroll-down">
-                            Листайте вниз
-                        </span>
-                    </div>
+                    <p class="paragraph">
+                        Аккредитованная лаборатория оснащена всем необходимым оборудованием. На постоянной основе
+                        проводится контроль входящего сырья и готовой продукции по физико-химическим и
+                        микробиологическим показателям.
+                    </p>
+                    <p class="paragraph">
+                        Производится скрупулезная ручная калибровка орехов и сухофруктов, определяется цвет, размер,
+                        содержание влаги.
+                    </p>
+                </div>
+            </div>
+            <div class="two-equals-row photo-row pb-200">
+                <div class="two-equals-row__block">
+                    <img src="./img/6_4.png" alt="" class="img-fluid wow fadeInUp">
+                </div>
+                <div class="two-equals-row__block d-none d-md-flex">
+                    <img src="./img/6_5.png" alt="" class="img-fluid wow fadeInUp">
 
                 </div>
-                <div class="text-row py-200">
-                    <h3>
-                        Наши производственные мощности полностью автоматизированы и оснащены метало детекторами, чтобы максимально исключить человеческий фактор при производстве продукта.
-                    </h3>
-                </div>
-                <div class="full-screen-image-row">
-                    <div class="full-screen-image-row__image" style="background-image: url('./img/6_2.png');">
-
-                    </div>
-                </div>
-                <div class="offset-image-row offset-image-center-row color__inverse py-200">
-                    <div class="offset-image-center-row__leaf offset-image-center-row__leaf--first">
-                        <img src="./img/leaf-1.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="offset-image-center-row__leaf offset-image-center-row__leaf--text-second">
-                        <img src="./img/leaf-10.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="offset-image-center-row__leaf offset-image-center-row__leaf--third">
-                        <img src="./img/leaf-8.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="offset-image-row__image order-1 order-md-0">
-                        <img src="./img/6_3.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="offset-image-row__content order-0 order-md-1">
-                        <h1 class="title title--line title--line--white title--line--right">Сырье</h1>
-                        <p class="paragraph">Сырье для нашей продукции произрастает в экологически чистых районах и выращивается с применением современных сельскохозяйственных эко-техник, которые сохраняют природную пользу орехов и сухофруктов.</p>
-                    </div>
-                </div>
-
-                <div class="text-row py-200">
-                    <div class="text-row__title">
-                        <h1 class="title title--line title--line--latte title--line--bottom">Лаборатория</h1>
-                    </div>
-                    <div class="text-row__content">
-
-                        <p class="paragraph">
-                            Аккредитованная лаборатория оснащена всем необходимым оборудованием. На постоянной основе проводится контроль входящего сырья и готовой продукции по физико-химическим и микробиологическим показателям.
-                        </p>
-                        <p class="paragraph">
-                            Производится скрупулезная ручная калибровка орехов и сухофруктов, определяется цвет, размер, содержание влаги.
-                        </p>
-                    </div>
-                </div>
-                <div class="two-equals-row photo-row pb-200">
-                    <div class="two-equals-row__block">
-                        <img src="./img/6_4.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="two-equals-row__block d-none d-md-flex">
-                        <img src="./img/6_5.png" alt="" class="img-fluid">
-
-                    </div>
-                </div>
-                <div class="two-offseted-images-row align-items-start pb-200">
-                    <div class="two-offseted-images-row__block">
-                        <h1 class="title title--line title--line--latte title--line--right mt-0">Хранение</h1>
-                        <p class="paragraph">Мы имеем свои склады, позволяющие нам хранить продукцию, соблюдая отдельный температурный режим для каждой категории нашего продукта. </p>
-                        <p class="paragraph">Вся продукция компании расфасована в многослойную пленку с отличными барьерными свойствами, которая предохраняет продукт от окисления и попадания в него влаги, а качественные гофрокороба не позволяют продукту мяться в процессе
-                            транспортировки. </p>
+            </div>
+            <div class="two-offseted-images-row align-items-start pb-200">
+                <div class="two-offseted-images-row__block">
+                    <h1 class="title hidden title--line title--line--latte title--line--right mt-0">Хранение</h1>
+                    <p class="paragraph">Мы имеем свои склады, позволяющие нам хранить продукцию, соблюдая отдельный
+                        температурный режим для каждой категории нашего продукта. </p>
+                    <p class="paragraph">Вся продукция компании расфасована в многослойную пленку с отличными барьерными
+                        свойствами, которая предохраняет продукт от окисления и попадания в него влаги, а качественные
+                        гофрокороба не позволяют продукту мяться в процессе
+                        транспортировки. </p>
 
 
-
-                    </div>
-                    <div class="two-offseted-images-row__image-right d-none d-lg-flex">
-                        <img src="./img/6_6.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="w-100"></div>
-                    <div class="two-offseted-images-row__image-bottom">
-                        <img src="./img/6_7.png" alt="" class="img-fluid">
-                    </div>
                 </div>
-                <div class="navigation-row">
-                    <div class="navigation-row__link navigation-row__link--light">
-                        <a href="production.html" class="breadcrumbs-link d-none d-sm-inline-block">Назад/Овощи и фрукты</a>
-                        <a href="production.html" class="breadcrumbs-link d-inline-block d-sm-none">Назад</a>
-                    </div>
-                    <div class="navigation-row__link navigation-row__link--dark">
-                        <a href="partners.html" class="breadcrumbs-link d-none d-sm-inline-block">Далее/Наши партнеры</a>
-                        <a href="partners.html" class="breadcrumbs-link d-inline-block d-sm-none">Далее</a>
-                    </div>
+                <div class="two-offseted-images-row__image-right d-none d-lg-flex">
+                    <img src="./img/6_6.png" alt="" class="img-fluid parallax-element" data-parallax-speed="2">
                 </div>
-            </section>
-        </main>
-    </div>
+                <div class="w-100"></div>
+                <div class="two-offseted-images-row__image-bottom">
+                    <img src="./img/6_7.png" alt="" class="img-fluid parallax-element" data-parallax-speed="-4">
+                </div>
+            </div>
+            <div class="navigation-row">
+                <div class="navigation-row__link navigation-row__link--light">
+                    <a href="production.html" class="breadcrumbs-link d-none d-sm-inline-block">Назад/Овощи и фрукты</a>
+                    <a href="production.html" class="breadcrumbs-link d-inline-block d-sm-none">Назад</a>
+                </div>
+                <div class="navigation-row__link navigation-row__link--dark">
+                    <a href="partners.html" class="breadcrumbs-link d-none d-sm-inline-block">Далее/Наши партнеры</a>
+                    <a href="partners.html" class="breadcrumbs-link d-inline-block d-sm-none">Далее</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
 </body>
 <script src="./js/jquery.min.js"></script>
 
 
 <script src="./js/menu.js">
 </script>
+<script src="./js/lettering.js"></script>
+<script src="./js/textillate.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/parallax.js"></script>
+<script src="./js/wow.min.js"></script>
 
-
+<script>
+    const wow = new WOW();
+    wow.init();
+</script>
+<script src="./js/jquery.selectric.min.js"></script>
 </html>

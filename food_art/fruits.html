@@ -10,6 +10,20 @@
 </head>
 
 <body>
+<div class="language-popup">
+    <div class="language-popup__inner">
+        <div class="navigation__cross language-toggler">
+            <div class="navigation__cross__inner">
+            </div>
+        </div>
+        <h2>Выбор языка</h2>
+        <select name="languages" id="lang">
+            <option value="rus">Русский</option>
+            <option value="eng">English</option>
+        </select>
+    </div>
+
+</div>
     <div class="">
         <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -33,7 +47,7 @@
 </svg>
                         <span>Меню</span>
                     </div>
-                    <div class="navigation__language">
+                    <div class="navigation__language language-toggler">
                         <img src="./img/ru.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -80,7 +94,7 @@
 
                     <div class="full-height-row__content">
                         <h6 class="headline">Ассортимент</h6>
-                        <h1 class="title title--line">Овощи и фрукты</h1>
+                        <h1 class="title hidden title--line">Овощи и фрукты</h1>
                         <p class="paragraph">
                             Мы предлагаем только свежий, экологический чистый продукт соответствующий требованиям самого взыскательного покупателя. </p>
                         <p class="paragraph">
@@ -93,28 +107,28 @@
                             Листайте вниз
                         </span>
                     </div>
-                    <div class="full-height-row__image mr-0">
-                        <img src="./img/5_1.png" alt="">
+                    <div class="full-height-row__image mr-0 wow scaleXRTL" data-wow-duration="2s">
+                        <img src="./img/5_1.png" alt="" class="wow translateRight" data-wow-duration="2s">
                     </div>
                 </div>
                 <div class="two-equals-row photo-row pt-200 align-items-start">
                     <div class="two-equals-row__block text-right d-none d-md-flex">
                         <div>
-                            <h1 class="title title--line title--vertical title--line--latte" style='margin-right: 10px !important;'>Хранение</h1>
+                            <h1 class="title hidden title--line title--vertical title--line--latte" style='margin-right: 10px !important;'>Хранение</h1>
                         </div>
-                        <img src="./img/5_2.png" alt="" class="img-fluid">
+                        <img src="./img/5_2.png" alt="" class="img-fluid wow fadeInUp">
                     </div>
                     <div class="two-equals-row__block">
-                        <img src="./img/5_3.png" alt="" class="img-fluid">
+                        <img src="./img/5_3.png" alt="" class="img-fluid wow fadeInUp">
 
                     </div>
                 </div>
                 <div class="text-row py-200 storage-row">
                     <div class="storage-row__leaf--first">
-                        <img src="./img/leaf-5.png" alt="" class="img-fluid">
+                        <img src="./img/leaf-5.png" alt="" class="img-fluid parallax-element d-none d-lg-inline-block" data-parallax-speed="-6">
                     </div>
                     <div class="storage-row__leaf--second">
-                        <img src="./img/leaf-9.png" alt="" class="img-fluid">
+                        <img src="./img/leaf-9.png" alt="" class="img-fluid parallax-element d-none d-lg-inline-block" data-parallax-speed="-4">
                     </div>
                     <h3>
                         Хранение продукции осуществляется буртовым способом с применением специализированных систем климат-контроля. Емкость хранения 30 000 тонн. Контейнерное хранение овощей и фруктов осуществляется в специализированных холодильных камерах.
@@ -122,7 +136,7 @@
                 </div>
                 <div class="two-equals-row photo-row pb-200">
                     <div class="two-equals-row__block">
-                        <h1 class="title title--line title--line--bottom title--line--latte">Оборудование</h1>
+                        <h1 class="title hidden title--line title--line--bottom title--line--latte">Оборудование</h1>
 
                     </div>
                     <div class="two-equals-row__block">
@@ -133,21 +147,21 @@
                     </div>
                 </div>
                 <div class="full-screen-image-row">
-                    <div class="full-screen-image-row__image" style="background-image: url('./img/5_4.png');">
+                    <div class="full-screen-image-row__image" data-parallax="scroll" data-image-src='./img/5_4.png'>
 
                     </div>
                 </div>
                 <div class="two-equals-row pt-200">
                     <div class="two-equals-row__block">
-                        <h1 class="title title--line title--line--bottom title--line--latte">Сертификаты</h1>
+                        <h1 class="title hidden title--line title--line--bottom title--line--latte">Сертификаты</h1>
                     </div>
                     <div class="two-equals-row__block d-none d-md-flex">
-                        <img src="./img/5_5.png" alt="" class="img-fluid">
+                        <img src="./img/5_5.png" alt="" class="img-fluid wow fadeInUp">
                     </div>
                 </div>
                 <div class="two-equals-row pb-200">
                     <div class="two-equals-row__block">
-                        <img src="./img/5_6.png" alt="" class="img-fluid mb-5">
+                        <img src="./img/5_6.png" alt="" class="img-fluid mb-5 wow fadeInUp">
                     </div>
                     <div class="two-equals-row__block">
                         <p class="paragraph"> ООО «Фуд Арт» с августа 2012 года применяет систему Менеджмента качества в соответствии стандарта ISO 9001-2008 на основании Сертификата №1272RUQS действующего до 21.09.2021 г. </p>
@@ -173,6 +187,15 @@
 
 <script src="./js/menu.js">
 </script>
+<script src="./js/lettering.js"></script>
+<script src="./js/textillate.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/parallax.js"></script>
+<script src="./js/wow.min.js"></script>
 
-
-</html
+<script>
+    const wow = new WOW();
+    wow.init();
+</script>
+<script src="./js/jquery.selectric.min.js"></script>
+</html>

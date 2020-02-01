@@ -10,6 +10,20 @@
 </head>
 
 <body>
+<div class="language-popup">
+    <div class="language-popup__inner">
+        <div class="navigation__cross language-toggler">
+            <div class="navigation__cross__inner">
+            </div>
+        </div>
+        <h2>Выбор языка</h2>
+        <select name="languages" id="lang">
+            <option value="rus">Русский</option>
+            <option value="eng">English</option>
+        </select>
+    </div>
+
+</div>
     <div class="">
         <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -33,7 +47,7 @@
 </svg>
                         <span>Меню</span>
                     </div>
-                    <div class="navigation__language">
+                    <div class="navigation__language language-toggler">
                         <img src="./img/ru.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -173,8 +187,21 @@
         spaceBetween: 30,
         mousewheel: true,
     })
+    const current = document.querySelector('#current-slide');
+    const total = document.querySelector('#total-counter');
+    const formatNum = (value)=>{
+        return (value < 10 ? '0' : '') + value;
+    };
+    current.innerHTML = formatNum(mySwiper.activeIndex + 1);
+    total.innerHTML = formatNum(mySwiper.slides.length);
+
+    mySwiper.on('slideChange', function () {
+        current.innerHTML = formatNum(mySwiper.activeIndex + 1);
+        total.innerHTML = formatNum(mySwiper.slides.length);
+    });
 </script>
-
-</html>
-
+<script src="./js/lettering.js"></script>
+<script src="./js/textillate.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/jquery.selectric.min.js"></script>
 </html>

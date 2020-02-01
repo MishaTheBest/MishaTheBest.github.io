@@ -10,6 +10,20 @@
 </head>
 
 <body>
+<div class="language-popup">
+    <div class="language-popup__inner">
+        <div class="navigation__cross language-toggler">
+            <div class="navigation__cross__inner">
+            </div>
+        </div>
+        <h2>Выбор языка</h2>
+        <select name="languages" id="lang">
+            <option value="rus">Русский</option>
+            <option value="eng">English</option>
+        </select>
+    </div>
+
+</div>
     <div class="">
         <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -33,7 +47,7 @@
 </svg>
                         <span>Меню</span>
                     </div>
-                    <div class="navigation__language">
+                    <div class="navigation__language language-toggler">
                         <img src="./img/ru.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -77,12 +91,12 @@
         <main id="horizontal-wrapper">
             <section class="newest-products-container content">
                 <div class="full-height-row">
-                    <div class="full-height-row__image">
-                        <img src="./img/4_1_bg.png" alt="">
+                    <div class="full-height-row__image  wow scaleXLTR" data-wow-duration="2s">
+                        <img class="wow translateLeft"  data-wow-duration="2s" src="./img/4_1.png" alt="" style="right: initial; left: 0;">
                     </div>
                     <div class="full-height-row__content">
                         <h6 class="headline">Ассортимент</h6>
-                        <h1 class="title title--line">Новинки</h1>
+                        <h1 class="title hidden title--line">Новинки</h1>
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
@@ -100,28 +114,28 @@
                 </div>
                 <div class="offset-image-row color__inverse">
                     <div class="offset-image-row__image">
-                        <img src="./img/4_2.png" class="img-fluid" alt="">
+                        <img src="./img/4_2.png" class="img-fluid parallax-element" alt="" data-parallax-speed="-8">
                     </div>
                     <div class="offset-image-row__content">
-                        <h1 class="title title--line">Попкорн</h1>
+                        <h1 class="title hidden title--line">Попкорн</h1>
                         <p class="paragraph">Компания Фуд Арт выпустила линейку сладкого попкорна. Для производства продукции используется зерно кукурузы, взорванное горячим воздухом. Это возможно благодаря уникальному оборудованию. </p>
                         <p class="paragraph">Изготовленный таким способом попкорн менее калориен и более полезен и вкусен.</p>
                     </div>
                 </div>
                 <div class="full-screen-image-row">
-                    <div class="full-screen-image-row__image" style="background-image: url('./img/4_3.png');">
+                    <div class="full-screen-image-row__image"  data-parallax="scroll" data-image-src='./img/4_3.png'>
 
                     </div>
                 </div>
                 <div class="text-row py-200 cereals-row">
                     <div class='cereals-row__parallax-bg'>
-                        <img src="./img/cereals-1.png" class='img-fluid' alt="">
+                        <img src="./img/cereals-1.png" class='parallax-element img-fluid' alt="" data-parallax-speed="-8">
                     </div>
                     <div class='cereals-row__parallax-bg'>
-                        <img src="./img/cereals-2.png" class='img-fluid' alt="">
+                        <img src="./img/cereals-2.png" class='parallax-element img-fluid' alt="" data-parallax-speed="6">
                     </div>
                     <div class="text-row__title">
-                        <h1 class="title title--line title--line--bottom title--line--latte">Мюсли</h1>
+                        <h1 class="title hidden title--line title--line--bottom title--line--latte">Мюсли</h1>
                     </div>
                     <div class="text-row__content">
 
@@ -132,31 +146,31 @@
                 </div>
                 <div class="two-equals-row">
                     <div class="two-equals-row__block">
-                        <h1 class="title title--line title--line--right title--line--latte">Драже</h1>
+                        <h1 class="title hidden title--line title--line--right title--line--latte">Драже</h1>
                         <p class="paragraph">Отлично подойдет для сладкоежек. Орехи в сочетании с нежной шоколадной глазурью, арахис в сахаре и кешью в меде с кунжутом. </p>
 
 
                     </div>
-                    <div class="two-equals-row__block">
+                    <div class="two-equals-row__block wow fadeInUp">
                         <img src="./img/4_4.png" alt="" class="img-fluid">
                     </div>
                 </div>
                 <div class="two-equals-row crisps-row">
-                    <div class="crisps-row__leaf--first">
-                        <img src="./img/leaf-2.png" alt="" class="img-fluid">
+                    <div class="crisps-row__leaf--first ">
+                        <img src="./img/leaf-2.png" alt="" class="img-fluid parallax-element d-none d-lg-inline-block" data-parallax-speed="-8">
                     </div>
-                    <div class="two-equals-row__block order-1 order-md-0">
+                    <div class="two-equals-row__block order-1 order-md-0 wow fadeInUp">
                         <img src="./img/4_5.png" alt="" class="img-fluid">
                     </div>
                     <div class="two-equals-row__block order-0 order-md-1">
-                        <h1 class="title title--line  title--line--latte">Фруктовые чипсы</h1>
+                        <h1 class="title hidden title--line  title--line--latte">Фруктовые чипсы</h1>
                         <p class="paragraph">Фруктовые чипсы медленно, но уверенно занимают лидирующие позиции на рынке здорового питания. Фруктовые чипсы отлично подходят для перекуса, можно употреблять во время диет и при занятии спортом. Они питательны и полезны. Присоединяйтесь
                             к здоровому питанию и к Foodart, и будьте здоровы! </p>
                     </div>
                 </div>
                 <div class="text-row py-200">
                     <div class="text-row__title">
-                        <h1 class="title title--line title--line--bottom title--line--latte">Салатные <br> смеси</h1>
+                        <h1 class="title hidden title--line title--line--bottom title--line--latte">Салатные <br> смеси</h1>
                     </div>
                     <div class="text-row__content">
 
@@ -165,17 +179,17 @@
                     </div>
                 </div>
                 <div class="two-equals-row photo-row pb-200">
-                    <div class="two-equals-row__block d-none d-md-flex">
+                    <div class="two-equals-row__block d-none d-md-flex wow fadeInUp">
                         <img src="./img/4_6.png" alt="" class="img-fluid">
                     </div>
-                    <div class="two-equals-row__block">
+                    <div class="two-equals-row__block wow fadeInUp">
                         <img src="./img/4_7.png" alt="" class="img-fluid">
 
                     </div>
                 </div>
                 <div class="navigation-row">
                     <div class="navigation-row__link navigation-row__link--light">
-                        <a href="production.html" class="breadcrumbs-link d-none d-sm-inline-block">Назад/Весовая продукция</a>
+                        <a href="trade_marks_weight.html" class="breadcrumbs-link d-none d-sm-inline-block">Назад/Весовая продукция</a>
                         <a href="production.html" class="breadcrumbs-link d-inline-block d-sm-none">Назад</a>
                     </div>
                     <div class="navigation-row__link navigation-row__link--dark">
@@ -192,6 +206,15 @@
 
 <script src="./js/menu.js">
 </script>
+<script src="./js/lettering.js"></script>
+<script src="./js/textillate.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/parallax.js"></script>
+<script src="./js/wow.min.js"></script>
 
-
+<script>
+    const wow = new WOW();
+    wow.init();
+</script>
+<script src="./js/jquery.selectric.min.js"></script>
 </html>

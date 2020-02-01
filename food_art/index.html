@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href='./css/animate.min.css'></link>
+    <!--<link rel="stylesheet" href='./css/animate.min.css'></link>-->
     <link rel="stylesheet" href='./css/main.css'></link>
 </head>
 
@@ -17,6 +17,32 @@
 
             </div>
         </div>
+        <div class="video-popup__inner">
+            <img src="./img/video-example.png" alt="" class="img-fluid">
+            <div class="video-popup__button">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="31px" height="41px">
+                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                          d="M29.864,19.239 L2.219,0.198 C1.926,-0.003 1.547,-0.024 1.234,0.139 C0.920,0.304 0.724,0.627 0.724,0.982 L0.724,39.064 C0.724,39.418 0.920,39.743 1.234,39.908 C1.373,39.980 1.526,40.016 1.678,40.016 C1.867,40.016 2.056,39.959 2.219,39.848 L29.864,20.806 C30.122,20.628 30.276,20.336 30.276,20.023 C30.276,19.710 30.121,19.417 29.864,19.239 Z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="language-popup">
+        <div class="language-popup__inner">
+            <div class="navigation__cross language-toggler">
+                <div class="navigation__cross__inner">
+                </div>
+            </div>
+            <h2>Выбор языка</h2>
+            <select name="languages" id="lang">
+                <option value="rus">Русский</option>
+                <option value="eng">English</option>
+            </select>
+        </div>
+
     </div>
     <div>
         <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
@@ -41,7 +67,7 @@
 </svg>
                         <span>Меню</span>
                     </div>
-                    <div class="navigation__language">
+                    <div class="navigation__language language-toggler">
                         <img src="./img/ru.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -86,8 +112,8 @@
             <div class="horizon scroll">
                 <!-- <img src="https://www.pixxelfactory.net/jInvertScroll/images/middle.png" alt="" />
                  -->
-                <div class="scroll__inner bg-1">
-                    <div class="parallax-bg" style='background-image: url("./img/bg-1.png");'>
+                <div class="scroll__inner bg-1 wow scaleXRTL" data-wow-duration="2s">
+                    <div class="parallax-bg wow translateRight" data-wow-duration="2s" style='background-image: url("./img/bg-1.png");'>
                         <!-- <img src=""> -->
                     </div>
 
@@ -132,50 +158,50 @@
             </div>
             <div class="leafs scroll">
                 <div class="scroll__inner leaf-1">
-                    <img src="./img/leaf-1.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-1.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden" data-wow-duration="2s">
                 </div>
 
                 <div class="scroll__inner leaf-3">
-                    <img src="./img/leaf-3.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-3.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-4">
-                    <img src="./img/leaf-4.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-4.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
 
 
                 <div class="scroll__inner leaf-8">
-                    <img src="./img/leaf-8.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-8.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-9">
-                    <img src="./img/leaf-9.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-9.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
 
                 <div class="scroll__inner leaf-11">
-                    <img src="./img/leaf-11.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-11.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
 
             </div>
             <div class="leafs-2 scroll">
                 <div class="scroll__inner leaf-2">
-                    <img src="./img/leaf-2.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-2.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-5">
-                    <img src="./img/leaf-5.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-5.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-6">
-                    <img src="./img/leaf-6.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-6.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-7">
-                    <img src="./img/leaf-7.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-7.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-10">
-                    <img src="./img/leaf-10.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-10.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-12">
-                    <img src="./img/leaf-12.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-12.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
                 <div class="scroll__inner leaf-13">
-                    <img src="./img/leaf-13.png" alt="" class="img-fluid">
+                    <img src="./img/leaf-13.png" alt="" class="img-fluid leafTransform" style="animation-name: none; visibility: hidden">
                 </div>
             </div>
             <div class="middle scroll">
@@ -225,7 +251,7 @@
             </div>
 
         </main>
-        <div class="container-fluid d-block d-md-none">
+        <div id="vertical-wrapper" class="container-fluid d-block d-md-none">
             <div class="row">
                 <div class="col-9 mt-5 mb-5">
                     <img src="./img/foodart-logo.svg" alt="" class="img-fluid logo-mobile mt-5">
@@ -321,6 +347,7 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.selectric.min.js"></script>
 <script src="./js/lettering.js"></script>
 <script src="./js/textillate.js"></script>
 <script src="./js/menu.js"></script>
@@ -338,29 +365,80 @@
         // }
         return elementRight > viewportTop && elementLeft < viewportBottom;
     };
+    $.fn.isInViewportVertical = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
 
-    $(window).on('resize scroll', function() {
-        $('.title').each(function() {
-            // var activeColor = $(this).attr('id');
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        // console.log(`${elementBottom} ${viewportTop} ${elementTop} ${viewportBottom}`)
+        // console.log(`${$(this)} ${elementBottom > viewportTop && elementTop < viewportBottom}`)
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+    const scrollProgress = document.querySelector('#progress .scroll-progress__inner');
+    if($(window).width() >= 576){
+        // document.addEventListener('wheel', function(e) {
+        //         e.preventDefault();
+        //         if(e.deltaY > 0) {
+        //             $("html, body")
+        //                 .stop()
+        //                 .animate({
+        //                         scrollTop: $(window).scrollTop() + $(window).width() + 120
+        //                     },
+        //                     500
+        //                 );
+        //         } else {
+        //             $("html, body")
+        //                 .stop()
+        //                 .animate({
+        //                         scrollTop: $(window).scrollTop() - ($(window).width() + 120)
+        //                     },
+        //                     500
+        //                 );
+        //         }
+        //     }
+        // );
+        $('.leafTransform').each(function() {
             if ($(this).isInViewport()) {
-                setTimeout(() => {
-                    $(this).textillate({ in: {
-                            effect: 'fadeInRight',
-                            delayScale: 1,
-                            delay: 50,
-                            sync: false,
-                            shuffle: false,
-                            reverse: false,
-                            callback: function() {}
-                        },
-                    });
-                }, 200);
+                setTimeout(()=>{
+                    this.setAttribute('style','animation-name: f; visibility: visible');
+                    this.classList.add('animated');
+                },250);
+
 
             }
         });
-    });
-    const scrollProgress = document.querySelector('#progress .scroll-progress__inner');
-    if($(window).width() >= 576){
+
+        $(window).on('resize scroll', function() {
+            $('.leafTransform').each(function() {
+                if ($(this).isInViewport()) {
+
+                    this.setAttribute('style','animation-name: f; visibility: visible');
+                    this.classList.add('animated');
+
+                }
+            })});
+        $(window).on('resize scroll', function() {
+            $('#horizontal-wrapper .title').each(function() {
+                if ($(this).isInViewport()) {
+                    setTimeout(() => {
+                        $(this).textillate({ in: {
+                                effect: 'fadeInRight',
+                                delayScale: 1,
+                                delay: 50,
+                                sync: false,
+                                shuffle: false,
+                                reverse: false,
+                                callback: function() {}
+                            },
+                        });
+                    }, 200);
+
+                }
+            });
+
+
+        });
         var elem = $.jInvertScroll([' .scroll '], // an array containing the selector(s) for the elements you want to animate
             {
                 // height: 6000, // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
@@ -368,6 +446,26 @@
                     scrollProgress.style.width = percent * 100 + '%';
                 }
             });
+    }else{
+        $(window).on('resize scroll', function() {
+            $('#vertical-wrapper .title').each(function() {
+                if ($(this).isInViewportVertical()) {
+                    setTimeout(() => {
+                        $(this).textillate({ in: {
+                                effect: 'fadeInRight',
+                                delayScale: 1,
+                                delay: 50,
+                                sync: false,
+                                shuffle: false,
+                                reverse: false,
+                                callback: function() {}
+                            },
+                        });
+                    }, 200);
+
+                }
+            });
+        });
     }
 
     window.addEventListener('load', () => {
@@ -407,7 +505,7 @@
             var scrollNum = $(window).scrollTop();
             scrollPercent = ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
             for (let i = 0; i < parallaxBg.length; i++) {
-                parallaxBg[i].style.backgroundPosition = `${-scrollPercent * 3}px 0`;
+                parallaxBg[i].style.backgroundPosition = `${-scrollPercent * 5}px 0`;
             }
             lastScrollTop = scrollNum;
         });
@@ -426,8 +524,13 @@
                     },
                 });
             }, 200);
-        };
+        }
     })
 </script>
+<script src="./js/wow.min.js"></script>
 
+<script>
+    const wow = new WOW();
+    wow.init();
+</script>
 </html>

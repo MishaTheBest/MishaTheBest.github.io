@@ -10,6 +10,20 @@
 </head>
 
 <body>
+<div class="language-popup">
+    <div class="language-popup__inner">
+        <div class="navigation__cross language-toggler">
+            <div class="navigation__cross__inner">
+            </div>
+        </div>
+        <h2>Выбор языка</h2>
+        <select name="languages" id="lang">
+            <option value="rus">Русский</option>
+            <option value="eng">English</option>
+        </select>
+    </div>
+
+</div>
     <div class="">
         <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -33,7 +47,7 @@
 </svg>
                         <span>Меню</span>
                     </div>
-                    <div class="navigation__language">
+                    <div class="navigation__language language-toggler">
                         <img src="./img/ru.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -79,7 +93,7 @@
                 <div class="full-height-row full-height-row--equal full-height-row--inverse full-height-row--title">
 
                     <div class="full-height-row__content full-height-row__content--padding-right">
-                        <h1 class="title">Наши торговые марки</h1>
+                        <h1 class="title hidden">Наши торговые марки</h1>
                         <p class="paragraph">
                             Мы не стоим на месте! Активно разрабатывая новые линейки, соответствующие современным тенденциям, стремимся быть лучшими в своем деле.
                         </p>
@@ -90,8 +104,8 @@
                         </span>
                     </div>
                     <span class="full-height-row__title--vertical d-none d-md-block">Наша продукция</span>
-                    <div class="full-height-row__image ml-40 d-none d-lg-flex">
-                        <img src="./img/3_2_1.png" alt="">
+                    <div class="full-height-row__image ml-40 d-none d-lg-flex wow scaleXRTL" data-wow-duration="2s">
+                        <img src="./img/3_2_1.png" class="wow translateRight" data-wow-duration="2s" alt="">
                     </div>
                 </div>
                 <div class="our-achivements-row">
@@ -105,7 +119,7 @@
                             </div>
                         </div>
                         <div class="our-achivements-row__elem">
-                            <div class="our-achivements-row__elem-counter our-achivements-row__elem-counter--yellow">
+                            <div class="our-achivements-row__elem-counter our-achivements-row__elem-counter--yellow wow fadeIn">
                                 <div class="our-achivements-row__elem-counter__inner">
                                     <span class="our-achivements-row__elem-counter__value">375</span>
                                     <span class="our-achivements-row__elem-counter__text">Активных партнеров</span>
@@ -114,14 +128,14 @@
                                 <img src="./img/yellow-apple.svg" alt="" class="img-fluid">
                             </div>
                             <div class="our-achivements-row__elem-text d-none d-lg-block">
-                                <h3>
+                                <h3 class="wow fadeIn" data-wow-duration="1.5s">
                                     Мы активно поддерживаем покупательский спрос и интерес к нашей продукции на должном уровне.
                                 </h3>
                             </div>
 
                         </div>
                         <div class="our-achivements-row__elem">
-                            <div class="our-achivements-row__elem-counter our-achivements-row__elem-counter--pink our-achivements-row__elem-counter--large">
+                            <div class="our-achivements-row__elem-counter our-achivements-row__elem-counter--pink our-achivements-row__elem-counter--large wow fadeIn">
                                 <div class="our-achivements-row__elem-counter__inner">
                                     <span class="our-achivements-row__elem-counter__value">684+</span>
                                     <span class="our-achivements-row__elem-counter__text">Наименований продукции</span>
@@ -131,7 +145,7 @@
                             </div>
                         </div>
                         <div class="our-achivements-row__elem">
-                            <div class="our-achivements-row__elem-counter our-achivements-row__elem-counter--green">
+                            <div class="our-achivements-row__elem-counter our-achivements-row__elem-counter--green wow fadeIn">
                                 <div class="our-achivements-row__elem-counter__inner">
                                     <span class="our-achivements-row__elem-counter__value">10</span>
                                     <span class="our-achivements-row__elem-counter__text">Лет на рынке</span>
@@ -144,17 +158,17 @@
 
                 </div>
                 <div class="full-height-row full-height-row--equal full-height-row--inverse audience-row">
-                    <img src="./img/leaf-1.png" alt="" class="img-fluid audience-row__leaf--first">
-                    <img src="./img/leaf-2.png" alt="" class="img-fluid audience-row__leaf--second">
-                    <div class="audience-row__square"></div>
-                    <h1 class="title mt-0">Целевая <br> аудитория</h1>
+                    <img src="./img/leaf-1.png" alt="" class="img-fluid audience-row__leaf--first d-none d-lg-inline-block">
+                    <img src="./img/leaf-2.png" alt="" class="img-fluid audience-row__leaf--second d-none d-lg-inline-block">
+                    <div class="audience-row__square wow slideInUp d-none d-lg-block"></div>
+                    <h1 class="title hidden mt-0">Целевая <br> аудитория</h1>
                     <div class="full-height-row__content">
                         <p class="paragraph">
                             Наша целевая аудитория – это женщины 25-45 лет с средним и высоким достатком, которые следят за своим здоровьем. Покупают орехи и сухофрукты для себя и всей своей семьи.
                         </p>
                     </div>
-                    <div class="full-height-row__image ml-40">
-                        <img src="./img/3_2_2.png" alt="">
+                    <div class="full-height-row__image ml-40 wow scaleXRTL" data-wow-duration="2s">
+                        <img src="./img/3_2_2.png" class="wow translateRight" data-wow-duration="2s" alt="">
                     </div>
                 </div>
                 <div class="two-equals-row pt-200 align-items-start">
@@ -162,7 +176,7 @@
                         <img src="./img/3_2_3.png" alt="" class="img-fluid">
                     </div>
                     <div class="two-equals-row__block pr-0 pl-0">
-                        <h1 class="title title--line title--vertical title--line--latte">ZackRoma</h1>
+                        <h1 class="title hidden title--line title--vertical title--line--latte">ZackRoma</h1>
                         <p class="paragraph">
                             Торговая марка представлена в ценовом сегменте Premium. Широкий ассортимент орехов, сухофруктов, цукатов и всевозможных смесей.
                         </p>
@@ -175,18 +189,18 @@
                 </div>
                 <div class="trade-marks-images-row align-items-start pb-200 d-none d-md-flex">
                     <div class="trade-marks-images-row__image-bottom">
-                        <img src="./img/3_2_4.png" alt="" class="img-fluid">
+                        <img src="./img/3_2_4.png" alt="" class="img-fluid wow fadeIn parallax-element" data-parallax-speed="-6">
                     </div>
                     <div class="trade-marks-images-row__image-right">
-                        <img src="./img/3_2_3.png" alt="" class="img-fluid">
+                        <img src="./img/3_2_3.png" alt="" class="img-fluid wow fadeIn parallax-element" data-parallax-speed="8">
                     </div>
                 </div>
                 <div class="two-equals-row pb-200">
                     <div class="two-equals-row__block text-center">
-                        <img src="./img/3_2_5.png" alt="" class="img-fluid">
+                        <img src="./img/3_2_5.png" alt="" class="img-fluid wow fadeInUp">
                     </div>
                     <div class="two-equals-row__block">
-                        <h1 class="title title--line title--line--latte">Линейка Foodart</h1>
+                        <h1 class="title hidden title--line title--line--latte">Линейка Foodart</h1>
                         <p class="paragraph">
                             Продукция представлена в пакетах типа дой-пак из крафт-бумаги с зип замком.
                         </p>
@@ -200,7 +214,7 @@
                 <div class="two-equals-row pb-200">
 
                     <div class="two-equals-row__block order-1 order-md-0">
-                        <h1 class="title title--line title--line--latte title--line--right">Original Product</h1>
+                        <h1 class="title hidden title--line title--line--latte title--line--right">Original Product</h1>
                         <p class="paragraph">
                             Оригинальный продукт, аналога которому вы вряд ли найдете. Это жареные во фритюре бобы с добавлением различных пряных трав и специй.
                         </p>
@@ -208,15 +222,15 @@
 
                     </div>
                     <div class="two-equals-row__block text-center order-0 order-md-1">
-                        <img src="./img/3_2_6.png" alt="" class="img-fluid">
+                        <img src="./img/3_2_6.png" alt="" class="img-fluid wow fadeInUp">
                     </div>
                 </div>
                 <div class="two-equals-row pb-200">
                     <div class="two-equals-row__block text-center">
-                        <img src="./img/3_2_7.png" alt="" class="img-fluid">
+                        <img src="./img/3_2_7.png" alt="" class="img-fluid wow fadeInUp">
                     </div>
                     <div class="two-equals-row__block">
-                        <h1 class="title title--line title--line--latte">Фрукторешки</h1>
+                        <h1 class="title hidden title--line title--line--latte">Фрукторешки</h1>
                         <p class="paragraph">
                             Оригинальная линейка соленых орехов. Посмотри Мир вместе с нашими «Фрукторешками». Возьми с собой в дорогу!
                         </p>
@@ -225,13 +239,13 @@
                     </div>
                 </div>
                 <div class="full-screen-image-row">
-                    <div class="full-screen-image-row__image" style="background-image: url('./img/3_2_8.png');">
+                    <div class="full-screen-image-row__image" data-parallax="scroll" data-image-src='./img/3_2_8.png'>
 
                     </div>
                 </div>
                 <div class="text-row py-200">
                     <div class="text-row__title">
-                        <h1 class="title title--line title--line--latte title--line--right">FIFA</h1>
+                        <h1 class="title hidden title--line title--line--latte title--line--right">FIFA</h1>
                     </div>
                     <div class="text-row__content">
 
@@ -245,11 +259,12 @@
                     <img src="./img/3_2_9.png" alt="" class="img-fluid">
                 </div>
                 <div class="trade-marks-images-row trade-marks-images-row--inverse align-items-start pb-200 d-none d-md-flex">
-                    <div class="trade-marks-images-row__image-right">
-                        <img src="./img/3_2_9.png" alt="" class="img-fluid">
-                    </div>
+
                     <div class="trade-marks-images-row__image-bottom">
-                        <img src="./img/3_2_10.png" alt="" class="img-fluid">
+                        <img src="./img/3_2_10.png" alt="" class="img-fluid wow fadeIn parallax-element" data-parallax-speed="-4">
+                    </div>
+                    <div class="trade-marks-images-row__image-right">
+                        <img src="./img/3_2_9.png" alt="" class="img-fluid wow fadeIn parallax-element" data-parallax-speed="2">
                     </div>
                 </div>
                 <div class="navigation-row">
@@ -267,30 +282,20 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/parallax.js"></script>
 
-<script src="./js/slick.min.js">
-</script>
+<!--<script src="./js/slick.min.js">-->
+<!--</script>-->
 <script src="./js/menu.js">
 </script>
+<script src="./js/lettering.js"></script>
+<script src="./js/textillate.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/wow.min.js"></script>
+
 <script>
-    var $status = $('.pagingInfo');
-    var $slickElement = $('.slider-container');
-
-    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
-        var i = (currentSlide ? currentSlide : 0) + 2;
-        console.log(i + '/' + slick.slideCount);
-    });
-    $('.slider-container').slick({
-        dots: false,
-        arrows: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        variableWidth: true,
-        swipeToSlide: true
-
-    });
+    const wow = new WOW();
+    wow.init();
 </script>
-
+<script src="./js/jquery.selectric.min.js"></script>
 </html>

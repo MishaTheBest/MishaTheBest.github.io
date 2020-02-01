@@ -10,6 +10,20 @@
 </head>
 
 <body>
+<div class="language-popup">
+    <div class="language-popup__inner">
+        <div class="navigation__cross language-toggler">
+            <div class="navigation__cross__inner">
+            </div>
+        </div>
+        <h2>Выбор языка</h2>
+        <select name="languages" id="lang">
+            <option value="rus">Русский</option>
+            <option value="eng">English</option>
+        </select>
+    </div>
+
+</div>
     <div class="">
         <div class="navigation__toggler navigation__toggler--fixed menu-toggler d-flex d-lg-none">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -33,7 +47,7 @@
 </svg>
                         <span>Меню</span>
                     </div>
-                    <div class="navigation__language">
+                    <div class="navigation__language language-toggler">
                         <img src="./img/ru.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -77,8 +91,8 @@
         <main id="horizontal-wrapper">
             <section class="trade-marks-container content">
                 <div class="full-height-row full-height-row--title">
-                    <div class="full-height-row__image">
-                        <img src="./img/3_3_1.png" alt="">
+                    <div class="full-height-row__image wow scaleXLTR" data-wow-duration="2s">
+                        <img src="./img/3_3_1.png" alt="" class="wow translateLeft" data-wow-duration="2s" style="left:0; right: 0;">
                     </div>
                     <span class="full-height-row__title--vertical">Наша продукция</span>
 
@@ -103,14 +117,14 @@
                     </h3>
                 </div>
                 <div class="full-screen-image-row">
-                    <div class="full-screen-image-row__image" style="background-image: url('./img/3_3_2.png');">
+                    <div class="full-screen-image-row__image" data-parallax="scroll" data-image-src='./img/3_3_2.png'>
 
                     </div>
                 </div>
 
 
                 <div class="our-partners-row py-200">
-                    <h1 class="title title--line title--line--right title--line--latte mt-0">С нами сотрудничают</h1>
+                    <h1 class="title hidden title--line title--line--right title--line--latte mt-0">С нами сотрудничают</h1>
                     <div class="slider-container">
 
                         <div class="swiper-container" style='width: 100%;'>
@@ -359,6 +373,7 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/parallax.js"></script>
 
 <script src="./js/swiper.min.js"></script>
 <script src="./js/menu.js">
@@ -378,6 +393,27 @@
         spaceBetween: 30,
         mousewheel: true,
     })
-</script>
+    const current = document.querySelector('#current-slide');
+    const total = document.querySelector('#total-counter');
+    const formatNum = (value)=>{
+        return (value < 10 ? '0' : '') + value;
+    };
+    current.innerHTML = formatNum(mySwiper.activeIndex + 1);
+    total.innerHTML = formatNum(mySwiper.slides.length);
 
+    mySwiper.on('slideChange', function () {
+        current.innerHTML = formatNum(mySwiper.activeIndex + 1);
+        total.innerHTML = formatNum(mySwiper.slides.length);
+    });
+</script>
+<script src="./js/lettering.js"></script>
+<script src="./js/textillate.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/wow.min.js"></script>
+
+<script>
+    const wow = new WOW();
+    wow.init();
+</script>
+<script src="./js/jquery.selectric.min.js"></script>
 </html>
