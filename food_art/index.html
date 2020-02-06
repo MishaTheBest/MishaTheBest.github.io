@@ -429,6 +429,27 @@
                 }
             });
         // console.log(elem)
+        $('.leafTransform').each(function() {
+            if ($(this).isInViewport()) {
+                setTimeout(()=>{
+                    this.setAttribute('style','animation-name: f; visibility: visible');
+                    this.classList.add('animated');
+                },this.dataset.delay?this.dataset.delay*1000:250);
+
+
+            }
+        });
+        $(window).on('resize scroll', function() {
+            $('.leafTransform').each(function() {
+                if ($(this).isInViewport()) {
+                    setTimeout(()=>{
+                        this.setAttribute('style','animation-name: f; visibility: visible');
+                        this.classList.add('animated');
+                    },this.dataset.delay?this.dataset.delay*1000:250)
+
+
+                }
+            })});
         $(window).on('scroll mousewheel', function(event){
             event.preventDefault();
             var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
@@ -487,28 +508,9 @@
             }
             lastScrollTop = scrollNum;
         });
-        $('.leafTransform').each(function() {
-            if ($(this).isInViewport()) {
-                setTimeout(()=>{
-                    this.setAttribute('style','animation-name: f; visibility: visible');
-                    this.classList.add('animated');
-                },this.dataset.delay?this.dataset.delay*1000:250);
 
 
-            }
-        });
 
-        $(window).on('resize scroll', function() {
-            $('.leafTransform').each(function() {
-                if ($(this).isInViewport()) {
-                    setTimeout(()=>{
-                        this.setAttribute('style','animation-name: f; visibility: visible');
-                        this.classList.add('animated');
-                    },this.dataset.delay?this.dataset.delay*1000:250)
-
-
-                }
-            })});
         $(window).on('resize scroll', function() {
             $('#horizontal-wrapper .title').each(function() {
                 if ($(this).isInViewport()) {
