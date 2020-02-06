@@ -376,6 +376,7 @@ body{
 }
 #vertical-wrapper{
     position: relative;
+    overflow-x: hidden;
     .leafs-mobile{
         position: absolute;
         top: 0;
