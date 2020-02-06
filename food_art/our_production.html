@@ -94,10 +94,13 @@
         <section class="newest-products-container content">
             <div class="full-height-row">
                 <div class="full-height-row__image wow scaleXLTR" data-wow-duration="2s">
-                    <img src="./img/6_1.png" alt="" class="wow translateLeft" data-wow-duration="2s"  style="right: initial; left: 0;">
+                    <img data-src="./img/6_1.png" alt="" class="wow translateLeftBrightness lazy" data-wow-duration="2s"  style="right: initial; left: 0;">
                 </div>
                 <div class="full-height-row__content">
-                    <h6 class="headline">Наше производство</h6>
+                    <div class="logo--mobile">
+                        <img src="./img/logo-mobile.svg" alt="" class="img-fluid">
+                    </div>
+                    <h6 class="headline mt-5">Наше производство</h6>
                     <h1 class="title hidden title--line">Производство</h1>
                     <p class="paragraph">
                         Компания «Фуд Арт» имеет свое высокотехнологичное производство в экологически чистом районе
@@ -165,10 +168,10 @@
             </div>
             <div class="two-equals-row photo-row pb-200">
                 <div class="two-equals-row__block">
-                    <img src="./img/6_4.png" alt="" class="img-fluid wow fadeInUp">
+                    <img data-src="./img/6_4.png" alt="" class="img-fluid wow fadeInUp lazy">
                 </div>
                 <div class="two-equals-row__block d-none d-md-flex">
-                    <img src="./img/6_5.png" alt="" class="img-fluid wow fadeInUp">
+                    <img data-src="./img/6_5.png" alt="" class="img-fluid wow fadeInUp lazy">
 
                 </div>
             </div>
@@ -185,11 +188,11 @@
 
                 </div>
                 <div class="two-offseted-images-row__image-right d-none d-lg-flex">
-                    <img src="./img/6_6.png" alt="" class="img-fluid parallax-element" data-parallax-speed="2">
+                    <img data-src="./img/6_6.png" alt="" class="img-fluid parallax-element lazy" data-parallax-speed="2">
                 </div>
                 <div class="w-100"></div>
                 <div class="two-offseted-images-row__image-bottom">
-                    <img src="./img/6_7.png" alt="" class="img-fluid parallax-element" data-parallax-speed="-4">
+                    <img data-src="./img/6_7.png" alt="" class="img-fluid parallax-element lazy" data-parallax-speed="-4">
                 </div>
             </div>
             <div class="navigation-row">
@@ -207,7 +210,12 @@
 </div>
 </body>
 <script src="./js/jquery.min.js"></script>
-
+<script src="./js/jquery.lazy.min.js"></script>
+<script>
+    $(function() {
+        $('.lazy').Lazy();
+    });
+</script>
 
 <script src="./js/menu.js">
 </script>

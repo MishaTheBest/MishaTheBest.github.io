@@ -93,6 +93,9 @@
                 <div class="full-height-row full-height-row--equal full-height-row--inverse full-height-row--title">
 
                     <div class="full-height-row__content full-height-row__content--padding-right">
+                        <div class="logo--mobile">
+                            <img src="./img/logo-mobile.svg" alt="" class="img-fluid">
+                        </div>
                         <h1 class="title hidden">Наши торговые марки</h1>
                         <p class="paragraph">
                             Мы не стоим на месте! Активно разрабатывая новые линейки, соответствующие современным тенденциям, стремимся быть лучшими в своем деле.
@@ -105,7 +108,7 @@
                     </div>
                     <span class="full-height-row__title--vertical d-none d-md-block">Наша продукция</span>
                     <div class="full-height-row__image ml-40 d-none d-lg-flex wow scaleXRTL" data-wow-duration="2s">
-                        <img src="./img/3_2_1.png" class="wow translateRight" data-wow-duration="2s" alt="">
+                        <img data-src="./img/3_2_1.png" class="wow translateRightBrightness lazy" data-wow-duration="2s" alt="">
                     </div>
                 </div>
                 <div class="our-achivements-row">
@@ -168,12 +171,12 @@
                         </p>
                     </div>
                     <div class="full-height-row__image ml-40 wow scaleXRTL" data-wow-duration="2s">
-                        <img src="./img/3_2_2.png" class="wow translateRight" data-wow-duration="2s" alt="">
+                        <img data-src="./img/3_2_2.png" class="wow translateRight lazy" data-wow-duration="2s" alt="">
                     </div>
                 </div>
                 <div class="two-equals-row pt-200 align-items-start">
                     <div class="col-12 d-md-none my-5 text-center">
-                        <img src="./img/3_2_3.png" alt="" class="img-fluid">
+                        <img data-src="./img/3_2_3.png" alt="" class="img-fluid lazy">
                     </div>
                     <div class="two-equals-row__block pr-0 pl-0">
                         <h1 class="title hidden title--line title--vertical title--line--latte">ZackRoma</h1>
@@ -261,10 +264,10 @@
                 <div class="trade-marks-images-row trade-marks-images-row--inverse align-items-start pb-200 d-none d-md-flex">
 
                     <div class="trade-marks-images-row__image-bottom">
-                        <img src="./img/3_2_10.png" alt="" class="img-fluid wow fadeIn parallax-element" data-parallax-speed="-4">
+                        <img data-src="./img/3_2_10.png" alt="" class="img-fluid wow fadeIn parallax-element lazy" data-parallax-speed="-4">
                     </div>
                     <div class="trade-marks-images-row__image-right">
-                        <img src="./img/3_2_9.png" alt="" class="img-fluid wow fadeIn parallax-element" data-parallax-speed="2">
+                        <img data-src="./img/3_2_9.png" alt="" class="img-fluid wow fadeIn parallax-element lazy" data-parallax-speed="2">
                     </div>
                 </div>
                 <div class="navigation-row">
@@ -282,6 +285,12 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.lazy.min.js"></script>
+<script>
+    $(function() {
+        $('.lazy').Lazy();
+    });
+</script>
 <script src="./js/parallax.js"></script>
 
 <!--<script src="./js/slick.min.js">-->

@@ -16,6 +16,9 @@
 }
 
 @media screen and (min-width: 992px) {
+    .logo--mobile{
+       display: none;
+    }
     .page-not-found {
         // margin-left: 80px !important;
         // margin-right: 80px !important;
@@ -125,6 +128,12 @@
     body {
         //font-size: 12.5217391304px;
     }
+    body .blog_page_container{
+        padding-left: 60px !important;
+    }
+    main{
+        padding-top: 30px;
+    }
     .text-row h3{
         font-size: 1.375rem !important;
     }
@@ -149,6 +158,13 @@
     }
     .date {
         font-size: 1rem;
+    }
+    .title{
+        &--line{
+            &::before{
+                display: none !important;
+            }
+        }
     }
     .breadcrumbs-link {
         font-size: 1rem;
@@ -176,7 +192,7 @@
         .full-height-row__content {
             padding-left: 60px !important;
             -ms-flex-preferred-size: 0 !important;
-            flex-basis: auto;
+            //flex-basis: auto;
             -webkit-box-flex: 1 !important;
             -ms-flex-positive: 1 !important;
             flex-grow: 1 !important;
@@ -214,7 +230,7 @@
         position: fixed;
         right: 30px;
         top: 30px;
-        z-index: 300;
+        z-index: 1001;
     }
     .image--full-width {
         margin-left: 0px;
@@ -286,8 +302,8 @@
     }
     .blog_page_container {
         .full-height-row__content {
-            padding-top: 13.333vh !important;
-            padding-bottom: 13.333vh !important;
+            //padding-top: 13.333vh !important;
+            //padding-bottom: 13.333vh !important;
             height: auto !important;
             overflow: initial !important;
             padding-left: 0 !important;
@@ -392,12 +408,30 @@
     .scroll-progress {
         left: 0 !important;
     }
+    .audience-row .title,.audience-row .paragraph{
+        position: initial !important;
+        top: initial !important;
+        left: initial !important;
+        margin-top: initial !important;
+    }
+    .audience-row .title{
+        padding-left: 60px !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
     html,
     body {
         //font-size: 9.04347826087px;
+    }
+    body .blog_page_container{
+        padding-left: 20px !important;
+    }
+    main{
+        padding-top: 30px;
+    }
+    .logo--mobile{
+        width: 111px !important;
     }
     .contacts-info__text{
         font-size: .875rem !important;
@@ -626,6 +660,9 @@
 
         padding-left: 20px !important;
         padding-right: 20px !important;
+    }
+    .audience-row .title{
+        padding-left: 20px !important;
     }
 }
 //@media screen and (max-width: 576px) and (orientation: portrait){

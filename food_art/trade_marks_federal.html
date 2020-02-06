@@ -92,11 +92,14 @@
             <section class="trade-marks-container content">
                 <div class="full-height-row full-height-row--title">
                     <div class="full-height-row__image wow scaleXLTR" data-wow-duration="2s">
-                        <img src="./img/3_3_1.png" alt="" class="wow translateLeft" data-wow-duration="2s" style="left:0; right: 0;">
+                        <img data-src="./img/3_3_1.png" alt="" class="wow translateLeftBrightness lazy" data-wow-duration="2s" style="left:0; right: 0;">
                     </div>
                     <span class="full-height-row__title--vertical">Наша продукция</span>
 
                     <div class="full-height-row__content">
+                        <div class="logo--mobile">
+                            <img src="./img/logo-mobile.svg" alt="" class="img-fluid">
+                        </div>
                         <h1 class="title">Торговые марки федеральных сетeй</h1>
                         <p class="paragraph">
                             На сегодняшний день мы с успехом сотрудничаем с большинством Федеральных сетей и делаем для них СТМ.
@@ -373,6 +376,12 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.lazy.min.js"></script>
+<script>
+    $(function() {
+        $('.lazy').Lazy();
+    });
+</script>
 <script src="./js/parallax.js"></script>
 
 <script src="./js/swiper.min.js"></script>

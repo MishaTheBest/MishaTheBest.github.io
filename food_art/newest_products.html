@@ -92,10 +92,13 @@
             <section class="newest-products-container content">
                 <div class="full-height-row">
                     <div class="full-height-row__image  wow scaleXLTR" data-wow-duration="2s">
-                        <img class="wow translateLeft"  data-wow-duration="2s" src="./img/4_1.png" alt="" style="right: initial; left: 0;">
+                        <img class="wow translateLeftBrightness lazy"  data-wow-duration="2s" data-src="./img/4_1.png" alt="" style="right: initial; left: 0;">
                     </div>
                     <div class="full-height-row__content">
-                        <h6 class="headline">Ассортимент</h6>
+                        <div class="logo--mobile">
+                            <img src="./img/logo-mobile.svg" alt="" class="img-fluid">
+                        </div>
+                        <h6 class="headline mt-5">Ассортимент</h6>
                         <h1 class="title hidden title--line">Новинки</h1>
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -114,7 +117,7 @@
                 </div>
                 <div class="offset-image-row color__inverse">
                     <div class="offset-image-row__image">
-                        <img src="./img/4_2.png" class="img-fluid parallax-element" alt="" data-parallax-speed="-8">
+                        <img data-src="./img/4_2.png" class="img-fluid parallax-element lazy" alt="" data-parallax-speed="-8">
                     </div>
                     <div class="offset-image-row__content">
                         <h1 class="title hidden title--line">Попкорн</h1>
@@ -129,10 +132,10 @@
                 </div>
                 <div class="text-row py-200 cereals-row">
                     <div class='cereals-row__parallax-bg'>
-                        <img src="./img/cereals-1.png" class='parallax-element img-fluid' alt="" data-parallax-speed="-8">
+                        <img data-src="./img/cereals-1.png" class='parallax-element img-fluid lazy' alt="" data-parallax-speed="-8">
                     </div>
                     <div class='cereals-row__parallax-bg'>
-                        <img src="./img/cereals-2.png" class='parallax-element img-fluid' alt="" data-parallax-speed="6">
+                        <img data-src="./img/cereals-2.png" class='parallax-element img-fluid lazy' alt="" data-parallax-speed="6">
                     </div>
                     <div class="text-row__title">
                         <h1 class="title hidden title--line title--line--bottom title--line--latte">Мюсли</h1>
@@ -152,7 +155,7 @@
 
                     </div>
                     <div class="two-equals-row__block wow fadeInUp">
-                        <img src="./img/4_4.png" alt="" class="img-fluid">
+                        <img data-src="./img/4_4.png" alt="" class="img-fluid lazy">
                     </div>
                 </div>
                 <div class="two-equals-row crisps-row">
@@ -160,7 +163,7 @@
                         <img src="./img/leaf-2.png" alt="" class="img-fluid parallax-element d-none d-lg-inline-block" data-parallax-speed="-8">
                     </div>
                     <div class="two-equals-row__block order-1 order-md-0 wow fadeInUp">
-                        <img src="./img/4_5.png" alt="" class="img-fluid">
+                        <img data-src="./img/4_5.png" alt="" class="img-fluid lazy">
                     </div>
                     <div class="two-equals-row__block order-0 order-md-1">
                         <h1 class="title hidden title--line  title--line--latte">Фруктовые чипсы</h1>
@@ -180,10 +183,10 @@
                 </div>
                 <div class="two-equals-row photo-row pb-200">
                     <div class="two-equals-row__block d-none d-md-flex wow fadeInUp">
-                        <img src="./img/4_6.png" alt="" class="img-fluid">
+                        <img data-src="./img/4_6.png" alt="" class="img-fluid lazy">
                     </div>
                     <div class="two-equals-row__block wow fadeInUp">
-                        <img src="./img/4_7.png" alt="" class="img-fluid">
+                        <img data-src="./img/4_7.png" alt="" class="img-fluid lazy">
 
                     </div>
                 </div>
@@ -202,7 +205,12 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
-
+<script src="./js/jquery.lazy.min.js"></script>
+<script>
+    $(function() {
+        $('.lazy').Lazy();
+    });
+</script>
 
 <script src="./js/menu.js">
 </script>

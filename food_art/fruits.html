@@ -93,7 +93,10 @@
                 <div class="full-height-row full-height-row--inverse">
 
                     <div class="full-height-row__content">
-                        <h6 class="headline">Ассортимент</h6>
+                        <div class="logo--mobile">
+                            <img src="./img/logo-mobile.svg" alt="" class="img-fluid">
+                        </div>
+                        <h6 class="headline mt-5">Ассортимент</h6>
                         <h1 class="title hidden title--line">Овощи и фрукты</h1>
                         <p class="paragraph">
                             Мы предлагаем только свежий, экологический чистый продукт соответствующий требованиям самого взыскательного покупателя. </p>
@@ -108,7 +111,7 @@
                         </span>
                     </div>
                     <div class="full-height-row__image mr-0 wow scaleXRTL" data-wow-duration="2s">
-                        <img src="./img/5_1.png" alt="" class="wow translateRight" data-wow-duration="2s">
+                        <img data-src="./img/5_1.png" alt="" class="wow translateRightBrightness lazy" data-wow-duration="2s">
                     </div>
                 </div>
                 <div class="two-equals-row photo-row pt-200 align-items-start">
@@ -116,7 +119,7 @@
                         <div>
                             <h1 class="title hidden title--line title--vertical title--line--latte" style='margin-right: 10px !important;'>Хранение</h1>
                         </div>
-                        <img src="./img/5_2.png" alt="" class="img-fluid wow fadeInUp">
+                        <img data-src="./img/5_2.png" alt="" class="img-fluid wow fadeInUp lazy">
                     </div>
                     <div class="two-equals-row__block">
                         <img src="./img/5_3.png" alt="" class="img-fluid wow fadeInUp">
@@ -183,7 +186,12 @@
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
-
+<script src="./js/jquery.lazy.min.js"></script>
+<script>
+    $(function() {
+        $('.lazy').Lazy();
+    });
+</script>
 
 <script src="./js/menu.js">
 </script>
