@@ -8,6 +8,13 @@
 @import "animate.min.css";
 @import "selectric.css";
 /* animations */
+@mixin transitionMenu {
+    @for $i from 1 through 50 {
+        &:nth-child(#{$i}) {
+            transition: transform 1s #{$i * .08}s cubic-bezier(.29,1.4,.44,.96);
+        }
+    }
+}
 @keyframes translateRight {
     from {
         -webkit-transform: translate3d(20%, 0, 0) scale3d(1.15,1,1);
@@ -378,15 +385,51 @@ body{
         z-index: -1;
         .leaf-mobile{
             position: absolute;
-            max-width: 14vw;
+            max-width: 12vw;
         }
-        @for $i from 1 through 9 {
-            .leaf-mobile-#{$i} {
-                top: percentage(random(100)/100);
-                left: percentage(random(100)/100);
-                max-width: random(5) + 14 + vw;
-            }
+        .leaf-mobile-1{
+            top: 6%;
+            left: 90%;
         }
+        .leaf-mobile-2{
+            top: 9%;
+            left: 10%;
+        }
+        .leaf-mobile-3{
+            top: 18%;
+            left: 10%;
+        }
+        .leaf-mobile-4{
+            top: 24%;
+            left: 60%;
+        }
+        .leaf-mobile-5{
+            top: 40%;
+            left: 5%;
+        }
+        .leaf-mobile-6{
+            top: 44%;
+            left: 90%;
+        }
+        .leaf-mobile-7{
+            top: 60%;
+            left: 95%;
+        }
+        .leaf-mobile-8{
+            top: 65%;
+            left: 5%;
+        }
+        .leaf-mobile-9{
+            top: 67%;
+            left: 10%;
+        }
+        //@for $i from 1 through 9 {
+        //    .leaf-mobile-#{$i} {
+        //        top: percentage(random(100)/100);
+        //        left: percentage(random(100)/100);
+        //        max-width: random(5) + 12 + vw;
+        //    }
+        //}
     }
 }
 .scroll__inner {
@@ -556,7 +599,7 @@ body{
 }
 
 .bg-5 {
-    left: 274.833vw;
+    left: 266.833vw;
     top: 27.556vh;
     height: 72.444vh;
     width: 31.181vw;
@@ -704,7 +747,7 @@ body{
 
 .leaf-7 {
     top: 22.222vh;
-    left: 269.097vw;
+    left: 240.097vw;
 }
 
 .leaf-8 {
@@ -879,6 +922,9 @@ body{
         position: absolute;
         bottom: 63px;
         // margin-left: 10%;
+        a{
+            text-decoration: none;
+        }
         span {
             color: #aeaeae;
             font-size: 1rem;
@@ -889,10 +935,15 @@ body{
             }
         }
     }
+
     &__menu {
         &--active {
             left: 120px;
             opacity: 1;
+            .navigation__menu-item{
+                transform: translateX(0);
+
+            }
         }
         border-left: 1px solid #d4d4d4;
         transition: left .8s ease-in-out,opacity .8s ease-in-out;
@@ -917,6 +968,8 @@ body{
         &-item {
             margin-top: 20px;
             margin-bottom: 20px;
+            @include transitionMenu;
+            transform: translateX(-100vw);
             a {
                 font-size: 1.5rem;
                 font-weight: bold;
