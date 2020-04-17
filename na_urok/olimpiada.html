@@ -812,7 +812,7 @@
 <script scr='https://naurok.com.ua/js/bootstrap.min.js'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://naurok.com.ua/js/slick.min.js"></script>
-<script src="https://naurok.com.ua/js/script.js?v2.2.90"></script>
+<!-- <script src="https://naurok.com.ua/js/script.js?v2.2.90"></script> -->
 <script>
     $('#olymp-revies-slider').slick({
         infinite: true,
@@ -830,13 +830,13 @@
         }]
     });
 
-    // function scrollToDiv(to) {
-    //     //$(click).click(function() {
-    //     $('html, body').animate({
-    //         scrollTop: $(to).offset().top
-    //     }, 800);
-    //     //});
-    // }
+    function scrollToDiv(to) {
+        //$(click).click(function() {
+        $('html, body').animate({
+            scrollTop: $(to).offset().top
+        }, 800);
+        //});
+    }
     $('#registerlink').on('click', function(e) {
         e.preventDefault();
         scrollToDiv('#register');
