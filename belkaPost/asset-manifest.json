@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/belkaPost/static/css/main.95b8ca66.chunk.css",
-    "main.js": "/belkaPost/static/js/main.b52e3f46.chunk.js",
-    "main.js.map": "/belkaPost/static/js/main.b52e3f46.chunk.js.map",
+    "main.css": "/belkaPost/static/css/main.134ec1b2.chunk.css",
+    "main.js": "/belkaPost/static/js/main.91787429.chunk.js",
+    "main.js.map": "/belkaPost/static/js/main.91787429.chunk.js.map",
     "runtime-main.js": "/belkaPost/static/js/runtime-main.5dab9f90.js",
     "runtime-main.js.map": "/belkaPost/static/js/runtime-main.5dab9f90.js.map",
     "static/css/2.847e01e0.chunk.css": "/belkaPost/static/css/2.847e01e0.chunk.css",
-    "static/js/2.69d4e0ad.chunk.js": "/belkaPost/static/js/2.69d4e0ad.chunk.js",
-    "static/js/2.69d4e0ad.chunk.js.map": "/belkaPost/static/js/2.69d4e0ad.chunk.js.map",
+    "static/js/2.a0c350fa.chunk.js": "/belkaPost/static/js/2.a0c350fa.chunk.js",
+    "static/js/2.a0c350fa.chunk.js.map": "/belkaPost/static/js/2.a0c350fa.chunk.js.map",
     "index.html": "/belkaPost/index.html",
-    "precache-manifest.254c23654805cb6b7cd1bd8fcd5b6c66.js": "/belkaPost/precache-manifest.254c23654805cb6b7cd1bd8fcd5b6c66.js",
+    "precache-manifest.0a952128fe472f72d9504deeb4c492b1.js": "/belkaPost/precache-manifest.0a952128fe472f72d9504deeb4c492b1.js",
     "service-worker.js": "/belkaPost/service-worker.js",
     "static/css/2.847e01e0.chunk.css.map": "/belkaPost/static/css/2.847e01e0.chunk.css.map",
-    "static/css/main.95b8ca66.chunk.css.map": "/belkaPost/static/css/main.95b8ca66.chunk.css.map",
-    "static/js/2.69d4e0ad.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.69d4e0ad.chunk.js.LICENSE.txt",
+    "static/css/main.134ec1b2.chunk.css.map": "/belkaPost/static/css/main.134ec1b2.chunk.css.map",
+    "static/js/2.a0c350fa.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.a0c350fa.chunk.js.LICENSE.txt",
     "static/media/05.png": "/belkaPost/static/media/05.09df87d6.png",
     "static/media/GothaProBla.otf": "/belkaPost/static/media/GothaProBla.0fe8b393.otf",
     "static/media/GothaProBol.otf": "/belkaPost/static/media/GothaProBol.3f9c5a2b.otf",
@@ -21,19 +21,26 @@
     "static/media/GothaProMed.otf": "/belkaPost/static/media/GothaProMed.dd3d9ca5.otf",
     "static/media/GothaProReg.otf": "/belkaPost/static/media/GothaProReg.aafeb237.otf",
     "static/media/boxes.svg": "/belkaPost/static/media/boxes.56adb439.svg",
+    "static/media/economy.scss": "/belkaPost/static/media/clouds.c814f616.png",
+    "static/media/logistics.png": "/belkaPost/static/media/logistics.82c274a1.png",
     "static/media/map-of-world.png": "/belkaPost/static/media/map-of-world.b876aae9.png",
     "static/media/opportunity_2.png": "/belkaPost/static/media/opportunity_2.a559ca5e.png",
     "static/media/opportunity_4.png": "/belkaPost/static/media/opportunity_4.22c14f5a.png",
     "static/media/opportunity_5.png": "/belkaPost/static/media/opportunity_5.09df87d6.png",
     "static/media/opportunity_6.png": "/belkaPost/static/media/opportunity_6.e03cad66.png",
     "static/media/screenshot-1.png": "/belkaPost/static/media/screenshot-1.f6d26c5d.png",
-    "static/media/screenshot-2.png": "/belkaPost/static/media/screenshot-2.40b3cc48.png"
+    "static/media/screenshot-2.png": "/belkaPost/static/media/screenshot-2.40b3cc48.png",
+    "static/media/screenshot-3.png": "/belkaPost/static/media/screenshot-3.69b1860d.png",
+    "static/media/simplicity_1.png": "/belkaPost/static/media/simplicity_1.777a27f4.png",
+    "static/media/simplicity_3.png": "/belkaPost/static/media/simplicity_3.d5e4ce80.png",
+    "static/media/simplicity_4.png": "/belkaPost/static/media/simplicity_4.c2f64385.png",
+    "static/media/simplicity_6.png": "/belkaPost/static/media/simplicity_6.02206b48.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5dab9f90.js",
     "static/css/2.847e01e0.chunk.css",
-    "static/js/2.69d4e0ad.chunk.js",
-    "static/css/main.95b8ca66.chunk.css",
-    "static/js/main.b52e3f46.chunk.js"
+    "static/js/2.a0c350fa.chunk.js",
+    "static/css/main.134ec1b2.chunk.css",
+    "static/js/main.91787429.chunk.js"
   ]
 }
