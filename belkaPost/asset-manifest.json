@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7849967d.chunk.css",
+    "main.js": "/static/js/main.da5ca8ba.chunk.js",
+    "main.js.map": "/static/js/main.da5ca8ba.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
+    "static/css/2.847e01e0.chunk.css": "/static/css/2.847e01e0.chunk.css",
+    "static/js/2.4402f30f.chunk.js": "/static/js/2.4402f30f.chunk.js",
+    "static/js/2.4402f30f.chunk.js.map": "/static/js/2.4402f30f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.69f3831e0eed7ac5c95c9e25172ea61b.js": "/precache-manifest.69f3831e0eed7ac5c95c9e25172ea61b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.847e01e0.chunk.css.map": "/static/css/2.847e01e0.chunk.css.map",
+    "static/css/main.7849967d.chunk.css.map": "/static/css/main.7849967d.chunk.css.map",
+    "static/js/2.4402f30f.chunk.js.LICENSE.txt": "/static/js/2.4402f30f.chunk.js.LICENSE.txt",
+    "static/media/05.png": "/static/media/05.09df87d6.png",
+    "static/media/GothaProBla.otf": "/static/media/GothaProBla.0fe8b393.otf",
+    "static/media/GothaProBol.otf": "/static/media/GothaProBol.3f9c5a2b.otf",
+    "static/media/GothaProLig.otf": "/static/media/GothaProLig.aab7d221.otf",
+    "static/media/GothaProMed.otf": "/static/media/GothaProMed.dd3d9ca5.otf",
+    "static/media/GothaProReg.otf": "/static/media/GothaProReg.aafeb237.otf",
+    "static/media/boxes.svg": "/static/media/boxes.56adb439.svg",
+    "static/media/map-of-world.png": "/static/media/map-of-world.b876aae9.png",
+    "static/media/opportunity_2.png": "/static/media/opportunity_2.a559ca5e.png",
+    "static/media/opportunity_4.png": "/static/media/opportunity_4.22c14f5a.png",
+    "static/media/opportunity_5.png": "/static/media/opportunity_5.09df87d6.png",
+    "static/media/opportunity_6.png": "/static/media/opportunity_6.e03cad66.png",
+    "static/media/screenshot-1.png": "/static/media/screenshot-1.f6d26c5d.png",
+    "static/media/screenshot-2.png": "/static/media/screenshot-2.40b3cc48.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8a21426.js",
+    "static/css/2.847e01e0.chunk.css",
+    "static/js/2.4402f30f.chunk.js",
+    "static/css/main.7849967d.chunk.css",
+    "static/js/main.da5ca8ba.chunk.js"
+  ]
+}
