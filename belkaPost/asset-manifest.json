@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/belkaPost/static/css/main.3171b080.chunk.css",
+    "main.css": "/belkaPost/static/css/main.97f06dee.chunk.css",
     "main.js": "/belkaPost/static/js/main.fdeb12b1.chunk.js",
     "main.js.map": "/belkaPost/static/js/main.fdeb12b1.chunk.js.map",
     "runtime-main.js": "/belkaPost/static/js/runtime-main.5dab9f90.js",
@@ -9,10 +9,10 @@
     "static/js/2.9ea99004.chunk.js": "/belkaPost/static/js/2.9ea99004.chunk.js",
     "static/js/2.9ea99004.chunk.js.map": "/belkaPost/static/js/2.9ea99004.chunk.js.map",
     "index.html": "/belkaPost/index.html",
-    "precache-manifest.ded600c724078ed1e008905dd99535d9.js": "/belkaPost/precache-manifest.ded600c724078ed1e008905dd99535d9.js",
+    "precache-manifest.e5e36c10be150f1207421a6b36dfaa1c.js": "/belkaPost/precache-manifest.e5e36c10be150f1207421a6b36dfaa1c.js",
     "service-worker.js": "/belkaPost/service-worker.js",
     "static/css/2.847e01e0.chunk.css.map": "/belkaPost/static/css/2.847e01e0.chunk.css.map",
-    "static/css/main.3171b080.chunk.css.map": "/belkaPost/static/css/main.3171b080.chunk.css.map",
+    "static/css/main.97f06dee.chunk.css.map": "/belkaPost/static/css/main.97f06dee.chunk.css.map",
     "static/js/2.9ea99004.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.9ea99004.chunk.js.LICENSE.txt",
     "static/media/05.png": "/belkaPost/static/media/05.09df87d6.png",
     "static/media/GothaProBla.otf": "/belkaPost/static/media/GothaProBla.0fe8b393.otf",
@@ -43,7 +43,7 @@
     "static/js/runtime-main.5dab9f90.js",
     "static/css/2.847e01e0.chunk.css",
     "static/js/2.9ea99004.chunk.js",
-    "static/css/main.3171b080.chunk.css",
+    "static/css/main.97f06dee.chunk.css",
     "static/js/main.fdeb12b1.chunk.js"
   ]
 }
