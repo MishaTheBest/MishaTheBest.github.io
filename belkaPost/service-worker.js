@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/belkaPost/precache-manifest.2390610cf3111cf53135e2835b06a06a.js"
+  "/belkaPost/precache-manifest.ded600c724078ed1e008905dd99535d9.js"
 );
 
 self.addEventListener('message', (event) => {

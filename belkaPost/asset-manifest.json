@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/belkaPost/static/css/main.83a7671c.chunk.css",
-    "main.js": "/belkaPost/static/js/main.1b3e7307.chunk.js",
-    "main.js.map": "/belkaPost/static/js/main.1b3e7307.chunk.js.map",
+    "main.css": "/belkaPost/static/css/main.3171b080.chunk.css",
+    "main.js": "/belkaPost/static/js/main.fdeb12b1.chunk.js",
+    "main.js.map": "/belkaPost/static/js/main.fdeb12b1.chunk.js.map",
     "runtime-main.js": "/belkaPost/static/js/runtime-main.5dab9f90.js",
     "runtime-main.js.map": "/belkaPost/static/js/runtime-main.5dab9f90.js.map",
     "static/css/2.847e01e0.chunk.css": "/belkaPost/static/css/2.847e01e0.chunk.css",
-    "static/js/2.fd78820e.chunk.js": "/belkaPost/static/js/2.fd78820e.chunk.js",
-    "static/js/2.fd78820e.chunk.js.map": "/belkaPost/static/js/2.fd78820e.chunk.js.map",
+    "static/js/2.9ea99004.chunk.js": "/belkaPost/static/js/2.9ea99004.chunk.js",
+    "static/js/2.9ea99004.chunk.js.map": "/belkaPost/static/js/2.9ea99004.chunk.js.map",
     "index.html": "/belkaPost/index.html",
-    "precache-manifest.2390610cf3111cf53135e2835b06a06a.js": "/belkaPost/precache-manifest.2390610cf3111cf53135e2835b06a06a.js",
+    "precache-manifest.ded600c724078ed1e008905dd99535d9.js": "/belkaPost/precache-manifest.ded600c724078ed1e008905dd99535d9.js",
     "service-worker.js": "/belkaPost/service-worker.js",
     "static/css/2.847e01e0.chunk.css.map": "/belkaPost/static/css/2.847e01e0.chunk.css.map",
-    "static/css/main.83a7671c.chunk.css.map": "/belkaPost/static/css/main.83a7671c.chunk.css.map",
-    "static/js/2.fd78820e.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.fd78820e.chunk.js.LICENSE.txt",
+    "static/css/main.3171b080.chunk.css.map": "/belkaPost/static/css/main.3171b080.chunk.css.map",
+    "static/js/2.9ea99004.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.9ea99004.chunk.js.LICENSE.txt",
     "static/media/05.png": "/belkaPost/static/media/05.09df87d6.png",
     "static/media/GothaProBla.otf": "/belkaPost/static/media/GothaProBla.0fe8b393.otf",
     "static/media/GothaProBol.otf": "/belkaPost/static/media/GothaProBol.3f9c5a2b.otf",
@@ -24,6 +24,7 @@
     "static/media/boxes.svg": "/belkaPost/static/media/boxes.56adb439.svg",
     "static/media/economy.scss": "/belkaPost/static/media/clouds.c814f616.png",
     "static/media/computer.png": "/belkaPost/static/media/computer.cdd25a06.png",
+    "static/media/feedback.scss": "/belkaPost/static/media/feedback.f5c1854a.png",
     "static/media/logistics.png": "/belkaPost/static/media/logistics.82c274a1.png",
     "static/media/map-of-world.png": "/belkaPost/static/media/map-of-world.b876aae9.png",
     "static/media/opportunity_2.png": "/belkaPost/static/media/opportunity_2.a559ca5e.png",
@@ -41,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.5dab9f90.js",
     "static/css/2.847e01e0.chunk.css",
-    "static/js/2.fd78820e.chunk.js",
-    "static/css/main.83a7671c.chunk.css",
-    "static/js/main.1b3e7307.chunk.js"
+    "static/js/2.9ea99004.chunk.js",
+    "static/css/main.3171b080.chunk.css",
+    "static/js/main.fdeb12b1.chunk.js"
   ]
 }
