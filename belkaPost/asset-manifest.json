@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/belkaPost/static/css/main.885832e9.chunk.css",
-    "main.js": "/belkaPost/static/js/main.eb846c96.chunk.js",
-    "main.js.map": "/belkaPost/static/js/main.eb846c96.chunk.js.map",
+    "main.css": "/belkaPost/static/css/main.6823147c.chunk.css",
+    "main.js": "/belkaPost/static/js/main.3025ddd5.chunk.js",
+    "main.js.map": "/belkaPost/static/js/main.3025ddd5.chunk.js.map",
     "runtime-main.js": "/belkaPost/static/js/runtime-main.5dab9f90.js",
     "runtime-main.js.map": "/belkaPost/static/js/runtime-main.5dab9f90.js.map",
     "static/css/2.0d9fcf26.chunk.css": "/belkaPost/static/css/2.0d9fcf26.chunk.css",
-    "static/js/2.2be16b24.chunk.js": "/belkaPost/static/js/2.2be16b24.chunk.js",
-    "static/js/2.2be16b24.chunk.js.map": "/belkaPost/static/js/2.2be16b24.chunk.js.map",
+    "static/js/2.ab694b95.chunk.js": "/belkaPost/static/js/2.ab694b95.chunk.js",
+    "static/js/2.ab694b95.chunk.js.map": "/belkaPost/static/js/2.ab694b95.chunk.js.map",
     "index.html": "/belkaPost/index.html",
-    "precache-manifest.bf946f3eb149a9f6b0a7a6c74e9d4575.js": "/belkaPost/precache-manifest.bf946f3eb149a9f6b0a7a6c74e9d4575.js",
+    "precache-manifest.76f36744ad526165789d35585ff0860b.js": "/belkaPost/precache-manifest.76f36744ad526165789d35585ff0860b.js",
     "service-worker.js": "/belkaPost/service-worker.js",
     "static/css/2.0d9fcf26.chunk.css.map": "/belkaPost/static/css/2.0d9fcf26.chunk.css.map",
-    "static/css/main.885832e9.chunk.css.map": "/belkaPost/static/css/main.885832e9.chunk.css.map",
-    "static/js/2.2be16b24.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.2be16b24.chunk.js.LICENSE.txt",
+    "static/css/main.6823147c.chunk.css.map": "/belkaPost/static/css/main.6823147c.chunk.css.map",
+    "static/js/2.ab694b95.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.ab694b95.chunk.js.LICENSE.txt",
     "static/media/05.png": "/belkaPost/static/media/05.09df87d6.png",
     "static/media/GothaProBla.otf": "/belkaPost/static/media/GothaProBla.0fe8b393.otf",
     "static/media/GothaProBol.otf": "/belkaPost/static/media/GothaProBol.3f9c5a2b.otf",
@@ -44,8 +44,8 @@
   "entrypoints": [
     "static/js/runtime-main.5dab9f90.js",
     "static/css/2.0d9fcf26.chunk.css",
-    "static/js/2.2be16b24.chunk.js",
-    "static/css/main.885832e9.chunk.css",
-    "static/js/main.eb846c96.chunk.js"
+    "static/js/2.ab694b95.chunk.js",
+    "static/css/main.6823147c.chunk.css",
+    "static/js/main.3025ddd5.chunk.js"
   ]
 }
