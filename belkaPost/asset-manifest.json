@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/belkaPost/static/css/main.a972f8e3.chunk.css",
-    "main.js": "/belkaPost/static/js/main.e2ed236d.chunk.js",
-    "main.js.map": "/belkaPost/static/js/main.e2ed236d.chunk.js.map",
+    "main.css": "/belkaPost/static/css/main.2a01c9af.chunk.css",
+    "main.js": "/belkaPost/static/js/main.bcfff5b9.chunk.js",
+    "main.js.map": "/belkaPost/static/js/main.bcfff5b9.chunk.js.map",
     "runtime-main.js": "/belkaPost/static/js/runtime-main.5dab9f90.js",
     "runtime-main.js.map": "/belkaPost/static/js/runtime-main.5dab9f90.js.map",
     "static/css/2.3adb8d2f.chunk.css": "/belkaPost/static/css/2.3adb8d2f.chunk.css",
-    "static/js/2.6e7a740f.chunk.js": "/belkaPost/static/js/2.6e7a740f.chunk.js",
-    "static/js/2.6e7a740f.chunk.js.map": "/belkaPost/static/js/2.6e7a740f.chunk.js.map",
+    "static/js/2.f0323a0a.chunk.js": "/belkaPost/static/js/2.f0323a0a.chunk.js",
+    "static/js/2.f0323a0a.chunk.js.map": "/belkaPost/static/js/2.f0323a0a.chunk.js.map",
     "index.html": "/belkaPost/index.html",
-    "precache-manifest.46fdf3a520990feb3c7b76c0618de0c6.js": "/belkaPost/precache-manifest.46fdf3a520990feb3c7b76c0618de0c6.js",
+    "precache-manifest.31b6c87a8f09f78f9743aea88094a808.js": "/belkaPost/precache-manifest.31b6c87a8f09f78f9743aea88094a808.js",
     "service-worker.js": "/belkaPost/service-worker.js",
     "static/css/2.3adb8d2f.chunk.css.map": "/belkaPost/static/css/2.3adb8d2f.chunk.css.map",
-    "static/css/main.a972f8e3.chunk.css.map": "/belkaPost/static/css/main.a972f8e3.chunk.css.map",
-    "static/js/2.6e7a740f.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.6e7a740f.chunk.js.LICENSE.txt",
+    "static/css/main.2a01c9af.chunk.css.map": "/belkaPost/static/css/main.2a01c9af.chunk.css.map",
+    "static/js/2.f0323a0a.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.f0323a0a.chunk.js.LICENSE.txt",
     "static/media/05.png": "/belkaPost/static/media/05.09df87d6.png",
     "static/media/App.scss": "/belkaPost/static/media/map-of-world.b876aae9.png",
     "static/media/boxes.svg": "/belkaPost/static/media/boxes.56adb439.svg",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.5dab9f90.js",
     "static/css/2.3adb8d2f.chunk.css",
-    "static/js/2.6e7a740f.chunk.js",
-    "static/css/main.a972f8e3.chunk.css",
-    "static/js/main.e2ed236d.chunk.js"
+    "static/js/2.f0323a0a.chunk.js",
+    "static/css/main.2a01c9af.chunk.css",
+    "static/js/main.bcfff5b9.chunk.js"
   ]
 }
