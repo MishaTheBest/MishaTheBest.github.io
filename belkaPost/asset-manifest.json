@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/belkaPost/static/css/main.2a01c9af.chunk.css",
-    "main.js": "/belkaPost/static/js/main.bcfff5b9.chunk.js",
-    "main.js.map": "/belkaPost/static/js/main.bcfff5b9.chunk.js.map",
+    "main.css": "/belkaPost/static/css/main.fbf6c131.chunk.css",
+    "main.js": "/belkaPost/static/js/main.323f6431.chunk.js",
+    "main.js.map": "/belkaPost/static/js/main.323f6431.chunk.js.map",
     "runtime-main.js": "/belkaPost/static/js/runtime-main.5dab9f90.js",
     "runtime-main.js.map": "/belkaPost/static/js/runtime-main.5dab9f90.js.map",
     "static/css/2.3adb8d2f.chunk.css": "/belkaPost/static/css/2.3adb8d2f.chunk.css",
-    "static/js/2.f0323a0a.chunk.js": "/belkaPost/static/js/2.f0323a0a.chunk.js",
-    "static/js/2.f0323a0a.chunk.js.map": "/belkaPost/static/js/2.f0323a0a.chunk.js.map",
+    "static/js/2.fb25c422.chunk.js": "/belkaPost/static/js/2.fb25c422.chunk.js",
+    "static/js/2.fb25c422.chunk.js.map": "/belkaPost/static/js/2.fb25c422.chunk.js.map",
     "index.html": "/belkaPost/index.html",
-    "precache-manifest.31b6c87a8f09f78f9743aea88094a808.js": "/belkaPost/precache-manifest.31b6c87a8f09f78f9743aea88094a808.js",
+    "precache-manifest.19510262fec1a464c984e1b651a08eb4.js": "/belkaPost/precache-manifest.19510262fec1a464c984e1b651a08eb4.js",
     "service-worker.js": "/belkaPost/service-worker.js",
     "static/css/2.3adb8d2f.chunk.css.map": "/belkaPost/static/css/2.3adb8d2f.chunk.css.map",
-    "static/css/main.2a01c9af.chunk.css.map": "/belkaPost/static/css/main.2a01c9af.chunk.css.map",
-    "static/js/2.f0323a0a.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.f0323a0a.chunk.js.LICENSE.txt",
+    "static/css/main.fbf6c131.chunk.css.map": "/belkaPost/static/css/main.fbf6c131.chunk.css.map",
+    "static/js/2.fb25c422.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.fb25c422.chunk.js.LICENSE.txt",
     "static/media/05.png": "/belkaPost/static/media/05.09df87d6.png",
     "static/media/App.scss": "/belkaPost/static/media/map-of-world.b876aae9.png",
+    "static/media/apple-logo.svg": "/belkaPost/static/media/apple-logo.1c61821e.svg",
+    "static/media/belkapost.svg": "/belkaPost/static/media/belkapost.ca501297.svg",
     "static/media/boxes.svg": "/belkaPost/static/media/boxes.56adb439.svg",
     "static/media/computer.svg": "/belkaPost/static/media/computer.4c22802d.svg",
     "static/media/dpd_color.svg": "/belkaPost/static/media/dpd_color.15acc752.svg",
+    "static/media/google-play.svg": "/belkaPost/static/media/google-play.4526f24c.svg",
     "static/media/logistics.svg": "/belkaPost/static/media/logistics.fa360134.svg",
     "static/media/opportunity_1.svg": "/belkaPost/static/media/opportunity_1.d234770b.svg",
     "static/media/opportunity_2.svg": "/belkaPost/static/media/opportunity_2.bb4999ea.svg",
@@ -39,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.5dab9f90.js",
     "static/css/2.3adb8d2f.chunk.css",
-    "static/js/2.f0323a0a.chunk.js",
-    "static/css/main.2a01c9af.chunk.css",
-    "static/js/main.bcfff5b9.chunk.js"
+    "static/js/2.fb25c422.chunk.js",
+    "static/css/main.fbf6c131.chunk.css",
+    "static/js/main.323f6431.chunk.js"
   ]
 }
