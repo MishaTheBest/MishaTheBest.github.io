@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/belkaPost/static/css/main.fbf6c131.chunk.css",
-    "main.js": "/belkaPost/static/js/main.323f6431.chunk.js",
-    "main.js.map": "/belkaPost/static/js/main.323f6431.chunk.js.map",
+    "main.css": "/belkaPost/static/css/main.7a2f0ebb.chunk.css",
+    "main.js": "/belkaPost/static/js/main.5340db73.chunk.js",
+    "main.js.map": "/belkaPost/static/js/main.5340db73.chunk.js.map",
     "runtime-main.js": "/belkaPost/static/js/runtime-main.5dab9f90.js",
     "runtime-main.js.map": "/belkaPost/static/js/runtime-main.5dab9f90.js.map",
     "static/css/2.3adb8d2f.chunk.css": "/belkaPost/static/css/2.3adb8d2f.chunk.css",
     "static/js/2.fb25c422.chunk.js": "/belkaPost/static/js/2.fb25c422.chunk.js",
     "static/js/2.fb25c422.chunk.js.map": "/belkaPost/static/js/2.fb25c422.chunk.js.map",
     "index.html": "/belkaPost/index.html",
-    "precache-manifest.19510262fec1a464c984e1b651a08eb4.js": "/belkaPost/precache-manifest.19510262fec1a464c984e1b651a08eb4.js",
+    "precache-manifest.2e0f49c1d16c843c76e1908a84e8be22.js": "/belkaPost/precache-manifest.2e0f49c1d16c843c76e1908a84e8be22.js",
     "service-worker.js": "/belkaPost/service-worker.js",
     "static/css/2.3adb8d2f.chunk.css.map": "/belkaPost/static/css/2.3adb8d2f.chunk.css.map",
-    "static/css/main.fbf6c131.chunk.css.map": "/belkaPost/static/css/main.fbf6c131.chunk.css.map",
+    "static/css/main.7a2f0ebb.chunk.css.map": "/belkaPost/static/css/main.7a2f0ebb.chunk.css.map",
     "static/js/2.fb25c422.chunk.js.LICENSE.txt": "/belkaPost/static/js/2.fb25c422.chunk.js.LICENSE.txt",
     "static/media/05.png": "/belkaPost/static/media/05.09df87d6.png",
     "static/media/App.scss": "/belkaPost/static/media/map-of-world.b876aae9.png",
@@ -43,7 +43,7 @@
     "static/js/runtime-main.5dab9f90.js",
     "static/css/2.3adb8d2f.chunk.css",
     "static/js/2.fb25c422.chunk.js",
-    "static/css/main.fbf6c131.chunk.css",
-    "static/js/main.323f6431.chunk.js"
+    "static/css/main.7a2f0ebb.chunk.css",
+    "static/js/main.5340db73.chunk.js"
   ]
 }
