@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap");
+%Nunito {
+    font-family: "Nunito", sans-serif;
+}
+
+%head,
+.head {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 144px;
+    letter-spacing: -0.03em;
+}
+
+%headline-2,
+.headline-2 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 90px;
+    letter-spacing: -0.03em;
+}
+
+%headline-3,
+.headline-3 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+}
+
+%headline-4,
+.headline-4 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 51px;
+    letter-spacing: -0.02em;
+}
+
+%headline-5,
+.headline-5 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+}
+
+%body-big,
+.body-big {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+    letter-spacing: 0.15px;
+}
+
+%body-1,
+.body-1 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+    letter-spacing: 0.44px;
+}
+
+%subtitle-2,
+.subtitle-2 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+    letter-spacing: 0.1px;
+}
+
+%button,
+.button {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+}
+
+%body-2,
+.body-2 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    letter-spacing: 0.25px;
+}
+
+%caption,
+.caption {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    letter-spacing: 0.4px;
+}
+
+%overline,
+.overline {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+    /* identical to box height, or 160% */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}

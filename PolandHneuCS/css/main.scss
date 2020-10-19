@@ -1,0 +1,477 @@
+@import "colors";
+@import "transitions";
+@import "fonts";
+
+/** global **/
+
+body {}
+
+.margin-fix {
+    margin-top: -50px;
+}
+
+.main-container {
+    // background: url('../img/14205.jpg') no-repeat fixed center/cover;
+}
+
+.wave {
+    width: 100vw;
+    margin-left: -15px;
+    margin-right: -15px;
+    display: block;
+    margin-top: -100px;
+}
+
+a {
+    display: inline-block;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+strong {
+    font-weight: 900;
+}
+
+.button {
+    position: relative;
+    z-index: 2000;
+    @extend %button;
+    &--primary {
+        background: $yellow;
+        padding: 10px 40px !important;
+        //border-radius: 5px;
+        color: $black !important;
+        @include transition(all);
+        &:hover {
+            box-shadow: 0 8px 16px 0 rgba(61, 45, 119, 0.4) !important;
+            transform: translateY(-2px);
+            background: rgba($yellow, 0.8) !important;
+        }
+    }
+}
+
+
+/** header **/
+
+header {
+    .navbar {
+        z-index: 2200;
+        @include transition(background-color);
+        background: rgba($white, 1);
+        &--active {
+            background: $white;
+        }
+        .navbar-brand {}
+        .nav-item.active {
+            .nav-link {
+                background: rgba(132, 92, 255, 0.05);
+            }
+            .button--primary {
+                background: $main;
+            }
+        }
+        .nav-item {
+            .nav-link {
+                // font-size: 1.1875rem;
+                position: relative;
+                color: $dark;
+                margin-left: 15px;
+                margin-right: 15px;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 4px;
+                    height: 4px;
+                    //background: $latte;
+                    border-radius: 50%;
+                    position: absolute;
+                    opacity: 0;
+                    @include transition(opacity);
+                    left: 0;
+                    top: calc(50% - 2px);
+                }
+                &:hover {
+                    background: rgba(132, 92, 255, 0.05);
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/** diplomas **/
+
+.diplomas {
+    &__row {
+        >div {
+            display: flex;
+        }
+    }
+}
+
+.diploma {
+    flex: 1;
+    width: 100%;
+    box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.2);
+    // height: 300px;
+    background: linear-gradient( 145deg, rgba(144, 144, 144, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+    padding: 30px;
+    &--dark {
+        background: #3a3b3b;
+    }
+    &__inner {
+        height: 100%;
+        width: 100%;
+        background: #fff;
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    }
+    &__content {
+        padding: 200px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h5 {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+        hr {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+    }
+}
+
+
+/** main-container **/
+
+.main-container {
+    &__row {
+        //background: url("../img/transparent-bg.png") center/cover;
+        min-height: 100vh;
+        min-height: calc(100vh + 215px);
+        padding-bottom: 74px;
+        .main-headers {
+            //background: rgba($yellow,1);
+            background: rgba($white, .1);
+            padding-top: 20px;
+            backdrop-filter: blur(20px);
+            // box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            // border: 1px solid $black;
+        }
+    }
+}
+
+
+/** disciplines **/
+
+.disciplines-container {
+    //background: linear-gradient(unquote($direction), $stops);
+    //background: linear-gradient(to bottom, rgb(255, 255, 255) 70%, rgb(176, 190, 47) 100%);
+    .disciplines-header {
+        h3 {
+            margin-top: 50px;
+            margin-bottom: 45px;
+        }
+        h6 {
+            font-size: 1.4375rem;
+        }
+    }
+    .disciplines-item {
+        margin-top: 35px;
+        margin-bottom: 35px;
+        &-icon {
+            width: 61px;
+        }
+        &-header {
+            margin-top: 48px;
+            color: $dark;
+        }
+        &-description {
+            margin-top: 30px;
+            color: $main-2;
+        }
+    }
+}
+
+// .requirements-container {
+//     background: #cad936;
+// }
+
+/** how to **/
+
+.how-to-container {
+    // &-last {
+    //     background: #cad936;
+    // }
+    ul {
+        list-style-image: url("../img/check-icon.png");
+        padding-left: 25px;
+        li {
+            color: $main-2;
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+    }
+    .process-graphic {
+        .arrow-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                position: absolute;
+                display: block;
+                width: 70%;
+                height: 1vw;
+                top: calc(50% - 1vw);
+                background: $main;
+                border-radius: 3vw;
+            }
+            .arrow {
+                width: 3vw;
+                height: 3vw;
+                top: calc(50% - 2vw);
+                right: 0.5vw;
+                border-radius: 0.5vw;
+                background: transparent;
+                border-top: 1vw solid $main;
+                border-right: 1vw solid $main;
+                transform: rotate(45deg);
+            }
+        }
+        p {
+            //font-size: 1vw ;
+        }
+    }
+}
+
+
+/** footer **/
+
+footer {
+    background: $dark-2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    a,
+    li,
+    small {
+        color: $white;
+        opacity: 0.8;
+    }
+    small {
+        margin-top: 45px;
+        display: inline-block;
+    }
+    a {
+        &:hover {
+            color: $white;
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+            font-size: 1rem;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+    .footer-images {
+        img {
+            max-height: 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        background-color: $white;
+        &-toggler {
+            outline: none;
+            &-icon {
+                background: url("../img/nav-humburger.png") no-repeat center/contain;
+            }
+        }
+    }
+}
+
+.do-not-try-to-remove-it {
+    opacity: 0.3;
+    font-size: 0.6rem;
+}
+
+@media screen and (max-width: 375px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.3rem !important;
+    }
+    .advantages-item {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+$birdColor: #845cff;
+$birdColor2: #845cff;
+$birdColor3: #845cff;
+$feetColor: #f8c14d;
+$beakColor: #f7d35d;
+$beakColor2: #eb9f2d;
+$birdColor3: #f627ff;
+// Storyboard Timeline
+$timeline: ( "begin": 0s,
+"eye-p0-1": 0.4s,
+"eye-p1-1": 0.4s,
+"eye-p4-1": 1.8s,
+"eye-p3-1": 0.4s,
+"eye-p4-2": 1s,
+"eye-p2-1": 0.1s,
+"end": 0.4s,
+);
+// $totaltime:                      Total of all timecodes in $timeline
+// $timelineAccumulated:    Accumulated timeline map based on $timeline
+$totaltime: 0s;
+$timelineAccumulated: ();
+@each $key,
+$time in $timeline {
+    $totaltime: $totaltime + $time;
+    $timelineAccumulated: map-merge( $timelineAccumulated, ( $key: $totaltime, ));
+}
+
+// Timecode to Percent function
+// Params:
+//  $key:           key/position in timeline
+//  $offset:    optional offset to add to time from timeline (use negative number to subtract)
+// Return:      Percentage value of keyposition in timeline.
+@function tp($key,
+$offset: 0s) {
+    @return (map-get($timelineAccumulated,
+    $key)+$offset) / $totaltime * 100%;
+}
+
+@keyframes eyes {
+    #{tp('begin')},
+    #{tp('eye-p0-1')},
+    #{tp('end')} {
+        top: -50px;
+    }
+    #{tp('eye-p1-1')} {
+        top: -45px;
+    }
+    #{tp('eye-p2-1')} {
+        top: -42px;
+    }
+    #{tp('eye-p4-1')},
+    #{tp('eye-p4-2')} {
+        top: -40px;
+    }
+    #{tp('eye-p3-1')} {
+        top: -45px;
+    }
+}
+
+@keyframes wings {
+    #{tp('begin')},
+    #{tp('eye-p4-2')},
+    #{tp('end')} {
+        top: 70px;
+    }
+    #{tp('eye-p2-1')} {
+        top: 60px;
+    }
+}
+
+@keyframes feet {
+    #{tp('begin')},
+    #{tp('eye-p4-2')},
+    #{tp('end')} {
+        top: -2px;
+    }
+    #{tp('eye-p2-1')} {
+        top: 0px;
+    }
+}
+
+@keyframes cloud {
+    0% {
+        left: -140px;
+    }
+    100% {
+        left: 280px;
+    }
+}
+
+.globe {
+    margin: 1em 0 0 0;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 20px solid #f7dbcf;
+    box-sizing: border-box;
+    background: linear-gradient( to bottom, rgba(134, 174, 204, 1) 0%, rgba(212, 228, 239, 1) 100%);
+    overflow: hidden;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        box-sizing: border-box;
+        border-radius: 50%;
+        z-index: 10;
+    }
+    &:before {
+        height: 94%;
+        width: 94%;
+        top: 3%;
+        right: 3%;
+        border: 10px solid transparent;
+        border-right-color: rgba(255, 255, 255, 0.3);
+        border-right-width: 10px;
+        border-right-style: solid;
+    }
+    &:after {
+        top: 50px;
+        right: 65px;
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-container {
+        // background: url("../img/14205.jpg") no-repeat center/cover;
+        // background-attachment: scroll !important;
+        img {
+            display: none !important;
+        }
+    }
+    .main-headers {
+        h3.my-5 {
+            font-size: 1.875rem !important;
+        }
+    }
+}

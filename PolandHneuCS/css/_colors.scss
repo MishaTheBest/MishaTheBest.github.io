@@ -1,0 +1,25 @@
+$black: #000;
+$white: #fff;
+$orange:#ff8a5c;
+$yellow: #ffd51a;
+$gray: #aaa;
+$lightgray: #ddd;
+
+$main: #000;
+$dark: #000;
+$dark-2: #201f1e;
+$main-2: #444;
+h1, h2, h3{
+  color: $dark;
+}
+h4, h5, h6 {
+  color: $dark;
+}
+
+p, span {
+  color: $dark;
+}
+
+body {
+  background: #fff;
+}
