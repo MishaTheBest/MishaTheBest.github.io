@@ -22,10 +22,10 @@
     background-repeat: no-repeat;
 }
 
-.theme-background-color {
-    background-color: $gradient !important;
-}
-
+// .theme-background-color,
+// #tawkchat-status-text-container {
+//     background: $gradient !important;
+// }
 .bg--primary {
     position: relative;
     &::before {
