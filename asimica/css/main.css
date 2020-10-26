@@ -157,7 +157,8 @@ a {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.theme-background-color {
+.theme-background-color,
+#tawkchat-status-text-container {
   background: linear-gradient(172.63deg, #00F260 -28.5%, #0575E6 88.54%) !important; }
 
 .bg--primary {
