@@ -110,7 +110,8 @@ h2,
 .headline-2 {
   font-size: 3.4375rem;
   font-weight: bold;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 40px; }
 
 h3,
 .headline-3 {
