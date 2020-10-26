@@ -39,10 +39,10 @@
                             <a class="nav-link" href="./team.html">Our team</a>
                         </li>
                         <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                            <a class="nav-link" href="./news.html">News letter</a>
+                            <a class="nav-link nav-link--active" href="./news.html">News letter</a>
                         </li>
                         <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                            <a class="nav-link nav-link--active" href="./contacts.html">Contact</a>
+                            <a class="nav-link" href="./contacts.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -57,32 +57,16 @@
     <main>
         <section class="container-fluid hero contacts bg bg--primary text--white">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2 class="text-center text-uppercase">Contact us</h2>
+                        <h2 class="text-center text-uppercase">Subscribe to Our News Letter</h2>
                     </div>
                     <div class="col-md-5">
-                        <div class="contacts__mail d-flex">
-                            <img src="./img/envelope-icon.svg" class="img-fluid contacts__icon" alt="">
-                            <div>
-                                <span class="paragraph text--white">
-                                    Laramie Wyoming email:
-                                    <br/>
-                                    <a href="#" class="text--white">info@asimica.com</a>
-                                </span>
-                            </div>
-                        </div>
-                        <form action="">
-                            <input type="text" placeholder="Name*">
-                            <input type="text" placeholder="Email*">
-                            <input type="text" placeholder="Subject*">
-                            <textarea placeholder="Type your message here..." rows="4"></textarea>
+                        <form action="./mail_form.php" method="POST">
+                            <input type="text" name="name" placeholder="Name*">
+                            <input type="text" name="email" placeholder="Email*">
                             <button type="submit" class="button button--primary ml-auto">Submit</button>
                         </form>
-                    </div>
-                    <div class="col-md-5 offset-md-1">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10256.326090785376!2d36.3499728!3d50.0098272!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb2ef05ba5c22644b!2z0KHRg9C_0LXRgNC80LDRgNC60LXRgiAi0JrQm9CQ0KHQoSI!5e0!3m2!1sru!2sua!4v1603635603389!5m2!1sru!2sua"
-                            width="100%" height="450" frameborder="0" style="border:0; border-radius:30px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
             </div>
